@@ -446,8 +446,8 @@
             "72721ec69edf230f",
             "8eca6e69b809790c"
         ],
-        "x": 2054,
-        "y": 699,
+        "x": 2014,
+        "y": 859,
         "w": 512,
         "h": 82
     },
@@ -498,7 +498,7 @@
         ],
         "x": 134,
         "y": 353,
-        "w": 2632,
+        "w": 2592,
         "h": 614
     },
     {
@@ -516,8 +516,8 @@
             "b1bc2e62654b04e2",
             "f125e4c474dd2e5c"
         ],
-        "x": 2054,
-        "y": 599,
+        "x": 2014,
+        "y": 759,
         "w": 512,
         "h": 82
     },
@@ -603,11 +603,12 @@
             "93434028042529b8",
             "ad66e8c05ee9a664",
             "dce8db9b841faf7f",
-            "1a29880acc851ff5"
+            "1a29880acc851ff5",
+            "c242d58e6ae32d04"
         ],
-        "x": 514,
+        "x": 434,
         "y": 679,
-        "w": 992,
+        "w": 1172,
         "h": 122
     },
     {
@@ -2652,8 +2653,8 @@
             "0308c42b587c3794",
             "58d1108b52842808"
         ],
-        "x": 2180,
-        "y": 740,
+        "x": 2140,
+        "y": 900,
         "wires": [
             [
                 "8eca6e69b809790c"
@@ -2673,8 +2674,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
-        "y": 740,
+        "x": 2380,
+        "y": 900,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -2691,8 +2692,8 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 2680,
-        "y": 640,
+        "x": 2640,
+        "y": 800,
         "wires": [],
         "l": true
     },
@@ -2840,8 +2841,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
-        "y": 640,
+        "x": 2380,
+        "y": 800,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -2857,8 +2858,8 @@
         "links": [
             "07ed8c85583c5a2e"
         ],
-        "x": 2170,
-        "y": 640,
+        "x": 2130,
+        "y": 800,
         "wires": [
             [
                 "b1bc2e62654b04e2"
@@ -2906,7 +2907,7 @@
             "dbeedddce12963de",
             "68628b6f32ec8b74"
         ],
-        "x": 630,
+        "x": 550,
         "y": 740,
         "wires": [
             [
@@ -2934,7 +2935,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 830,
+        "x": 750,
         "y": 740,
         "wires": [
             [
@@ -2955,7 +2956,7 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1060,
+        "x": 980,
         "y": 760,
         "wires": [],
         "l": true
@@ -2972,7 +2973,7 @@
         "syntax": "mustache",
         "template": "{\n    \"data\": {\n        \"task\": {\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": 0,\n            \"category\": 6,\n            \"entity\": 1,\n            \"requester_id\": 1,\n            \"requesttypes_id\": 6\n        }\n        \n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n",
         "output": "json",
-        "x": 1090,
+        "x": 1010,
         "y": 720,
         "wires": [
             [
@@ -2990,7 +2991,7 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1400,
+        "x": 1500,
         "y": 720,
         "wires": [],
         "l": true
@@ -3006,11 +3007,11 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1270,
+        "x": 1190,
         "y": 720,
         "wires": [
             [
-                "8dd7c0779eac59f0"
+                "c242d58e6ae32d04"
             ]
         ]
     },
@@ -3260,6 +3261,34 @@
             ],
             [
                 "ec52cbc3aa0fec25"
+            ]
+        ]
+    },
+    {
+        "id": "c242d58e6ae32d04",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "Store Ticket Data",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "itsm.ticket",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 720,
+        "wires": [
+            [
+                "8dd7c0779eac59f0"
             ]
         ]
     },
