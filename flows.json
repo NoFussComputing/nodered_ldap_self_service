@@ -72,7 +72,13 @@
         "label": "Functions",
         "disabled": false,
         "info": "# Functions\n\nContained within are reusable functions.",
-        "env": []
+        "env": [
+            {
+                "name": "oidc",
+                "value": "false",
+                "type": "bool"
+            }
+        ]
     },
     {
         "id": "8ad5fe68ad170e2d",
@@ -606,9 +612,9 @@
             "1a29880acc851ff5",
             "c242d58e6ae32d04"
         ],
-        "x": 434,
+        "x": 474,
         "y": 679,
-        "w": 1172,
+        "w": 1092,
         "h": 122
     },
     {
@@ -634,8 +640,114 @@
         ],
         "x": 214,
         "y": 819,
-        "w": 1712,
+        "w": 1692,
         "h": 122
+    },
+    {
+        "id": "bbd929c437c592ea",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "name": "Authorization",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#ffbfbf",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "f17afdbfc8c07889",
+            "53a5ee55ee916cec",
+            "4c583f2fab47bd8a",
+            "61ac44522e8da07f",
+            "6c790a65bbdc61a5",
+            "bc039e4b516adf37",
+            "95c7670ef9039295",
+            "627a72eee1e26ae6",
+            "311c966bd1fa946e",
+            "1b2783bfbb09503e",
+            "32fbc01a34859498",
+            "7ccb5fae05b5c6a6"
+        ],
+        "x": 94,
+        "y": 1519,
+        "w": 1932,
+        "h": 522
+    },
+    {
+        "id": "95c7670ef9039295",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Token",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "cbd58f491456eb8c",
+            "366892fde876296f",
+            "42a1e057dda56f95",
+            "0593c236e186e0bb",
+            "8d9fa9fe704e74be",
+            "9c55bf6229fa740c",
+            "0e55ee565cde91d7",
+            "8b1fef39c34f5513"
+        ],
+        "x": 694,
+        "y": 1559,
+        "w": 1052,
+        "h": 142
+    },
+    {
+        "id": "311c966bd1fa946e",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "OpenID",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "9f416bc258c1a60c",
+            "4939f66d56cdd4f8",
+            "13126d75aae301a2",
+            "13ebe1d63226e702"
+        ],
+        "x": 694,
+        "y": 1754,
+        "w": 672,
+        "h": 107
+    },
+    {
+        "id": "1b2783bfbb09503e",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Generate Auth Token",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#addb7b",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "cb10034e64c15167",
+            "2f7615b7afa603aa",
+            "0107c5fd18462084",
+            "99a20ee6c80595d1",
+            "158aa20b662c7f8f",
+            "9bb0664a91ae9b97",
+            "f08e22fcc829d7b2"
+        ],
+        "x": 214,
+        "y": 1919,
+        "w": 1112,
+        "h": 82
     },
     {
         "id": "5798e39cbc3730ae",
@@ -647,6 +759,45 @@
         "wires": [
             [
                 "365ba07c1f4721ec"
+            ]
+        ]
+    },
+    {
+        "id": "13ebe1d63226e702",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "311c966bd1fa946e",
+        "x": 1200,
+        "y": 1780,
+        "wires": [
+            [
+                "7ccb5fae05b5c6a6"
+            ]
+        ]
+    },
+    {
+        "id": "32fbc01a34859498",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "x": 1820,
+        "y": 1740,
+        "wires": [
+            [
+                "53a5ee55ee916cec"
+            ]
+        ]
+    },
+    {
+        "id": "7ccb5fae05b5c6a6",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "x": 1540,
+        "y": 1780,
+        "wires": [
+            [
+                "53a5ee55ee916cec"
             ]
         ]
     },
@@ -665,7 +816,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
+        "x": 90,
         "y": 280,
         "wires": [
             [
@@ -678,7 +829,7 @@
         "type": "switch",
         "z": "379c65a27117b46c",
         "name": "Routing",
-        "property": " $split(req.url, '/', limit)[2]",
+        "property": " $split(req._parsedUrl.pathname, '/', limit)[2]",
         "propertyType": "jsonata",
         "rules": [
             {
@@ -716,7 +867,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 620,
+        "x": 800,
         "y": 280,
         "wires": [
             [
@@ -738,7 +889,8 @@
                 "68f30ef53ebc2074"
             ],
             [
-                "12a331c2a036a776"
+                "12a331c2a036a776",
+                "f2026962fb8dbb44"
             ]
         ]
     },
@@ -755,7 +907,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
+        "x": 810,
         "y": 220,
         "wires": []
     },
@@ -785,12 +937,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
+        "x": 240,
         "y": 280,
         "wires": [
             [
-                "1b121b9ecdf14084",
-                "6dc15589d8863139"
+                "6dc15589d8863139",
+                "8551cf5d923ff586"
             ]
         ]
     },
@@ -804,7 +956,7 @@
             "02c4b9524d361ade",
             "b202e09db45b339a"
         ],
-        "x": 980,
+        "x": 1160,
         "y": 340,
         "wires": [],
         "l": true
@@ -819,7 +971,7 @@
             "2dc375bf57ad8daa",
             "86d0cb173ed572b5"
         ],
-        "x": 940,
+        "x": 1120,
         "y": 300,
         "wires": [],
         "l": true
@@ -939,7 +1091,7 @@
         "type": "switch",
         "z": "379c65a27117b46c",
         "name": "Routing",
-        "property": " $split(req.url, '/', limit)[2]",
+        "property": " $split(req._parsedUrl.pathname, '/', limit)[2]",
         "propertyType": "jsonata",
         "rules": [
             {
@@ -1214,7 +1366,7 @@
         "links": [
             "acd5690f3865f156"
         ],
-        "x": 910,
+        "x": 1090,
         "y": 420,
         "wires": [],
         "l": true
@@ -1277,7 +1429,7 @@
             "0172c4a240b566fd",
             "d810b86dc7c722cd"
         ],
-        "x": 890,
+        "x": 1070,
         "y": 180,
         "wires": [],
         "l": true
@@ -1292,7 +1444,7 @@
             "b5cedc58894f707e",
             "2ccbf2d475489da8"
         ],
-        "x": 950,
+        "x": 1130,
         "y": 260,
         "wires": [],
         "l": true
@@ -1307,7 +1459,7 @@
             "e50f46892eabd2a5",
             "a28d15c7a8dfdc85"
         ],
-        "x": 940,
+        "x": 1120,
         "y": 220,
         "wires": [],
         "l": true
@@ -1321,7 +1473,7 @@
         "links": [
             "fb5301abffede979"
         ],
-        "x": 910,
+        "x": 1090,
         "y": 380,
         "wires": [],
         "l": true
@@ -1341,6 +1493,87 @@
         "statusType": "auto",
         "x": 920,
         "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f2026962fb8dbb44",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "debug 99",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8551cf5d923ff586",
+        "type": "link call",
+        "z": "379c65a27117b46c",
+        "name": "Authentication",
+        "links": [
+            "f17afdbfc8c07889"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "43a3bec1272517ae"
+            ]
+        ]
+    },
+    {
+        "id": "43a3bec1272517ae",
+        "type": "switch",
+        "z": "379c65a27117b46c",
+        "name": "Authorized?",
+        "property": "authorized",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "1b121b9ecdf14084"
+            ],
+            [
+                "ce290d371c7687b0"
+            ]
+        ]
+    },
+    {
+        "id": "ce290d371c7687b0",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "Not-Authorized",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 360,
         "wires": []
     },
     {
@@ -1707,7 +1940,8 @@
         "g": "a64f4a2c837d5c3c",
         "name": "HTML: Error",
         "links": [
-            "d81c931de5a63675"
+            "d81c931de5a63675",
+            "d17512b4de05ede1"
         ],
         "x": 1410,
         "y": 100,
@@ -2211,6 +2445,73 @@
                 "1ce803b83ecf1593"
             ]
         ]
+    },
+    {
+        "id": "a834b786ac4c71f9",
+        "type": "change",
+        "z": "42b9663b67dbd983",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "401",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "http.error",
+                "pt": "msg",
+                "to": "Not Authorized",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 200,
+        "wires": [
+            [
+                "d17512b4de05ede1"
+            ]
+        ]
+    },
+    {
+        "id": "d17512b4de05ede1",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "name": "Process Error",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 1697.1428833007812,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "58479d9fdbd86ed8",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "name": "HTTP/401",
+        "links": [
+            "13126d75aae301a2",
+            "9c55bf6229fa740c",
+            "366892fde876296f"
+        ],
+        "x": 1400,
+        "y": 200,
+        "wires": [
+            [
+                "a834b786ac4c71f9"
+            ]
+        ],
+        "l": true
     },
     {
         "id": "bb8102ee0c070ff2",
@@ -2907,7 +3208,7 @@
             "dbeedddce12963de",
             "68628b6f32ec8b74"
         ],
-        "x": 550,
+        "x": 590,
         "y": 740,
         "wires": [
             [
@@ -2921,7 +3222,7 @@
         "type": "switch",
         "z": "4b5e055cd6b1e387",
         "g": "5e535ca826ad969c",
-        "name": "Conduct ITSM Search?",
+        "name": "Create Ticket?",
         "property": "itsm_create_ticket",
         "propertyType": "env",
         "rules": [
@@ -2935,7 +3236,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 750,
+        "x": 760,
         "y": 740,
         "wires": [
             [
@@ -2956,7 +3257,7 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 980,
+        "x": 940,
         "y": 760,
         "wires": [],
         "l": true
@@ -2973,7 +3274,7 @@
         "syntax": "mustache",
         "template": "{\n    \"data\": {\n        \"task\": {\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": 0,\n            \"category\": 6,\n            \"entity\": 1,\n            \"requester_id\": 1,\n            \"requesttypes_id\": 6\n        }\n        \n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n",
         "output": "json",
-        "x": 1010,
+        "x": 970,
         "y": 720,
         "wires": [
             [
@@ -2991,7 +3292,7 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1500,
+        "x": 1460,
         "y": 720,
         "wires": [],
         "l": true
@@ -3007,7 +3308,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1190,
+        "x": 1150,
         "y": 720,
         "wires": [
             [
@@ -3206,12 +3507,12 @@
         "type": "link out",
         "z": "4b5e055cd6b1e387",
         "g": "d0dc259791aed430",
-        "name": "Processing Complete",
+        "name": "Respond to User",
         "mode": "link",
         "links": [
             "f125e4c474dd2e5c"
         ],
-        "x": 1800,
+        "x": 1790,
         "y": 860,
         "wires": [],
         "l": true
@@ -3284,7 +3585,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1330,
+        "x": 1290,
         "y": 720,
         "wires": [
             [
@@ -4056,6 +4357,526 @@
         "x": 1090,
         "y": 1360,
         "wires": [],
+        "l": true
+    },
+    {
+        "id": "0e55ee565cde91d7",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "Token File Check",
+        "func": "var msg1 = null;\nvar msg2 = null;\n\n//msg.filename = msg.req.query.token + '.json';\n\nfs.stat(msg.filename, function (err) {\n    if (err) {\n       //msg1 = msg;\n        node.send([null, msg]);\n    } else {\n        //msg2 = msg;\n        node.send([msg, null]);\n    }\n});\n\n//node.send([msg1, msg2]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 990,
+        "y": 1640,
+        "wires": [
+            [
+                "8d9fa9fe704e74be"
+            ],
+            [
+                "9c55bf6229fa740c"
+            ]
+        ],
+        "outputLabels": [
+            "True",
+            "False"
+        ]
+    },
+    {
+        "id": "f17afdbfc8c07889",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Authentication Check",
+        "links": [],
+        "x": 220,
+        "y": 1720,
+        "wires": [
+            [
+                "4c583f2fab47bd8a",
+                "6c790a65bbdc61a5"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "53a5ee55ee916cec",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 1950,
+        "y": 2000,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4c583f2fab47bd8a",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "debug 102",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "8d9fa9fe704e74be",
+        "type": "file in",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1180,
+        "y": 1620,
+        "wires": [
+            [
+                "0593c236e186e0bb"
+            ]
+        ]
+    },
+    {
+        "id": "4939f66d56cdd4f8",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "311c966bd1fa946e",
+        "name": "OpenID Auth?",
+        "property": "oidc",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 1800,
+        "wires": [
+            [
+                "13ebe1d63226e702"
+            ],
+            [
+                "13126d75aae301a2"
+            ]
+        ]
+    },
+    {
+        "id": "13126d75aae301a2",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "311c966bd1fa946e",
+        "name": "HTTP/401",
+        "mode": "link",
+        "links": [
+            "58479d9fdbd86ed8"
+        ],
+        "x": 1270,
+        "y": 1820,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9c55bf6229fa740c",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "HTTP/401",
+        "mode": "link",
+        "links": [
+            "58479d9fdbd86ed8"
+        ],
+        "x": 1190,
+        "y": 1660,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cb10034e64c15167",
+        "type": "inject",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "Create Auth Token",
+        "props": [
+            {
+                "p": "auth",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "datetime",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 350,
+        "y": 1960,
+        "wires": [
+            [
+                "2f7615b7afa603aa"
+            ]
+        ]
+    },
+    {
+        "id": "2f7615b7afa603aa",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "Build: Hash Details",
+        "func": "msg.hash = {};\nmsg.hash.string = msg.datetime;\nmsg.hash.type = 'sha256';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1960,
+        "wires": [
+            [
+                "0107c5fd18462084"
+            ]
+        ]
+    },
+    {
+        "id": "0107c5fd18462084",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "",
+        "links": [
+            "43eebf1623f29074"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 690,
+        "y": 1960,
+        "wires": [
+            [
+                "99a20ee6c80595d1"
+            ]
+        ]
+    },
+    {
+        "id": "9bb0664a91ae9b97",
+        "type": "file",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1080,
+        "y": 1960,
+        "wires": [
+            [
+                "f08e22fcc829d7b2"
+            ]
+        ]
+    },
+    {
+        "id": "158aa20b662c7f8f",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "$string(msg.hash.value & '.json')",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"datetime\": $number(msg.expires)\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 1960,
+        "wires": [
+            [
+                "9bb0664a91ae9b97"
+            ]
+        ]
+    },
+    {
+        "id": "f08e22fcc829d7b2",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "Auth Token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "42a1e057dda56f95",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "Validate Token File",
+        "func": "var msg1 = null;\nvar msg2 = null;\nmsg.authorized = false;\n\n\nif( msg.payload.datetime > Date.now() ) {\n    msg.authorized = true;\n    node.send([msg, null]);\n} else {\n    //msg2 = msg;\n    node.send([null, msg]);\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 1430,
+        "y": 1620,
+        "wires": [
+            [
+                "cbd58f491456eb8c"
+            ],
+            [
+                "366892fde876296f"
+            ]
+        ],
+        "outputLabels": [
+            "True",
+            "False"
+        ]
+    },
+    {
+        "id": "0593c236e186e0bb",
+        "type": "json",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1290,
+        "y": 1620,
+        "wires": [
+            [
+                "42a1e057dda56f95"
+            ]
+        ]
+    },
+    {
+        "id": "366892fde876296f",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "HTTP/401",
+        "mode": "link",
+        "links": [
+            "58479d9fdbd86ed8"
+        ],
+        "x": 1630,
+        "y": 1640,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cbd58f491456eb8c",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "Set Auth cookie",
+        "func": "\n//if ( ! msg.cookie_exists ) {\n    msg.cookies = {\n        token: {\n            value: String(msg.token),\n            expires: 0\n        }\n    }\n//}\ndelete msg.token;\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 1600,
+        "wires": [
+            [
+                "61ac44522e8da07f",
+                "32fbc01a34859498"
+            ]
+        ]
+    },
+    {
+        "id": "99a20ee6c80595d1",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "1b2783bfbb09503e",
+        "name": "expiry",
+        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1960,
+        "wires": [
+            [
+                "158aa20b662c7f8f"
+            ]
+        ]
+    },
+    {
+        "id": "61ac44522e8da07f",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "debug 108",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1910,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "6c790a65bbdc61a5",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Auth Type",
+        "func": "var token = null;\nvar auth = null;\n\nif (msg.req.cookies.hasOwnProperty(\"token\")) {\n\n    msg.filename = msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if (msg.req.query.hasOwnProperty(\"token\") ) {\n\n    msg.filename = msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1720,
+        "wires": [
+            [
+                "bc039e4b516adf37"
+            ],
+            [
+                "627a72eee1e26ae6"
+            ]
+        ],
+        "outputLabels": [
+            "Token",
+            "Auth"
+        ]
+    },
+    {
+        "id": "bc039e4b516adf37",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Token",
+        "mode": "link",
+        "links": [
+            "8b1fef39c34f5513"
+        ],
+        "x": 530,
+        "y": 1700,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8b1fef39c34f5513",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "95c7670ef9039295",
+        "name": "Process Token Auth",
+        "links": [
+            "bc039e4b516adf37"
+        ],
+        "x": 810,
+        "y": 1640,
+        "wires": [
+            [
+                "0e55ee565cde91d7"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "627a72eee1e26ae6",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "OpenID",
+        "mode": "link",
+        "links": [
+            "9f416bc258c1a60c"
+        ],
+        "x": 540,
+        "y": 1740,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9f416bc258c1a60c",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "311c966bd1fa946e",
+        "name": "Process OpenID Auth",
+        "links": [
+            "627a72eee1e26ae6"
+        ],
+        "x": 820,
+        "y": 1800,
+        "wires": [
+            [
+                "4939f66d56cdd4f8"
+            ]
+        ],
         "l": true
     }
 ]
