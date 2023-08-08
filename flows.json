@@ -4,72 +4,21 @@
         "type": "tab",
         "label": "HTTP",
         "disabled": false,
-        "info": "# HTTP Flow\n\nThi flow contains the HTTP nodes for requests and responses.",
-        "env": [
-            {
-                "name": "user_data",
-                "value": "userdata/",
-                "type": "str"
-            },
-            {
-                "name": "http_path",
-                "value": "/mysite",
-                "type": "str"
-            }
-        ]
+        "info": "# HTTP Flow\n\nThi flow contains the HTTP nodes for requests and responses."
     },
     {
         "id": "42b9663b67dbd983",
         "type": "tab",
         "label": "Files",
         "disabled": false,
-        "info": "",
-        "env": [
-            {
-                "name": "page_logo",
-                "value": "http://nofusscomputing.com/assets/nfc_revamp_dark.png",
-                "type": "str"
-            },
-            {
-                "name": "page_logo_width",
-                "value": "282",
-                "type": "num"
-            },
-            {
-                "name": "page_logo_height",
-                "value": "90",
-                "type": "num"
-            },
-            {
-                "name": "developer_mode",
-                "value": "false",
-                "type": "bool"
-            }
-        ]
+        "info": ""
     },
     {
         "id": "4b5e055cd6b1e387",
         "type": "tab",
         "label": "Form Processing",
         "disabled": false,
-        "info": "",
-        "env": [
-            {
-                "name": "itsm_search",
-                "value": "true",
-                "type": "bool"
-            },
-            {
-                "name": "itsm_platform",
-                "value": "glpi",
-                "type": "str"
-            },
-            {
-                "name": "itsm_create_ticket",
-                "value": "true",
-                "type": "bool"
-            }
-        ]
+        "info": ""
     },
     {
         "id": "8179bf22c4c31682",
@@ -767,6 +716,51 @@
         "x": 214,
         "y": 1919,
         "w": 1112,
+        "h": 82
+    },
+    {
+        "id": "8a2206d682028469",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Deveopment: Create Config File",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#b797cf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "e36b580c48d33ca0",
+            "497a482f9881a318",
+            "170b86b633c5ccd7",
+            "befac3bb99b2c2cc"
+        ],
+        "x": 1234,
+        "y": 339,
+        "w": 752,
+        "h": 82
+    },
+    {
+        "id": "b994fe21efb223a9",
+        "type": "group",
+        "z": "379c65a27117b46c",
+        "name": "Automagic: Read Config file",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#92d04f",
+            "label": true,
+            "color": "#ffff00"
+        },
+        "nodes": [
+            "c7ca92d48206b4b2",
+            "7df31641fc2fe59a",
+            "d109fc9821987d4f",
+            "e9127065159b9f0f",
+            "de01a4559aecf1c4"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 832,
         "h": 82
     },
     {
@@ -1899,6 +1893,116 @@
         "wires": []
     },
     {
+        "id": "c7ca92d48206b4b2",
+        "type": "inject",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "Auto Read Config",
+        "props": [
+            {
+                "p": "filename",
+                "v": "config.json",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "7df31641fc2fe59a"
+            ]
+        ]
+    },
+    {
+        "id": "7df31641fc2fe59a",
+        "type": "file in",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "Open Config File",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 370,
+        "y": 80,
+        "wires": [
+            [
+                "d109fc9821987d4f"
+            ]
+        ]
+    },
+    {
+        "id": "d109fc9821987d4f",
+        "type": "json",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "e9127065159b9f0f"
+            ]
+        ]
+    },
+    {
+        "id": "e9127065159b9f0f",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "global.config",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "config",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 80,
+        "wires": [
+            [
+                "de01a4559aecf1c4"
+            ]
+        ]
+    },
+    {
+        "id": "de01a4559aecf1c4",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "Config read",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 80,
+        "wires": []
+    },
+    {
         "id": "02c4b9524d361ade",
         "type": "link in",
         "z": "42b9663b67dbd983",
@@ -2212,7 +2316,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n{{#env.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/changepassword';\">Change Password</button>\n{{/env.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordreset';\">Password Reset</button>\n{{#env.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/logout';\">Log Out</button>\n{{/env.developer_mode}}\n\n</fieldset>",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/changepassword';\">Change Password</button>\n{{/global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
         "x": 450,
         "y": 340,
         "wires": [
@@ -2388,7 +2492,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n  <head>\n    <title>No Fuss Computing</title>\n    <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\">\n    <meta charset=\"utf-8\">\n    <meta name=\"robots\" content=\"noindex,nofollow\">\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js\"></script>\n    <script src=\"{{ url }}common.js\"></script>\n    <link rel=\"stylesheet\" href=\"{{ url }}style.css\">\n  </head>\n  \n<body>\n  <div>\n\n    <div style=\"background: url({{{ env.page_logo }}}) no-repeat center top; background-size: {{ env.page_logo_width }}px {{ env.page_logo_height }}px; width: 100%; height: 120px; display: flex;\"></div>\n\n    {{{ html.body }}}\n\n  </div>\n</body>\n</html>\n",
+        "template": "<html>\n  <head>\n    <title>No Fuss Computing</title>\n    <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\">\n    <meta charset=\"utf-8\">\n    <meta name=\"robots\" content=\"noindex,nofollow\">\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js\"></script>\n    <script src=\"{{ url }}common.js\"></script>\n    <link rel=\"stylesheet\" href=\"{{ url }}style.css\">\n  </head>\n  \n<body>\n  <div>\n\n    <div style=\"background: url({{{ global.config.html.logo }}}) no-repeat center top; background-size: {{ global.config.html.logo_width }}px {{ global.config.html.logo_height }}px; width: 100%; height: 120px; display: flex;\"></div>\n\n    {{{ html.body }}}\n\n  </div>\n</body>\n</html>\n",
         "x": 510,
         "y": 60,
         "wires": [
@@ -2834,6 +2938,94 @@
             ]
         ],
         "l": true
+    },
+    {
+        "id": "e36b580c48d33ca0",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "8a2206d682028469",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"developer_mode\": true,\n    \"html\": {\n        \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n        \"logo_width\": 282,\n        \"logo_height\": 90\n    },\n    \"http_path\": \"/mysite/\",\n    \"itsm\": {\n        \"create_ticket\": true,\n        \"platform\": \"glpi\",\n        \"search\": true\n    },\n    \"user_data\": \"userdata/\"\n}",
+        "output": "json",
+        "x": 1500,
+        "y": 380,
+        "wires": [
+            [
+                "170b86b633c5ccd7"
+            ]
+        ]
+    },
+    {
+        "id": "497a482f9881a318",
+        "type": "inject",
+        "z": "42b9663b67dbd983",
+        "g": "8a2206d682028469",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1340,
+        "y": 380,
+        "wires": [
+            [
+                "e36b580c48d33ca0"
+            ]
+        ]
+    },
+    {
+        "id": "170b86b633c5ccd7",
+        "type": "file",
+        "z": "42b9663b67dbd983",
+        "g": "8a2206d682028469",
+        "name": "",
+        "filename": "config.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1690,
+        "y": 380,
+        "wires": [
+            [
+                "befac3bb99b2c2cc"
+            ]
+        ]
+    },
+    {
+        "id": "befac3bb99b2c2cc",
+        "type": "debug",
+        "z": "42b9663b67dbd983",
+        "g": "8a2206d682028469",
+        "name": "Config Written",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "bb8102ee0c070ff2",
@@ -3344,8 +3536,8 @@
         "z": "4b5e055cd6b1e387",
         "g": "20eb97dd0c088b3d",
         "name": "Conduct ITSM Search?",
-        "property": "itsm_search",
-        "propertyType": "env",
+        "property": "config.itsm.search",
+        "propertyType": "global",
         "rules": [
             {
                 "t": "true"
@@ -3545,8 +3737,8 @@
         "z": "4b5e055cd6b1e387",
         "g": "5e535ca826ad969c",
         "name": "Create Ticket?",
-        "property": "itsm_create_ticket",
-        "propertyType": "env",
+        "property": "config.itsm.create_ticket",
+        "propertyType": "global",
         "rules": [
             {
                 "t": "true"
@@ -4239,7 +4431,7 @@
         "z": "8179bf22c4c31682",
         "g": "9b1493c4ae19a935",
         "name": "ITSM Platform",
-        "property": "payload.platform",
+        "property": "config.itsm.platform",
         "propertyType": "msg",
         "rules": [
             {
