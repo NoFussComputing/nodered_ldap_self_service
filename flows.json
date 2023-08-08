@@ -32,6 +32,14 @@
         ]
     },
     {
+        "id": "8179bf22c4c31682",
+        "type": "tab",
+        "label": "Functions",
+        "disabled": false,
+        "info": "# Functions\n\nContained within are reusable functions.",
+        "env": []
+    },
+    {
         "id": "8ad5fe68ad170e2d",
         "type": "group",
         "z": "42b9663b67dbd983",
@@ -45,12 +53,19 @@
             "02c4b9524d361ade",
             "365ba07c1f4721ec",
             "50339f503fd4878d",
-            "591e68e90f876dd1"
+            "591e68e90f876dd1",
+            "7e95892f2f3454b7",
+            "9b89c2da58fccb8d",
+            "99a3fa75430c37f7",
+            "b2c917da9e845f7a",
+            "5798e39cbc3730ae",
+            "52dc13e1fdbf064d",
+            "d460346f6ae1673b"
         ],
         "x": 154,
         "y": 819,
-        "w": 952,
-        "h": 82
+        "w": 1912,
+        "h": 122
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -237,9 +252,62 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 959,
+        "y": 999,
         "w": 812,
         "h": 82
+    },
+    {
+        "id": "0d96945ec7d069cb",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "name": "Returns: dict, msg.hash",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0eeaba70b043a226",
+            "9c9c7bbd71c78d8e",
+            "43eebf1623f29074",
+            "8fadd3c4294a6939",
+            "540882a95f65754c"
+        ],
+        "x": 94,
+        "y": 159,
+        "w": 972,
+        "h": 109.5
+    },
+    {
+        "id": "bcd2727d77a80ce3",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "name": "Returns: string, msg.filename",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8c13bbcc86d93be8",
+            "a35b8cc53c276d62",
+            "858268a5d48a4486",
+            "998b007182d85455",
+            "0f2ff2f433d17eef"
+        ],
+        "x": 94,
+        "y": 319,
+        "w": 912,
+        "h": 82
+    },
+    {
+        "id": "5798e39cbc3730ae",
+        "type": "junction",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "x": 1240,
+        "y": 860,
+        "wires": [
+            [
+                "365ba07c1f4721ec"
+            ]
+        ]
     },
     {
         "id": "1e0841f1.ac68fe",
@@ -600,22 +668,16 @@
         "z": "379c65a27117b46c",
         "name": "HTTP: Response",
         "links": [
-            "bf098463143ac8ad",
-            "50339f503fd4878d",
-            "4cdbeaa8f5f3ddb7",
-            "96836f5a4c7c756c",
-            "f1dcd5b6e32fb905",
-            "b664f0b9e6c17ad6",
-            "4ecc0631139b51e0",
-            "e5ae19af5f6d6561",
-            "1d661b2385de4b4a",
             "0c2e73371d4238a1",
-            "036721280c02c6d9",
-            "9f8e617b36773689",
-            "0cbedb9d4c130aa4",
-            "cf0b05bf1d07d7d4",
-            "1f96b47b77fdd1ac",
-            "988765ea19236af0"
+            "1d661b2385de4b4a",
+            "4ecc0631139b51e0",
+            "50339f503fd4878d",
+            "96836f5a4c7c756c",
+            "988765ea19236af0",
+            "b664f0b9e6c17ad6",
+            "bf098463143ac8ad",
+            "e5ae19af5f6d6561",
+            "f1dcd5b6e32fb905"
         ],
         "x": 300,
         "y": 720,
@@ -925,10 +987,10 @@
             "28c74c7b39a06100"
         ],
         "x": 320,
-        "y": 860,
+        "y": 880,
         "wires": [
             [
-                "365ba07c1f4721ec"
+                "7e95892f2f3454b7"
             ]
         ],
         "icon": "node-red/file.svg",
@@ -942,10 +1004,11 @@
         "name": "HTML",
         "field": "html.body",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "html",
         "syntax": "mustache",
-        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"{{{ url }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
-        "x": 650,
+        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"{{{ url }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\" value=\"{{{ payload.0.question }}}\" placeholder=\"Type Question one here\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\" value=\"{{{ payload.1.question }}}\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\" value=\"{{{ payload.2.question }}}\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
+        "output": "str",
+        "x": 1670,
         "y": 860,
         "wires": [
             [
@@ -963,7 +1026,7 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 990,
+        "x": 1950,
         "y": 860,
         "wires": [],
         "l": true
@@ -1213,7 +1276,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 770,
+        "x": 1790,
         "y": 860,
         "wires": [
             [
@@ -1588,7 +1651,7 @@
             "68f30ef53ebc2074"
         ],
         "x": 250,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "1102d30391c745a6"
@@ -1609,7 +1672,7 @@
         "syntax": "mustache",
         "template": "logout",
         "x": 470,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "b19bd0621d479d66"
@@ -1627,7 +1690,7 @@
             "7db929503cf13635"
         ],
         "x": 850,
-        "y": 1000,
+        "y": 1040,
         "wires": [],
         "l": true
     },
@@ -1643,10 +1706,326 @@
         "linkType": "static",
         "timeout": "30",
         "x": 630,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "988765ea19236af0"
+            ]
+        ]
+    },
+    {
+        "id": "52dc13e1fdbf064d",
+        "type": "file in",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "Fetch Password Questions",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1360,
+        "y": 900,
+        "wires": [
+            [
+                "d460346f6ae1673b"
+            ]
+        ]
+    },
+    {
+        "id": "d460346f6ae1673b",
+        "type": "json",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 1530,
+        "y": 900,
+        "wires": [
+            [
+                "365ba07c1f4721ec"
+            ]
+        ]
+    },
+    {
+        "id": "b2c917da9e845f7a",
+        "type": "switch",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "No / Yes",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1120,
+        "y": 880,
+        "wires": [
+            [
+                "5798e39cbc3730ae"
+            ],
+            [
+                "52dc13e1fdbf064d"
+            ]
+        ]
+    },
+    {
+        "id": "99a3fa75430c37f7",
+        "type": "function",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "Questions Exist",
+        "func": "\nfs.stat(msg.filename, function (err) {\n    if (err) {\n        msg.payload = 0\n    } else {\n        msg.payload = 1\n    }\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 980,
+        "y": 880,
+        "wires": [
+            [
+                "b2c917da9e845f7a"
+            ]
+        ]
+    },
+    {
+        "id": "7e95892f2f3454b7",
+        "type": "function",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "Fetch: User Name",
+        "func": "msg.user = 'john.smith';\n\n//msg.payload = 'echo -n $(echo -n ' + msg.user + '| sha256sum) | awk \\'{print $1 }\\'';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 880,
+        "wires": [
+            [
+                "9b89c2da58fccb8d"
+            ]
+        ]
+    },
+    {
+        "id": "9b89c2da58fccb8d",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "",
+        "links": [
+            "8c13bbcc86d93be8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 770,
+        "y": 880,
+        "wires": [
+            [
+                "99a3fa75430c37f7"
+            ]
+        ]
+    },
+    {
+        "id": "0eeaba70b043a226",
+        "type": "exec",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "1",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Hash Command",
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "540882a95f65754c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9c9c7bbd71c78d8e",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Create Hash Command",
+        "func": "\nmsg.payload = 'echo -n $(echo -n ' + msg.hash.string + '| ' + msg.hash.type + 'sum) | awk \\'{print $1 }\\' | tr -dc \\'A-Fa-f0-9\\'';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "0eeaba70b043a226"
+            ]
+        ]
+    },
+    {
+        "id": "43eebf1623f29074",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Hash String",
+        "links": [],
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "9c9c7bbd71c78d8e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8fadd3c4294a6939",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 990,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "540882a95f65754c",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Save Hash Value",
+        "func": "msg.hash.value = msg.payload;\n\ndelete msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "8fadd3c4294a6939"
+            ]
+        ]
+    },
+    {
+        "id": "8c13bbcc86d93be8",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Hash: User-Questions-Filename",
+        "links": [],
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "858268a5d48a4486"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a35b8cc53c276d62",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "",
+        "links": [
+            "43eebf1623f29074"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "0f2ff2f433d17eef"
+            ]
+        ]
+    },
+    {
+        "id": "858268a5d48a4486",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Build: Hash Details",
+        "func": "msg.hash = {};\nmsg.hash.string = msg.user;\nmsg.hash.type = 'sha256';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "a35b8cc53c276d62"
+            ]
+        ]
+    },
+    {
+        "id": "998b007182d85455",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 930,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "0f2ff2f433d17eef",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Build: Hash Details",
+        "func": "msg.filename = msg.hash.value + '.json'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 360,
+        "wires": [
+            [
+                "998b007182d85455"
             ]
         ]
     }
