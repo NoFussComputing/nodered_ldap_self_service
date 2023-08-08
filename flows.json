@@ -382,8 +382,8 @@
         ],
         "x": 94,
         "y": 639,
-        "w": 1118,
-        "h": 408
+        "w": 1238,
+        "h": 454
     },
     {
         "id": "c41dc5b999e5cc21",
@@ -405,7 +405,7 @@
             "0308c42b587c3794",
             "04818ddd8782b0a1"
         ],
-        "x": 454,
+        "x": 494,
         "y": 379,
         "w": 1032,
         "h": 122
@@ -426,8 +426,8 @@
             "72721ec69edf230f",
             "8eca6e69b809790c"
         ],
-        "x": 1614,
-        "y": 679,
+        "x": 2054,
+        "y": 699,
         "w": 512,
         "h": 82
     },
@@ -442,18 +442,18 @@
             "label": true
         },
         "nodes": [
-            "33d710f97adb5298",
-            "6aac3151138c4af9",
             "160bc27f7530e52d",
             "269cbacf5274d6d8",
             "4cdb1540cd4c8744",
             "0676d69c05236349",
-            "42f157ed01b737f4"
+            "edbb6827a8b33085",
+            "f9d8741c4385a7eb",
+            "ed0645c12f7435b2"
         ],
-        "x": 174,
-        "y": 859,
-        "w": 1012,
-        "h": 162
+        "x": 154,
+        "y": 819,
+        "w": 1152,
+        "h": 248
     },
     {
         "id": "a9d52eb951c5f037",
@@ -472,12 +472,13 @@
             "cdde8116fcac6e5d",
             "4cdbeaa8f5f3ddb7",
             "82ccba0e0a13970a",
-            "20eb97dd0c088b3d"
+            "20eb97dd0c088b3d",
+            "5e535ca826ad969c"
         ],
         "x": 134,
         "y": 353,
-        "w": 2192,
-        "h": 434
+        "w": 2632,
+        "h": 474
     },
     {
         "id": "82ccba0e0a13970a",
@@ -494,8 +495,8 @@
             "b1bc2e62654b04e2",
             "f125e4c474dd2e5c"
         ],
-        "x": 1614,
-        "y": 579,
+        "x": 2054,
+        "y": 599,
         "w": 512,
         "h": 82
     },
@@ -516,11 +517,76 @@
             "eeb2b5a4e44d0c24",
             "bc29c53d4ef04184",
             "68628b6f32ec8b74",
-            "dbeedddce12963de"
+            "dbeedddce12963de",
+            "445623ba528e5df1",
+            "58d1108b52842808",
+            "f6fc2010d0af1e33"
         ],
-        "x": 434,
-        "y": 539,
-        "w": 1072,
+        "x": 354,
+        "y": 519,
+        "w": 1392,
+        "h": 142
+    },
+    {
+        "id": "f9d8741c4385a7eb",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Search for User",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "42f157ed01b737f4",
+            "33d710f97adb5298",
+            "6aac3151138c4af9"
+        ],
+        "x": 674,
+        "y": 859,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "ed0645c12f7435b2",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Create a Ticket",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "d4de6eab89782579"
+        ],
+        "x": 674,
+        "y": 959,
+        "w": 152,
+        "h": 82
+    },
+    {
+        "id": "5e535ca826ad969c",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "ITSM: Create Ticket",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "8dd7c0779eac59f0",
+            "00066fdae59433b8",
+            "93434028042529b8",
+            "ad66e8c05ee9a664",
+            "dce8db9b841faf7f",
+            "1a29880acc851ff5"
+        ],
+        "x": 514,
+        "y": 679,
+        "w": 992,
         "h": 122
     },
     {
@@ -2420,7 +2486,7 @@
         "searchScope": "sub",
         "filter": "",
         "attributes": "dn,cn,givenName,sn,uid,mail",
-        "x": 800,
+        "x": 840,
         "y": 440,
         "wires": [
             [
@@ -2440,7 +2506,7 @@
         "syntax": "mustache",
         "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
         "output": "str",
-        "x": 600,
+        "x": 640,
         "y": 440,
         "wires": [
             [
@@ -2469,7 +2535,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 950,
+        "x": 990,
         "y": 440,
         "wires": [
             [
@@ -2491,7 +2557,7 @@
         "links": [
             "4a4676456c27f256"
         ],
-        "x": 1370,
+        "x": 1410,
         "y": 420,
         "wires": [],
         "l": true
@@ -2506,7 +2572,7 @@
         "links": [
             "72721ec69edf230f"
         ],
-        "x": 1170,
+        "x": 1210,
         "y": 460,
         "wires": [],
         "l": true
@@ -2536,10 +2602,11 @@
         "g": "aea0a3398dafab4c",
         "name": "Respond: Invalid User",
         "links": [
-            "0308c42b587c3794"
+            "0308c42b587c3794",
+            "58d1108b52842808"
         ],
-        "x": 1740,
-        "y": 720,
+        "x": 2180,
+        "y": 740,
         "wires": [
             [
                 "8eca6e69b809790c"
@@ -2559,8 +2626,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 720,
+        "x": 2420,
+        "y": 740,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -2577,8 +2644,8 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 2240,
-        "y": 620,
+        "x": 2680,
+        "y": 640,
         "wires": [],
         "l": true
     },
@@ -2591,7 +2658,7 @@
         "links": [
             "b10e8a45ff44f80d"
         ],
-        "x": 560,
+        "x": 480,
         "y": 600,
         "wires": [
             [
@@ -2619,7 +2686,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 770,
+        "x": 690,
         "y": 600,
         "wires": [
             [
@@ -2641,11 +2708,11 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1230,
+        "x": 1130,
         "y": 580,
         "wires": [
             [
-                "68628b6f32ec8b74"
+                "445623ba528e5df1"
             ]
         ]
     },
@@ -2686,7 +2753,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
+        "x": 1200,
         "y": 420,
         "wires": [
             [
@@ -2706,7 +2773,7 @@
         "syntax": "mustache",
         "template": "{\n    \"data\": {\n        \"givenName\": \"{{ ldap.givenName }}\",\n        \"sn\": \"{{ ldap.sn }}\",\n        \"uid\": \"{{ ldap.uid }}\"\n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}",
         "output": "json",
-        "x": 1050,
+        "x": 970,
         "y": 580,
         "wires": [
             [
@@ -2726,8 +2793,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 620,
+        "x": 2420,
+        "y": 640,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -2741,11 +2808,10 @@
         "g": "82ccba0e0a13970a",
         "name": "Respond: Success",
         "links": [
-            "68628b6f32ec8b74",
-            "dbeedddce12963de"
+            "8dd7c0779eac59f0"
         ],
-        "x": 1730,
-        "y": 620,
+        "x": 2170,
+        "y": 640,
         "wires": [
             [
                 "b1bc2e62654b04e2"
@@ -2761,10 +2827,10 @@
         "name": "LDAP: User Found",
         "mode": "link",
         "links": [
-            "f125e4c474dd2e5c"
+            "1a29880acc851ff5"
         ],
-        "x": 1390,
-        "y": 580,
+        "x": 1630,
+        "y": 560,
         "wires": [],
         "l": true
     },
@@ -2773,15 +2839,223 @@
         "type": "link out",
         "z": "4b5e055cd6b1e387",
         "g": "20eb97dd0c088b3d",
-        "name": "Success",
+        "name": "Continue",
+        "mode": "link",
+        "links": [
+            "1a29880acc851ff5"
+        ],
+        "x": 920,
+        "y": 620,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1a29880acc851ff5",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "ITSM: Create Ticket",
+        "links": [
+            "dbeedddce12963de",
+            "68628b6f32ec8b74"
+        ],
+        "x": 630,
+        "y": 740,
+        "wires": [
+            [
+                "dce8db9b841faf7f"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "dce8db9b841faf7f",
+        "type": "switch",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "Conduct ITSM Search?",
+        "property": "itsm_create_ticket",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 830,
+        "y": 740,
+        "wires": [
+            [
+                "93434028042529b8"
+            ],
+            [
+                "ad66e8c05ee9a664"
+            ]
+        ]
+    },
+    {
+        "id": "ad66e8c05ee9a664",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "Continue",
+        "mode": "link",
+        "links": [],
+        "x": 1060,
+        "y": 760,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "93434028042529b8",
+        "type": "template",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "ITSM Ticket Data",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"data\": {\n        \"task\": {\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": 0,\n            \"category\": 6,\n            \"entity\": 1,\n            \"requester_id\": 1,\n            \"requesttypes_id\": 6\n        }\n        \n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n",
+        "output": "json",
+        "x": 1090,
+        "y": 720,
+        "wires": [
+            [
+                "00066fdae59433b8"
+            ]
+        ]
+    },
+    {
+        "id": "8dd7c0779eac59f0",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "Ticket Created",
         "mode": "link",
         "links": [
             "f125e4c474dd2e5c"
         ],
-        "x": 1000,
-        "y": 620,
+        "x": 1400,
+        "y": 720,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "00066fdae59433b8",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "5e535ca826ad969c",
+        "name": "",
+        "links": [
+            "b8c9f1cf125efd2e"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1270,
+        "y": 720,
+        "wires": [
+            [
+                "8dd7c0779eac59f0"
+            ]
+        ]
+    },
+    {
+        "id": "445623ba528e5df1",
+        "type": "switch",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "Found User",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "id",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1250,
+        "y": 580,
+        "wires": [
+            [
+                "f6fc2010d0af1e33"
+            ],
+            [
+                "58d1108b52842808"
+            ]
+        ]
+    },
+    {
+        "id": "58d1108b52842808",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "Response: Invalid User",
+        "mode": "link",
+        "links": [
+            "72721ec69edf230f"
+        ],
+        "x": 1470,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f6fc2010d0af1e33",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "Store User Data",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "glpi.user",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 560,
+        "wires": [
+            [
+                "68628b6f32ec8b74"
+            ]
+        ]
+    },
+    {
+        "id": "a35de85c057745a4",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "name": "debug 97",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 960,
+        "wires": []
     },
     {
         "id": "0eeaba70b043a226",
@@ -3040,7 +3314,7 @@
         "id": "33d710f97adb5298",
         "type": "http request",
         "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
+        "g": "f9d8741c4385a7eb",
         "name": "User ITSM Search",
         "method": "GET",
         "ret": "txt",
@@ -3060,7 +3334,7 @@
                 "valueValue": ""
             }
         ],
-        "x": 870,
+        "x": 890,
         "y": 900,
         "wires": [
             [
@@ -3072,12 +3346,12 @@
         "id": "6aac3151138c4af9",
         "type": "json",
         "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
+        "g": "f9d8741c4385a7eb",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1010,
+        "x": 1030,
         "y": 900,
         "wires": [
             [
@@ -3090,9 +3364,9 @@
         "type": "link in",
         "z": "8179bf22c4c31682",
         "g": "9b1493c4ae19a935",
-        "name": "ITSM Search",
+        "name": "ITSM",
         "links": [],
-        "x": 190,
+        "x": 170,
         "y": 700,
         "wires": [
             [
@@ -3172,8 +3446,8 @@
         "g": "9858d84dc9d001be",
         "name": "GLPI",
         "links": [],
-        "x": 250,
-        "y": 980,
+        "x": 230,
+        "y": 880,
         "wires": [
             [
                 "4cdb1540cd4c8744"
@@ -3189,8 +3463,8 @@
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 1110,
-        "y": 900,
+        "x": 1230,
+        "y": 1020,
         "wires": [],
         "l": true
     },
@@ -3216,7 +3490,7 @@
         "id": "42f157ed01b737f4",
         "type": "change",
         "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
+        "g": "f9d8741c4385a7eb",
         "name": "User",
         "rules": [
             {
@@ -3239,7 +3513,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 750,
         "y": 900,
         "wires": [
             [
@@ -3262,17 +3536,25 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "create",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 350,
-        "y": 980,
+        "y": 880,
         "wires": [
             [
                 "0676d69c05236349"
+            ],
+            [
+                "edbb6827a8b33085"
             ],
             []
         ]
@@ -3299,12 +3581,95 @@
         "repair": false,
         "outputs": 2,
         "x": 560,
-        "y": 920,
+        "y": 860,
         "wires": [
             [
                 "42f157ed01b737f4"
             ],
             []
         ]
+    },
+    {
+        "id": "edbb6827a8b33085",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Create",
+        "property": "payload.action_for",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ticket",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [
+                "d4de6eab89782579"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d4de6eab89782579",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Ticket",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://nodered:1880/api/ticket",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 1000,
+        "wires": [
+            [
+                "269cbacf5274d6d8",
+                "6de60d145e2e49f5"
+            ]
+        ]
+    },
+    {
+        "id": "6de60d145e2e49f5",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 98",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1140,
+        "wires": []
     }
 ]
