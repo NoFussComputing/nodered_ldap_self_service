@@ -59,14 +59,6 @@
         "env": []
     },
     {
-        "id": "352eabab75f21ad7",
-        "type": "tab",
-        "label": "Password Reset",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "8ad5fe68ad170e2d",
         "type": "group",
         "z": "42b9663b67dbd983",
@@ -376,6 +368,74 @@
         "h": 122
     },
     {
+        "id": "c41dc5b999e5cc21",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "046b4a43c9ecde56",
+        "name": "Search LDAP for user",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "311e184a2397eb19",
+            "faa5e7380a3092a2",
+            "fe1f0a50300d9224",
+            "b10e8a45ff44f80d",
+            "0308c42b587c3794",
+            "cdde8116fcac6e5d"
+        ],
+        "x": 214,
+        "y": 379,
+        "w": 1072,
+        "h": 122
+    },
+    {
+        "id": "aea0a3398dafab4c",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "046b4a43c9ecde56",
+        "name": "Invalid User Response",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "72721ec69edf230f",
+            "8eca6e69b809790c",
+            "4cdbeaa8f5f3ddb7",
+            "e5f4eda95fcfd8d7"
+        ],
+        "x": 1614,
+        "y": 639,
+        "w": 612,
+        "h": 122
+    },
+    {
+        "id": "046b4a43c9ecde56",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "name": "Password Reset",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#ffff00"
+        },
+        "nodes": [
+            "c41dc5b999e5cc21",
+            "aea0a3398dafab4c"
+        ],
+        "x": 188,
+        "y": 353,
+        "w": 2064,
+        "h": 434
+    },
+    {
         "id": "5798e39cbc3730ae",
         "type": "junction",
         "z": "42b9663b67dbd983",
@@ -387,6 +447,12 @@
                 "365ba07c1f4721ec"
             ]
         ]
+    },
+    {
+        "id": "160d0b5ed597dc51",
+        "type": "ldap",
+        "host": "ldap://ldap",
+        "port": "389"
     },
     {
         "id": "1e0841f1.ac68fe",
@@ -756,7 +822,8 @@
             "b664f0b9e6c17ad6",
             "bf098463143ac8ad",
             "e5ae19af5f6d6561",
-            "f1dcd5b6e32fb905"
+            "f1dcd5b6e32fb905",
+            "4cdbeaa8f5f3ddb7"
         ],
         "x": 300,
         "y": 720,
@@ -2238,6 +2305,198 @@
                 "edf62fa2ca3cd812"
             ]
         ]
+    },
+    {
+        "id": "311e184a2397eb19",
+        "type": "ldap-search in",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "Find LDAP User",
+        "ldap": "160d0b5ed597dc51",
+        "baseDn": "dc=nww",
+        "searchScope": "sub",
+        "filter": "",
+        "attributes": "dn,cn,givenName,sn,uid,mail",
+        "x": 780,
+        "y": 440,
+        "wires": [
+            [
+                "fe1f0a50300d9224"
+            ]
+        ]
+    },
+    {
+        "id": "faa5e7380a3092a2",
+        "type": "template",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "Create LDAP Search Filter",
+        "field": "filter",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
+        "output": "str",
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "311e184a2397eb19"
+            ]
+        ]
+    },
+    {
+        "id": "fe1f0a50300d9224",
+        "type": "switch",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "User Found",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1\t",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 440,
+        "wires": [
+            [
+                "b10e8a45ff44f80d"
+            ],
+            [
+                "0308c42b587c3794"
+            ]
+        ]
+    },
+    {
+        "id": "b10e8a45ff44f80d",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "Response: Valid User",
+        "mode": "link",
+        "links": [
+            "b95bc55627121e7b"
+        ],
+        "x": 1140,
+        "y": 420,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "0308c42b587c3794",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "Response: Invalid User",
+        "mode": "link",
+        "links": [
+            "72721ec69edf230f"
+        ],
+        "x": 1150,
+        "y": 460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cdde8116fcac6e5d",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "Process: Password Reset",
+        "links": [
+            "b7fde07e47cc852e"
+        ],
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "faa5e7380a3092a2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "72721ec69edf230f",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "aea0a3398dafab4c",
+        "name": "Process: Invalid User",
+        "links": [
+            "0308c42b587c3794",
+            "5c1445a8771782d3"
+        ],
+        "x": 1740,
+        "y": 680,
+        "wires": [
+            [
+                "8eca6e69b809790c",
+                "e5f4eda95fcfd8d7"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8eca6e69b809790c",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "aea0a3398dafab4c",
+        "name": "Give impression of success",
+        "func": "msg.payload = 'Your Password has been reset';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 680,
+        "wires": [
+            [
+                "4cdbeaa8f5f3ddb7"
+            ]
+        ]
+    },
+    {
+        "id": "4cdbeaa8f5f3ddb7",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "aea0a3398dafab4c",
+        "name": "Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 2140,
+        "y": 680,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e5f4eda95fcfd8d7",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "g": "aea0a3398dafab4c",
+        "name": "Invalid User",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2010,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "0eeaba70b043a226",
