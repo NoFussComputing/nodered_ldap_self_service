@@ -98,7 +98,9 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 122
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -119,7 +121,9 @@
             "317930c679e833d1"
         ],
         "x": 154,
-        "y": 679
+        "y": 679,
+        "w": 1092,
+        "h": 82
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -138,7 +142,9 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299
+        "y": 299,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -158,7 +164,9 @@
             "781d23c946457b30"
         ],
         "x": 1314,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 122
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -176,7 +184,9 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -195,7 +205,9 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419
+        "y": 419,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -214,7 +226,9 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539
+        "y": 539,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "d3393ec35cb20a93",
@@ -232,7 +246,9 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139
+        "y": 139,
+        "w": 462,
+        "h": 82
     },
     {
         "id": "3e330505ea1e9cba",
@@ -250,7 +266,9 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139
+        "y": 139,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "b447a1f691eb02df",
@@ -269,7 +287,9 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 999
+        "y": 999,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "0d96945ec7d069cb",
@@ -473,12 +493,13 @@
             "4cdbeaa8f5f3ddb7",
             "82ccba0e0a13970a",
             "20eb97dd0c088b3d",
-            "5e535ca826ad969c"
+            "5e535ca826ad969c",
+            "d0dc259791aed430"
         ],
         "x": 134,
         "y": 353,
         "w": 2632,
-        "h": 474
+        "h": 614
     },
     {
         "id": "82ccba0e0a13970a",
@@ -587,6 +608,32 @@
         "x": 514,
         "y": 679,
         "w": 992,
+        "h": 122
+    },
+    {
+        "id": "d0dc259791aed430",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "07ed8c85583c5a2e",
+            "9090daaf8a5892b0",
+            "853e6c15b5317007",
+            "142f9ce43cb63dd7",
+            "c710ba5a1416cfd8",
+            "c66c2a0c3817433c",
+            "073709e754dd98a3",
+            "ec52cbc3aa0fec25"
+        ],
+        "x": 214,
+        "y": 819,
+        "w": 1712,
         "h": 122
     },
     {
@@ -2808,7 +2855,7 @@
         "g": "82ccba0e0a13970a",
         "name": "Respond: Success",
         "links": [
-            "8dd7c0779eac59f0"
+            "07ed8c85583c5a2e"
         ],
         "x": 2170,
         "y": 640,
@@ -2905,7 +2952,9 @@
         "g": "5e535ca826ad969c",
         "name": "Continue",
         "mode": "link",
-        "links": [],
+        "links": [
+            "073709e754dd98a3"
+        ],
         "x": 1060,
         "y": 760,
         "wires": [],
@@ -2939,7 +2988,7 @@
         "name": "Ticket Created",
         "mode": "link",
         "links": [
-            "f125e4c474dd2e5c"
+            "073709e754dd98a3"
         ],
         "x": 1400,
         "y": 720,
@@ -3041,10 +3090,137 @@
         ]
     },
     {
-        "id": "a35de85c057745a4",
+        "id": "853e6c15b5317007",
+        "type": "ldap-update in",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "Update Password",
+        "ldap": "160d0b5ed597dc51",
+        "operation": "replace",
+        "dn": "",
+        "attribute": "userPassword",
+        "value": "",
+        "x": 1350,
+        "y": 880,
+        "wires": [
+            [
+                "9090daaf8a5892b0"
+            ]
+        ]
+    },
+    {
+        "id": "073709e754dd98a3",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "LDAP: Update Password",
+        "links": [
+            "8dd7c0779eac59f0",
+            "ad66e8c05ee9a664"
+        ],
+        "x": 350,
+        "y": 880,
+        "wires": [
+            [
+                "c66c2a0c3817433c"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "142f9ce43cb63dd7",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "Convert Password to LDAP Hashed Password",
+        "links": [
+            "c19ba5f86ea40757"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1080,
+        "y": 880,
+        "wires": [
+            [
+                "853e6c15b5317007"
+            ]
+        ]
+    },
+    {
+        "id": "c66c2a0c3817433c",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "Fetch Second half of password",
+        "links": [
+            "869469819396a632"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 590,
+        "y": 880,
+        "wires": [
+            [
+                "c710ba5a1416cfd8"
+            ]
+        ]
+    },
+    {
+        "id": "c710ba5a1416cfd8",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "Prepare LDAP data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$string(msg.http.form.random & msg.payload)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "dn",
+                "pt": "msg",
+                "to": "ldap.dn",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 880,
+        "wires": [
+            [
+                "142f9ce43cb63dd7"
+            ]
+        ]
+    },
+    {
+        "id": "07ed8c85583c5a2e",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "Processing Complete",
+        "mode": "link",
+        "links": [
+            "f125e4c474dd2e5c"
+        ],
+        "x": 1800,
+        "y": 860,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ec52cbc3aa0fec25",
         "type": "debug",
         "z": "4b5e055cd6b1e387",
-        "name": "debug 97",
+        "g": "d0dc259791aed430",
+        "name": "LDAP Error",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -3053,9 +3229,39 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1460,
-        "y": 960,
+        "x": 1770,
+        "y": 900,
         "wires": []
+    },
+    {
+        "id": "9090daaf8a5892b0",
+        "type": "switch",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "LDAP: Changed?",
+        "property": "ldapStatus.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1530,
+        "y": 880,
+        "wires": [
+            [
+                "07ed8c85583c5a2e"
+            ],
+            [
+                "ec52cbc3aa0fec25"
+            ]
+        ]
     },
     {
         "id": "0eeaba70b043a226",
@@ -3671,5 +3877,156 @@
         "x": 1080,
         "y": 1140,
         "wires": []
+    },
+    {
+        "id": "c6c63174053774b7",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "name": "Build Command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'echo -n \"{sha512}$(echo -n \"$(echo -n ' & msg.payload &'| sha512sum)\" | xxd -r -p | openssl enc -base64 | tr -dc \"A-Za-z0-9+\\\\/=\")\"'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1380,
+        "wires": [
+            [
+                "0a8a08fff2cf8bc6",
+                "38ef027aea02e3b9"
+            ]
+        ]
+    },
+    {
+        "id": "0a8a08fff2cf8bc6",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "38ef027aea02e3b9",
+        "type": "exec",
+        "z": "8179bf22c4c31682",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Generate LDAP Password String",
+        "x": 820,
+        "y": 1380,
+        "wires": [
+            [
+                "0041766d05e6184c",
+                "55a05bb281e1f7a8"
+            ],
+            [
+                "f284a3ecbe8cdbe6",
+                "55a05bb281e1f7a8"
+            ],
+            [
+                "00064453b16cedac"
+            ]
+        ]
+    },
+    {
+        "id": "0041766d05e6184c",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 53",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "f284a3ecbe8cdbe6",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 54",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "00064453b16cedac",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "c19ba5f86ea40757",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "name": "LDAP Password String {sha256}",
+        "links": [],
+        "x": 350,
+        "y": 1380,
+        "wires": [
+            [
+                "c6c63174053774b7"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "55a05bb281e1f7a8",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 1090,
+        "y": 1360,
+        "wires": [],
+        "l": true
     }
 ]
