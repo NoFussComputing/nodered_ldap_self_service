@@ -5,7 +5,18 @@
         "label": "HTTP",
         "disabled": false,
         "info": "# HTTP Flow\n\nThi flow contains the HTTP nodes for requests and responses.",
-        "env": []
+        "env": [
+            {
+                "name": "user_data",
+                "value": "userdata/",
+                "type": "str"
+            },
+            {
+                "name": "http_path",
+                "value": "/mysite",
+                "type": "str"
+            }
+        ]
     },
     {
         "id": "42b9663b67dbd983",
