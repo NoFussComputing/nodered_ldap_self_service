@@ -3073,7 +3073,7 @@
                 "t": "move",
                 "p": "payload",
                 "pt": "msg",
-                "to": "glpi.user",
+                "to": "itsm.user",
                 "tot": "msg"
             }
         ],
