@@ -1,0 +1,1653 @@
+[
+    {
+        "id": "379c65a27117b46c",
+        "type": "tab",
+        "label": "HTTP",
+        "disabled": false,
+        "info": "# HTTP Flow\n\nThi flow contains the HTTP nodes for requests and responses.",
+        "env": []
+    },
+    {
+        "id": "42b9663b67dbd983",
+        "type": "tab",
+        "label": "Files",
+        "disabled": false,
+        "info": "",
+        "env": [
+            {
+                "name": "page_logo",
+                "value": "http://nofusscomputing.com/assets/nfc_revamp_dark.png",
+                "type": "str"
+            },
+            {
+                "name": "page_logo_width",
+                "value": "282",
+                "type": "num"
+            },
+            {
+                "name": "page_logo_height",
+                "value": "90",
+                "type": "num"
+            }
+        ]
+    },
+    {
+        "id": "8ad5fe68ad170e2d",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Form: Password Reset Questions",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "02c4b9524d361ade",
+            "365ba07c1f4721ec",
+            "50339f503fd4878d",
+            "591e68e90f876dd1"
+        ],
+        "x": 154,
+        "y": 819,
+        "w": 952,
+        "h": 82
+    },
+    {
+        "id": "ad0235dd3aa9eb7d",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Form: Password Reset",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "2dc375bf57ad8daa",
+            "1ce803b83ecf1593",
+            "51b436503d414ae6",
+            "f3b55ea2.f4d51",
+            "bf098463143ac8ad",
+            "457583335831f826"
+        ],
+        "x": 154,
+        "y": 671.5,
+        "w": 1272,
+        "h": 97
+    },
+    {
+        "id": "1c5c6c543ef047b6",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Home Page",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "0172c4a240b566fd",
+            "2106525aa2ebda7d",
+            "4ecc0631139b51e0",
+            "2f628eec7ca4b343"
+        ],
+        "x": 154,
+        "y": 299,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "a64f4a2c837d5c3c",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Error Page",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "fd80fd11fc971e2c",
+            "274e4e6606cb379a",
+            "50d19d3ce5cf88f2",
+            "e5ae19af5f6d6561",
+            "781d23c946457b30"
+        ],
+        "x": 1314,
+        "y": 19,
+        "w": 812,
+        "h": 122
+    },
+    {
+        "id": "a8e6ecf8ae37659e",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "HTML Page Template",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "3ec10e706b7bdc9d",
+            "8bdcaea510dbad1e",
+            "6fc3fe2eef3733b0"
+        ],
+        "x": 154,
+        "y": 19,
+        "w": 692,
+        "h": 82
+    },
+    {
+        "id": "0abe2cea5975dcfd",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Account Details",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "e50f46892eabd2a5",
+            "46ef4f0739d6c1b8",
+            "1d661b2385de4b4a",
+            "c9323e9dc74c9203"
+        ],
+        "x": 154,
+        "y": 419,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "07f2249ad4b7ccd0",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Change Password",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "b5cedc58894f707e",
+            "54b1149ed3d047fe",
+            "0c2e73371d4238a1",
+            "dcfa3cfba4eb1356"
+        ],
+        "x": 154,
+        "y": 539,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "d3393ec35cb20a93",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "",
+        "style": {
+            "label": true,
+            "stroke": "#92d04f",
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "a702d39f0f3180de",
+            "3502d9cf69680b66",
+            "f1dcd5b6e32fb905"
+        ],
+        "x": 164,
+        "y": 139,
+        "w": 462,
+        "h": 82
+    },
+    {
+        "id": "3e330505ea1e9cba",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "c8c3f9c8f2ee35ee",
+            "602e7197835bba91",
+            "b664f0b9e6c17ad6"
+        ],
+        "x": 674,
+        "y": 139,
+        "w": 492,
+        "h": 82
+    },
+    {
+        "id": "b447a1f691eb02df",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Logout",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "fb5301abffede979",
+            "1102d30391c745a6",
+            "988765ea19236af0",
+            "b19bd0621d479d66"
+        ],
+        "x": 154,
+        "y": 959,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "1e0841f1.ac68fe",
+        "type": "http in",
+        "z": "379c65a27117b46c",
+        "name": "",
+        "url": "/mysite/*",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "eae031f35d9a1e9e"
+            ]
+        ]
+    },
+    {
+        "id": "1b121b9ecdf14084",
+        "type": "switch",
+        "z": "379c65a27117b46c",
+        "name": "Routing",
+        "property": " $split(req.url, '/', limit)[2]",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "eq",
+                "v": "details",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "changepassword",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "passwordreset",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "passwordquestions",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "logout",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 7,
+        "x": 620,
+        "y": 280,
+        "wires": [
+            [
+                "515f363d4f52f625"
+            ],
+            [
+                "52395c2abfc3c4f5"
+            ],
+            [
+                "333303604fa4ca01"
+            ],
+            [
+                "cad86e4a717ecb58"
+            ],
+            [
+                "e2876b413d95adf9"
+            ],
+            [
+                "68f30ef53ebc2074"
+            ],
+            [
+                "12a331c2a036a776"
+            ]
+        ]
+    },
+    {
+        "id": "6dc15589d8863139",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "HTTP / Get",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "eae031f35d9a1e9e",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "client",
+                "pt": "msg",
+                "to": "req.connection.remoteAddress",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "/mysite/",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "1b121b9ecdf14084",
+                "6dc15589d8863139"
+            ]
+        ]
+    },
+    {
+        "id": "e2876b413d95adf9",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Page: Password Reset Questions",
+        "mode": "link",
+        "links": [
+            "02c4b9524d361ade",
+            "b202e09db45b339a"
+        ],
+        "x": 980,
+        "y": 340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cad86e4a717ecb58",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Page: Password Reset",
+        "mode": "link",
+        "links": [
+            "2dc375bf57ad8daa",
+            "86d0cb173ed572b5"
+        ],
+        "x": 940,
+        "y": 300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5de0bbd4.6c8574",
+        "type": "http in",
+        "z": "379c65a27117b46c",
+        "name": "",
+        "url": "/mysite/*",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 1020,
+        "wires": [
+            [
+                "482740e98dda9d35",
+                "75913f37.78e6e"
+            ]
+        ]
+    },
+    {
+        "id": "75913f37.78e6e",
+        "type": "json",
+        "z": "379c65a27117b46c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 410,
+        "y": 1020,
+        "wires": [
+            [
+                "539d65720b0ff630"
+            ]
+        ]
+    },
+    {
+        "id": "482740e98dda9d35",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "HTTP / Post",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "3072b7c1fc0fd171",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "debug 69",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "539d65720b0ff630",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "http",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "http.client",
+                "pt": "msg",
+                "to": "req.connection.remoteAddress",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "http.form",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 1020,
+        "wires": [
+            [
+                "0eb8679ee25c4a34",
+                "3072b7c1fc0fd171"
+            ]
+        ]
+    },
+    {
+        "id": "0eb8679ee25c4a34",
+        "type": "switch",
+        "z": "379c65a27117b46c",
+        "name": "Routing",
+        "property": " $split(req.url, '/', limit)[2]",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "passwordreset",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "passwordquestions",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 740,
+        "y": 1020,
+        "wires": [
+            [
+                "b7fde07e47cc852e"
+            ],
+            [
+                "9c92aaf02fee52b5"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b7fde07e47cc852e",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Password Reset",
+        "mode": "link",
+        "links": [
+            "cdde8116fcac6e5d"
+        ],
+        "x": 940,
+        "y": 980,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9c92aaf02fee52b5",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Password Reset Questions",
+        "mode": "link",
+        "links": [
+            "bb8102ee0c070ff2"
+        ],
+        "x": 980,
+        "y": 1020,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "876431fc89aa2a3d",
+        "type": "comment",
+        "z": "379c65a27117b46c",
+        "name": "HTTP/POST",
+        "info": "",
+        "x": 250,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "7db929503cf13635",
+        "type": "link in",
+        "z": "379c65a27117b46c",
+        "name": "HTTP: Response",
+        "links": [
+            "bf098463143ac8ad",
+            "50339f503fd4878d",
+            "4cdbeaa8f5f3ddb7",
+            "96836f5a4c7c756c",
+            "f1dcd5b6e32fb905",
+            "b664f0b9e6c17ad6",
+            "4ecc0631139b51e0",
+            "e5ae19af5f6d6561",
+            "1d661b2385de4b4a",
+            "0c2e73371d4238a1",
+            "036721280c02c6d9",
+            "9f8e617b36773689",
+            "0cbedb9d4c130aa4",
+            "cf0b05bf1d07d7d4",
+            "1f96b47b77fdd1ac",
+            "988765ea19236af0"
+        ],
+        "x": 300,
+        "y": 720,
+        "wires": [
+            [
+                "e3043367c9a89a90",
+                "564400f9ec708521"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "e3043367c9a89a90",
+        "type": "http response",
+        "z": "379c65a27117b46c",
+        "name": "HTTP Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 500,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "564400f9ec708521",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "HTTP / Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9f59194fecc0976a",
+        "type": "switch",
+        "z": "379c65a27117b46c",
+        "name": "File Name",
+        "property": "$split(req.url, '/', limit)[$count($split(req.url, '/', limit)) + 2]\t\t",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "style.css",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "common.js",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 1710,
+        "y": 420,
+        "wires": [
+            [
+                "eaeb9e2bfbe1dc95",
+                "15721605aaae8a86"
+            ],
+            [
+                "e72f08d8fc433bea",
+                "1b1ca0bd7037ed0f"
+            ],
+            [
+                "f56a55d84eb88baf",
+                "28ac8fd21056642c"
+            ]
+        ]
+    },
+    {
+        "id": "eaeb9e2bfbe1dc95",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "style.css",
+        "mode": "link",
+        "links": [
+            "3502d9cf69680b66"
+        ],
+        "x": 2080,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f56a55d84eb88baf",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "404",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "http.error",
+                "pt": "msg",
+                "to": "Not Found",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 540,
+        "wires": [
+            [
+                "d81c931de5a63675"
+            ]
+        ]
+    },
+    {
+        "id": "d81c931de5a63675",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "HTTP/404",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 2150,
+        "y": 540,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "15721605aaae8a86",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "CSS File",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2080,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "28ac8fd21056642c",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "HTTP / 404",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1950,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "12a331c2a036a776",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Fetch Files",
+        "mode": "link",
+        "links": [
+            "acd5690f3865f156"
+        ],
+        "x": 910,
+        "y": 420,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "acd5690f3865f156",
+        "type": "link in",
+        "z": "379c65a27117b46c",
+        "name": "Fetch File",
+        "links": [
+            "12a331c2a036a776"
+        ],
+        "x": 1540,
+        "y": 420,
+        "wires": [
+            [
+                "9f59194fecc0976a"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "e72f08d8fc433bea",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "common.js",
+        "mode": "link",
+        "links": [
+            "602e7197835bba91"
+        ],
+        "x": 2090,
+        "y": 440,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1b1ca0bd7037ed0f",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "JS File",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2070,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "515f363d4f52f625",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Home",
+        "mode": "link",
+        "links": [
+            "0172c4a240b566fd",
+            "d810b86dc7c722cd"
+        ],
+        "x": 890,
+        "y": 180,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "333303604fa4ca01",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Page: Change Password",
+        "mode": "link",
+        "links": [
+            "b5cedc58894f707e",
+            "2ccbf2d475489da8"
+        ],
+        "x": 950,
+        "y": 260,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "52395c2abfc3c4f5",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Page: Account Details",
+        "mode": "link",
+        "links": [
+            "e50f46892eabd2a5",
+            "a28d15c7a8dfdc85"
+        ],
+        "x": 940,
+        "y": 220,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "68f30ef53ebc2074",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "Page: Logout",
+        "mode": "link",
+        "links": [
+            "fb5301abffede979"
+        ],
+        "x": 910,
+        "y": 380,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "02c4b9524d361ade",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "HTML: Password Reset Questions",
+        "links": [
+            "e2876b413d95adf9",
+            "28c74c7b39a06100"
+        ],
+        "x": 320,
+        "y": 860,
+        "wires": [
+            [
+                "365ba07c1f4721ec"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "365ba07c1f4721ec",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"{{{ url }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
+        "x": 650,
+        "y": 860,
+        "wires": [
+            [
+                "591e68e90f876dd1"
+            ]
+        ]
+    },
+    {
+        "id": "50339f503fd4878d",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 990,
+        "y": 860,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2dc375bf57ad8daa",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "HTML: Password Reset",
+        "links": [
+            "cad86e4a717ecb58"
+        ],
+        "x": 280,
+        "y": 720,
+        "wires": [
+            [
+                "51b436503d414ae6"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "1ce803b83ecf1593",
+        "type": "change",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "random",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "client",
+                "pt": "msg",
+                "to": "req.connection.remoteAddress",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "f3b55ea2.f4d51"
+            ]
+        ]
+    },
+    {
+        "id": "51b436503d414ae6",
+        "type": "exec",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "command": "bash -c \"tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6  ; echo -n\"",
+        "addpay": "random",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Generate First half of Password",
+        "x": 570,
+        "y": 720,
+        "wires": [
+            [
+                "1ce803b83ecf1593"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f3b55ea2.f4d51",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"{{{ url }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\">\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\">\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\">\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\">\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n  </form>\n</fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
+        "x": 970,
+        "y": 720,
+        "wires": [
+            [
+                "457583335831f826"
+            ]
+        ]
+    },
+    {
+        "id": "bf098463143ac8ad",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 1310,
+        "y": 720,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a702d39f0f3180de",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "d3393ec35cb20a93",
+        "name": "CSS",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "body {\n    text-align: center;\n}\n\nfieldset {\n    border-radius: 5px;\n    /* background-color: #f2f2f2; */\n    border-color: #ffffff;\n    border-style: groove;\n    /* padding: 20px; */\n}\n\nbody fieldset[id=form] {\n    margin: 0 auto;\n    background-color: #f2f2f2;\n}\n\nform {\n    text-align: left;\n    padding: 0px;\n}\n\nh2 {\n    font-size: 20px;\n    text-align: center;\n    margin: 0;\n    padding: 0;\n}\n\nform p {\n    text-align: justify;\n    margin: 0;\n    padding: 10px;\n}\n\ninput[type=text], select {\n    width: 100%;\n    padding: 12px 20px;\n    margin: 8px 0 20px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n\ninput[type=submit], button[id=navigation] {\n    width: 100%;\n    background-color: #4CAF50;\n    color: white;\n    padding: 14px 20px;\n    margin: 8px 0;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n}\n\ninput[type=submit]:hover, button[id=navigation]:hover {\n    background-color: #45a049;\n}\n\n\nbody fieldset[id=response] {\n    height: auto;\n    min-height: 25px;\n    width: 400px;\n    margin: 0 auto;\n    background-color: rgb(247, 240, 228);\n    \n}\n\nlabel {\n    font-size: 12pt;\n    font-style: normal;\n    font-weight: bold;\n    color: #000000;\n    text-align: left;\n}\n\n\n#labelDescription {\n    color: #414141;\n\n}\n\ndiv[id=question_multicolumn] {\n    margin: 0;\n    padding: 0px;\n    display: grid;\n    grid-template-columns: 600px 200px;\n    grid-template-rows: 25px;\n}",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "f1dcd5b6e32fb905"
+            ]
+        ]
+    },
+    {
+        "id": "3502d9cf69680b66",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "d3393ec35cb20a93",
+        "name": "style.css",
+        "links": [
+            "eaeb9e2bfbe1dc95"
+        ],
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "a702d39f0f3180de"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "f1dcd5b6e32fb905",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "d3393ec35cb20a93",
+        "name": "Return",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 550,
+        "y": 180,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c8c3f9c8f2ee35ee",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "3e330505ea1e9cba",
+        "name": "JavaScript",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "plain",
+        "template": "$(document).ready(function(e) {\n    \n    $(\"form[ajax=true]\").submit(function(e) {\n        \n        e.preventDefault();\n        \n        var form_data = $(this).serialize();\n        var form_url = $(this).attr(\"action\");\n        var form_method = $(this).attr(\"method\").toUpperCase();\n        \n        $(\"#loadingimg\").show();\n        \n        $.ajax({\n            url: form_url, \n            type: form_method,      \n            data: form_data,     \n            cache: false,\n            success: function(returnhtml){                          \n                $(\"#result\").html(returnhtml); \n                $(\"#loadingimg\").hide();                    \n            }           \n        });    \n        \n    });\n    \n});",
+        "x": 930,
+        "y": 180,
+        "wires": [
+            [
+                "b664f0b9e6c17ad6"
+            ]
+        ]
+    },
+    {
+        "id": "602e7197835bba91",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "3e330505ea1e9cba",
+        "name": "common.js",
+        "links": [
+            "e72f08d8fc433bea"
+        ],
+        "x": 760,
+        "y": 180,
+        "wires": [
+            [
+                "c8c3f9c8f2ee35ee"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b664f0b9e6c17ad6",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "3e330505ea1e9cba",
+        "name": "Return",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 1090,
+        "y": 180,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "457583335831f826",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1090,
+        "y": 720,
+        "wires": [
+            [
+                "bf098463143ac8ad"
+            ]
+        ]
+    },
+    {
+        "id": "591e68e90f876dd1",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "8ad5fe68ad170e2d",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 770,
+        "y": 860,
+        "wires": [
+            [
+                "50339f503fd4878d"
+            ]
+        ]
+    },
+    {
+        "id": "0172c4a240b566fd",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "1c5c6c543ef047b6",
+        "name": "HTML: Home",
+        "links": [
+            "515f363d4f52f625"
+        ],
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "2106525aa2ebda7d"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "2106525aa2ebda7d",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "1c5c6c543ef047b6",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordreset';\">Password Reset</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordquestions';\">Password Reset Questions</button>\n\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/logout';\">Log Out</button>\n\n</fieldset>",
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "2f628eec7ca4b343"
+            ]
+        ]
+    },
+    {
+        "id": "4ecc0631139b51e0",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "1c5c6c543ef047b6",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 850,
+        "y": 340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2f628eec7ca4b343",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "1c5c6c543ef047b6",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "4ecc0631139b51e0"
+            ]
+        ]
+    },
+    {
+        "id": "fd80fd11fc971e2c",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "name": "HTML: Error",
+        "links": [
+            "d81c931de5a63675"
+        ],
+        "x": 1410,
+        "y": 100,
+        "wires": [
+            [
+                "274e4e6606cb379a"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "274e4e6606cb379a",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<h1>{{ statusCode }}: {{ http.error }}<h1>",
+        "output": "str",
+        "x": 1610,
+        "y": 100,
+        "wires": [
+            [
+                "50d19d3ce5cf88f2",
+                "781d23c946457b30"
+            ]
+        ]
+    },
+    {
+        "id": "50d19d3ce5cf88f2",
+        "type": "debug",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "name": "debug 82",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1980,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e5ae19af5f6d6561",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 2010,
+        "y": 100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "781d23c946457b30",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1790,
+        "y": 100,
+        "wires": [
+            [
+                "e5ae19af5f6d6561",
+                "50d19d3ce5cf88f2"
+            ]
+        ]
+    },
+    {
+        "id": "3ec10e706b7bdc9d",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "a8e6ecf8ae37659e",
+        "name": "Page Template",
+        "links": [],
+        "x": 260,
+        "y": 60,
+        "wires": [
+            [
+                "6fc3fe2eef3733b0"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8bdcaea510dbad1e",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "a8e6ecf8ae37659e",
+        "name": "Return Content",
+        "mode": "return",
+        "links": [],
+        "x": 740,
+        "y": 60,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "6fc3fe2eef3733b0",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "a8e6ecf8ae37659e",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n  <head>\n    <title>No Fuss Computing</title>\n    <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\">\n    <meta charset=\"utf-8\">\n    <meta name=\"robots\" content=\"noindex,nofollow\">\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js\"></script>\n    <script src=\"{{ url }}common.js\"></script>\n    <link rel=\"stylesheet\" href=\"{{ url }}style.css\">\n  </head>\n  \n<body>\n  <div>\n\n    <div style=\"background: url({{{ env.page_logo }}}) no-repeat center top; background-size: {{ env.page_logo_width }}px {{ env.page_logo_height }}px; width: 100%; height: 120px; display: flex;\"></div>\n\n    {{{ html.body }}}\n\n  </div>\n</body>\n</html>\n",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "8bdcaea510dbad1e"
+            ]
+        ]
+    },
+    {
+        "id": "e50f46892eabd2a5",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "0abe2cea5975dcfd",
+        "name": "HTML: Account Details",
+        "links": [
+            "52395c2abfc3c4f5"
+        ],
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "46ef4f0739d6c1b8"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "46ef4f0739d6c1b8",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "0abe2cea5975dcfd",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "account details",
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "c9323e9dc74c9203"
+            ]
+        ]
+    },
+    {
+        "id": "1d661b2385de4b4a",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "0abe2cea5975dcfd",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 850,
+        "y": 460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c9323e9dc74c9203",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "0abe2cea5975dcfd",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 630,
+        "y": 460,
+        "wires": [
+            [
+                "1d661b2385de4b4a"
+            ]
+        ]
+    },
+    {
+        "id": "b5cedc58894f707e",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "07f2249ad4b7ccd0",
+        "name": "HTML: Change Password",
+        "links": [
+            "333303604fa4ca01"
+        ],
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "54b1149ed3d047fe"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "54b1149ed3d047fe",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "07f2249ad4b7ccd0",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "change Password",
+        "x": 470,
+        "y": 580,
+        "wires": [
+            [
+                "dcfa3cfba4eb1356"
+            ]
+        ]
+    },
+    {
+        "id": "0c2e73371d4238a1",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "07f2249ad4b7ccd0",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 850,
+        "y": 580,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "dcfa3cfba4eb1356",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "07f2249ad4b7ccd0",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "0c2e73371d4238a1"
+            ]
+        ]
+    },
+    {
+        "id": "fb5301abffede979",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "name": "HTML: Logout",
+        "links": [
+            "68f30ef53ebc2074"
+        ],
+        "x": 250,
+        "y": 1000,
+        "wires": [
+            [
+                "1102d30391c745a6"
+            ]
+        ],
+        "icon": "node-red/file.svg",
+        "l": true
+    },
+    {
+        "id": "1102d30391c745a6",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "name": "HTML",
+        "field": "html.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "logout",
+        "x": 470,
+        "y": 1000,
+        "wires": [
+            [
+                "b19bd0621d479d66"
+            ]
+        ]
+    },
+    {
+        "id": "988765ea19236af0",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "name": "HTML Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 850,
+        "y": 1000,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "b19bd0621d479d66",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "name": "Build HTML",
+        "links": [
+            "3ec10e706b7bdc9d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 630,
+        "y": 1000,
+        "wires": [
+            [
+                "988765ea19236af0"
+            ]
+        ]
+    }
+]
