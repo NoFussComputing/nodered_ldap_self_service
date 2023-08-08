@@ -39,6 +39,11 @@
                 "name": "page_logo_height",
                 "value": "90",
                 "type": "num"
+            },
+            {
+                "name": "developer_mode",
+                "value": "false",
+                "type": "bool"
             }
         ]
     },
@@ -1890,7 +1895,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordreset';\">Password Reset</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordquestions';\">Password Reset Questions</button>\n\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/logout';\">Log Out</button>\n\n</fieldset>",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n{{#env.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/changepassword';\">Change Password</button>\n{{/env.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordreset';\">Password Reset</button>\n{{#env.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/logout';\">Log Out</button>\n{{/env.developer_mode}}\n\n</fieldset>",
         "x": 450,
         "y": 340,
         "wires": [
