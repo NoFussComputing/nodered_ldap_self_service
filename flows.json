@@ -43,6 +43,14 @@
         ]
     },
     {
+        "id": "4b5e055cd6b1e387",
+        "type": "tab",
+        "label": "Form Processing",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "8179bf22c4c31682",
         "type": "tab",
         "label": "Functions",
@@ -51,9 +59,9 @@
         "env": []
     },
     {
-        "id": "4b5e055cd6b1e387",
+        "id": "352eabab75f21ad7",
         "type": "tab",
-        "label": "Form Processing",
+        "label": "Password Reset",
         "disabled": false,
         "info": "",
         "env": []
@@ -347,6 +355,25 @@
         "y": 119,
         "w": 2312,
         "h": 182
+    },
+    {
+        "id": "10a6c6b12749dda9",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "name": "Returns: string msg.payload",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "804feccd90b3276c",
+            "869469819396a632",
+            "c4e40d6f6678bb55",
+            "e62119d30db09cce"
+        ],
+        "x": 94,
+        "y": 459,
+        "w": 832,
+        "h": 122
     },
     {
         "id": "5798e39cbc3730ae",
@@ -1902,186 +1929,6 @@
         ]
     },
     {
-        "id": "0eeaba70b043a226",
-        "type": "exec",
-        "z": "8179bf22c4c31682",
-        "g": "0d96945ec7d069cb",
-        "command": "",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "1",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Run Hash Command",
-        "x": 620,
-        "y": 220,
-        "wires": [
-            [
-                "540882a95f65754c"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "9c9c7bbd71c78d8e",
-        "type": "function",
-        "z": "8179bf22c4c31682",
-        "g": "0d96945ec7d069cb",
-        "name": "Create Hash Command",
-        "func": "\nmsg.payload = 'echo -n $(echo -n ' + msg.hash.string + '| ' + msg.hash.type + 'sum) | awk \\'{print $1 }\\' | tr -dc \\'A-Fa-f0-9\\'';\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 220,
-        "wires": [
-            [
-                "0eeaba70b043a226"
-            ]
-        ]
-    },
-    {
-        "id": "43eebf1623f29074",
-        "type": "link in",
-        "z": "8179bf22c4c31682",
-        "g": "0d96945ec7d069cb",
-        "name": "Hash String",
-        "links": [],
-        "x": 190,
-        "y": 220,
-        "wires": [
-            [
-                "9c9c7bbd71c78d8e"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "8fadd3c4294a6939",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "0d96945ec7d069cb",
-        "name": "Return",
-        "mode": "return",
-        "links": [],
-        "x": 990,
-        "y": 200,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "540882a95f65754c",
-        "type": "function",
-        "z": "8179bf22c4c31682",
-        "g": "0d96945ec7d069cb",
-        "name": "Save Hash Value",
-        "func": "msg.hash.value = msg.payload;\n\ndelete msg.payload;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 200,
-        "wires": [
-            [
-                "8fadd3c4294a6939"
-            ]
-        ]
-    },
-    {
-        "id": "8c13bbcc86d93be8",
-        "type": "link in",
-        "z": "8179bf22c4c31682",
-        "g": "bcd2727d77a80ce3",
-        "name": "Hash: User-Questions-Filename",
-        "links": [],
-        "x": 250,
-        "y": 360,
-        "wires": [
-            [
-                "858268a5d48a4486"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "a35b8cc53c276d62",
-        "type": "link call",
-        "z": "8179bf22c4c31682",
-        "g": "bcd2727d77a80ce3",
-        "name": "",
-        "links": [
-            "43eebf1623f29074"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 630,
-        "y": 360,
-        "wires": [
-            [
-                "0f2ff2f433d17eef"
-            ]
-        ]
-    },
-    {
-        "id": "858268a5d48a4486",
-        "type": "function",
-        "z": "8179bf22c4c31682",
-        "g": "bcd2727d77a80ce3",
-        "name": "Build: Hash Details",
-        "func": "msg.hash = {};\nmsg.hash.string = msg.user;\nmsg.hash.type = 'sha256';\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 360,
-        "wires": [
-            [
-                "a35b8cc53c276d62"
-            ]
-        ]
-    },
-    {
-        "id": "998b007182d85455",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "bcd2727d77a80ce3",
-        "name": "Return",
-        "mode": "return",
-        "links": [],
-        "x": 930,
-        "y": 360,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "0f2ff2f433d17eef",
-        "type": "function",
-        "z": "8179bf22c4c31682",
-        "g": "bcd2727d77a80ce3",
-        "name": "Build: Hash Details",
-        "func": "msg.filename = msg.hash.value + '.json'\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 790,
-        "y": 360,
-        "wires": [
-            [
-                "998b007182d85455"
-            ]
-        ]
-    },
-    {
         "id": "bb8102ee0c070ff2",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
@@ -2391,5 +2238,258 @@
                 "edf62fa2ca3cd812"
             ]
         ]
+    },
+    {
+        "id": "0eeaba70b043a226",
+        "type": "exec",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "1",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Hash Command",
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "540882a95f65754c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9c9c7bbd71c78d8e",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Create Hash Command",
+        "func": "\nmsg.payload = 'echo -n $(echo -n ' + msg.hash.string + '| ' + msg.hash.type + 'sum) | awk \\'{print $1 }\\' | tr -dc \\'A-Fa-f0-9\\'';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "0eeaba70b043a226"
+            ]
+        ]
+    },
+    {
+        "id": "43eebf1623f29074",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Hash String",
+        "links": [],
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "9c9c7bbd71c78d8e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8fadd3c4294a6939",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 990,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "540882a95f65754c",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "0d96945ec7d069cb",
+        "name": "Save Hash Value",
+        "func": "msg.hash.value = msg.payload;\n\ndelete msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "8fadd3c4294a6939"
+            ]
+        ]
+    },
+    {
+        "id": "8c13bbcc86d93be8",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Hash: User-Questions-Filename",
+        "links": [],
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "858268a5d48a4486"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a35b8cc53c276d62",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "",
+        "links": [
+            "43eebf1623f29074"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "0f2ff2f433d17eef"
+            ]
+        ]
+    },
+    {
+        "id": "858268a5d48a4486",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Build: Hash Details",
+        "func": "msg.hash = {};\nmsg.hash.string = msg.user;\nmsg.hash.type = 'sha256';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "a35b8cc53c276d62"
+            ]
+        ]
+    },
+    {
+        "id": "998b007182d85455",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 930,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "0f2ff2f433d17eef",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bcd2727d77a80ce3",
+        "name": "Build: Hash Details",
+        "func": "msg.filename = msg.hash.value + '.json'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 360,
+        "wires": [
+            [
+                "998b007182d85455"
+            ]
+        ]
+    },
+    {
+        "id": "804feccd90b3276c",
+        "type": "exec",
+        "z": "8179bf22c4c31682",
+        "g": "10a6c6b12749dda9",
+        "command": "bash -c \"tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6  ; echo -n\"",
+        "addpay": "random",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "1",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Generate random 6 char string",
+        "x": 550,
+        "y": 520,
+        "wires": [
+            [
+                "c4e40d6f6678bb55"
+            ],
+            [
+                "c4e40d6f6678bb55",
+                "e62119d30db09cce"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "869469819396a632",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "10a6c6b12749dda9",
+        "name": "Generate random 6 char string",
+        "links": [],
+        "x": 250,
+        "y": 520,
+        "wires": [
+            [
+                "804feccd90b3276c"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "c4e40d6f6678bb55",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "10a6c6b12749dda9",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 810,
+        "y": 500,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e62119d30db09cce",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "10a6c6b12749dda9",
+        "name": "STDERR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 540,
+        "wires": []
     }
 ]
