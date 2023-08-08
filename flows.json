@@ -40,6 +40,14 @@
         "env": []
     },
     {
+        "id": "4b5e055cd6b1e387",
+        "type": "tab",
+        "label": "Form Processing",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "8ad5fe68ad170e2d",
         "type": "group",
         "z": "42b9663b67dbd983",
@@ -295,6 +303,39 @@
         "y": 319,
         "w": 912,
         "h": 82
+    },
+    {
+        "id": "3b96ab15b1a54e33",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "name": "Save Password Reset Questions",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#ffff00"
+        },
+        "nodes": [
+            "bb8102ee0c070ff2",
+            "629b7df0515c7d83",
+            "a712f5e2056bbb1b",
+            "e9f50265154e4b83",
+            "1e3c2b23420d6e40",
+            "cee76f9f914dd0fa",
+            "fba98a197970c6ee",
+            "edf62fa2ca3cd812",
+            "5210f540af1eb2e5",
+            "96836f5a4c7c756c",
+            "6ec9911b7ad7d042",
+            "3f128f23d72e0492",
+            "7ce13238fa87d636",
+            "8b70b96b1f62a785",
+            "858fd2b2fac0f719"
+        ],
+        "x": 174,
+        "y": 119,
+        "w": 2312,
+        "h": 182
     },
     {
         "id": "5798e39cbc3730ae",
@@ -2026,6 +2067,317 @@
         "wires": [
             [
                 "998b007182d85455"
+            ]
+        ]
+    },
+    {
+        "id": "bb8102ee0c070ff2",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Process: Password Reset Questions",
+        "links": [
+            "9c92aaf02fee52b5"
+        ],
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "a712f5e2056bbb1b"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "629b7df0515c7d83",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "STDERR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a712f5e2056bbb1b",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Process Questions",
+        "func": "\nmsg.cleaned = \"cat <<EOF\\n\\n[\";\n\n// let keys = Object.keys(msg.http.form); \n// var values = msg.http.form\n\n// var exec = childProcess.exec;\n\n// function my_exec(command, callback) {\n//     var proc = exec(command, { shell: \"/bin/bash\" });\n\n//     var list = [];\n//     proc.stdout.setEncoding('utf8');\n\n//     proc.stdout.on('data', function (chunk) {\n//         list.push(chunk);\n//     });\n\n//     proc.stdout.on('end', function () {\n//         callback(list.join());\n//     });\n\n//     node.warn(`stderr: ${proc}`);\n// }\n\n\n// function sha256( value ) {\n//     var hash;\n//     //my_exec(\"echo - n '\" + value + \"' | openssl dgst - sha256 | awk '{print $2}'\", function (stdout) {\n//     //my_exec(\"echo - n 88\" + value + \"\", function (stdout) {\n//     my_exec(\"openssl --help\", function (stdout) {\n//         node.warn(`stdout: ${stdout}`);\n//         return String(stdout).replace(/\\s/g, '');\n//     })\n\n//     //return String(hash);\n// }\n\nfunction Sanitize( value ) {\n\n    value = String(value).toLowerCase();\n\n    var keep = \"abcdefghijklmnopqrstuvwxyz0123456789 \";\n    const allowed = new Set(keep.split(\"\"));\n\n    value = value\n        .split(\"\")\n        .filter(char => allowed.has(char))\n        .join(\"\");\n\n\n    return String(value);\n}\n\n\nfor (var i = 1; i < 4; i++) {\n\n    //let key = keys[i];\n\n    msg.cleaned += String(\n        '{\"question\": \"' + Sanitize(msg.http.form['q' + String(i)]) + \n        '\", \"answer\": \"$(echo -n ' + Sanitize(msg.http.form['a' + String(i)]).replace(' ', '') + ' | openssl dgst -sha256 | awk \\'{print $2}\\')\" }');\n\n    if( i < 3) {\n        msg.cleaned += String(',')\n    }\n\n}\n\nmsg.payload = msg.cleaned + \"]\\n\\nEOF\";\n\ndelete msg.cleaned;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "childProcess",
+                "module": "child_process"
+            }
+        ],
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "e9f50265154e4b83"
+            ]
+        ]
+    },
+    {
+        "id": "e9f50265154e4b83",
+        "type": "exec",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Expand bash variables",
+        "x": 800,
+        "y": 240,
+        "wires": [
+            [
+                "1e3c2b23420d6e40"
+            ],
+            [],
+            [
+                "629b7df0515c7d83"
+            ]
+        ]
+    },
+    {
+        "id": "1e3c2b23420d6e40",
+        "type": "json",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 1010,
+        "y": 200,
+        "wires": [
+            [
+                "fba98a197970c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "cee76f9f914dd0fa",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Response message",
+        "func": "msg.payload = 'Your Password Questions have been saved';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2180,
+        "y": 200,
+        "wires": [
+            [
+                "96836f5a4c7c756c",
+                "8b70b96b1f62a785"
+            ]
+        ]
+    },
+    {
+        "id": "fba98a197970c6ee",
+        "type": "json",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1110,
+        "y": 200,
+        "wires": [
+            [
+                "6ec9911b7ad7d042"
+            ]
+        ]
+    },
+    {
+        "id": "edf62fa2ca3cd812",
+        "type": "file",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Save Questions",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1880,
+        "y": 200,
+        "wires": [
+            [
+                "5210f540af1eb2e5"
+            ]
+        ]
+    },
+    {
+        "id": "5210f540af1eb2e5",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Cleanup",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "rc",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2020,
+        "y": 200,
+        "wires": [
+            [
+                "cee76f9f914dd0fa"
+            ]
+        ]
+    },
+    {
+        "id": "96836f5a4c7c756c",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "HTTP Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 2360,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "6ec9911b7ad7d042",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Fetch: User Name",
+        "func": "msg.user = 'john.smith';\nmsg.file_contents = msg.payload;\n\n//msg.payload = 'echo -n $(echo -n ' + msg.user + '| sha256sum) | awk \\'{print $1 }\\'';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 200,
+        "wires": [
+            [
+                "3f128f23d72e0492",
+                "7ce13238fa87d636"
+            ]
+        ]
+    },
+    {
+        "id": "3f128f23d72e0492",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "",
+        "links": [
+            "8c13bbcc86d93be8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1470,
+        "y": 200,
+        "wires": [
+            [
+                "858fd2b2fac0f719"
+            ]
+        ]
+    },
+    {
+        "id": "7ce13238fa87d636",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Fetch: UserName",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8b70b96b1f62a785",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "debug 94",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2380,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "858fd2b2fac0f719",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b96ab15b1a54e33",
+        "name": "Prepare File Content",
+        "rules": [
+            {
+                "t": "move",
+                "p": "file_contents",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 200,
+        "wires": [
+            [
+                "edf62fa2ca3cd812"
             ]
         ]
     }
