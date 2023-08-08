@@ -377,78 +377,9 @@
         ],
         "x": 94,
         "y": 639,
-        "w": 1238,
-        "h": 454
-    },
-    {
-        "id": "c41dc5b999e5cc21",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "Search LDAP for user",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#dbcbe7",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "311e184a2397eb19",
-            "faa5e7380a3092a2",
-            "fe1f0a50300d9224",
-            "b10e8a45ff44f80d",
-            "0308c42b587c3794",
-            "04818ddd8782b0a1"
-        ],
-        "x": 494,
-        "y": 379,
-        "w": 1032,
-        "h": 122
-    },
-    {
-        "id": "aea0a3398dafab4c",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "Invalid User Response",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "72721ec69edf230f",
-            "8eca6e69b809790c"
-        ],
-        "x": 2014,
-        "y": 859,
-        "w": 512,
-        "h": 82
-    },
-    {
-        "id": "9858d84dc9d001be",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "9b1493c4ae19a935",
-        "name": "GLPI",
-        "style": {
-            "fill": "#d1d1d1",
-            "label": true
-        },
-        "nodes": [
-            "160bc27f7530e52d",
-            "269cbacf5274d6d8",
-            "4cdb1540cd4c8744",
-            "0676d69c05236349",
-            "edbb6827a8b33085",
-            "f9d8741c4385a7eb",
-            "ed0645c12f7435b2"
-        ],
-        "x": 154,
-        "y": 819,
-        "w": 1152,
-        "h": 248
+        "w": 4744,
+        "h": 834,
+        "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
         "id": "a9d52eb951c5f037",
@@ -462,155 +393,19 @@
             "color": "#ffff00"
         },
         "nodes": [
-            "c41dc5b999e5cc21",
             "aea0a3398dafab4c",
             "cdde8116fcac6e5d",
             "4cdbeaa8f5f3ddb7",
             "82ccba0e0a13970a",
-            "20eb97dd0c088b3d",
-            "5e535ca826ad969c",
-            "d0dc259791aed430"
+            "d0dc259791aed430",
+            "d1b4f7ad9e8ea4f0",
+            "4cdebccc4a1f08ed",
+            "9926c0ba3f91aca8"
         ],
         "x": 134,
         "y": 353,
-        "w": 2592,
+        "w": 2732,
         "h": 614
-    },
-    {
-        "id": "82ccba0e0a13970a",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "Respond: Success",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#e3f3d3",
-            "label": true
-        },
-        "nodes": [
-            "b1bc2e62654b04e2",
-            "f125e4c474dd2e5c"
-        ],
-        "x": 2014,
-        "y": 759,
-        "w": 512,
-        "h": 82
-    },
-    {
-        "id": "20eb97dd0c088b3d",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "ITSM Search",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "4a4676456c27f256",
-            "a43bd1f944ef851c",
-            "eeb2b5a4e44d0c24",
-            "bc29c53d4ef04184",
-            "68628b6f32ec8b74",
-            "dbeedddce12963de",
-            "445623ba528e5df1",
-            "58d1108b52842808",
-            "f6fc2010d0af1e33"
-        ],
-        "x": 354,
-        "y": 519,
-        "w": 1392,
-        "h": 142
-    },
-    {
-        "id": "f9d8741c4385a7eb",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
-        "name": "Search for User",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "42f157ed01b737f4",
-            "33d710f97adb5298",
-            "6aac3151138c4af9"
-        ],
-        "x": 674,
-        "y": 859,
-        "w": 432,
-        "h": 82
-    },
-    {
-        "id": "ed0645c12f7435b2",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
-        "name": "Create a Ticket",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "d4de6eab89782579"
-        ],
-        "x": 674,
-        "y": 959,
-        "w": 152,
-        "h": 82
-    },
-    {
-        "id": "5e535ca826ad969c",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "ITSM: Create Ticket",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "8dd7c0779eac59f0",
-            "00066fdae59433b8",
-            "93434028042529b8",
-            "ad66e8c05ee9a664",
-            "dce8db9b841faf7f",
-            "1a29880acc851ff5",
-            "c242d58e6ae32d04"
-        ],
-        "x": 474,
-        "y": 679,
-        "w": 1092,
-        "h": 122
-    },
-    {
-        "id": "d0dc259791aed430",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "9090daaf8a5892b0",
-            "853e6c15b5317007",
-            "142f9ce43cb63dd7",
-            "c710ba5a1416cfd8",
-            "c66c2a0c3817433c",
-            "073709e754dd98a3",
-            "ec52cbc3aa0fec25",
-            "07ed8c85583c5a2e"
-        ],
-        "x": 214,
-        "y": 819,
-        "w": 1692,
-        "h": 122
     },
     {
         "id": "bbd929c437c592ea",
@@ -641,6 +436,140 @@
         "y": 1519,
         "w": 1932,
         "h": 522
+    },
+    {
+        "id": "8a2206d682028469",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Deveopment: Create Config File",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#b797cf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "e36b580c48d33ca0",
+            "497a482f9881a318",
+            "170b86b633c5ccd7",
+            "befac3bb99b2c2cc"
+        ],
+        "x": 1234,
+        "y": 339,
+        "w": 752,
+        "h": 82
+    },
+    {
+        "id": "b994fe21efb223a9",
+        "type": "group",
+        "z": "379c65a27117b46c",
+        "name": "Automagic: Read Config file",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#92d04f",
+            "label": true,
+            "color": "#ffff00"
+        },
+        "nodes": [
+            "c7ca92d48206b4b2",
+            "7df31641fc2fe59a",
+            "d109fc9821987d4f",
+            "e9127065159b9f0f",
+            "de01a4559aecf1c4"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "aea0a3398dafab4c",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "Invalid User Response",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "72721ec69edf230f",
+            "8eca6e69b809790c"
+        ],
+        "x": 2154,
+        "y": 859,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "9858d84dc9d001be",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "GLPI",
+        "style": {
+            "fill": "#d1d1d1",
+            "label": true
+        },
+        "nodes": [
+            "160bc27f7530e52d",
+            "4cdb1540cd4c8744",
+            "0676d69c05236349",
+            "edbb6827a8b33085",
+            "ed0645c12f7435b2",
+            "d7dbd3970c891c33"
+        ],
+        "x": 234,
+        "y": 813,
+        "w": 4578,
+        "h": 634
+    },
+    {
+        "id": "82ccba0e0a13970a",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "Respond: Success",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "b1bc2e62654b04e2",
+            "f125e4c474dd2e5c"
+        ],
+        "x": 2154,
+        "y": 759,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "d0dc259791aed430",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "9090daaf8a5892b0",
+            "853e6c15b5317007",
+            "142f9ce43cb63dd7",
+            "c710ba5a1416cfd8",
+            "073709e754dd98a3",
+            "ec52cbc3aa0fec25",
+            "13711f1826f83198"
+        ],
+        "x": 514,
+        "y": 819,
+        "w": 1432,
+        "h": 122
     },
     {
         "id": "95c7670ef9039295",
@@ -719,48 +648,238 @@
         "h": 82
     },
     {
-        "id": "8a2206d682028469",
+        "id": "d1b4f7ad9e8ea4f0",
         "type": "group",
-        "z": "42b9663b67dbd983",
-        "name": "Deveopment: Create Config File",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "ITSM: Create Ticket",
         "style": {
-            "stroke": "#0070c0",
-            "fill": "#b797cf",
-            "label": true,
-            "color": "#000000"
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true
         },
         "nodes": [
-            "e36b580c48d33ca0",
-            "497a482f9881a318",
-            "170b86b633c5ccd7",
-            "befac3bb99b2c2cc"
+            "8dd7c0779eac59f0",
+            "00066fdae59433b8",
+            "93434028042529b8",
+            "ad66e8c05ee9a664",
+            "dce8db9b841faf7f",
+            "1a29880acc851ff5"
         ],
-        "x": 1234,
-        "y": 339,
-        "w": 752,
+        "x": 774,
+        "y": 679,
+        "w": 912,
+        "h": 122
+    },
+    {
+        "id": "ed0645c12f7435b2",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Create a Ticket",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "d4de6eab89782579",
+            "d20869bcacd7b0fd",
+            "525cc01f4d41ae0b",
+            "45d7aa8b4b386bb7",
+            "2663cccd5d6ca575",
+            "6492bc8146326691",
+            "e363219f4309eedb",
+            "c6c64453fc61e50f",
+            "5eda003868c5e354",
+            "d59d4248cc68349c",
+            "2545718f1853e084",
+            "1840577fd414a84d",
+            "cffce1b60cc14e8b",
+            "ed5a0fab59b28faa",
+            "85fa24886e126df7",
+            "246331e1c052e1f8",
+            "e8f257b38aa4d749",
+            "f57f557a25d166b7",
+            "aa5626527a9df701",
+            "5a961504d7ca5be3"
+        ],
+        "x": 754,
+        "y": 1048,
+        "w": 4032,
+        "h": 373
+    },
+    {
+        "id": "d7dbd3970c891c33",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Search for User",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "669724fdc876385d",
+            "65c3e138bbcd8b3a",
+            "269cbacf5274d6d8",
+            "42f157ed01b737f4",
+            "33d710f97adb5298",
+            "6aac3151138c4af9",
+            "587b497ce06d683f",
+            "f76da20ac475cf64",
+            "a9cfd4c1413c7ec6",
+            "a888a2ed9a053acc"
+        ],
+        "x": 754,
+        "y": 839,
+        "w": 1412,
+        "h": 182
+    },
+    {
+        "id": "85fa24886e126df7",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Ticket Solution",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "40208ed719417cac",
+            "803a8b65fc7a5087",
+            "96766518a046855d",
+            "242b471ad711a4f1",
+            "1305e2f195ec5ede",
+            "285f57c0fee687a1"
+        ],
+        "x": 2234,
+        "y": 1259,
+        "w": 1472,
         "h": 82
     },
     {
-        "id": "b994fe21efb223a9",
+        "id": "4cdebccc4a1f08ed",
         "type": "group",
-        "z": "379c65a27117b46c",
-        "name": "Automagic: Read Config file",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "Search LDAP for user",
         "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#92d04f",
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
             "label": true,
-            "color": "#ffff00"
+            "color": "#777777"
         },
         "nodes": [
-            "c7ca92d48206b4b2",
-            "7df31641fc2fe59a",
-            "d109fc9821987d4f",
-            "e9127065159b9f0f",
-            "de01a4559aecf1c4"
+            "c66c2a0c3817433c",
+            "c08e353c85cde934",
+            "311e184a2397eb19",
+            "faa5e7380a3092a2",
+            "fe1f0a50300d9224",
+            "b10e8a45ff44f80d",
+            "0308c42b587c3794",
+            "04818ddd8782b0a1"
         ],
-        "x": 54,
-        "y": 39,
-        "w": 832,
+        "x": 454,
+        "y": 379,
+        "w": 1552,
+        "h": 122
+    },
+    {
+        "id": "9926c0ba3f91aca8",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "ITSM Search",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "07ed8c85583c5a2e",
+            "4a4676456c27f256",
+            "a43bd1f944ef851c",
+            "eeb2b5a4e44d0c24",
+            "bc29c53d4ef04184",
+            "68628b6f32ec8b74",
+            "dbeedddce12963de",
+            "445623ba528e5df1",
+            "58d1108b52842808",
+            "f6fc2010d0af1e33"
+        ],
+        "x": 514,
+        "y": 519,
+        "w": 1452,
+        "h": 142
+    },
+    {
+        "id": "aa5626527a9df701",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Ticket Task",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "ab36781dcfc9dd94",
+            "351440700b3e2ecc",
+            "f17ccfa845461657"
+        ],
+        "x": 2228,
+        "y": 1074,
+        "w": 2204,
+        "h": 153
+    },
+    {
+        "id": "351440700b3e2ecc",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "aa5626527a9df701",
+        "name": "Create",
+        "style": {
+            "stroke": "#001f60",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "fb6750555645b873",
+            "e0660324da4581dd"
+        ],
+        "x": 2254,
+        "y": 1119,
+        "w": 492,
+        "h": 82
+    },
+    {
+        "id": "f17ccfa845461657",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "aa5626527a9df701",
+        "name": "Update",
+        "style": {
+            "stroke": "#001f60",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "eacbafc05d06b95a",
+            "76cd564b69443419",
+            "ca1b9c48c3c0c522",
+            "d64e9c631ee7ec87",
+            "cafa50da13d9e5d9",
+            "c2f8e99492223cfb",
+            "fdf014eff1962329"
+        ],
+        "x": 2794,
+        "y": 1119,
+        "w": 1612,
         "h": 82
     },
     {
@@ -1118,6 +1237,97 @@
         ]
     },
     {
+        "id": "e363219f4309eedb",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "x": 2160,
+        "y": 1240,
+        "wires": [
+            [
+                "803a8b65fc7a5087"
+            ]
+        ]
+    },
+    {
+        "id": "2545718f1853e084",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "x": 2160,
+        "y": 1160,
+        "wires": [
+            [
+                "fb6750555645b873"
+            ]
+        ]
+    },
+    {
+        "id": "53b1c5bbed90265f",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 820,
+        "y": 1980,
+        "wires": [
+            [
+                "0bf3afb49b551d9c",
+                "ab69851f2d76cc5e"
+            ]
+        ]
+    },
+    {
+        "id": "ab69851f2d76cc5e",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 1060,
+        "y": 1980,
+        "wires": [
+            [
+                "ce93ad07095d87d3"
+            ]
+        ]
+    },
+    {
+        "id": "f57f557a25d166b7",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "x": 4480,
+        "y": 1340,
+        "wires": [
+            [
+                "5eda003868c5e354",
+                "e8f257b38aa4d749"
+            ]
+        ]
+    },
+    {
+        "id": "1840577fd414a84d",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "x": 2160,
+        "y": 1320,
+        "wires": [
+            [
+                "c6c64453fc61e50f"
+            ]
+        ]
+    },
+    {
+        "id": "c6c64453fc61e50f",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "x": 2260,
+        "y": 1360,
+        "wires": [
+            [
+                "5a961504d7ca5be3"
+            ]
+        ]
+    },
+    {
         "id": "160d0b5ed597dc51",
         "type": "ldap",
         "host": "ldap://ldap",
@@ -1424,7 +1634,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 3,
         "x": 740,
@@ -1861,7 +2071,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 550,
@@ -2949,7 +3159,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"developer_mode\": true,\n    \"html\": {\n        \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n        \"logo_width\": 282,\n        \"logo_height\": 90\n    },\n    \"http_path\": \"/mysite/\",\n    \"itsm\": {\n        \"create_ticket\": true,\n        \"platform\": \"glpi\",\n        \"search\": true,\n        \"ticket\": {\n            \"approval_required\": 0,\n            \"category\": 6,\n            \"entity\": 1,\n            \"requesttype_id\": 6,\n            \"task_category_id\": 6\n        }\n    },\n    \"user_data\": \"userdata/\"\n}",
+        "template": "{\n  \"developer_mode\": true,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/mysite/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"user_data\": \"userdata/\"\n}",
         "output": "json",
         "x": 1500,
         "y": 380,
@@ -3342,14 +3552,14 @@
         "id": "311e184a2397eb19",
         "type": "ldap-search in",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "4cdebccc4a1f08ed",
         "name": "Find LDAP User",
         "ldap": "160d0b5ed597dc51",
         "baseDn": "dc=nww",
         "searchScope": "sub",
         "filter": "",
         "attributes": "dn,cn,givenName,sn,uid,mail",
-        "x": 840,
+        "x": 800,
         "y": 440,
         "wires": [
             [
@@ -3361,7 +3571,7 @@
         "id": "faa5e7380a3092a2",
         "type": "template",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "4cdebccc4a1f08ed",
         "name": "Create LDAP Search Filter",
         "field": "filter",
         "fieldType": "msg",
@@ -3369,7 +3579,7 @@
         "syntax": "mustache",
         "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
         "output": "str",
-        "x": 640,
+        "x": 600,
         "y": 440,
         "wires": [
             [
@@ -3381,7 +3591,7 @@
         "id": "fe1f0a50300d9224",
         "type": "switch",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "4cdebccc4a1f08ed",
         "name": "User Found",
         "property": "$count(msg.payload)",
         "propertyType": "jsonata",
@@ -3398,11 +3608,10 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 990,
+        "x": 950,
         "y": 440,
         "wires": [
             [
-                "5fd67e7434f3fcd1",
                 "04818ddd8782b0a1"
             ],
             [
@@ -3414,13 +3623,13 @@
         "id": "b10e8a45ff44f80d",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "4cdebccc4a1f08ed",
         "name": "LDAP: User Found",
         "mode": "link",
         "links": [
             "4a4676456c27f256"
         ],
-        "x": 1410,
+        "x": 1890,
         "y": 420,
         "wires": [],
         "l": true
@@ -3429,13 +3638,13 @@
         "id": "0308c42b587c3794",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "4cdebccc4a1f08ed",
         "name": "Response: Invalid User",
         "mode": "link",
         "links": [
             "72721ec69edf230f"
         ],
-        "x": 1210,
+        "x": 1170,
         "y": 460,
         "wires": [],
         "l": true
@@ -3468,7 +3677,7 @@
             "0308c42b587c3794",
             "58d1108b52842808"
         ],
-        "x": 2140,
+        "x": 2280,
         "y": 900,
         "wires": [
             [
@@ -3489,7 +3698,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2380,
+        "x": 2520,
         "y": 900,
         "wires": [
             [
@@ -3507,7 +3716,7 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 2640,
+        "x": 2780,
         "y": 800,
         "wires": [],
         "l": true
@@ -3516,12 +3725,12 @@
         "id": "4a4676456c27f256",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "ITSM: Search for User",
         "links": [
             "b10e8a45ff44f80d"
         ],
-        "x": 480,
+        "x": 640,
         "y": 600,
         "wires": [
             [
@@ -3534,7 +3743,7 @@
         "id": "a43bd1f944ef851c",
         "type": "switch",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "Conduct ITSM Search?",
         "property": "config.itsm.search",
         "propertyType": "global",
@@ -3546,10 +3755,10 @@
                 "t": "false"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 690,
+        "x": 850,
         "y": 600,
         "wires": [
             [
@@ -3564,14 +3773,14 @@
         "id": "eeb2b5a4e44d0c24",
         "type": "link call",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "",
         "links": [
             "b8c9f1cf125efd2e"
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1130,
+        "x": 1290,
         "y": 580,
         "wires": [
             [
@@ -3580,27 +3789,10 @@
         ]
     },
     {
-        "id": "5fd67e7434f3fcd1",
-        "type": "debug",
-        "z": "4b5e055cd6b1e387",
-        "name": "debug 96",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1400,
-        "y": 320,
-        "wires": []
-    },
-    {
         "id": "04818ddd8782b0a1",
         "type": "change",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "4cdebccc4a1f08ed",
         "name": "",
         "rules": [
             {
@@ -3616,11 +3808,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1200,
+        "x": 1160,
         "y": 420,
         "wires": [
             [
-                "b10e8a45ff44f80d"
+                "c66c2a0c3817433c"
             ]
         ]
     },
@@ -3628,7 +3820,7 @@
         "id": "bc29c53d4ef04184",
         "type": "template",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "ITSM User SearchData",
         "field": "payload",
         "fieldType": "msg",
@@ -3636,7 +3828,7 @@
         "syntax": "mustache",
         "template": "{\n    \"data\": {\n        \"givenName\": \"{{ ldap.givenName }}\",\n        \"sn\": \"{{ ldap.sn }}\",\n        \"uid\": \"{{ ldap.uid }}\"\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}",
         "output": "json",
-        "x": 970,
+        "x": 1130,
         "y": 580,
         "wires": [
             [
@@ -3656,7 +3848,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2380,
+        "x": 2520,
         "y": 800,
         "wires": [
             [
@@ -3673,7 +3865,7 @@
         "links": [
             "07ed8c85583c5a2e"
         ],
-        "x": 2130,
+        "x": 2270,
         "y": 800,
         "wires": [
             [
@@ -3686,14 +3878,14 @@
         "id": "68628b6f32ec8b74",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "LDAP: User Found",
         "mode": "link",
         "links": [
             "1a29880acc851ff5"
         ],
-        "x": 1630,
-        "y": 560,
+        "x": 1850,
+        "y": 600,
         "wires": [],
         "l": true
     },
@@ -3701,13 +3893,13 @@
         "id": "dbeedddce12963de",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "Continue",
         "mode": "link",
         "links": [
-            "1a29880acc851ff5"
+            "073709e754dd98a3"
         ],
-        "x": 920,
+        "x": 1080,
         "y": 620,
         "wires": [],
         "l": true
@@ -3716,13 +3908,12 @@
         "id": "1a29880acc851ff5",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
+        "g": "d1b4f7ad9e8ea4f0",
         "name": "ITSM: Create Ticket",
         "links": [
-            "dbeedddce12963de",
             "68628b6f32ec8b74"
         ],
-        "x": 590,
+        "x": 890,
         "y": 740,
         "wires": [
             [
@@ -3735,7 +3926,7 @@
         "id": "dce8db9b841faf7f",
         "type": "switch",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
+        "g": "d1b4f7ad9e8ea4f0",
         "name": "Create Ticket?",
         "property": "config.itsm.create_ticket",
         "propertyType": "global",
@@ -3747,10 +3938,10 @@
                 "t": "false"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 760,
+        "x": 1060,
         "y": 740,
         "wires": [
             [
@@ -3765,13 +3956,13 @@
         "id": "ad66e8c05ee9a664",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
+        "g": "d1b4f7ad9e8ea4f0",
         "name": "Continue",
         "mode": "link",
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 940,
+        "x": 1240,
         "y": 760,
         "wires": [],
         "l": true
@@ -3780,15 +3971,15 @@
         "id": "93434028042529b8",
         "type": "template",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
+        "g": "d1b4f7ad9e8ea4f0",
         "name": "ITSM Ticket Data",
         "field": "payload",
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"data\": {\n        \"task\": {\n            \"body\": {\n                \"name\": \"LDAP Password Reset\",\n                \"human_task_duration\": {{ global.config.itsm.human_task_duration_time }},\n                \"platform\": \"NodeRed\",\n                \"details\": {\n                    \"url\": \"{{{ req.url }}}\",\n                    \"client_address\": \"{{{ req.connection.remoteAddress }}}\",\n                    \"request_method\": \"{{{ req.method }}}\"\n                },\n                \"form\": {\n                    \"fname\": \"{{{ msg.http.form.givenName }}}\",\n                    \"lname\": \"{{{ msg.http.form.sn }}}\",\n                    \"mail\": \"{{{ msg.http.form.mail }}}\",\n                    \"username\": \"{{{ msg.http.form.uid }}}\"\n                }\n            },\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": {{ global.config.ticket.approval_required }},\n            \"category_id\": {{ global.config.ticket.category_id }},\n            \"entity_id\": {{ global.config.ticket.entity_id }},\n            \"requester_id\": {{ itsm.user.id }},\n            \"requesttype_id\":{{ global.config.ticket.requesttype_id }}\n            \"task_category_id\": {{ global.config.ticket.task_category_id }}\n        }\n        \n    },\n    \"platform\": \"{{ global.config.itsm.platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n\n{\n    \"requesttypes_id\": 6,\n    \"Automation\": {\n        \"name\": \"LDAP Password Reset\",\n        \"platform\": \"NodeRed\",\n        \"details\": {\n            \"url\": \"{{{ req.url }}}\",\n            \"client_address\": \"{{{ req.connection.remoteAddress }}}\",\n            \"request_method\": \"{{{ req.method }}}\"\n        }\n    },\n    \"approval_required\": 0,\n    \"name\": \"\",\n    \"ticket_category\": 6,\n    \"ticket_entity\": 1,\n    \"requester_id\": {\n        { glpi_user.id\n        }\n    }\n}",
+        "template": "{\n    \"data\": {\n        \"task\": {\n            \"body\": {\n                \"name\": \"LDAP Password Reset\",\n                \"human_task_duration\": {{ global.config.itsm.human_task_duration_time }},\n                \"platform\": \"NodeRed\",\n                \"details\": {\n                    \"url\": \"{{{ req.url }}}\",\n                    \"client_address\": \"{{{ req.connection.remoteAddress }}}\",\n                    \"request_method\": \"{{{ req.method }}}\"\n                },\n                \"form\": {\n                    \"fname\": \"{{{ http.form.givenName }}}\",\n                    \"lname\": \"{{{ http.form.sn }}}\",\n                    \"mail\": \"{{{ http.form.mail }}}\",\n                    \"username\": \"{{{ http.form.uid }}}\"\n                }\n            },\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": {{ global.config.itsm.ticket.approval_required }},\n            \"category_id\": {{ global.config.itsm.ticket.category_id }},\n            \"entity_id\": {{ global.config.itsm.ticket.entity_id }},\n            \"requester_id\": {{ itsm.user.id }},\n            \"requesttype_id\":{{ global.config.itsm.ticket.requesttype_id }},\n            \"task_category_id\": {{ global.config.itsm.ticket.task_category_id }}\n        }\n        \n    },\n    \"platform\": \"{{ global.config.itsm.platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n",
         "output": "json",
-        "x": 970,
+        "x": 1270,
         "y": 720,
         "wires": [
             [
@@ -3800,13 +3991,13 @@
         "id": "8dd7c0779eac59f0",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
+        "g": "d1b4f7ad9e8ea4f0",
         "name": "Ticket Created",
         "mode": "link",
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1460,
+        "x": 1580,
         "y": 720,
         "wires": [],
         "l": true
@@ -3815,18 +4006,18 @@
         "id": "00066fdae59433b8",
         "type": "link call",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
+        "g": "d1b4f7ad9e8ea4f0",
         "name": "",
         "links": [
             "b8c9f1cf125efd2e"
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1150,
+        "x": 1450,
         "y": 720,
         "wires": [
             [
-                "c242d58e6ae32d04"
+                "8dd7c0779eac59f0"
             ]
         ]
     },
@@ -3834,7 +4025,7 @@
         "id": "445623ba528e5df1",
         "type": "switch",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "Found User",
         "property": "payload",
         "propertyType": "msg",
@@ -3848,10 +4039,10 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1250,
+        "x": 1410,
         "y": 580,
         "wires": [
             [
@@ -3866,14 +4057,14 @@
         "id": "58d1108b52842808",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "Response: Invalid User",
         "mode": "link",
         "links": [
             "72721ec69edf230f"
         ],
-        "x": 1470,
-        "y": 600,
+        "x": 1630,
+        "y": 620,
         "wires": [],
         "l": true
     },
@@ -3881,7 +4072,7 @@
         "id": "f6fc2010d0af1e33",
         "type": "change",
         "z": "4b5e055cd6b1e387",
-        "g": "20eb97dd0c088b3d",
+        "g": "9926c0ba3f91aca8",
         "name": "Store User Data",
         "rules": [
             {
@@ -3897,11 +4088,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1440,
+        "x": 1600,
         "y": 560,
         "wires": [
             [
-                "68628b6f32ec8b74"
+                "68628b6f32ec8b74",
+                "07ed8c85583c5a2e"
             ]
         ]
     },
@@ -3916,7 +4108,7 @@
         "dn": "",
         "attribute": "userPassword",
         "value": "",
-        "x": 1350,
+        "x": 1390,
         "y": 880,
         "wires": [
             [
@@ -3932,13 +4124,14 @@
         "name": "LDAP: Update Password",
         "links": [
             "8dd7c0779eac59f0",
-            "ad66e8c05ee9a664"
+            "ad66e8c05ee9a664",
+            "dbeedddce12963de"
         ],
-        "x": 350,
+        "x": 650,
         "y": 880,
         "wires": [
             [
-                "c66c2a0c3817433c"
+                "c710ba5a1416cfd8"
             ]
         ],
         "l": true
@@ -3954,7 +4147,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1080,
+        "x": 1120,
         "y": 880,
         "wires": [
             [
@@ -3966,18 +4159,18 @@
         "id": "c66c2a0c3817433c",
         "type": "link call",
         "z": "4b5e055cd6b1e387",
-        "g": "d0dc259791aed430",
+        "g": "4cdebccc4a1f08ed",
         "name": "Fetch Second half of password",
         "links": [
             "869469819396a632"
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 590,
-        "y": 880,
+        "x": 1430,
+        "y": 420,
         "wires": [
             [
-                "c710ba5a1416cfd8"
+                "c08e353c85cde934"
             ]
         ]
     },
@@ -4008,7 +4201,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
+        "x": 850,
         "y": 880,
         "wires": [
             [
@@ -4030,7 +4223,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
+        "x": 1810,
         "y": 900,
         "wires": []
     },
@@ -4050,14 +4243,14 @@
                 "t": "false"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1530,
+        "x": 1570,
         "y": 880,
         "wires": [
             [
-                "07ed8c85583c5a2e"
+                "13711f1826f83198"
             ],
             [
                 "ec52cbc3aa0fec25"
@@ -4065,17 +4258,32 @@
         ]
     },
     {
-        "id": "c242d58e6ae32d04",
+        "id": "07ed8c85583c5a2e",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "9926c0ba3f91aca8",
+        "name": "Respond to User",
+        "mode": "link",
+        "links": [
+            "f125e4c474dd2e5c"
+        ],
+        "x": 1850,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c08e353c85cde934",
         "type": "change",
         "z": "4b5e055cd6b1e387",
-        "g": "5e535ca826ad969c",
-        "name": "Store Ticket Data",
+        "g": "4cdebccc4a1f08ed",
+        "name": "msg.password_second_half",
         "rules": [
             {
                 "t": "move",
                 "p": "payload",
                 "pt": "msg",
-                "to": "itsm.ticket",
+                "to": "password_second_half",
                 "tot": "msg"
             }
         ],
@@ -4084,28 +4292,31 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 720,
+        "x": 1680,
+        "y": 420,
         "wires": [
             [
-                "8dd7c0779eac59f0"
+                "b10e8a45ff44f80d"
             ]
         ]
     },
     {
-        "id": "07ed8c85583c5a2e",
-        "type": "link out",
+        "id": "13711f1826f83198",
+        "type": "debug",
         "z": "4b5e055cd6b1e387",
         "g": "d0dc259791aed430",
-        "name": "Respond to User",
-        "mode": "link",
-        "links": [
-            "f125e4c474dd2e5c"
-        ],
-        "x": 1790,
+        "name": "LDAP Success",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1820,
         "y": 860,
-        "wires": [],
-        "l": true
+        "wires": []
     },
     {
         "id": "0eeaba70b043a226",
@@ -4364,7 +4575,7 @@
         "id": "33d710f97adb5298",
         "type": "http request",
         "z": "8179bf22c4c31682",
-        "g": "f9d8741c4385a7eb",
+        "g": "d7dbd3970c891c33",
         "name": "User ITSM Search",
         "method": "GET",
         "ret": "txt",
@@ -4384,28 +4595,26 @@
                 "valueValue": ""
             }
         ],
-        "x": 890,
-        "y": 900,
+        "x": 990,
+        "y": 880,
         "wires": [
-            [
-                "6aac3151138c4af9"
-            ]
+            []
         ]
     },
     {
         "id": "6aac3151138c4af9",
         "type": "json",
         "z": "8179bf22c4c31682",
-        "g": "f9d8741c4385a7eb",
+        "g": "d7dbd3970c891c33",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1030,
-        "y": 900,
+        "x": 1750,
+        "y": 980,
         "wires": [
             [
-                "269cbacf5274d6d8"
+                "a888a2ed9a053acc"
             ]
         ]
     },
@@ -4443,7 +4652,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 360,
@@ -4496,8 +4705,8 @@
         "g": "9858d84dc9d001be",
         "name": "GLPI",
         "links": [],
-        "x": 230,
-        "y": 880,
+        "x": 310,
+        "y": 960,
         "wires": [
             [
                 "4cdb1540cd4c8744"
@@ -4509,12 +4718,12 @@
         "id": "269cbacf5274d6d8",
         "type": "link out",
         "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
+        "g": "d7dbd3970c891c33",
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 1230,
-        "y": 1020,
+        "x": 2090,
+        "y": 980,
         "wires": [],
         "l": true
     },
@@ -4540,7 +4749,7 @@
         "id": "42f157ed01b737f4",
         "type": "change",
         "z": "8179bf22c4c31682",
-        "g": "f9d8741c4385a7eb",
+        "g": "d7dbd3970c891c33",
         "name": "User",
         "rules": [
             {
@@ -4563,11 +4772,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 750,
-        "y": 900,
+        "x": 830,
+        "y": 980,
         "wires": [
             [
-                "33d710f97adb5298"
+                "a9cfd4c1413c7ec6"
             ]
         ]
     },
@@ -4597,8 +4806,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 350,
-        "y": 880,
+        "x": 430,
+        "y": 960,
         "wires": [
             [
                 "0676d69c05236349"
@@ -4627,11 +4836,11 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 560,
-        "y": 860,
+        "x": 640,
+        "y": 940,
         "wires": [
             [
                 "42f157ed01b737f4"
@@ -4657,11 +4866,11 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 960,
+        "x": 630,
+        "y": 1040,
         "wires": [
             [
                 "d4de6eab89782579"
@@ -4675,52 +4884,19 @@
         "z": "8179bf22c4c31682",
         "g": "ed0645c12f7435b2",
         "name": "Ticket",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.data",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "url",
-                "pt": "msg",
-                "to": "http://nodered:1880/api/ticket",
-                "tot": "str"
-            }
-        ],
+        "rules": [],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 750,
-        "y": 1000,
+        "x": 830,
+        "y": 1100,
         "wires": [
             [
-                "269cbacf5274d6d8",
-                "6de60d145e2e49f5"
+                "246331e1c052e1f8"
             ]
         ]
-    },
-    {
-        "id": "6de60d145e2e49f5",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "name": "debug 98",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 1140,
-        "wires": []
     },
     {
         "id": "c6c63174053774b7",
@@ -4741,8 +4917,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 1380,
+        "x": 1620,
+        "y": 360,
         "wires": [
             [
                 "0a8a08fff2cf8bc6",
@@ -4763,8 +4939,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1340,
+        "x": 1800,
+        "y": 320,
         "wires": []
     },
     {
@@ -4779,8 +4955,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Generate LDAP Password String",
-        "x": 820,
-        "y": 1380,
+        "x": 1880,
+        "y": 360,
         "wires": [
             [
                 "0041766d05e6184c",
@@ -4808,8 +4984,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1300,
+        "x": 2160,
+        "y": 280,
         "wires": []
     },
     {
@@ -4825,8 +5001,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1420,
+        "x": 2160,
+        "y": 400,
         "wires": []
     },
     {
@@ -4842,8 +5018,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1460,
+        "x": 2160,
+        "y": 440,
         "wires": []
     },
     {
@@ -4852,8 +5028,8 @@
         "z": "8179bf22c4c31682",
         "name": "LDAP Password String {sha256}",
         "links": [],
-        "x": 350,
-        "y": 1380,
+        "x": 1410,
+        "y": 360,
         "wires": [
             [
                 "c6c63174053774b7"
@@ -4868,8 +5044,8 @@
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 1090,
-        "y": 1360,
+        "x": 2150,
+        "y": 340,
         "wires": [],
         "l": true
     },
@@ -4990,7 +5166,7 @@
                 "t": "false"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 1080,
@@ -5392,6 +5568,749 @@
             ]
         ],
         "l": true
+    },
+    {
+        "id": "d20869bcacd7b0fd",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "",
+        "links": [
+            "aa3f79a3aae107ec"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1510,
+        "y": 1100,
+        "wires": [
+            [
+                "6492bc8146326691"
+            ]
+        ]
+    },
+    {
+        "id": "525cc01f4d41ae0b",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "GLPI: Build Data",
+        "field": "form",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n  \"approval_required\": {{ payload.data.ticket.approval_required }},\n  \"data\": {\n    {{ payload.data }}\n  },\n  \"name\": \"\",\n  \"requester_id\": {{ itsm.user.id }},\n  \"requesttypes_id\": {{ payload.data.ticket.requesttype_id }},\n  \"ticket_category\": {{ payload.data.ticket.category_id }},\n  \"ticket_entity\": {{ payload.data.ticket.entity_id }}\n}\n",
+        "output": "str",
+        "x": 910,
+        "y": 1240,
+        "wires": [
+            [
+                "2663cccd5d6ca575"
+            ]
+        ]
+    },
+    {
+        "id": "45d7aa8b4b386bb7",
+        "type": "json",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "",
+        "property": "form",
+        "action": "obj",
+        "pretty": false,
+        "x": 1110,
+        "y": 1220,
+        "wires": [
+            [
+                "2663cccd5d6ca575"
+            ]
+        ]
+    },
+    {
+        "id": "6492bc8146326691",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Route Ticket Packets",
+        "property": "glpi.msg_routing",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ticket_task_creation_automation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ticket_creation",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 1960,
+        "y": 1100,
+        "wires": [
+            [
+                "2545718f1853e084"
+            ],
+            [
+                "e363219f4309eedb"
+            ],
+            [
+                "1840577fd414a84d"
+            ]
+        ]
+    },
+    {
+        "id": "803a8b65fc7a5087",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "85fa24886e126df7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "itsm_ticket",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "POST",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2340,
+        "y": 1300,
+        "wires": [
+            [
+                "96766518a046855d"
+            ]
+        ]
+    },
+    {
+        "id": "2663cccd5d6ca575",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Multi-Message Check",
+        "func": "\nmsg.config = global.get('config');\n\nif ( global.get('config.itsm.create_ticket_task') ) {\n\n    msg.parts = String('{ \"id\": \"ticket_creation\", \"count\": 2 }');\n    msg.parts = JSON.parse(msg.parts);\n\n}else{\n\n    msg.parts = String('{ \"id\": \"ticket_creation\", \"count\": 1 }');\n    msg.parts = JSON.parse(msg.parts);\n\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 1100,
+        "wires": [
+            [
+                "d20869bcacd7b0fd"
+            ]
+        ]
+    },
+    {
+        "id": "553c6471a13c3a67",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 52",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2680,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "71cb9eac9872c9a9",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "name": "Password Changed",
+        "property": "ldapStatus.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2210,
+        "y": 1560,
+        "wires": [
+            [],
+            [
+                "f43efd743ef3e33e"
+            ]
+        ]
+    },
+    {
+        "id": "96766518a046855d",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "85fa24886e126df7",
+        "name": "Ticket Solution JSON Body",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n  \"input\": {\n    \"itemtype\": \"Ticket\",\n    \"items_id\": {{ itsm_ticket.id }},\n    \"content\": \"Your Password has been reset.\\n\\n the second half of your password is: {{ password_second_half }}\",\n    \"status\": 2\n  }\n}\n        ",
+        "output": "json",
+        "x": 2540,
+        "y": 1300,
+        "wires": [
+            [
+                "242b471ad711a4f1"
+            ]
+        ]
+    },
+    {
+        "id": "1305e2f195ec5ede",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "85fa24886e126df7",
+        "name": "GLPI Ticket Solution",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 3100,
+        "y": 1300,
+        "wires": [
+            [
+                "40208ed719417cac"
+            ]
+        ]
+    },
+    {
+        "id": "242b471ad711a4f1",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "85fa24886e126df7",
+        "name": "Create GLPI Solution URL",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{ global.config.itsm.api_url }}}Ticket/{{ itsm_ticket.id }}/ITILSolution/",
+        "output": "str",
+        "x": 2880,
+        "y": 1300,
+        "wires": [
+            [
+                "1305e2f195ec5ede"
+            ]
+        ]
+    },
+    {
+        "id": "285f57c0fee687a1",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "85fa24886e126df7",
+        "name": "Update Ticket Task Part 2/2",
+        "mode": "link",
+        "links": [
+            "c2f8e99492223cfb"
+        ],
+        "x": 3560,
+        "y": 1300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f43efd743ef3e33e",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "name": "Error: LDAP Password Change",
+        "mode": "link",
+        "links": [
+            "469a324c5a76451f"
+        ],
+        "x": 2490,
+        "y": 1600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5eda003868c5e354",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "GLPI: Ticket Complete",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4640,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "ed5a0fab59b28faa",
+        "type": "comment",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "ToDo: On error Update ticket",
+        "info": "",
+        "x": 4600,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "40208ed719417cac",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "85fa24886e126df7",
+        "name": "Save Ticket Solution",
+        "rules": [
+            {
+                "t": "set",
+                "p": "itsm_solution",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3340,
+        "y": 1300,
+        "wires": [
+            [
+                "285f57c0fee687a1"
+            ]
+        ]
+    },
+    {
+        "id": "246331e1c052e1f8",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "msg.form",
+        "func": "\n\nmsg.form = {\n  \"approval_required\": msg.payload.data.ticket.approval_required,\n  \"data\": msg.payload.data,\n  \"name\": \"\",\n  \"requester_id\": msg.itsm.user.id,\n  \"requesttypes_id\": msg.payload.data.ticket.requesttype_id,\n  \"ticket_category\": msg.payload.data.ticket.category_id,\n  \"ticket_entity\": msg.payload.data.ticket.entity_id\n}\n\nmsg.task_category = global.get('config.itsm.ticket.task_category_id');\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1100,
+        "wires": [
+            [
+                "2663cccd5d6ca575"
+            ]
+        ]
+    },
+    {
+        "id": "587b497ce06d683f",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "d7dbd3970c891c33",
+        "name": "GLPI User Search",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1610,
+        "y": 980,
+        "wires": [
+            [
+                "6aac3151138c4af9"
+            ]
+        ]
+    },
+    {
+        "id": "f76da20ac475cf64",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "d7dbd3970c891c33",
+        "name": "function 1",
+        "func": "msg.ldap = msg.payload[0];\ndelete msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9cfd4c1413c7ec6",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "d7dbd3970c891c33",
+        "name": "Globals",
+        "rules": [
+            {
+                "t": "set",
+                "p": "authorization",
+                "pt": "msg",
+                "to": "glpi.authorization",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "app_token",
+                "pt": "msg",
+                "to": "glpi.app_token",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "api_url",
+                "pt": "msg",
+                "to": "config.itsm.api_url",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 980,
+        "wires": [
+            [
+                "669724fdc876385d"
+            ]
+        ],
+        "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "669724fdc876385d",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "d7dbd3970c891c33",
+        "name": "Fetch GLPI Session",
+        "links": [
+            "e930fc18412ba052"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1200,
+        "y": 980,
+        "wires": [
+            [
+                "65c3e138bbcd8b3a"
+            ]
+        ]
+    },
+    {
+        "id": "65c3e138bbcd8b3a",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "d7dbd3970c891c33",
+        "name": "Create GLPI Search URL",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{ global.config.itsm.api_url }}}/User?searchText[name]={{ ldap.uid }}&searchText[firstname]={{ ldap.givenName }}&searchText[realname]={{ ldap.sn }}&searchText[sync_field]={{ ldap.uid }}",
+        "output": "str",
+        "x": 1410,
+        "y": 980,
+        "wires": [
+            [
+                "587b497ce06d683f"
+            ]
+        ]
+    },
+    {
+        "id": "a888a2ed9a053acc",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "d7dbd3970c891c33",
+        "name": "Search GLPI Results for user",
+        "func": "for( var i = 0; i < msg.payload.length; i++ ) {\n\n    if (\n        msg.payload[i].name == msg.ldap.uid\n          &&\n        msg.payload[i].firstname == msg.ldap.givenName\n          &&\n        msg.payload[i].realname == msg.ldap.sn\n          &&\n        msg.payload[i].user_dn == msg.ldap.dn\n          &&\n        msg.payload[i].sync_field == msg.ldap.uid\n          &&\n        Number(msg.payload[i].is_deleted) == 0\n          &&\n        Number(msg.payload[i].is_deleted_ldap) == 0\n    ){\n    \n        msg.user = msg.payload[i];\n    \n    }\n}\n\ndelete msg.payload;\n\nmsg.payload = msg.user;\ndelete msg.user;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1920,
+        "y": 980,
+        "wires": [
+            [
+                "269cbacf5274d6d8"
+            ]
+        ]
+    },
+    {
+        "id": "e8f257b38aa4d749",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 4590,
+        "y": 1340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "fb6750555645b873",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "351440700b3e2ecc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "itsm_task",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2360,
+        "y": 1160,
+        "wires": [
+            [
+                "e0660324da4581dd"
+            ]
+        ]
+    },
+    {
+        "id": "e0660324da4581dd",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "351440700b3e2ecc",
+        "name": "Update Ticket Task Part 1/2",
+        "mode": "link",
+        "links": [
+            "c2f8e99492223cfb"
+        ],
+        "x": 2600,
+        "y": 1160,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "eacbafc05d06b95a",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "GLPI: Automation Task Duration",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 4250,
+        "y": 1160,
+        "wires": [
+            [
+                "f57f557a25d166b7"
+            ]
+        ]
+    },
+    {
+        "id": "76cd564b69443419",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "msg.method",
+        "rules": [
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "PUT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4030,
+        "y": 1160,
+        "wires": [
+            [
+                "eacbafc05d06b95a"
+            ]
+        ]
+    },
+    {
+        "id": "ca1b9c48c3c0c522",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "GLPI: Ticket Task URL",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{ global.config.itsm.api_url }}}Ticket/{{ itsm.ticket.id }}/TicketTask/{{ itsm.ticket_task.id }}",
+        "output": "str",
+        "x": 3800,
+        "y": 1160,
+        "wires": [
+            [
+                "76cd564b69443419"
+            ]
+        ]
+    },
+    {
+        "id": "d64e9c631ee7ec87",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "Task time JSON Body",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n  \"input\": {\n    \"id\": \"{{ itsm.ticket_task.id }}\",\n    \"actiontime\": 5,\n    \"state\": 2\n  }\n}\n",
+        "output": "json",
+        "x": 3600,
+        "y": 1160,
+        "wires": [
+            [
+                "ca1b9c48c3c0c522"
+            ]
+        ]
+    },
+    {
+        "id": "cafa50da13d9e5d9",
+        "type": "join",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "Combine Ticket and Ticket Task Packets",
+        "mode": "custom",
+        "build": "merged",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "1",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 3220,
+        "y": 1160,
+        "wires": [
+            [
+                "fdf014eff1962329"
+            ]
+        ],
+        "info": "after two messages, the password has been changed"
+    },
+    {
+        "id": "c2f8e99492223cfb",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "Process: Update Ticket Task",
+        "links": [
+            "e0660324da4581dd",
+            "285f57c0fee687a1"
+        ],
+        "x": 2940,
+        "y": 1160,
+        "wires": [
+            [
+                "cafa50da13d9e5d9"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "fdf014eff1962329",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "f17ccfa845461657",
+        "name": "function 2",
+        "func": "\nmsg.itsm = {\n    \"ticket\": msg.itsm_ticket,\n    \"ticket_task\": msg.itsm_task,\n    \"solution\": msg.itsm_solution,\n    \"user\": msg.itsm.user\n}\ndelete msg.itsm_ticket;\ndelete msg.itsm_task;\ndelete msg.itsm_solution;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3440,
+        "y": 1160,
+        "wires": [
+            [
+                "d64e9c631ee7ec87"
+            ]
+        ]
+    },
+    {
+        "id": "5a961504d7ca5be3",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "debug 67",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2580,
+        "y": 1360,
+        "wires": []
     },
     {
         "id": "17f893c2bb347668",
@@ -6328,7 +7247,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 2370,
@@ -7300,7 +8219,7 @@
                 "vt": "num"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 1100,
@@ -7913,7 +8832,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 860,
@@ -7933,7 +8852,7 @@
         "type": "debug",
         "z": "f6f2187d.f17ca8",
         "name": "debug 39",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7967,7 +8886,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 3,
         "x": 1660,
@@ -8123,7 +9042,7 @@
                 "vt": "num"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 2100,
@@ -8738,6 +9657,11 @@
                 "t": "delete",
                 "p": "method",
                 "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "responseUrl",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -8879,7 +9803,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 4,
         "x": 630,
@@ -8895,8 +9819,7 @@
                 "ad563b1612f320ce"
             ],
             [
-                "0bf3afb49b551d9c",
-                "6a2cbd18a64442d7"
+                "53b1c5bbed90265f"
             ]
         ]
     },
@@ -8937,31 +9860,6 @@
         ]
     },
     {
-        "id": "6a2cbd18a64442d7",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "Remove Payload",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 970,
-        "y": 1980,
-        "wires": [
-            [
-                "ce93ad07095d87d3"
-            ]
-        ]
-    },
-    {
         "id": "29882bec61111349",
         "type": "switch",
         "z": "f6f2187d.f17ca8",
@@ -8978,7 +9876,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 3160,
@@ -9005,7 +9903,7 @@
                 "t": "true"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 2870,
@@ -9816,38 +10714,6 @@
         "l": true
     },
     {
-        "id": "2656360846806b47",
-        "type": "catch",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "scope": null,
-        "uncaught": false,
-        "x": 3100,
-        "y": 1440,
-        "wires": [
-            [
-                "d3d3832a60939b85"
-            ]
-        ]
-    },
-    {
-        "id": "d3d3832a60939b85",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "debug 44",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3360,
-        "y": 1440,
-        "wires": []
-    },
-    {
         "id": "048e10e4b5f175c8",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
@@ -10032,7 +10898,7 @@
                 "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 370,
