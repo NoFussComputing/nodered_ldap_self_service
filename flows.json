@@ -86,6 +86,21 @@
         ]
     },
     {
+        "id": "104f7938a23fe82f",
+        "type": "tab",
+        "label": "ITSM: GLPI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "GLPI: FormCreator Automation",
+        "disabled": false,
+        "info": "# GLPI: FormCreator Automation\nThis flow search for the forms from the GLPI Plugin formcreator.\nOn finding a form, creates a ticket from that form."
+    },
+    {
         "id": "8ad5fe68ad170e2d",
         "type": "group",
         "z": "42b9663b67dbd983",
@@ -803,6 +818,308 @@
         "wires": [
             [
                 "53a5ee55ee916cec"
+            ]
+        ]
+    },
+    {
+        "id": "4ab2787bb0227121",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 820,
+        "y": 220,
+        "wires": [
+            [
+                "82183bee2dd412fe"
+            ]
+        ]
+    },
+    {
+        "id": "f48665a4a0c87ccf",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 2220,
+        "y": 280,
+        "wires": [
+            [
+                "e65438fd63bf5834"
+            ]
+        ]
+    },
+    {
+        "id": "e2fdc9ac8f0f5378",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 1540,
+        "y": 280,
+        "wires": [
+            [
+                "f48665a4a0c87ccf"
+            ]
+        ]
+    },
+    {
+        "id": "b365499ab7271965",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 1900,
+        "y": 180,
+        "wires": [
+            [
+                "e6062222b53b3146"
+            ]
+        ]
+    },
+    {
+        "id": "e6062222b53b3146",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 2140,
+        "y": 180,
+        "wires": [
+            [
+                "f48665a4a0c87ccf"
+            ]
+        ]
+    },
+    {
+        "id": "4c730b98279aaca6",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "4ab2787bb0227121",
+                "0097abc4a9b09076"
+            ]
+        ]
+    },
+    {
+        "id": "a740ac24fa947f73",
+        "type": "junction",
+        "z": "104f7938a23fe82f",
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "ab1b24f61ae7f3bf",
+                "4c730b98279aaca6"
+            ]
+        ]
+    },
+    {
+        "id": "ce93ad07095d87d3",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 1120,
+        "y": 1920,
+        "wires": [
+            [
+                "d4dcc73bbe878f42"
+            ]
+        ]
+    },
+    {
+        "id": "bab95cf5ba3d6045",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 820,
+        "y": 1840,
+        "wires": [
+            [
+                "d4dcc73bbe878f42",
+                "836dca1c83616f32"
+            ]
+        ]
+    },
+    {
+        "id": "ce4de75bc712f124",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 820,
+        "y": 1900,
+        "wires": [
+            [
+                "ebb2a01cac9a803d",
+                "607f24e3f91dff90"
+            ]
+        ]
+    },
+    {
+        "id": "607f24e3f91dff90",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 880,
+        "y": 1920,
+        "wires": [
+            [
+                "ce93ad07095d87d3"
+            ]
+        ]
+    },
+    {
+        "id": "ad563b1612f320ce",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 820,
+        "y": 1940,
+        "wires": [
+            [
+                "3944fbf533097cbb",
+                "607f24e3f91dff90"
+            ]
+        ]
+    },
+    {
+        "id": "bf6a0883e2c6fa86",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 3520,
+        "y": 700,
+        "wires": [
+            [
+                "9b78dc70ba04be52",
+                "7d597c9f95237aec"
+            ]
+        ]
+    },
+    {
+        "id": "e0b3838ab709561b",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 4720,
+        "y": 420,
+        "wires": [
+            [
+                "a06872fd8512eb8d",
+                "7cd8e1fefd5dd694"
+            ]
+        ]
+    },
+    {
+        "id": "7d597c9f95237aec",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 3800,
+        "y": 700,
+        "wires": [
+            [
+                "7cd8e1fefd5dd694"
+            ]
+        ]
+    },
+    {
+        "id": "9b78dc70ba04be52",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 3800,
+        "y": 740,
+        "wires": [
+            [
+                "405728494cdf7f87"
+            ]
+        ]
+    },
+    {
+        "id": "7cd8e1fefd5dd694",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 4780,
+        "y": 700,
+        "wires": [
+            [
+                "bcdb9f8a74cd2414"
+            ]
+        ]
+    },
+    {
+        "id": "596b03adcd307cb4",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 4560,
+        "y": 540,
+        "wires": [
+            [
+                "7cd8e1fefd5dd694"
+            ]
+        ]
+    },
+    {
+        "id": "e5548020922347cc",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 3300,
+        "y": 2120,
+        "wires": [
+            [
+                "7bb0fa06d2b81ebf"
+            ]
+        ]
+    },
+    {
+        "id": "8fdb88fa979041c2",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 180,
+        "y": 1620,
+        "wires": [
+            [
+                "e370037f2b9ae9a6",
+                "109cb443e3b18552"
+            ]
+        ]
+    },
+    {
+        "id": "56d5a39010b82e94",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 500,
+        "y": 1420,
+        "wires": [
+            [
+                "d5037ce5a29693fc"
+            ]
+        ]
+    },
+    {
+        "id": "eb6eecd9d940aecb",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 80,
+        "y": 1500,
+        "wires": [
+            [
+                "8fdb88fa979041c2"
+            ]
+        ]
+    },
+    {
+        "id": "46dd694a18a599c9",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 1040,
+        "y": 1460,
+        "wires": [
+            [
+                "eb6eecd9d940aecb"
+            ]
+        ]
+    },
+    {
+        "id": "facaa6a7395e5d7f",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 2600,
+        "y": 2140,
+        "wires": [
+            [
+                "96b9e9bd2edabf78",
+                "4e856f29a7148cf0",
+                "f0b8ea2876129114",
+                "4b51a5788a45d420",
+                "f710a0c68b11ee76",
+                "04d760f9b1988f4b",
+                "baa846245c4d19de"
             ]
         ]
     },
@@ -4883,5 +5200,4905 @@
             ]
         ],
         "l": true
+    },
+    {
+        "id": "17f893c2bb347668",
+        "type": "inject",
+        "z": "104f7938a23fe82f",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "a740ac24fa947f73"
+            ]
+        ]
+    },
+    {
+        "id": "6dc681185dff1d75",
+        "type": "comment",
+        "z": "104f7938a23fe82f",
+        "name": "Flow Start",
+        "info": "Flow Start",
+        "x": 100,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "82183bee2dd412fe",
+        "type": "change",
+        "z": "104f7938a23fe82f",
+        "name": "Defaults",
+        "rules": [
+            {
+                "t": "set",
+                "p": "authorization",
+                "pt": "msg",
+                "to": "user_token W6Ay7cdu38KuQCpYaZw5E7fxk4q8dYSrz38EsPuK",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "app_token",
+                "pt": "msg",
+                "to": "SwiMCd61d6qcfCoFCziotpJgBafl15vQCdRwHJ47",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api_url",
+                "pt": "msg",
+                "to": "http://glpi/apirest.php",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "debug_on",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "category_id_automation_task",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [
+                "cd999564657880cc",
+                "4146b052670fb819"
+            ]
+        ],
+        "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "9587918c59375270",
+        "type": "inject",
+        "z": "104f7938a23fe82f",
+        "name": "Start: Manual Failsafe",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "4ab2787bb0227121"
+            ]
+        ]
+    },
+    {
+        "id": "ab1b24f61ae7f3bf",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "Start",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0097abc4a9b09076",
+        "type": "trigger",
+        "z": "104f7938a23fe82f",
+        "name": "fail safe: start flow",
+        "op1": "",
+        "op2": "4",
+        "op1type": "nul",
+        "op2type": "num",
+        "duration": "303",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "a493231bd5231b91",
+                "4ab2787bb0227121"
+            ]
+        ]
+    },
+    {
+        "id": "a493231bd5231b91",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "FailSafe: Session Start",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cd999564657880cc",
+        "type": "switch",
+        "z": "104f7938a23fe82f",
+        "name": "Debug No Auto-run",
+        "property": "debug_on",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1410,
+        "y": 220,
+        "wires": [
+            [
+                "271a0053b235aad2"
+            ],
+            [
+                "c2d23a114d11726f",
+                "e2fdc9ac8f0f5378"
+            ]
+        ]
+    },
+    {
+        "id": "efca7293ea947912",
+        "type": "comment",
+        "z": "104f7938a23fe82f",
+        "name": "Within the Defaults node below\\n You will need to sutup the app token\\n and the user token for this automation to work.",
+        "info": "Within the Defaults node below\\n\nYou will need to sutup the app token\\n\nand the user token for this automation to work.\n",
+        "x": 1130,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "271a0053b235aad2",
+        "type": "switch",
+        "z": "104f7938a23fe82f",
+        "name": "Manual Run Only",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1650,
+        "y": 180,
+        "wires": [
+            [
+                "d3ee1ecc22c74264",
+                "b365499ab7271965"
+            ],
+            [
+                "0c185358cc65059b"
+            ]
+        ]
+    },
+    {
+        "id": "d3ee1ecc22c74264",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "Debug on: Manual run only",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1980,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0c185358cc65059b",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "Debug: On, no autorun",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c2d23a114d11726f",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "Debug: Off, Autorun Enabled",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "935f35904a0d89bf",
+        "type": "link in",
+        "z": "104f7938a23fe82f",
+        "name": "Manual Start",
+        "links": [
+            "2f0dd5172e907730",
+            "0e97a47512b3c7ef",
+            "d6e72db598c850a0",
+            "610fb43bda07b3c3"
+        ],
+        "x": 145,
+        "y": 180,
+        "wires": [
+            [
+                "a740ac24fa947f73"
+            ]
+        ]
+    },
+    {
+        "id": "e65438fd63bf5834",
+        "type": "link out",
+        "z": "104f7938a23fe82f",
+        "name": "GLPI: FormCreator",
+        "mode": "link",
+        "links": [
+            "3c3f4ccfbc0ec4e7"
+        ],
+        "x": 2350,
+        "y": 280,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4146b052670fb819",
+        "type": "change",
+        "z": "104f7938a23fe82f",
+        "name": "Globals",
+        "rules": [
+            {
+                "t": "set",
+                "p": "glpi.authorization",
+                "pt": "global",
+                "to": "authorization",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "glpi.app_token",
+                "pt": "global",
+                "to": "app_token",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "glpi.api_url",
+                "pt": "global",
+                "to": "api_url",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 120,
+        "wires": [
+            [
+                "a9472349e8102352"
+            ]
+        ],
+        "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "a9472349e8102352",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "debug 56",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8de5bc665bc27215",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "App-Token",
+                "valueType": "msg",
+                "valueValue": "app_token"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Authorization",
+                "valueType": "msg",
+                "valueValue": "authorization"
+            }
+        ],
+        "x": 750,
+        "y": 260,
+        "wires": [
+            [
+                "4faa229d7128337c",
+                "0ca59c59c589aa9a"
+            ]
+        ]
+    },
+    {
+        "id": "4faa229d7128337c",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "60ce45a4be8c49f5"
+            ],
+            [
+                "b1928b4dfdebf45a"
+            ]
+        ]
+    },
+    {
+        "id": "60ce45a4be8c49f5",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "session_details.session.valid_id",
+                "pt": "msg",
+                "to": "payload.session_token",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "app_token",
+                "pt": "flow",
+                "to": "app_token",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bot_account",
+                "pt": "flow",
+                "to": "bot_account",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "authorization",
+                "pt": "msg",
+                "to": "authorization",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "authorisation",
+                "pt": "msg",
+                "to": "authorisation",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 240,
+        "wires": [
+            [
+                "2138ec0147a36c71",
+                "6856e12e77f0102f"
+            ]
+        ]
+    },
+    {
+        "id": "4974c57bfe4fabf9",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 1020,
+        "wires": [
+            [
+                "04a413764f4af078"
+            ]
+        ]
+    },
+    {
+        "id": "454c179e9999918e",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set session-token + URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/PluginFormcreatorFormAnswer\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "app_token",
+                "pt": "msg",
+                "to": "app_token",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "bot_account",
+                "pt": "msg",
+                "to": "bot_account",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 960,
+        "wires": [
+            [
+                "8a3fd2b2125c14fb"
+            ]
+        ]
+    },
+    {
+        "id": "84f26b16f40f482b",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "From 'GLPI' Flow\\n Start",
+        "info": "From 'GLPI' Flow\\n\nStart",
+        "x": 220,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "dfc6e804866badfa",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Form Answers",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1980,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "d6ead9ea953d172e",
+        "type": "split",
+        "z": "f6f2187d.f17ca8",
+        "name": "List of forms to form",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 1340,
+        "y": 940,
+        "wires": [
+            [
+                "883ef304b2dec6bc"
+            ]
+        ]
+    },
+    {
+        "id": "883ef304b2dec6bc",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Build Answer URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & '/PluginFormcreatorFormAnswer/' & msg.payload.id & '/PluginFormcreatorAnswer?range=0-150'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "form_details.id",
+                "pt": "msg",
+                "to": "payload.plugin_formcreator_forms_id",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form_details.answer_id",
+                "pt": "msg",
+                "to": "payload.id",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form_details.requester_id",
+                "pt": "msg",
+                "to": "payload.requester_id",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form_details.name",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form_details.ticket_entity",
+                "pt": "msg",
+                "to": "payload.entities_id",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form_details.entity_id",
+                "pt": "msg",
+                "to": "payload.entities_id",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "parts",
+                "pt": "msg",
+                "to": "form_parts",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 940,
+        "wires": [
+            [
+                "ae6d3ff335b65b3d",
+                "048e10e4b5f175c8"
+            ]
+        ]
+    },
+    {
+        "id": "ab66728b85b18a91",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get the forms",
+        "info": "",
+        "x": 210,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "1d89ecbaf2f03503",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.form",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "url",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "responseUrl",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "redirectList",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "retry",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "headers",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "parts",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "statusCode",
+                "pt": "msg"
+            },
+            {
+                "t": "move",
+                "p": "form",
+                "pt": "msg",
+                "to": "questions",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "form_details",
+                "pt": "msg",
+                "to": "form",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "questions",
+                "pt": "msg",
+                "to": "form.questions",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1620,
+        "wires": [
+            [
+                "7ec7fc9e20c4a7e8",
+                "2a779072acca3f67"
+            ]
+        ]
+    },
+    {
+        "id": "34a93eb2fba21d96",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Ticket Prepare",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2260,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "d690fb9681f9829e",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Prepare",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/Ticket\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "move",
+                "p": "generated_template",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "session_token",
+                "pt": "msg",
+                "to": "session_token",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "POST",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "glpi",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2060,
+        "y": 2160,
+        "wires": [
+            [
+                "34a93eb2fba21d96",
+                "7641a0ba9012b0c4"
+            ]
+        ]
+    },
+    {
+        "id": "d081be6d1e4379b5",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Create Ticket",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2410,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "d4cbdb80c6de1a0c",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP Status",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "201",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2370,
+        "y": 2160,
+        "wires": [
+            [
+                "30eb92e619af0e99",
+                "facaa6a7395e5d7f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "96b9e9bd2edabf78",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add Requester to ticket",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & '/Ticket/' & msg.payload.id & '/Ticket_User'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t  \"input\": [\t        {\t          \"users_id\": msg.form.requester_id,\t          \"tickets_id\": msg.payload.id,\t          \"type\": 1,\t          \"use_notification\": 1,\t          \"alternative_email\": \"\",\t          \"links\": [\t            {\t              \"rel\": \"Ticket\",\t              \"href\": $string('http://127.0.0.1/apirest.php/Ticket/' & msg.payload.id, prettify)\t            },\t            {\t              \"rel\": \"User\",\t              \"href\": $string('http://127.0.0.1/apirest.php/User/' & msg.form.requester_id, prettify)\t              \t            }\t          ]\t\t        }\t    ]\t  }",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2850,
+        "y": 2020,
+        "wires": [
+            [
+                "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "40bba4658693fcf0",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Amend Ticket",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3940,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "baa846245c4d19de",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Upload json to ticket",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & '/Ticket/' & msg.payload.id &'/TicketTask/'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t  \"input\": {\t    \"tickets_id\": msg.payload.id,\t    \"taskcategories_id\": msg.task_category,\t    \"users_id\": msg.session_details.session.glpiID,\t    \"users_id_editor\": 0,\t    \"content\": $string(msg.form),\t    \"is_private\": 1,\t    \"actiontime\": 0,\t    \"begin\": null,\t    \"end\": null,\t    \"state\": 1,\t    \"users_id_tech\": msg.session_details.session.glpiID,\t    \"groups_id_tech\": 0,\t\t    \"tasktemplates_id\": 0,\t\t    \"sourceitems_id\": 0,\t    \"sourceof_items_id\": 0,\t    \"links\": [\t      {\t        \"rel\": \"Ticket\",\t        \"href\": \"http://127.0.0.1/apirest.php/Ticket/msg.payload.id\"\t      },\t      {\t        \"rel\": \"User\",\t        \"href\": $string(\"http://127.0.0.1/apirest.php/User/\" & msg.session_details.session.glpiID)\t      },\t      {\t        \"rel\": \"User\",\t        \"href\": $string(\"http://127.0.0.1/apirest.php/User/\" & msg.session_details.session.glpiID)\t      }\t    ]\t  }\t\t}\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2860,
+        "y": 2260,
+        "wires": [
+            [
+                "a1830195f3d24676",
+                "3a6a6d119c434dce",
+                "f44d85f3dd843e24"
+            ]
+        ]
+    },
+    {
+        "id": "7af4f7c4d5054119",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Remove Form Answer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "$string(msg.api_url & '/PluginFormcreatorFormAnswer/' & msg.form.answer_id)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "DELETE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3460,
+        "y": 2300,
+        "wires": [
+            [
+                "94e9c3f821a62eed",
+                "7bb0fa06d2b81ebf"
+            ]
+        ]
+    },
+    {
+        "id": "8e8b0cd0b13c0c61",
+        "type": "split",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "payload",
+        "x": 1890,
+        "y": 940,
+        "wires": [
+            [
+                "254033ce6df92ac2"
+            ]
+        ]
+    },
+    {
+        "id": "254033ce6df92ac2",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form",
+                "pt": "msg",
+                "to": "{\t   \"question_id\": msg.payload.plugin_formcreator_questions_id,\t   \"answer\": msg.payload.answer\t}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & '/PluginFormcreatorQuestion/' & msg.payload.plugin_formcreator_questions_id & '?range=0-150'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "parts",
+                "pt": "msg",
+                "to": "answer_parts",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2020,
+        "y": 940,
+        "wires": [
+            [
+                "7a564f89bd59c747",
+                "92f06ed116476f53"
+            ]
+        ]
+    },
+    {
+        "id": "109cb443e3b18552",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine Questions",
+        "mode": "auto",
+        "build": "object",
+        "property": "form",
+        "propertyType": "msg",
+        "key": "form",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "5",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 250,
+        "y": 1620,
+        "wires": [
+            [
+                "32337fc19b0c6c53",
+                "6abd782f33f6aa9f"
+            ]
+        ]
+    },
+    {
+        "id": "14ec463e022ba2e6",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add Form fields",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form.question",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form.field_type",
+                "pt": "msg",
+                "to": "payload.fieldtype",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2780,
+        "y": 660,
+        "wires": [
+            [
+                "77a912d5ef7737c9",
+                "32c5dc82712e4b12"
+            ]
+        ]
+    },
+    {
+        "id": "77a912d5ef7737c9",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Form Fields",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3030,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4e856f29a7148cf0",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Assign to Bot User",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & '/Ticket/' & msg.payload.id & '/Ticket_User'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t  \"input\": [\t        {\t          \"users_id\": msg.session_details.session.glpiID,\t          \"tickets_id\": msg.payload.id,\t          \"type\": 3,\t          \"use_notification\": 0,\t          \"alternative_email\": \"\",\t          \"links\": [\t            {\t              \"rel\": \"Ticket\",\t              \"href\": $string('http://127.0.0.1/apirest.php/Ticket/' & msg.payload.id, prettify)\t            },\t            {\t              \"rel\": \"User\",\t              \"href\": $string('http://127.0.0.1/apirest.php/User/' & session_details.session.glpiID, prettify)\t              \t            }\t          ]\t\t        }\t    ]\t  }",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2870,
+        "y": 2060,
+        "wires": [
+            [
+                "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "d50561ffddac19e4",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Split messages and build form json",
+        "info": "",
+        "x": 1980,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "159ed95d7807ebf4",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch Question Details",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2500,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "cf4fe833c9fe8b07",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Form Details",
+        "info": "",
+        "x": 3230,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "38ea96d6c95ce24a",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Ticket Creation",
+        "info": "",
+        "x": 1860,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "4cbac34d37797cc9",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Ticket Details",
+        "info": "",
+        "x": 2850,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "9a5db65742117413",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "ToDo",
+        "info": "",
+        "x": 210,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "92f06ed116476f53",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Split Form Answer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2230,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "63ed9783b1185337",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Session Details",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0ca59c59c589aa9a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Session Init",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "31641a423aec4269",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 3940,
+        "wires": [
+            [
+                "35d95d641dd4fa34"
+            ]
+        ]
+    },
+    {
+        "id": "35d95d641dd4fa34",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set session-token + URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "session_token",
+                "pt": "msg",
+                "to": "session_token",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://glpi/apirest.php/TicketTask/?searchText[users_id_tech]=11&searchText[state]=1",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "app_token",
+                "pt": "msg",
+                "to": "app_token",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "bot_account",
+                "pt": "msg",
+                "to": "bot_account",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 3820,
+        "wires": [
+            [
+                "fa23ae9590ce975a"
+            ]
+        ]
+    },
+    {
+        "id": "fa23ae9590ce975a",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get All form Answers",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "App-Token",
+                "valueType": "msg",
+                "valueValue": "app_token"
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Session-Token",
+                "valueType": "msg",
+                "valueValue": "session_token"
+            }
+        ],
+        "x": 520,
+        "y": 3780,
+        "wires": [
+            [
+                "be9730be497c0a0a",
+                "e07e2c386f4dd6a2"
+            ]
+        ]
+    },
+    {
+        "id": "be9730be497c0a0a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "e369c19f7af0f81f",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "TEST Get ticket tasks",
+        "info": "",
+        "x": 240,
+        "y": 3740,
+        "wires": []
+    },
+    {
+        "id": "7f220be9b68fe3c9",
+        "type": "json",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "task",
+        "action": "obj",
+        "pretty": false,
+        "x": 930,
+        "y": 3820,
+        "wires": [
+            [
+                "9c5bfdbf78f8ce86"
+            ]
+        ]
+    },
+    {
+        "id": "e07e2c386f4dd6a2",
+        "type": "split",
+        "z": "f6f2187d.f17ca8",
+        "name": "List of forms to form",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 700,
+        "y": 3820,
+        "wires": [
+            [
+                "903ae9214c328d8b",
+                "42a4a8bd6fc637b8"
+            ]
+        ]
+    },
+    {
+        "id": "9c5bfdbf78f8ce86",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 3760,
+        "wires": []
+    },
+    {
+        "id": "903ae9214c328d8b",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set session-token + URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "task",
+                "pt": "msg",
+                "to": "$string($replace(msg.payload.content, /(\\&\\#\\d{2}\\;\\/?[a-z]+\\&\\#\\d{2}\\;)/, ''))\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 3880,
+        "wires": [
+            [
+                "7f220be9b68fe3c9",
+                "d26d506004500f22"
+            ]
+        ]
+    },
+    {
+        "id": "42a4a8bd6fc637b8",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "d26d506004500f22",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 3940,
+        "wires": []
+    },
+    {
+        "id": "b92b33f2ae2ee405",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 2300,
+        "wires": [
+            [
+                "15760c44e52dc96e"
+            ],
+            [
+                "15760c44e52dc96e"
+            ]
+        ]
+    },
+    {
+        "id": "15760c44e52dc96e",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "session_token",
+                "pt": "flow",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 2280,
+        "wires": [
+            [
+                "58412e238946fb86"
+            ]
+        ]
+    },
+    {
+        "id": "c1b719a6a47b9bdc",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Kill the API session",
+        "info": "",
+        "x": 170,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "58412e238946fb86",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Session End",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "348d59445d4c260c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Form Answers Returned",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "adc6e4883443806f",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP Request: Kill user session",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "App-Token",
+                "valueType": "msg",
+                "valueValue": "app_token"
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Session-Token",
+                "valueType": "msg",
+                "valueValue": "session_details.session.valid_id"
+            }
+        ],
+        "x": 810,
+        "y": 2300,
+        "wires": [
+            [
+                "b92b33f2ae2ee405"
+            ]
+        ]
+    },
+    {
+        "id": "1e03a208414a3bf0",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set session-token + URL",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/killSession\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "app_token",
+                "pt": "msg",
+                "to": "app_token",
+                "tot": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "responseUrl",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "method",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "statusCode",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "headers",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 2300,
+        "wires": [
+            [
+                "adc6e4883443806f",
+                "557310b9928fc001"
+            ]
+        ]
+    },
+    {
+        "id": "04a413764f4af078",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Session Check",
+        "property": "session_token",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 1020,
+        "wires": [
+            [
+                "454c179e9999918e"
+            ]
+        ]
+    },
+    {
+        "id": "c6318878d6c4173e",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Results returned",
+        "property": "msg.payload.length",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1100,
+        "y": 960,
+        "wires": [
+            [
+                "d6ead9ea953d172e",
+                "348d59445d4c260c"
+            ],
+            [
+                "815974a44d365161",
+                "951a8a267481cfe6"
+            ]
+        ]
+    },
+    {
+        "id": "951a8a267481cfe6",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "No Form Answers Returned",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "4350bb1697165898",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: End Session",
+        "links": [
+            "815974a44d365161",
+            "94c316c3e6192a53",
+            "84ac2b5e6df44243"
+        ],
+        "x": 330,
+        "y": 2300,
+        "wires": [
+            [
+                "1e03a208414a3bf0"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "815974a44d365161",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "End GLPI Session",
+        "mode": "link",
+        "links": [
+            "4350bb1697165898"
+        ],
+        "x": 1350,
+        "y": 1100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "94c316c3e6192a53",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "End GLPI Session",
+        "mode": "link",
+        "links": [
+            "4350bb1697165898"
+        ],
+        "x": 4010,
+        "y": 2120,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "51124c8c0b7142dd",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: Session Fetch end",
+        "mode": "return",
+        "links": [],
+        "x": 1790,
+        "y": 260,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3c3f4ccfbc0ec4e7",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: Fetch Forms",
+        "links": [
+            "e65438fd63bf5834"
+        ],
+        "x": 170,
+        "y": 880,
+        "wires": [
+            [
+                "e3b230d99d4bf90e",
+                "87d33fd4cc09e27f"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "557310b9928fc001",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "fb18f6154f0c0465",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Dynamic Fields Check",
+        "mode": "link",
+        "links": [
+            "2e2491c09565868d"
+        ],
+        "x": 2500,
+        "y": 940,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2e2491c09565868d",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "Form: Dynamic fields",
+        "links": [
+            "fb18f6154f0c0465"
+        ],
+        "x": 2600,
+        "y": 660,
+        "wires": [
+            [
+                "14ec463e022ba2e6"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "e2fd3bd854073749",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "Process Form",
+        "links": [
+            "bcdb9f8a74cd2414"
+        ],
+        "x": 90,
+        "y": 1400,
+        "wires": [
+            [
+                "5c7a23d16f3799de"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "bcdb9f8a74cd2414",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Continue",
+        "mode": "link",
+        "links": [
+            "e2fd3bd854073749"
+        ],
+        "x": 4900,
+        "y": 700,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3dee9addd0ed8cd6",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "ticket_category",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ticket_category",
+                "pt": "msg",
+                "to": "$number(msg.payload.default_values)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3480,
+        "y": 540,
+        "wires": [
+            [
+                "b1524bd812745460",
+                "7d597c9f95237aec"
+            ]
+        ]
+    },
+    {
+        "id": "32c5dc82712e4b12",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Route fields for processing",
+        "property": "$lowercase( msg.payload.name )\t",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "approval_required",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "entity_approval",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ticket_category",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ticket_title",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ticket_type",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "task_category",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "automation_account_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "approver_id",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "entity",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 10,
+        "x": 3080,
+        "y": 660,
+        "wires": [
+            [
+                "56cdb59cb181c6f4"
+            ],
+            [
+                "ec869fcde783d888"
+            ],
+            [
+                "3dee9addd0ed8cd6"
+            ],
+            [
+                "0d4ff1f5a09fe7c6"
+            ],
+            [
+                "b56ed66c5684c193"
+            ],
+            [
+                "738079e881bd7c2c"
+            ],
+            [
+                "bf6a0883e2c6fa86"
+            ],
+            [
+                "bf6a0883e2c6fa86"
+            ],
+            [
+                "8ff8495c24d48ef7"
+            ],
+            [
+                "bf6a0883e2c6fa86"
+            ]
+        ]
+    },
+    {
+        "id": "b1524bd812745460",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4060,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b56ed66c5684c193",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "ticket_type",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ticket_type",
+                "pt": "msg",
+                "to": "$number(msg.payload.default_values)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3490,
+        "y": 620,
+        "wires": [
+            [
+                "83eb1d86b52defce",
+                "7d597c9f95237aec"
+            ]
+        ]
+    },
+    {
+        "id": "83eb1d86b52defce",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4060,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "32337fc19b0c6c53",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.form_details",
+        "rules": [
+            {
+                "t": "move",
+                "p": "automation_account_id",
+                "pt": "msg",
+                "to": "form_details.automation_account_id",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "ticket_category",
+                "pt": "msg",
+                "to": "form_details.ticket_category",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "ticket_title",
+                "pt": "msg",
+                "to": "form_details.ticket_title",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "ticket_type",
+                "pt": "msg",
+                "to": "form_details.ticket_type",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "approval_required",
+                "pt": "msg",
+                "to": "form_details.approval_required",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "approver_id",
+                "pt": "msg",
+                "to": "form_details.approver_id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 1620,
+        "wires": [
+            [
+                "1d89ecbaf2f03503"
+            ]
+        ]
+    },
+    {
+        "id": "0d4ff1f5a09fe7c6",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "ticket_title",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ticket_title",
+                "pt": "msg",
+                "to": "$string(msg.payload.default_values)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3500,
+        "y": 580,
+        "wires": [
+            [
+                "06aa9b576afd2be5",
+                "7d597c9f95237aec"
+            ]
+        ]
+    },
+    {
+        "id": "06aa9b576afd2be5",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4060,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9d874e042a1954f0",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "[Done] Add approval to ticket if specified",
+        "info": "",
+        "x": 310,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b1928b4dfdebf45a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP ERROR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "94e9c3f821a62eed",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Remove Form Answers",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3470,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "58d7f582867e25b9",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Approver Packet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3430,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "3988dff78ba97852",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Adjust form fields so that multiple approvers for different parts can have differnet approvers",
+        "info": "",
+        "x": 530,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "8c254f92f72ca43b",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "ITILCategory Checks Including building Ticket request from category Template",
+        "info": "",
+        "x": 350,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "c5055cdaaf932dbc",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch Details",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/ITILCategory/\" & msg.form.ticket_category",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 1600,
+        "wires": [
+            [
+                "5225cbd0ed0d0ee3"
+            ]
+        ]
+    },
+    {
+        "id": "7ec7fc9e20c4a7e8",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Category Exists",
+        "property": "form.ticket_category",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "number",
+                "vt": "number"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 860,
+        "y": 1620,
+        "wires": [
+            [
+                "c5055cdaaf932dbc"
+            ],
+            [
+                "8d453aaee35aa375",
+                "fd37bced67415bb7"
+            ]
+        ]
+    },
+    {
+        "id": "67dd1c6bb33f2633",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "77366d1c8a178421",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Incident <> Request",
+        "property": "form.ticket_type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1660,
+        "y": 1600,
+        "wires": [
+            [
+                "1ffc637c2378703d"
+            ],
+            [
+                "858c1aaae498389e"
+            ],
+            [
+                "858c1aaae498389e"
+            ]
+        ]
+    },
+    {
+        "id": "24cc9ac0380bd505",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ticket_category",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "statusCode",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "headers",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "redirectList",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "retry",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "responseUrl",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 1600,
+        "wires": [
+            [
+                "77366d1c8a178421"
+            ]
+        ]
+    },
+    {
+        "id": "1ffc637c2378703d",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Incident",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ticket_template",
+                "pt": "msg",
+                "to": "ticket_category.tickettemplates_id_incident",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "ticket_template_applicable",
+                "pt": "msg",
+                "to": "ticket_category.is_incident",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1860,
+        "y": 1580,
+        "wires": [
+            [
+                "9c91ead347397f0d"
+            ]
+        ]
+    },
+    {
+        "id": "858c1aaae498389e",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Request",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ticket_template",
+                "pt": "msg",
+                "to": "ticket_category.tickettemplates_id_demand",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "ticket_template_applicable",
+                "pt": "msg",
+                "to": "ticket_category.is_request",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1860,
+        "y": 1620,
+        "wires": [
+            [
+                "9c91ead347397f0d"
+            ]
+        ]
+    },
+    {
+        "id": "9c91ead347397f0d",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Template Applicable",
+        "property": "ticket_template_applicable",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2100,
+        "y": 1600,
+        "wires": [
+            [
+                "219fbaa53aa78d28"
+            ],
+            [
+                "3af87a18632ad1be"
+            ]
+        ]
+    },
+    {
+        "id": "a672f214ea959fc4",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: Ticket Creation",
+        "links": [
+            "46377a801e0c95c7",
+            "8d453aaee35aa375",
+            "8dafd33b57416c3f"
+        ],
+        "x": 1880,
+        "y": 2160,
+        "wires": [
+            [
+                "d690fb9681f9829e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8dafd33b57416c3f",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Continue",
+        "mode": "link",
+        "links": [
+            "a672f214ea959fc4"
+        ],
+        "x": 2460,
+        "y": 1680,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8d453aaee35aa375",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Continue",
+        "mode": "link",
+        "links": [
+            "a672f214ea959fc4"
+        ],
+        "x": 1100,
+        "y": 1700,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3af87a18632ad1be",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cleanup",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "ticket_template_applicable",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "ticket_template",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2300,
+        "y": 1640,
+        "wires": [
+            [
+                "8dafd33b57416c3f",
+                "a3b3c181797c094a"
+            ]
+        ]
+    },
+    {
+        "id": "bbba2b34fa078dc7",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 40",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3180,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "219fbaa53aa78d28",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "URL Build",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/TicketTemplate/\" & msg.ticket_template &\"/TicketTemplatePredefinedField\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "ticket_template_applicable",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2300,
+        "y": 1580,
+        "wires": [
+            [
+                "04a5b3d6d2bb5609"
+            ]
+        ]
+    },
+    {
+        "id": "389e918ab0b455df",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Build Ticket from Template",
+        "func": "// \"msg.ticket_fields[String(msg.template_fields[i].num)].field\"\nmsg.generated_template = '{ \"input\": {'\nmsg.items_ticket = \"[\"\nfor (var i = 0; i < msg.template_fields.length; i++) {\n\n    // var TicketField = String(msg.template_fields[i].num);\n    //var TheField = String(msg.template_fields[i].num); // msg.template_fields[0].num\n\n    msg.template_fields[i].name = msg.ticket_fields[String(msg.template_fields[i].num)].field; // msg.ticket_fields[\"1\"].field\n\n    var key = msg.template_fields[i].name;\n    \n    if (key == 'name') {\n        msg.template_fields[i].value = msg.template_fields[i].value + msg.form.name;\n    }\n    if (key == 'content') {\n        // msg.template_fields[i].value = String(msg.template_fields[i].value + msg.form.content).replace(\"\\n\", '\\\\r\\\\n').replace(\"\\r\", '');\n        if (msg.form.hasOwnProperty(\"content\") ){\n\n            msg.template_fields[i].value = String(msg.template_fields[i].value + msg.form.content).replace(/\\n/g, '\\\\r\\\\n').replace(/\\r/g, '').replace(/(\\\")/g, '&#34;');\n        \n        }else{\n            \n            msg.template_fields[i].value = String(msg.template_fields[i].value).replace(/\\n/g, '\\\\r\\\\n').replace(/\\r/g, '').replace(/(\\\")/g, '&#34;');\n        \n        }\n    }\n\n    \n    // var value = String(msg.template_fields[i].value).replace(\"\\n\", '\\\\r\\\\n').replace(\"\\r\", '').replace(/(\\&\\#\\d{2}\\;\\/?[a-z]+\\&\\#\\d{2}\\;)/g, '');\n    var value = String(msg.template_fields[i].value).replace(/\\n/g, '\\\\r\\\\n').replace(/\\r/g, '').replace(/(\\\")/g, '&#34;'); // Test to see if html can stay\n\n    if( key != 'items_id' ) {\n        \n        msg.generated_template = msg.generated_template + String(\n            '\"' + key + '\": ' +\n            '\"' + value + '\",'\n        );\n\n    } else if (key == 'items_id') {\n\n        var item_details = value.split('_')\n\n        msg.items_ticket = msg.items_ticket + String(\n            \"{\" +\n            '\"' + key + '\": ' +\n            '\"' + item_details[1] + '\",' \n            +\n            '\"itemtype\": ' +\n            '\"' + item_details[0] + '\"' +\n            \"},\"\n        );\n\n\n    }\n}\n\nif (msg.ticket_category.users_id != 0 && msg.form.approval_required == 1 ) {\n\n    msg.form.user_id_approver = msg.ticket_category.users_id;\n    msg.generated_template = msg.generated_template + String('\"validation_percent\": ' + 100 + ',');\n\n}\n\nif (msg.ticket_category.groups_id != 0 && msg.form.approval_required == 1 ) {\n\n    msg.form.group_id_approver = msg.ticket_category.groups_id;\n    msg.generated_template = msg.generated_template + String('\"validation_percent\": ' + 25 + ',');\n}\n\nmsg.generated_template = msg.generated_template + String('\"itilcategories_id\": ' + msg.form.ticket_category + ',' );\nmsg.generated_template = msg.generated_template + String('\"requesttypes_id\": ' + 7 + ',');\nmsg.generated_template = msg.generated_template + String('\"entities_id\": ' + msg.form.ticket_entity);\nmsg.generated_template = msg.generated_template + \"}}\";\nmsg.generated_template = JSON.parse(msg.generated_template);\n\nif(msg.items_ticket != \"[\" ) {\n    msg.items_ticket = String(msg.items_ticket).substring(0, msg.items_ticket.length-1)  + \"]\";\n    msg.items_ticket = JSON.parse(msg.items_ticket);\n}else{\n    delete (msg.items_ticket);\n}\n\nif ( ! msg.generated_template.hasOwnProperty(\"name\") ) {\n\n    msg.generated_template.name = msg.form.name;\n\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3180,
+        "y": 1580,
+        "wires": [
+            [
+                "531c943af7341755",
+                "46377a801e0c95c7"
+            ]
+        ]
+    },
+    {
+        "id": "5d11f290abca4992",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Clean-up / Prep",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "template_fields",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/listSearchOptions/Ticket\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2680,
+        "y": 1580,
+        "wires": [
+            [
+                "2cf4482e5aa3d454"
+            ]
+        ]
+    },
+    {
+        "id": "531c943af7341755",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3400,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "13d2fe736f955b77",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Clean-up",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ticket_fields",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3000,
+        "y": 1580,
+        "wires": [
+            [
+                "389e918ab0b455df",
+                "bbba2b34fa078dc7"
+            ]
+        ]
+    },
+    {
+        "id": "46377a801e0c95c7",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Continue",
+        "mode": "link",
+        "links": [
+            "a672f214ea959fc4"
+        ],
+        "x": 3360,
+        "y": 1580,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f0b8ea2876129114",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Approver Packet",
+        "func": "//{\n//  \"input\": {\n//    \"tickets_id\": msg.payload.id,\n//    \"users_id_validate\": msg.form.approver_id,\n//    \"comment_submission\": $string(\"A request for '\" & msg.form.name & \"' has been made that requires your approval.\"),\n//    \"status\": 2\n//  }\n//}\n\nif (\n    msg.form.hasOwnProperty(\"user_id_approver\")\n      ||\n    msg.form.hasOwnProperty(\"group_id_approver\")\n    ) {\n\n    msg.input = {};\n    \n    msg.input.tickets_id = msg.payload.id;\n    msg.input.comment_submission = String(\"As the person listed as responsible, this request requires your approval.\");\n    msg.input.status = 2;\n\n    if( msg.form.user_id_approver != 0 ) {\n        msg.input.users_id_validate = msg.form.user_id_approver;\n    }\n    if( msg.form.group_id_approver != 0) {\n        msg.input.groups_id_validate = msg.form.group_id_approver;\n    }\n\n    msg.url = String(msg.api_url + '/Ticket/' + msg.payload.id + '/TicketValidation');\n    msg.method = \"POST\";\n\n    msg.payload = {};\n    msg.payload.input = msg.input;\n\n    return msg;\n\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2870,
+        "y": 2100,
+        "wires": [
+            [
+                "58d7f582867e25b9",
+                "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "f710a0c68b11ee76",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Build Ticket Items Packet",
+        "func": "\nif( msg.hasOwnProperty(\"items_ticket\") ) {\n\n    for (var i = 0; i < msg.items_ticket.length; i++ ) {\n\n        msg.items_ticket[i].tickets_id = msg.payload.id\n\n    }\n    \n    msg.payload = {};\n    msg.payload.input = msg.items_ticket;\n\n    msg.url = msg.api_url + \"/Item_Ticket\"\n    msg.method = \"POST\";\n\n    return msg;\n\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2850,
+        "y": 2180,
+        "wires": [
+            [
+                "314b414628960c36",
+                "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "314b414628960c36",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Ticket Item Packet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3430,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "a7f816f627d2deb8",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 3860,
+        "y": 2120,
+        "wires": [
+            [
+                "94c316c3e6192a53"
+            ]
+        ]
+    },
+    {
+        "id": "04a5b3d6d2bb5609",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch Ticket Template Fields",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2480,
+        "y": 1580,
+        "wires": [
+            [
+                "5d11f290abca4992"
+            ]
+        ]
+    },
+    {
+        "id": "7bb0fa06d2b81ebf",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Amend Ticket",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 3720,
+        "y": 2120,
+        "wires": [
+            [
+                "a7f816f627d2deb8",
+                "40bba4658693fcf0",
+                "34d02c8cfe43bbe6"
+            ]
+        ]
+    },
+    {
+        "id": "2cf4482e5aa3d454",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch Field Details",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2850,
+        "y": 1580,
+        "wires": [
+            [
+                "13d2fe736f955b77"
+            ]
+        ]
+    },
+    {
+        "id": "7641a0ba9012b0c4",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Create Ticket",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2230,
+        "y": 2160,
+        "wires": [
+            [
+                "d4cbdb80c6de1a0c",
+                "d081be6d1e4379b5"
+            ]
+        ]
+    },
+    {
+        "id": "fcbf307dae461acb",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "App-Token",
+                "valueType": "msg",
+                "valueValue": "app_token"
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Session-Token",
+                "valueType": "msg",
+                "valueValue": "session_details.session.valid_id"
+            }
+        ],
+        "x": 250,
+        "y": 1900,
+        "wires": [
+            [
+                "8dc03813b42d41cb",
+                "72eeacf15e359fec"
+            ]
+        ]
+    },
+    {
+        "id": "eb5f283400263c25",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI API",
+        "links": [],
+        "x": 140,
+        "y": 1900,
+        "wires": [
+            [
+                "fcbf307dae461acb",
+                "e5c1f581fdc90543"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a1557288d6c101e4",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Return to flow",
+        "mode": "return",
+        "links": [],
+        "x": 1460,
+        "y": 1840,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5225cbd0ed0d0ee3",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch ITILCategory",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1210,
+        "y": 1600,
+        "wires": [
+            [
+                "24cc9ac0380bd505",
+                "67dd1c6bb33f2633"
+            ]
+        ]
+    },
+    {
+        "id": "e57ec269ddceda7d",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI API Request",
+        "info": "",
+        "x": 170,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "2138ec0147a36c71",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Defaults",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "automation_account_id",
+                "pt": "msg",
+                "to": "11",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/getFullSession\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 240,
+        "wires": [
+            [
+                "09a9ef3efab61351"
+            ]
+        ]
+    },
+    {
+        "id": "09a9ef3efab61351",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get My User ID",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1320,
+        "y": 240,
+        "wires": [
+            [
+                "0d8fdbae0c5bc0ad"
+            ]
+        ]
+    },
+    {
+        "id": "d4dcc73bbe878f42",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Clean Up Response",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "headers",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "redirectList",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "retry",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "method",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 1840,
+        "wires": [
+            [
+                "a1557288d6c101e4"
+            ]
+        ]
+    },
+    {
+        "id": "8dc03813b42d41cb",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Web Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "0d8fdbae0c5bc0ad",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Session Details",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "session_details",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 240,
+        "wires": [
+            [
+                "63ed9783b1185337",
+                "51124c8c0b7142dd"
+            ]
+        ]
+    },
+    {
+        "id": "6856e12e77f0102f",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8a3fd2b2125c14fb",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get All form Answers",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 920,
+        "y": 960,
+        "wires": [
+            [
+                "c6318878d6c4173e"
+            ]
+        ]
+    },
+    {
+        "id": "ae6d3ff335b65b3d",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get Each Answered Form",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1730,
+        "y": 940,
+        "wires": [
+            [
+                "8e8b0cd0b13c0c61",
+                "dfc6e804866badfa"
+            ]
+        ]
+    },
+    {
+        "id": "72eeacf15e359fec",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP StatusCode",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "201",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "206",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 630,
+        "y": 1900,
+        "wires": [
+            [
+                "bab95cf5ba3d6045"
+            ],
+            [
+                "ce4de75bc712f124"
+            ],
+            [
+                "ad563b1612f320ce"
+            ],
+            [
+                "0bf3afb49b551d9c",
+                "6a2cbd18a64442d7"
+            ]
+        ]
+    },
+    {
+        "id": "0bf3afb49b551d9c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Web Error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "7a564f89bd59c747",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get Question Details",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2200,
+        "y": 940,
+        "wires": [
+            [
+                "fb18f6154f0c0465",
+                "159ed95d7807ebf4"
+            ]
+        ]
+    },
+    {
+        "id": "6a2cbd18a64442d7",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Remove Payload",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1980,
+        "wires": [
+            [
+                "ce93ad07095d87d3"
+            ]
+        ]
+    },
+    {
+        "id": "29882bec61111349",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Only Remove Form Answer, on success",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "201",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3160,
+        "y": 2300,
+        "wires": [
+            [
+                "7af4f7c4d5054119"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a1830195f3d24676",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Debug Don't Delete",
+        "property": "debug_on",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2870,
+        "y": 2300,
+        "wires": [
+            [
+                "29882bec61111349"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e3b230d99d4bf90e",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch Forms",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ebb2a01cac9a803d",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP/201",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "836dca1c83616f32",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP/200",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "3944fbf533097cbb",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "HTTP/206",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "a3b3c181797c094a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Template N/A",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2480,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "fd37bced67415bb7",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "No Category",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "be126901c3d26d5d",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "ToDo: Build ticket packet\\n as no category exists",
+        "info": "ToDo: Build ticket packet\\n\nas no category exists",
+        "x": 1330,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "405728494cdf7f87",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Un-Processed Field",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4090,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "2a779072acca3f67",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Pre-Category Exists",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "6abd782f33f6aa9f",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combined Questions",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "e370037f2b9ae9a6",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Process Form",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "e97bbbbac1bab270",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "No Payload Required",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/initSession\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "8de5bc665bc27215"
+            ]
+        ],
+        "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "8ff8495c24d48ef7",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "flow.entity_id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "entity_id",
+                "pt": "flow",
+                "to": "$number(msg.form.answer)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3490,
+        "y": 760,
+        "wires": [
+            [
+                "13b00547bd61210c",
+                "7d597c9f95237aec"
+            ]
+        ]
+    },
+    {
+        "id": "56cdb59cb181c6f4",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "approval_required",
+        "rules": [
+            {
+                "t": "set",
+                "p": "approval_required",
+                "pt": "msg",
+                "to": "payload.default_values",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3470,
+        "y": 420,
+        "wires": [
+            [
+                "e0b3838ab709561b"
+            ]
+        ]
+    },
+    {
+        "id": "a06872fd8512eb8d",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Approval required",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4850,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ec869fcde783d888",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "entity_approval",
+        "rules": [
+            {
+                "t": "set",
+                "p": "entity_approval",
+                "pt": "msg",
+                "to": "$number(msg.payload.default_values)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3480,
+        "y": 460,
+        "wires": [
+            [
+                "0ab23bd954321b9c"
+            ]
+        ]
+    },
+    {
+        "id": "c0f28e1a21ee46d1",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Entity Approvers",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4420,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4b51a5788a45d420",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Entity Owner Approver Packet",
+        "func": "//{\n//  \"input\": {\n//    \"tickets_id\": msg.payload.id,\n//    \"users_id_validate\": msg.form.approver_id,\n//    \"comment_submission\": $string(\"A request for '\" & msg.form.name & \"' has been made that requires your approval.\"),\n//    \"status\": 2\n//  }\n//}\n\nif (msg.hasOwnProperty(\"entity_approvers\") ) {\n\n    msg.input = [];\n    msg.url = String(msg.api_url + '/Ticket/' + msg.payload.id + '/TicketValidation');\n\n\n    for(var i = 0; i < msg.entity_approvers.length; i++ ) {\n\n        var approver = {};\n    \n        approver.tickets_id = msg.payload.id;\n        approver.comment_submission = String(\"As the person listed as responsible, this request requires your approval.\");\n        approver.status = 2;\n        approver.users_id_validate = msg.entity_approvers[i];\n\n\n        \n        msg.input[i] = approver;\n        \n\n    }\n\n    msg.payload = {};\n    msg.payload.input = msg.input;\n\n    msg.method = \"POST\";\n\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2830,
+        "y": 2140,
+        "wires": [
+            [
+                "7926c9939779dd37",
+                "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "f5462f2891c454ec",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Approval Type Routing",
+        "property": "approval_type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "entity",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3940,
+        "y": 320,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "20a4cf95c10a2a5c",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "msg.entity_id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "entity_id",
+                "pt": "msg",
+                "to": "entity_id",
+                "tot": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "entity_id",
+                "pt": "flow"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & \"/Profile_User?searchText[profiles_id]=\" & msg.entity_approval &\"&searchText[entities_id]=\" & msg.entity_id",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "mehod",
+                "pt": "msg",
+                "to": "GET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3950,
+        "y": 460,
+        "wires": [
+            [
+                "3d1e72dfd4b897dc"
+            ]
+        ]
+    },
+    {
+        "id": "3d1e72dfd4b897dc",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "Fetch Entity Approvers",
+        "links": [
+            "eb5f283400263c25"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 4180,
+        "y": 460,
+        "wires": [
+            [
+                "c0f28e1a21ee46d1",
+                "2535b188f77fe631"
+            ]
+        ]
+    },
+    {
+        "id": "13b00547bd61210c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Entity ID",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3860,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "0ab23bd954321b9c",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "wait for flow.entity_id",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 3740,
+        "y": 460,
+        "wires": [
+            [
+                "20a4cf95c10a2a5c",
+                "d665febefbcb0731"
+            ]
+        ]
+    },
+    {
+        "id": "d665febefbcb0731",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Entity Approval: post wait",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4010,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "efc41ed6a8dcc29b",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Manual Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "2f0dd5172e907730"
+            ]
+        ]
+    },
+    {
+        "id": "2f0dd5172e907730",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "f2259793983f70a6",
+            "935f35904a0d89bf"
+        ],
+        "x": 345,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8cbff9c661802fc8",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Manual Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 3190,
+        "y": 2000,
+        "wires": [
+            [
+                "0e97a47512b3c7ef"
+            ]
+        ]
+    },
+    {
+        "id": "0e97a47512b3c7ef",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "f2259793983f70a6",
+            "935f35904a0d89bf"
+        ],
+        "x": 3345,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "2535b188f77fe631",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add Approvers",
+        "func": "if(msg.payload.length > 0){\n\n    msg.entity_approvers = \"[\";\n\n    for(var i = 0; i < msg.payload.length; i++ ) {\n\n        msg.entity_approvers = msg.entity_approvers + msg.payload[i].users_id + ',';\n    }\n\n\n    if (msg.entity_approvers != \"[\") {\n        msg.entity_approvers = String(msg.entity_approvers).substring(0, msg.entity_approvers.length - 1) + \"]\";\n        msg.entity_approvers = JSON.parse(msg.entity_approvers);\n    } else {\n        delete (msg.entity_approvers);\n    }\n\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4420,
+        "y": 500,
+        "wires": [
+            [
+                "fef2e3d863dd3b14",
+                "596b03adcd307cb4"
+            ]
+        ]
+    },
+    {
+        "id": "7926c9939779dd37",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Entity Owner Approval",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3440,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "84ac2b5e6df44243",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "End GLPI Session",
+        "mode": "link",
+        "links": [
+            "4350bb1697165898"
+        ],
+        "x": 570,
+        "y": 1960,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e5c1f581fdc90543",
+        "type": "trigger",
+        "z": "f6f2187d.f17ca8",
+        "name": "fail safe: End Session",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "date",
+        "duration": "8",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "1",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 360,
+        "y": 1960,
+        "wires": [
+            [
+                "84ac2b5e6df44243",
+                "e86ff2dd49db8a79"
+            ]
+        ]
+    },
+    {
+        "id": "fef2e3d863dd3b14",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add Approvers",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4600,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "e86ff2dd49db8a79",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "FailSafe: End Session",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "fa52923d181b861e",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Manual Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 3990,
+        "y": 260,
+        "wires": [
+            [
+                "d6e72db598c850a0"
+            ]
+        ]
+    },
+    {
+        "id": "d6e72db598c850a0",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "f2259793983f70a6",
+            "935f35904a0d89bf"
+        ],
+        "x": 4145,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "04d760f9b1988f4b",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add task to ticket for time tracking",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.api_url & '/Ticket/' & msg.payload.id &'/TicketTask/'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t  \"input\": {\t    \"tickets_id\": msg.payload.id,\t    \"taskcategories_id\": msg.category_id_automation_task,\t    \"users_id\": msg.session_details.session.glpiID,\t    \"content\": \"Created Ticket via NodeRed\",\t    \"is_private\": 1,\t    \"actiontime\": 10,\t    \"state\": 2,\t    \"users_id_tech\": msg.session_details.session.glpiID\t  }\t\t}\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "method",
+                "pt": "msg",
+                "to": "post",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2900,
+        "y": 2220,
+        "wires": [
+            [
+                "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "e930fc18412ba052",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: Fetch Session",
+        "links": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "e97bbbbac1bab270",
+                "865a5c31c2d4529c"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "2656360846806b47",
+        "type": "catch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 3100,
+        "y": 1440,
+        "wires": [
+            [
+                "d3d3832a60939b85"
+            ]
+        ]
+    },
+    {
+        "id": "d3d3832a60939b85",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 44",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3360,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "048e10e4b5f175c8",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Individulal Forms",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "400a61dcdf038b1d",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Manual Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1170,
+        "y": 1320,
+        "wires": [
+            [
+                "610fb43bda07b3c3"
+            ]
+        ]
+    },
+    {
+        "id": "610fb43bda07b3c3",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "f2259793983f70a6",
+            "935f35904a0d89bf"
+        ],
+        "x": 1325,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "5c7a23d16f3799de",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "answer_parts",
+                "pt": "msg",
+                "to": "parts",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form_parts.id",
+                "pt": "msg",
+                "to": "parts.id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 1400,
+        "wires": [
+            [
+                "706486ceadc2bee7"
+            ]
+        ]
+    },
+    {
+        "id": "731ac452a4471480",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine Questions",
+        "mode": "custom",
+        "build": "array",
+        "property": "form",
+        "propertyType": "msg",
+        "key": "parts",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 390,
+        "y": 1740,
+        "wires": [
+            [
+                "32337fc19b0c6c53",
+                "6abd782f33f6aa9f"
+            ]
+        ]
+    },
+    {
+        "id": "738079e881bd7c2c",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "task_category",
+        "rules": [
+            {
+                "t": "set",
+                "p": "task_category",
+                "pt": "msg",
+                "to": "$number(msg.payload.default_values)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3500,
+        "y": 660,
+        "wires": [
+            [
+                "675eebaa2b29490e",
+                "7d597c9f95237aec"
+            ]
+        ]
+    },
+    {
+        "id": "675eebaa2b29490e",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 45",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4060,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "706486ceadc2bee7",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "form.field_type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "description",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 1400,
+        "wires": [
+            [
+                "88a41fa724a24518"
+            ],
+            [
+                "56d5a39010b82e94"
+            ]
+        ]
+    },
+    {
+        "id": "88a41fa724a24518",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form.answer",
+                "pt": "msg",
+                "to": "$replace( msg.payload.description, /(\\&\\#\\d{2}\\;\\/?[a-z]+\\&\\#\\d{2}\\;|\\r\\n)/, '')\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1380,
+        "wires": [
+            [
+                "d5037ce5a29693fc"
+            ]
+        ]
+    },
+    {
+        "id": "3a6a6d119c434dce",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Upload JSON to ticket",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3420,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "c9f51df946e2038a",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form.answer",
+                "pt": "msg",
+                "to": "$replace( msg.payload.description, /(\\&\\#\\d{2}\\;\\/?[a-z]+\\&\\#\\d{2}\\;|\\r\\n)/, '')\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d00cd10c985b1d91",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Description Field as Value",
+        "property": "form.field_type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "hidden",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d5037ce5a29693fc",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Description Field as Value",
+        "func": "if(\n    msg.form.field_type == 'hidden'\n      &&\n    msg.form.answer == '-description-'\n) {\n\n  // msg.form.answer = msg.payload.description.replace(\"\\r)\", '').replace(\"\\n)\", '\\\\r\\\\n')\n  msg.form.answer = msg.payload.description.replace(/\\r/g, '').replace(/\\n/g, '').replace(/\\\"/g, '&quot;')\n  // msg.form.answer = msg.payload.description\n\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1420,
+        "wires": [
+            [
+                "46dd694a18a599c9"
+            ]
+        ]
+    },
+    {
+        "id": "87d33fd4cc09e27f",
+        "type": "link call",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: Get Session",
+        "links": [],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 920,
+        "wires": [
+            [
+                "454c179e9999918e"
+            ]
+        ]
+    },
+    {
+        "id": "865a5c31c2d4529c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Session Init begin",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "aa3f79a3aae107ec",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "GLPI: Ticket Creation (ITIL Template)",
+        "links": [],
+        "x": 540,
+        "y": 1580,
+        "wires": [
+            [
+                "7ec7fc9e20c4a7e8",
+                "aecf1787ccb37139"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "34d02c8cfe43bbe6",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Return to calling node",
+        "mode": "return",
+        "links": [],
+        "x": 4020,
+        "y": 1940,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "aecf1787ccb37139",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Ticket Creation - Template",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "30eb92e619af0e99",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "glpi.msg_routing",
+                "pt": "msg",
+                "to": "ticket_creation",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2590,
+        "y": 1940,
+        "wires": [
+            [
+                "34d02c8cfe43bbe6"
+            ]
+        ]
+    },
+    {
+        "id": "f44d85f3dd843e24",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "glpi.msg_routing",
+                "pt": "msg",
+                "to": "ticket_task_creation_automation",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3170,
+        "y": 2240,
+        "wires": [
+            [
+                "e5548020922347cc"
+            ]
+        ]
     }
 ]
