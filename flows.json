@@ -48,7 +48,18 @@
         "label": "Form Processing",
         "disabled": false,
         "info": "",
-        "env": []
+        "env": [
+            {
+                "name": "itsm_search",
+                "value": "true",
+                "type": "bool"
+            },
+            {
+                "name": "itsm_platform",
+                "value": "glpi",
+                "type": "str"
+            }
+        ]
     },
     {
         "id": "8179bf22c4c31682",
@@ -82,9 +93,7 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819,
-        "w": 1912,
-        "h": 122
+        "y": 819
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -105,9 +114,7 @@
             "317930c679e833d1"
         ],
         "x": 154,
-        "y": 679,
-        "w": 1092,
-        "h": 82
+        "y": 679
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -126,9 +133,7 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299,
-        "w": 812,
-        "h": 82
+        "y": 299
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -148,9 +153,7 @@
             "781d23c946457b30"
         ],
         "x": 1314,
-        "y": 19,
-        "w": 812,
-        "h": 122
+        "y": 19
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -168,9 +171,7 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19,
-        "w": 692,
-        "h": 82
+        "y": 19
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -189,9 +190,7 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419,
-        "w": 812,
-        "h": 82
+        "y": 419
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -210,9 +209,7 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539,
-        "w": 812,
-        "h": 82
+        "y": 539
     },
     {
         "id": "d3393ec35cb20a93",
@@ -230,9 +227,7 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139,
-        "w": 462,
-        "h": 82
+        "y": 139
     },
     {
         "id": "3e330505ea1e9cba",
@@ -250,9 +245,7 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139,
-        "w": 492,
-        "h": 82
+        "y": 139
     },
     {
         "id": "b447a1f691eb02df",
@@ -271,9 +264,7 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 999,
-        "w": 812,
-        "h": 82
+        "y": 999
     },
     {
         "id": "0d96945ec7d069cb",
@@ -291,9 +282,7 @@
             "540882a95f65754c"
         ],
         "x": 94,
-        "y": 159,
-        "w": 972,
-        "h": 109.5
+        "y": 159
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -311,9 +300,7 @@
             "0f2ff2f433d17eef"
         ],
         "x": 94,
-        "y": 319,
-        "w": 912,
-        "h": 82
+        "y": 319
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -343,7 +330,7 @@
             "8b70b96b1f62a785",
             "858fd2b2fac0f719"
         ],
-        "x": 174,
+        "x": 134,
         "y": 119,
         "w": 2312,
         "h": 182
@@ -363,15 +350,33 @@
             "e62119d30db09cce"
         ],
         "x": 94,
-        "y": 459,
-        "w": 832,
-        "h": 122
+        "y": 459
+    },
+    {
+        "id": "9b1493c4ae19a935",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "name": "ITSM Selection",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "b8c9f1cf125efd2e",
+            "f5cae04225998e3b",
+            "002457f33834fc91",
+            "d4d1ce730aa1c15b",
+            "9858d84dc9d001be",
+            "6840ab77f76439db"
+        ],
+        "x": 94,
+        "y": 639
     },
     {
         "id": "c41dc5b999e5cc21",
         "type": "group",
         "z": "4b5e055cd6b1e387",
-        "g": "046b4a43c9ecde56",
+        "g": "a9d52eb951c5f037",
         "name": "Search LDAP for user",
         "style": {
             "stroke": "#ff0000",
@@ -385,38 +390,58 @@
             "fe1f0a50300d9224",
             "b10e8a45ff44f80d",
             "0308c42b587c3794",
-            "cdde8116fcac6e5d"
+            "04818ddd8782b0a1"
         ],
-        "x": 214,
+        "x": 454,
         "y": 379,
-        "w": 1072,
+        "w": 1032,
         "h": 122
     },
     {
         "id": "aea0a3398dafab4c",
         "type": "group",
         "z": "4b5e055cd6b1e387",
-        "g": "046b4a43c9ecde56",
+        "g": "a9d52eb951c5f037",
         "name": "Invalid User Response",
         "style": {
             "stroke": "#ff0000",
-            "fill": "#dbcbe7",
+            "fill": "#e3f3d3",
             "label": true,
             "color": "#777777"
         },
         "nodes": [
             "72721ec69edf230f",
-            "8eca6e69b809790c",
-            "4cdbeaa8f5f3ddb7",
-            "e5f4eda95fcfd8d7"
+            "8eca6e69b809790c"
         ],
         "x": 1614,
-        "y": 639,
-        "w": 612,
-        "h": 122
+        "y": 679,
+        "w": 512,
+        "h": 82
     },
     {
-        "id": "046b4a43c9ecde56",
+        "id": "9858d84dc9d001be",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "GLPI",
+        "style": {
+            "fill": "#d1d1d1",
+            "label": true
+        },
+        "nodes": [
+            "33d710f97adb5298",
+            "6aac3151138c4af9",
+            "160bc27f7530e52d",
+            "269cbacf5274d6d8",
+            "4cdb1540cd4c8744",
+            "0676d69c05236349",
+            "42f157ed01b737f4"
+        ],
+        "x": 174,
+        "y": 859
+    },
+    {
+        "id": "a9d52eb951c5f037",
         "type": "group",
         "z": "4b5e055cd6b1e387",
         "name": "Password Reset",
@@ -428,12 +453,60 @@
         },
         "nodes": [
             "c41dc5b999e5cc21",
-            "aea0a3398dafab4c"
+            "aea0a3398dafab4c",
+            "cdde8116fcac6e5d",
+            "4cdbeaa8f5f3ddb7",
+            "82ccba0e0a13970a",
+            "20eb97dd0c088b3d"
         ],
-        "x": 188,
+        "x": 134,
         "y": 353,
-        "w": 2064,
+        "w": 2192,
         "h": 434
+    },
+    {
+        "id": "82ccba0e0a13970a",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "Respond: Success",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "b1bc2e62654b04e2",
+            "f125e4c474dd2e5c"
+        ],
+        "x": 1614,
+        "y": 579,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "20eb97dd0c088b3d",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "ITSM Search",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "4a4676456c27f256",
+            "a43bd1f944ef851c",
+            "eeb2b5a4e44d0c24",
+            "bc29c53d4ef04184",
+            "68628b6f32ec8b74",
+            "dbeedddce12963de"
+        ],
+        "x": 434,
+        "y": 539,
+        "w": 1072,
+        "h": 122
     },
     {
         "id": "5798e39cbc3730ae",
@@ -761,7 +834,8 @@
         "y": 1020,
         "wires": [
             [
-                "b7fde07e47cc852e"
+                "b7fde07e47cc852e",
+                "2189bf4e56868e51"
             ],
             [
                 "9c92aaf02fee52b5"
@@ -823,7 +897,8 @@
             "bf098463143ac8ad",
             "e5ae19af5f6d6561",
             "f1dcd5b6e32fb905",
-            "4cdbeaa8f5f3ddb7"
+            "4cdbeaa8f5f3ddb7",
+            "b54c063d6519c463"
         ],
         "x": 300,
         "y": 720,
@@ -1121,6 +1196,23 @@
         "y": 380,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "2189bf4e56868e51",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "debug 95",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 940,
+        "wires": []
     },
     {
         "id": "02c4b9524d361ade",
@@ -2000,7 +2092,7 @@
         "links": [
             "9c92aaf02fee52b5"
         ],
-        "x": 340,
+        "x": 300,
         "y": 240,
         "wires": [
             [
@@ -2023,7 +2115,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
+        "x": 980,
         "y": 260,
         "wires": []
     },
@@ -2044,7 +2136,7 @@
                 "module": "child_process"
             }
         ],
-        "x": 570,
+        "x": 530,
         "y": 240,
         "wires": [
             [
@@ -2065,7 +2157,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Expand bash variables",
-        "x": 800,
+        "x": 760,
         "y": 240,
         "wires": [
             [
@@ -2086,7 +2178,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1010,
+        "x": 970,
         "y": 200,
         "wires": [
             [
@@ -2106,7 +2198,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2180,
+        "x": 2140,
         "y": 200,
         "wires": [
             [
@@ -2124,7 +2216,7 @@
         "property": "payload",
         "action": "str",
         "pretty": false,
-        "x": 1110,
+        "x": 1070,
         "y": 200,
         "wires": [
             [
@@ -2144,7 +2236,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "utf8",
-        "x": 1880,
+        "x": 1840,
         "y": 200,
         "wires": [
             [
@@ -2175,7 +2267,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2020,
+        "x": 1980,
         "y": 200,
         "wires": [
             [
@@ -2193,7 +2285,7 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 2360,
+        "x": 2320,
         "y": 200,
         "wires": [],
         "l": true
@@ -2210,7 +2302,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
+        "x": 1210,
         "y": 200,
         "wires": [
             [
@@ -2230,7 +2322,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1470,
+        "x": 1430,
         "y": 200,
         "wires": [
             [
@@ -2252,7 +2344,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
+        "x": 1450,
         "y": 160,
         "wires": []
     },
@@ -2270,7 +2362,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2380,
+        "x": 2340,
         "y": 160,
         "wires": []
     },
@@ -2294,7 +2386,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1700,
+        "x": 1660,
         "y": 200,
         "wires": [
             [
@@ -2313,7 +2405,7 @@
         "searchScope": "sub",
         "filter": "",
         "attributes": "dn,cn,givenName,sn,uid,mail",
-        "x": 780,
+        "x": 800,
         "y": 440,
         "wires": [
             [
@@ -2333,7 +2425,7 @@
         "syntax": "mustache",
         "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
         "output": "str",
-        "x": 580,
+        "x": 600,
         "y": 440,
         "wires": [
             [
@@ -2362,11 +2454,12 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 930,
+        "x": 950,
         "y": 440,
         "wires": [
             [
-                "b10e8a45ff44f80d"
+                "5fd67e7434f3fcd1",
+                "04818ddd8782b0a1"
             ],
             [
                 "0308c42b587c3794"
@@ -2378,12 +2471,12 @@
         "type": "link out",
         "z": "4b5e055cd6b1e387",
         "g": "c41dc5b999e5cc21",
-        "name": "Response: Valid User",
+        "name": "LDAP: User Found",
         "mode": "link",
         "links": [
-            "b95bc55627121e7b"
+            "4a4676456c27f256"
         ],
-        "x": 1140,
+        "x": 1370,
         "y": 420,
         "wires": [],
         "l": true
@@ -2398,7 +2491,7 @@
         "links": [
             "72721ec69edf230f"
         ],
-        "x": 1150,
+        "x": 1170,
         "y": 460,
         "wires": [],
         "l": true
@@ -2407,13 +2500,13 @@
         "id": "cdde8116fcac6e5d",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
-        "g": "c41dc5b999e5cc21",
+        "g": "a9d52eb951c5f037",
         "name": "Process: Password Reset",
         "links": [
             "b7fde07e47cc852e"
         ],
-        "x": 350,
-        "y": 440,
+        "x": 270,
+        "y": 400,
         "wires": [
             [
                 "faa5e7380a3092a2"
@@ -2426,17 +2519,15 @@
         "type": "link in",
         "z": "4b5e055cd6b1e387",
         "g": "aea0a3398dafab4c",
-        "name": "Process: Invalid User",
+        "name": "Respond: Invalid User",
         "links": [
-            "0308c42b587c3794",
-            "5c1445a8771782d3"
+            "0308c42b587c3794"
         ],
         "x": 1740,
-        "y": 680,
+        "y": 720,
         "wires": [
             [
-                "8eca6e69b809790c",
-                "e5f4eda95fcfd8d7"
+                "8eca6e69b809790c"
             ]
         ],
         "l": true
@@ -2453,8 +2544,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1960,
-        "y": 680,
+        "x": 1980,
+        "y": 720,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -2465,23 +2556,89 @@
         "id": "4cdbeaa8f5f3ddb7",
         "type": "link out",
         "z": "4b5e055cd6b1e387",
-        "g": "aea0a3398dafab4c",
+        "g": "a9d52eb951c5f037",
         "name": "Response",
         "mode": "link",
         "links": [
             "7db929503cf13635"
         ],
-        "x": 2140,
-        "y": 680,
+        "x": 2240,
+        "y": 620,
         "wires": [],
         "l": true
     },
     {
-        "id": "e5f4eda95fcfd8d7",
+        "id": "4a4676456c27f256",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "ITSM: Search for User",
+        "links": [
+            "b10e8a45ff44f80d"
+        ],
+        "x": 560,
+        "y": 600,
+        "wires": [
+            [
+                "a43bd1f944ef851c"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a43bd1f944ef851c",
+        "type": "switch",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "Conduct ITSM Search?",
+        "property": "itsm_search",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 600,
+        "wires": [
+            [
+                "bc29c53d4ef04184"
+            ],
+            [
+                "dbeedddce12963de"
+            ]
+        ]
+    },
+    {
+        "id": "eeb2b5a4e44d0c24",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "",
+        "links": [
+            "b8c9f1cf125efd2e"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1230,
+        "y": 580,
+        "wires": [
+            [
+                "68628b6f32ec8b74"
+            ]
+        ]
+    },
+    {
+        "id": "5fd67e7434f3fcd1",
         "type": "debug",
         "z": "4b5e055cd6b1e387",
-        "g": "aea0a3398dafab4c",
-        "name": "Invalid User",
+        "name": "debug 96",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2490,9 +2647,126 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2010,
-        "y": 720,
+        "x": 1400,
+        "y": 320,
         "wires": []
+    },
+    {
+        "id": "04818ddd8782b0a1",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "c41dc5b999e5cc21",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload[0]",
+                "pt": "msg",
+                "to": "ldap",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 420,
+        "wires": [
+            [
+                "b10e8a45ff44f80d"
+            ]
+        ]
+    },
+    {
+        "id": "bc29c53d4ef04184",
+        "type": "template",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "ITSM User SearchData",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"data\": {\n        \"givenName\": \"{{ ldap.givenName }}\",\n        \"sn\": \"{{ ldap.sn }}\",\n        \"uid\": \"{{ ldap.uid }}\"\n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}",
+        "output": "json",
+        "x": 1050,
+        "y": 580,
+        "wires": [
+            [
+                "eeb2b5a4e44d0c24"
+            ]
+        ]
+    },
+    {
+        "id": "b1bc2e62654b04e2",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "82ccba0e0a13970a",
+        "name": "return msg.payload to client",
+        "func": "msg.payload = msg.payload = 'Your Password has been reset, dont forget to take note of the first half of your password!!';\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 620,
+        "wires": [
+            [
+                "4cdbeaa8f5f3ddb7"
+            ]
+        ]
+    },
+    {
+        "id": "f125e4c474dd2e5c",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "82ccba0e0a13970a",
+        "name": "Respond: Success",
+        "links": [
+            "68628b6f32ec8b74",
+            "dbeedddce12963de"
+        ],
+        "x": 1730,
+        "y": 620,
+        "wires": [
+            [
+                "b1bc2e62654b04e2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "68628b6f32ec8b74",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "LDAP: User Found",
+        "mode": "link",
+        "links": [
+            "f125e4c474dd2e5c"
+        ],
+        "x": 1390,
+        "y": 580,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "dbeedddce12963de",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "20eb97dd0c088b3d",
+        "name": "Success",
+        "mode": "link",
+        "links": [
+            "f125e4c474dd2e5c"
+        ],
+        "x": 1000,
+        "y": 620,
+        "wires": [],
+        "l": true
     },
     {
         "id": "0eeaba70b043a226",
@@ -2746,5 +3020,276 @@
         "x": 820,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "33d710f97adb5298",
+        "type": "http request",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "User ITSM Search",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 870,
+        "y": 900,
+        "wires": [
+            [
+                "6aac3151138c4af9"
+            ]
+        ]
+    },
+    {
+        "id": "6aac3151138c4af9",
+        "type": "json",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 1010,
+        "y": 900,
+        "wires": [
+            [
+                "269cbacf5274d6d8"
+            ]
+        ]
+    },
+    {
+        "id": "b8c9f1cf125efd2e",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "ITSM Search",
+        "links": [],
+        "x": 190,
+        "y": 700,
+        "wires": [
+            [
+                "f5cae04225998e3b"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "f5cae04225998e3b",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "ITSM Platform",
+        "property": "payload.platform",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "glpi",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 360,
+        "y": 700,
+        "wires": [
+            [
+                "002457f33834fc91"
+            ],
+            [
+                "6840ab77f76439db"
+            ]
+        ]
+    },
+    {
+        "id": "002457f33834fc91",
+        "type": "link call",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "GLPI",
+        "links": [
+            "160bc27f7530e52d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 590,
+        "y": 680,
+        "wires": [
+            [
+                "d4d1ce730aa1c15b"
+            ]
+        ]
+    },
+    {
+        "id": "d4d1ce730aa1c15b",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 730,
+        "y": 680,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "160bc27f7530e52d",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "GLPI",
+        "links": [],
+        "x": 250,
+        "y": 980,
+        "wires": [
+            [
+                "4cdb1540cd4c8744"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "269cbacf5274d6d8",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 1110,
+        "y": 900,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "6840ab77f76439db",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "9b1493c4ae19a935",
+        "name": "ITSM Platform Doesn't exist",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "42f157ed01b737f4",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "User",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://nodered:1880/api/user",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 900,
+        "wires": [
+            [
+                "33d710f97adb5298"
+            ]
+        ]
+    },
+    {
+        "id": "4cdb1540cd4c8744",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Action",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "search",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 980,
+        "wires": [
+            [
+                "0676d69c05236349"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0676d69c05236349",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Search",
+        "property": "payload.action_for",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "user",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 560,
+        "y": 920,
+        "wires": [
+            [
+                "42f157ed01b737f4"
+            ],
+            []
+        ]
     }
 ]
