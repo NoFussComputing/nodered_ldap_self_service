@@ -99,15 +99,15 @@
         "nodes": [
             "2dc375bf57ad8daa",
             "1ce803b83ecf1593",
-            "51b436503d414ae6",
             "f3b55ea2.f4d51",
             "bf098463143ac8ad",
-            "457583335831f826"
+            "457583335831f826",
+            "317930c679e833d1"
         ],
         "x": 154,
-        "y": 671.5,
-        "w": 1272,
-        "h": 97
+        "y": 679,
+        "w": 1092,
+        "h": 82
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -1190,7 +1190,7 @@
         "y": 720,
         "wires": [
             [
-                "51b436503d414ae6"
+                "317930c679e833d1"
             ]
         ],
         "icon": "node-red/file.svg",
@@ -1223,35 +1223,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
+        "x": 720,
         "y": 720,
         "wires": [
             [
                 "f3b55ea2.f4d51"
             ]
-        ]
-    },
-    {
-        "id": "51b436503d414ae6",
-        "type": "exec",
-        "z": "42b9663b67dbd983",
-        "g": "ad0235dd3aa9eb7d",
-        "command": "bash -c \"tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6  ; echo -n\"",
-        "addpay": "random",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Generate First half of Password",
-        "x": 570,
-        "y": 720,
-        "wires": [
-            [
-                "1ce803b83ecf1593"
-            ],
-            [],
-            []
         ]
     },
     {
@@ -1265,7 +1242,7 @@
         "format": "handlebars",
         "syntax": "mustache",
         "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"{{{ url }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\">\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\">\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\">\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\">\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n  </form>\n</fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
-        "x": 970,
+        "x": 850,
         "y": 720,
         "wires": [
             [
@@ -1283,7 +1260,7 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 1310,
+        "x": 1130,
         "y": 720,
         "wires": [],
         "l": true
@@ -1403,7 +1380,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1090,
+        "x": 970,
         "y": 720,
         "wires": [
             [
@@ -1992,6 +1969,25 @@
         "wires": [
             [
                 "99a3fa75430c37f7"
+            ]
+        ]
+    },
+    {
+        "id": "317930c679e833d1",
+        "type": "link call",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "Fetch First Half of the password",
+        "links": [
+            "869469819396a632"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "1ce803b83ecf1593"
             ]
         ]
     },
