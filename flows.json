@@ -598,14 +598,14 @@
             "label": true
         },
         "nodes": [
-            "07ed8c85583c5a2e",
             "9090daaf8a5892b0",
             "853e6c15b5317007",
             "142f9ce43cb63dd7",
             "c710ba5a1416cfd8",
             "c66c2a0c3817433c",
             "073709e754dd98a3",
-            "ec52cbc3aa0fec25"
+            "ec52cbc3aa0fec25",
+            "07ed8c85583c5a2e"
         ],
         "x": 214,
         "y": 819,
@@ -1964,11 +1964,11 @@
         "name": "global.config",
         "rules": [
             {
-                "t": "move",
-                "p": "payload",
-                "pt": "msg",
-                "to": "config",
-                "tot": "global"
+                "t": "set",
+                "p": "config",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -2949,7 +2949,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"developer_mode\": true,\n    \"html\": {\n        \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n        \"logo_width\": 282,\n        \"logo_height\": 90\n    },\n    \"http_path\": \"/mysite/\",\n    \"itsm\": {\n        \"create_ticket\": true,\n        \"platform\": \"glpi\",\n        \"search\": true\n    },\n    \"user_data\": \"userdata/\"\n}",
+        "template": "{\n    \"developer_mode\": true,\n    \"html\": {\n        \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n        \"logo_width\": 282,\n        \"logo_height\": 90\n    },\n    \"http_path\": \"/mysite/\",\n    \"itsm\": {\n        \"create_ticket\": true,\n        \"platform\": \"glpi\",\n        \"search\": true,\n        \"ticket\": {\n            \"approval_required\": 0,\n            \"category\": 6,\n            \"entity\": 1,\n            \"requesttype_id\": 6,\n            \"task_category_id\": 6\n        }\n    },\n    \"user_data\": \"userdata/\"\n}",
         "output": "json",
         "x": 1500,
         "y": 380,
@@ -3634,7 +3634,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"data\": {\n        \"givenName\": \"{{ ldap.givenName }}\",\n        \"sn\": \"{{ ldap.sn }}\",\n        \"uid\": \"{{ ldap.uid }}\"\n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}",
+        "template": "{\n    \"data\": {\n        \"givenName\": \"{{ ldap.givenName }}\",\n        \"sn\": \"{{ ldap.sn }}\",\n        \"uid\": \"{{ ldap.uid }}\"\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}",
         "output": "json",
         "x": 970,
         "y": 580,
@@ -3786,7 +3786,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"data\": {\n        \"task\": {\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": 0,\n            \"category\": 6,\n            \"entity\": 1,\n            \"requester_id\": 1,\n            \"requesttypes_id\": 6\n        }\n        \n    },\n    \"platform\": \"{{ env.itsm_platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n",
+        "template": "{\n    \"data\": {\n        \"task\": {\n            \"body\": {\n                \"name\": \"LDAP Password Reset\",\n                \"human_task_duration\": {{ global.config.itsm.human_task_duration_time }},\n                \"platform\": \"NodeRed\",\n                \"details\": {\n                    \"url\": \"{{{ req.url }}}\",\n                    \"client_address\": \"{{{ req.connection.remoteAddress }}}\",\n                    \"request_method\": \"{{{ req.method }}}\"\n                },\n                \"form\": {\n                    \"fname\": \"{{{ msg.http.form.givenName }}}\",\n                    \"lname\": \"{{{ msg.http.form.sn }}}\",\n                    \"mail\": \"{{{ msg.http.form.mail }}}\",\n                    \"username\": \"{{{ msg.http.form.uid }}}\"\n                }\n            },\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": {{ global.config.ticket.approval_required }},\n            \"category_id\": {{ global.config.ticket.category_id }},\n            \"entity_id\": {{ global.config.ticket.entity_id }},\n            \"requester_id\": {{ itsm.user.id }},\n            \"requesttype_id\":{{ global.config.ticket.requesttype_id }}\n            \"task_category_id\": {{ global.config.ticket.task_category_id }}\n        }\n        \n    },\n    \"platform\": \"{{ global.config.itsm.platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n\n{\n    \"requesttypes_id\": 6,\n    \"Automation\": {\n        \"name\": \"LDAP Password Reset\",\n        \"platform\": \"NodeRed\",\n        \"details\": {\n            \"url\": \"{{{ req.url }}}\",\n            \"client_address\": \"{{{ req.connection.remoteAddress }}}\",\n            \"request_method\": \"{{{ req.method }}}\"\n        }\n    },\n    \"approval_required\": 0,\n    \"name\": \"\",\n    \"ticket_category\": 6,\n    \"ticket_entity\": 1,\n    \"requester_id\": {\n        { glpi_user.id\n        }\n    }\n}",
         "output": "json",
         "x": 970,
         "y": 720,
@@ -4017,21 +4017,6 @@
         ]
     },
     {
-        "id": "07ed8c85583c5a2e",
-        "type": "link out",
-        "z": "4b5e055cd6b1e387",
-        "g": "d0dc259791aed430",
-        "name": "Respond to User",
-        "mode": "link",
-        "links": [
-            "f125e4c474dd2e5c"
-        ],
-        "x": 1790,
-        "y": 860,
-        "wires": [],
-        "l": true
-    },
-    {
         "id": "ec52cbc3aa0fec25",
         "type": "debug",
         "z": "4b5e055cd6b1e387",
@@ -4106,6 +4091,21 @@
                 "8dd7c0779eac59f0"
             ]
         ]
+    },
+    {
+        "id": "07ed8c85583c5a2e",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "d0dc259791aed430",
+        "name": "Respond to User",
+        "mode": "link",
+        "links": [
+            "f125e4c474dd2e5c"
+        ],
+        "x": 1790,
+        "y": 860,
+        "wires": [],
+        "l": true
     },
     {
         "id": "0eeaba70b043a226",
@@ -4432,7 +4432,7 @@
         "g": "9b1493c4ae19a935",
         "name": "ITSM Platform",
         "property": "config.itsm.platform",
-        "propertyType": "msg",
+        "propertyType": "global",
         "rules": [
             {
                 "t": "eq",
