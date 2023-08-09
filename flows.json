@@ -282,7 +282,9 @@
             "540882a95f65754c"
         ],
         "x": 94,
-        "y": 159
+        "y": 159,
+        "w": 972,
+        "h": 109.5
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -300,7 +302,9 @@
             "0f2ff2f433d17eef"
         ],
         "x": 94,
-        "y": 319
+        "y": 319,
+        "w": 912,
+        "h": 82
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -350,7 +354,9 @@
             "e62119d30db09cce"
         ],
         "x": 94,
-        "y": 459
+        "y": 459,
+        "w": 832,
+        "h": 122
     },
     {
         "id": "9b1493c4ae19a935",
@@ -371,6 +377,8 @@
         ],
         "x": 94,
         "y": 639,
+        "w": 4744,
+        "h": 834,
         "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
@@ -425,7 +433,9 @@
             "7ccb5fae05b5c6a6"
         ],
         "x": 94,
-        "y": 1519
+        "y": 1519,
+        "w": 1932,
+        "h": 522
     },
     {
         "id": "8a2206d682028469",
@@ -565,7 +575,9 @@
             "d7dbd3970c891c33"
         ],
         "x": 234,
-        "y": 813
+        "y": 813,
+        "w": 4578,
+        "h": 634
     },
     {
         "id": "82ccba0e0a13970a",
@@ -635,7 +647,9 @@
             "8b1fef39c34f5513"
         ],
         "x": 694,
-        "y": 1559
+        "y": 1559,
+        "w": 1052,
+        "h": 142
     },
     {
         "id": "311c966bd1fa946e",
@@ -656,7 +670,9 @@
             "13ebe1d63226e702"
         ],
         "x": 694,
-        "y": 1754
+        "y": 1754,
+        "w": 672,
+        "h": 107
     },
     {
         "id": "1b2783bfbb09503e",
@@ -679,7 +695,9 @@
             "f08e22fcc829d7b2"
         ],
         "x": 214,
-        "y": 1919
+        "y": 1919,
+        "w": 952,
+        "h": 82
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -813,7 +831,9 @@
             "5a961504d7ca5be3"
         ],
         "x": 754,
-        "y": 1051.5
+        "y": 1051.5,
+        "w": 4032,
+        "h": 369.5
     },
     {
         "id": "d7dbd3970c891c33",
@@ -838,7 +858,9 @@
             "a888a2ed9a053acc"
         ],
         "x": 754,
-        "y": 839
+        "y": 839,
+        "w": 1412,
+        "h": 182
     },
     {
         "id": "85fa24886e126df7",
@@ -860,7 +882,9 @@
             "285f57c0fee687a1"
         ],
         "x": 2234,
-        "y": 1259
+        "y": 1259,
+        "w": 1472,
+        "h": 82
     },
     {
         "id": "aa5626527a9df701",
@@ -878,7 +902,9 @@
             "f17ccfa845461657"
         ],
         "x": 2228,
-        "y": 1093
+        "y": 1093,
+        "w": 2204,
+        "h": 134
     },
     {
         "id": "351440700b3e2ecc",
@@ -897,7 +923,9 @@
             "e0660324da4581dd"
         ],
         "x": 2254,
-        "y": 1119
+        "y": 1119,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "f17ccfa845461657",
@@ -921,7 +949,9 @@
             "fdf014eff1962329"
         ],
         "x": 2794,
-        "y": 1119
+        "y": 1119,
+        "w": 1612,
+        "h": 82
     },
     {
         "id": "5798e39cbc3730ae",
@@ -1406,15 +1436,16 @@
         "type": "http in",
         "z": "379c65a27117b46c",
         "name": "",
-        "url": "/mysite/*",
+        "url": "*",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 440,
+        "x": 530,
+        "y": 580,
         "wires": [
             [
-                "eae031f35d9a1e9e"
+                "3ada862ebc07a99d",
+                "c80657a01a03012d"
             ]
         ]
     },
@@ -1461,8 +1492,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 860,
-        "y": 440,
+        "x": 1420,
+        "y": 560,
         "wires": [
             [
                 "515f363d4f52f625"
@@ -1501,8 +1532,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 380,
+        "x": 1430,
+        "y": 500,
         "wires": []
     },
     {
@@ -1531,8 +1562,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 440,
+        "x": 860,
+        "y": 560,
         "wires": [
             [
                 "6dc15589d8863139",
@@ -1550,8 +1581,8 @@
             "02c4b9524d361ade",
             "b202e09db45b339a"
         ],
-        "x": 1220,
-        "y": 500,
+        "x": 1780,
+        "y": 620,
         "wires": [],
         "l": true
     },
@@ -1565,8 +1596,8 @@
             "2dc375bf57ad8daa",
             "86d0cb173ed572b5"
         ],
-        "x": 1180,
-        "y": 460,
+        "x": 1740,
+        "y": 580,
         "wires": [],
         "l": true
     },
@@ -1575,16 +1606,16 @@
         "type": "http in",
         "z": "379c65a27117b46c",
         "name": "",
-        "url": "/mysite/*",
+        "url": "*",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 260,
-        "y": 1020,
+        "x": 610,
+        "y": 1160,
         "wires": [
             [
                 "482740e98dda9d35",
-                "75913f37.78e6e"
+                "7c38c172df490c56"
             ]
         ]
     },
@@ -1596,8 +1627,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 410,
-        "y": 1020,
+        "x": 910,
+        "y": 1140,
         "wires": [
             [
                 "539d65720b0ff630"
@@ -1617,8 +1648,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
-        "y": 980,
+        "x": 770,
+        "y": 1100,
         "wires": []
     },
     {
@@ -1634,8 +1665,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1060,
+        "x": 1320,
+        "y": 1200,
         "wires": []
     },
     {
@@ -1671,8 +1702,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 1020,
+        "x": 1060,
+        "y": 1140,
         "wires": [
             [
                 "0eb8679ee25c4a34",
@@ -1710,8 +1741,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 740,
-        "y": 1020,
+        "x": 1320,
+        "y": 1160,
         "wires": [
             [
                 "b7fde07e47cc852e",
@@ -1735,8 +1766,8 @@
         "links": [
             "cdde8116fcac6e5d"
         ],
-        "x": 940,
-        "y": 980,
+        "x": 1520,
+        "y": 1120,
         "wires": [],
         "l": true
     },
@@ -1749,20 +1780,10 @@
         "links": [
             "bb8102ee0c070ff2"
         ],
-        "x": 980,
-        "y": 1020,
+        "x": 1560,
+        "y": 1160,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "876431fc89aa2a3d",
-        "type": "comment",
-        "z": "379c65a27117b46c",
-        "name": "HTTP/POST",
-        "info": "",
-        "x": 250,
-        "y": 960,
-        "wires": []
     },
     {
         "id": "7db929503cf13635",
@@ -1783,8 +1804,8 @@
             "4cdbeaa8f5f3ddb7",
             "b54c063d6519c463"
         ],
-        "x": 300,
-        "y": 720,
+        "x": 760,
+        "y": 1420,
         "wires": [
             [
                 "e3043367c9a89a90",
@@ -1800,8 +1821,8 @@
         "name": "HTTP Response",
         "statusCode": "",
         "headers": {},
-        "x": 500,
-        "y": 720,
+        "x": 960,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1817,8 +1838,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 680,
+        "x": 970,
+        "y": 1380,
         "wires": []
     },
     {
@@ -1846,8 +1867,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 1710,
-        "y": 420,
+        "x": 2350,
+        "y": 540,
         "wires": [
             [
                 "eaeb9e2bfbe1dc95",
@@ -1858,8 +1879,8 @@
                 "1b1ca0bd7037ed0f"
             ],
             [
-                "f56a55d84eb88baf",
-                "28ac8fd21056642c"
+                "28ac8fd21056642c",
+                "d81c931de5a63675"
             ]
         ]
     },
@@ -1872,44 +1893,10 @@
         "links": [
             "3502d9cf69680b66"
         ],
-        "x": 2080,
-        "y": 360,
+        "x": 2720,
+        "y": 480,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "f56a55d84eb88baf",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "404",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Not Found",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1960,
-        "y": 540,
-        "wires": [
-            [
-                "d81c931de5a63675"
-            ]
-        ]
     },
     {
         "id": "d81c931de5a63675",
@@ -1918,10 +1905,10 @@
         "name": "HTTP/404",
         "mode": "link",
         "links": [
-            "fd80fd11fc971e2c"
+            "4d40709eea926ab1"
         ],
-        "x": 2150,
-        "y": 540,
+        "x": 2730,
+        "y": 660,
         "wires": [],
         "l": true
     },
@@ -1938,8 +1925,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2080,
-        "y": 320,
+        "x": 2720,
+        "y": 440,
         "wires": []
     },
     {
@@ -1955,8 +1942,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1950,
-        "y": 580,
+        "x": 2730,
+        "y": 700,
         "wires": []
     },
     {
@@ -1968,8 +1955,8 @@
         "links": [
             "acd5690f3865f156"
         ],
-        "x": 1150,
-        "y": 580,
+        "x": 1710,
+        "y": 700,
         "wires": [],
         "l": true
     },
@@ -1981,8 +1968,8 @@
         "links": [
             "12a331c2a036a776"
         ],
-        "x": 1540,
-        "y": 420,
+        "x": 2180,
+        "y": 540,
         "wires": [
             [
                 "9f59194fecc0976a"
@@ -1999,8 +1986,8 @@
         "links": [
             "602e7197835bba91"
         ],
-        "x": 2090,
-        "y": 440,
+        "x": 2730,
+        "y": 560,
         "wires": [],
         "l": true
     },
@@ -2017,8 +2004,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2070,
-        "y": 400,
+        "x": 2710,
+        "y": 520,
         "wires": []
     },
     {
@@ -2031,8 +2018,8 @@
             "0172c4a240b566fd",
             "d810b86dc7c722cd"
         ],
-        "x": 1130,
-        "y": 340,
+        "x": 1690,
+        "y": 460,
         "wires": [],
         "l": true
     },
@@ -2046,8 +2033,8 @@
             "b5cedc58894f707e",
             "2ccbf2d475489da8"
         ],
-        "x": 1190,
-        "y": 420,
+        "x": 1750,
+        "y": 540,
         "wires": [],
         "l": true
     },
@@ -2061,8 +2048,8 @@
             "e50f46892eabd2a5",
             "a28d15c7a8dfdc85"
         ],
-        "x": 1180,
-        "y": 380,
+        "x": 1740,
+        "y": 500,
         "wires": [],
         "l": true
     },
@@ -2075,8 +2062,8 @@
         "links": [
             "fb5301abffede979"
         ],
-        "x": 1150,
-        "y": 540,
+        "x": 1710,
+        "y": 660,
         "wires": [],
         "l": true
     },
@@ -2093,8 +2080,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 940,
+        "x": 1500,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2110,8 +2097,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 640,
+        "x": 1700,
+        "y": 760,
         "wires": []
     },
     {
@@ -2124,8 +2111,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 460,
-        "y": 440,
+        "x": 1020,
+        "y": 560,
         "wires": [
             [
                 "43a3bec1272517ae"
@@ -2150,8 +2137,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 610,
-        "y": 440,
+        "x": 1170,
+        "y": 560,
         "wires": [
             [
                 "1b121b9ecdf14084"
@@ -2174,8 +2161,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 520,
+        "x": 1440,
+        "y": 640,
         "wires": []
     },
     {
@@ -2495,10 +2482,143 @@
             "bb8102ee0c070ff2",
             "1df8ab6bb55ff621"
         ],
-        "x": 950,
-        "y": 1060,
+        "x": 1530,
+        "y": 1200,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "3ada862ebc07a99d",
+        "type": "function",
+        "z": "379c65a27117b46c",
+        "name": "Valid Path?",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/')\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\n\nif ( msg.http.path[1] + '/' == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "eae031f35d9a1e9e"
+            ],
+            [
+                "4716d2916d6de31e",
+                "6e74b4a9a6b2dac8"
+            ]
+        ],
+        "outputLabels": [
+            "SelfService",
+            "HTTP/404"
+        ]
+    },
+    {
+        "id": "4716d2916d6de31e",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "HTTP/404",
+        "mode": "link",
+        "links": [
+            "4d40709eea926ab1"
+        ],
+        "x": 850,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "6e74b4a9a6b2dac8",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "HTTP / 404",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c80657a01a03012d",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "debug 113",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7c38c172df490c56",
+        "type": "function",
+        "z": "379c65a27117b46c",
+        "name": "Valid Path?",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/')\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\n\nif ( msg.http.path[1] + '/' == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1160,
+        "wires": [
+            [
+                "75913f37.78e6e"
+            ],
+            [
+                "c0e5efefb8395690",
+                "7b62ec12651e478a"
+            ]
+        ],
+        "outputLabels": [
+            "SelfService",
+            "HTTP/404"
+        ]
+    },
+    {
+        "id": "c0e5efefb8395690",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "name": "HTTP/404",
+        "mode": "link",
+        "links": [
+            "4d40709eea926ab1"
+        ],
+        "x": 930,
+        "y": 1180,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7b62ec12651e478a",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "name": "HTTP / 404",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 1220,
+        "wires": []
     },
     {
         "id": "02c4b9524d361ade",
@@ -2530,7 +2650,7 @@
         "fieldType": "msg",
         "format": "html",
         "syntax": "mustache",
-        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"{{{ url }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\" value=\"{{{ payload.0.question }}}\" placeholder=\"Type Question one here\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\" value=\"{{{ payload.1.question }}}\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\" value=\"{{{ payload.2.question }}}\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
+        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\" value=\"{{{ payload.0.question }}}\" placeholder=\"Type Question one here\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\" value=\"{{{ payload.1.question }}}\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\" value=\"{{{ payload.2.question }}}\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
         "output": "str",
         "x": 1670,
         "y": 860,
@@ -2619,7 +2739,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"{{{ url }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\">\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\">\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\">\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\">\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n  </form>\n</fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\">\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\">\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\">\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\">\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}';\">Home</button>\n  </form>\n</fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
         "x": 850,
         "y": 720,
         "wires": [
@@ -2814,7 +2934,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/changepassword';\">Change Password</button>\n{{/global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/mysite/logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>My Account</h2></legend>\n\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n{{/global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
         "x": 450,
         "y": 340,
         "wires": [
@@ -2864,8 +2984,8 @@
         "g": "a64f4a2c837d5c3c",
         "name": "HTML: Error",
         "links": [
-            "d81c931de5a63675",
-            "d17512b4de05ede1"
+            "d17512b4de05ede1",
+            "434d74f494db7cfc"
         ],
         "x": 1410,
         "y": 100,
@@ -2990,7 +3110,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n  <head>\n    <title>No Fuss Computing</title>\n    <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\">\n    <meta charset=\"utf-8\">\n    <meta name=\"robots\" content=\"noindex,nofollow\">\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js\"></script>\n    <script src=\"{{ url }}common.js\"></script>\n    <link rel=\"stylesheet\" href=\"{{ url }}style.css\">\n  </head>\n  \n<body>\n  <div>\n\n    <div style=\"background: url({{{ global.config.html.logo }}}) no-repeat center top; background-size: {{ global.config.html.logo_width }}px {{ global.config.html.logo_height }}px; width: 100%; height: 120px; display: flex;\"></div>\n\n    {{{ html.body }}}\n\n  </div>\n</body>\n</html>\n",
+        "template": "<html>\n  <head>\n    <title>No Fuss Computing</title>\n    <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=no\">\n    <meta charset=\"utf-8\">\n    <meta name=\"robots\" content=\"noindex,nofollow\">\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js\"></script>\n    <script src=\"/{{{ global.config.http_path }}}common.js\"></script>\n    <link rel=\"stylesheet\" href=\"/{{{ global.config.http_path }}}style.css\">\n  </head>\n  \n<body>\n  <div>\n\n    <div style=\"background: url({{{ global.config.html.logo }}}) no-repeat center top; background-size: {{ global.config.html.logo_width }}px {{ global.config.html.logo_height }}px; width: 100%; height: 120px; display: flex;\"></div>\n\n    {{{ html.body }}}\n\n  </div>\n</body>\n</html>\n",
         "x": 510,
         "y": 60,
         "wires": [
@@ -3100,7 +3220,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"{{{ url }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"lname\">Current Password</label>\n          <input type=\"password\" id=\"sn\" name=\"sn\">\n      \n          <label for=\"lname\">New Password</label>\n          <input type=\"password\" id=\"mail\" name=\"mail\">\n      \n          <label for=\"lname\">Confirm New Password</label>\n          <input type=\"password\" id=\"uid\" name=\"uid\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n          <button id=\"navigation\" onclick=\"window.location.href='/mysite/';\">Home</button>\n        </form>\n      </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
+        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"lname\">Current Password</label>\n          <input type=\"password\" id=\"sn\" name=\"sn\">\n      \n          <label for=\"lname\">New Password</label>\n          <input type=\"password\" id=\"mail\" name=\"mail\">\n      \n          <label for=\"lname\">Confirm New Password</label>\n          <input type=\"password\" id=\"uid\" name=\"uid\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n          <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}/';\">Home</button>\n        </form>\n      </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
         "x": 470,
         "y": 580,
         "wires": [
@@ -3425,8 +3545,8 @@
         "name": "HTTP/401",
         "links": [
             "13126d75aae301a2",
-            "9c55bf6229fa740c",
-            "366892fde876296f"
+            "366892fde876296f",
+            "9c55bf6229fa740c"
         ],
         "x": 1400,
         "y": 200,
@@ -3447,7 +3567,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/mysite/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
+        "template": "{\n  \"developer_mode\": true,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"selfservice/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
         "output": "json",
         "x": 1500,
         "y": 380,
@@ -3612,6 +3732,73 @@
         "x": 1880,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "782fc77ff667cc29",
+        "type": "change",
+        "z": "42b9663b67dbd983",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "404",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "http.error",
+                "pt": "msg",
+                "to": "Not Found",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 260,
+        "wires": [
+            [
+                "434d74f494db7cfc"
+            ]
+        ]
+    },
+    {
+        "id": "434d74f494db7cfc",
+        "type": "link out",
+        "z": "42b9663b67dbd983",
+        "name": "Process Error",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 1700,
+        "y": 260,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4d40709eea926ab1",
+        "type": "link in",
+        "z": "42b9663b67dbd983",
+        "name": "HTTP/404",
+        "links": [
+            "d81c931de5a63675",
+            "4716d2916d6de31e",
+            "c0e5efefb8395690"
+        ],
+        "x": 1400,
+        "y": 260,
+        "wires": [
+            [
+                "782fc77ff667cc29"
+            ]
+        ],
+        "l": true
     },
     {
         "id": "bb8102ee0c070ff2",
