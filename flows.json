@@ -475,12 +475,22 @@
             "7df31641fc2fe59a",
             "d109fc9821987d4f",
             "e9127065159b9f0f",
-            "de01a4559aecf1c4"
+            "de01a4559aecf1c4",
+            "36cf43c754570ebd",
+            "1fb718bcdd65dc23",
+            "b73763bef878743f",
+            "a42b269766d80f74",
+            "842ade29052f7e66",
+            "3a543f0ac74f2891",
+            "f7ac866b468babe1",
+            "330ab008da58ac93",
+            "30efda375178f75f",
+            "8e72ce414e21b54f"
         ],
-        "x": 54,
-        "y": 39,
-        "w": 832,
-        "h": 82
+        "x": 74,
+        "y": 59,
+        "w": 1142,
+        "h": 162
     },
     {
         "id": "aea0a3398dafab4c",
@@ -672,94 +682,6 @@
         "h": 122
     },
     {
-        "id": "ed0645c12f7435b2",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
-        "name": "Create a Ticket",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "d4de6eab89782579",
-            "d20869bcacd7b0fd",
-            "525cc01f4d41ae0b",
-            "45d7aa8b4b386bb7",
-            "2663cccd5d6ca575",
-            "6492bc8146326691",
-            "e363219f4309eedb",
-            "c6c64453fc61e50f",
-            "5eda003868c5e354",
-            "d59d4248cc68349c",
-            "2545718f1853e084",
-            "1840577fd414a84d",
-            "cffce1b60cc14e8b",
-            "ed5a0fab59b28faa",
-            "85fa24886e126df7",
-            "246331e1c052e1f8",
-            "e8f257b38aa4d749",
-            "f57f557a25d166b7",
-            "aa5626527a9df701",
-            "5a961504d7ca5be3"
-        ],
-        "x": 754,
-        "y": 1048,
-        "w": 4032,
-        "h": 373
-    },
-    {
-        "id": "d7dbd3970c891c33",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "9858d84dc9d001be",
-        "name": "Search for User",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "669724fdc876385d",
-            "65c3e138bbcd8b3a",
-            "269cbacf5274d6d8",
-            "42f157ed01b737f4",
-            "33d710f97adb5298",
-            "6aac3151138c4af9",
-            "587b497ce06d683f",
-            "f76da20ac475cf64",
-            "a9cfd4c1413c7ec6",
-            "a888a2ed9a053acc"
-        ],
-        "x": 754,
-        "y": 839,
-        "w": 1412,
-        "h": 182
-    },
-    {
-        "id": "85fa24886e126df7",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "ed0645c12f7435b2",
-        "name": "Ticket Solution",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#bfdbef",
-            "label": true
-        },
-        "nodes": [
-            "40208ed719417cac",
-            "803a8b65fc7a5087",
-            "96766518a046855d",
-            "242b471ad711a4f1",
-            "1305e2f195ec5ede",
-            "285f57c0fee687a1"
-        ],
-        "x": 2234,
-        "y": 1259,
-        "w": 1472,
-        "h": 82
-    },
-    {
         "id": "4cdebccc4a1f08ed",
         "type": "group",
         "z": "4b5e055cd6b1e387",
@@ -815,6 +737,92 @@
         "h": 142
     },
     {
+        "id": "ed0645c12f7435b2",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Create a Ticket",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "d4de6eab89782579",
+            "d20869bcacd7b0fd",
+            "525cc01f4d41ae0b",
+            "45d7aa8b4b386bb7",
+            "2663cccd5d6ca575",
+            "6492bc8146326691",
+            "e363219f4309eedb",
+            "c6c64453fc61e50f",
+            "5eda003868c5e354",
+            "2545718f1853e084",
+            "1840577fd414a84d",
+            "ed5a0fab59b28faa",
+            "85fa24886e126df7",
+            "246331e1c052e1f8",
+            "e8f257b38aa4d749",
+            "f57f557a25d166b7",
+            "aa5626527a9df701",
+            "5a961504d7ca5be3"
+        ],
+        "x": 754,
+        "y": 1051.5,
+        "w": 4032,
+        "h": 369.5
+    },
+    {
+        "id": "d7dbd3970c891c33",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "9858d84dc9d001be",
+        "name": "Search for User",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "669724fdc876385d",
+            "65c3e138bbcd8b3a",
+            "269cbacf5274d6d8",
+            "42f157ed01b737f4",
+            "33d710f97adb5298",
+            "6aac3151138c4af9",
+            "587b497ce06d683f",
+            "f76da20ac475cf64",
+            "a9cfd4c1413c7ec6",
+            "a888a2ed9a053acc"
+        ],
+        "x": 754,
+        "y": 839,
+        "w": 1412,
+        "h": 182
+    },
+    {
+        "id": "85fa24886e126df7",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Ticket Solution",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "40208ed719417cac",
+            "803a8b65fc7a5087",
+            "96766518a046855d",
+            "242b471ad711a4f1",
+            "1305e2f195ec5ede",
+            "285f57c0fee687a1"
+        ],
+        "x": 2234,
+        "y": 1259,
+        "w": 1472,
+        "h": 82
+    },
+    {
         "id": "aa5626527a9df701",
         "type": "group",
         "z": "8179bf22c4c31682",
@@ -826,14 +834,13 @@
             "label": true
         },
         "nodes": [
-            "ab36781dcfc9dd94",
             "351440700b3e2ecc",
             "f17ccfa845461657"
         ],
         "x": 2228,
-        "y": 1074,
+        "y": 1093,
         "w": 2204,
-        "h": 153
+        "h": 134
     },
     {
         "id": "351440700b3e2ecc",
@@ -880,6 +887,28 @@
         "x": 2794,
         "y": 1119,
         "w": 1612,
+        "h": 82
+    },
+    {
+        "id": "690ee27cf3eee484",
+        "type": "group",
+        "z": "42b9663b67dbd983",
+        "name": "Development: Create GLPI Config File",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#b797cf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "742f2f88646c543a",
+            "b54ff25c1e83a094",
+            "da2cb448945babee",
+            "d5627c7a12528006"
+        ],
+        "x": 1234,
+        "y": 459,
+        "w": 772,
         "h": 82
     },
     {
@@ -942,7 +971,7 @@
         "y": 220,
         "wires": [
             [
-                "82183bee2dd412fe"
+                "b3adfbc257af34d9"
             ]
         ]
     },
@@ -1328,6 +1357,33 @@
         ]
     },
     {
+        "id": "3a543f0ac74f2891",
+        "type": "junction",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "30efda375178f75f",
+                "8e72ce414e21b54f"
+            ]
+        ]
+    },
+    {
+        "id": "f7ac866b468babe1",
+        "type": "junction",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "x": 970,
+        "y": 100,
+        "wires": [
+            [
+                "de01a4559aecf1c4"
+            ]
+        ]
+    },
+    {
         "id": "160d0b5ed597dc51",
         "type": "ldap",
         "host": "ldap://ldap",
@@ -1342,8 +1398,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 90,
-        "y": 280,
+        "x": 150,
+        "y": 440,
         "wires": [
             [
                 "eae031f35d9a1e9e"
@@ -1393,8 +1449,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 800,
-        "y": 280,
+        "x": 860,
+        "y": 440,
         "wires": [
             [
                 "515f363d4f52f625"
@@ -1433,8 +1489,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 810,
-        "y": 220,
+        "x": 870,
+        "y": 380,
         "wires": []
     },
     {
@@ -1463,8 +1519,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 240,
-        "y": 280,
+        "x": 300,
+        "y": 440,
         "wires": [
             [
                 "6dc15589d8863139",
@@ -1482,8 +1538,8 @@
             "02c4b9524d361ade",
             "b202e09db45b339a"
         ],
-        "x": 1160,
-        "y": 340,
+        "x": 1220,
+        "y": 500,
         "wires": [],
         "l": true
     },
@@ -1497,8 +1553,8 @@
             "2dc375bf57ad8daa",
             "86d0cb173ed572b5"
         ],
-        "x": 1120,
-        "y": 300,
+        "x": 1180,
+        "y": 460,
         "wires": [],
         "l": true
     },
@@ -1892,8 +1948,8 @@
         "links": [
             "acd5690f3865f156"
         ],
-        "x": 1090,
-        "y": 420,
+        "x": 1150,
+        "y": 580,
         "wires": [],
         "l": true
     },
@@ -1955,8 +2011,8 @@
             "0172c4a240b566fd",
             "d810b86dc7c722cd"
         ],
-        "x": 1070,
-        "y": 180,
+        "x": 1130,
+        "y": 340,
         "wires": [],
         "l": true
     },
@@ -1970,8 +2026,8 @@
             "b5cedc58894f707e",
             "2ccbf2d475489da8"
         ],
-        "x": 1130,
-        "y": 260,
+        "x": 1190,
+        "y": 420,
         "wires": [],
         "l": true
     },
@@ -1985,8 +2041,8 @@
             "e50f46892eabd2a5",
             "a28d15c7a8dfdc85"
         ],
-        "x": 1120,
-        "y": 220,
+        "x": 1180,
+        "y": 380,
         "wires": [],
         "l": true
     },
@@ -1999,8 +2055,8 @@
         "links": [
             "fb5301abffede979"
         ],
-        "x": 1090,
-        "y": 380,
+        "x": 1150,
+        "y": 540,
         "wires": [],
         "l": true
     },
@@ -2034,8 +2090,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1080,
-        "y": 480,
+        "x": 1140,
+        "y": 640,
         "wires": []
     },
     {
@@ -2048,8 +2104,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 400,
-        "y": 280,
+        "x": 460,
+        "y": 440,
         "wires": [
             [
                 "43a3bec1272517ae"
@@ -2074,8 +2130,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 280,
+        "x": 610,
+        "y": 440,
         "wires": [
             [
                 "1b121b9ecdf14084"
@@ -2098,8 +2154,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 360,
+        "x": 880,
+        "y": 520,
         "wires": []
     },
     {
@@ -2120,11 +2176,11 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 190,
-        "y": 80,
+        "x": 210,
+        "y": 140,
         "wires": [
             [
-                "7df31641fc2fe59a"
+                "3a543f0ac74f2891"
             ]
         ]
     },
@@ -2141,8 +2197,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 370,
-        "y": 80,
+        "x": 550,
+        "y": 100,
         "wires": [
             [
                 "d109fc9821987d4f"
@@ -2158,8 +2214,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 510,
-        "y": 80,
+        "x": 690,
+        "y": 100,
         "wires": [
             [
                 "e9127065159b9f0f"
@@ -2179,6 +2235,13 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "CurrentGlobalConfig",
+                "pt": "msg",
+                "to": "config",
+                "tot": "global"
             }
         ],
         "action": "",
@@ -2186,11 +2249,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 80,
+        "x": 810,
+        "y": 100,
         "wires": [
             [
-                "de01a4559aecf1c4"
+                "f7ac866b468babe1"
             ]
         ]
     },
@@ -2208,9 +2271,199 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 80,
+        "x": 1100,
+        "y": 140,
         "wires": []
+    },
+    {
+        "id": "36cf43c754570ebd",
+        "type": "watch",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "files": "config.json",
+        "recursive": "",
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "3a543f0ac74f2891"
+            ]
+        ]
+    },
+    {
+        "id": "1fb718bcdd65dc23",
+        "type": "watch",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "files": "config.glpi.json",
+        "recursive": "",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "3a543f0ac74f2891"
+            ]
+        ]
+    },
+    {
+        "id": "b73763bef878743f",
+        "type": "file in",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "Open GLPI  Config File",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "a42b269766d80f74"
+            ]
+        ]
+    },
+    {
+        "id": "a42b269766d80f74",
+        "type": "json",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 740,
+        "y": 180,
+        "wires": [
+            [
+                "842ade29052f7e66"
+            ]
+        ]
+    },
+    {
+        "id": "842ade29052f7e66",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "global.config.glpi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "config.glpi",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "CurrentGlobalConfig",
+                "pt": "msg",
+                "to": "config",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 180,
+        "wires": [
+            [
+                "de01a4559aecf1c4"
+            ]
+        ]
+    },
+    {
+        "id": "330ab008da58ac93",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "config.glpi.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 475,
+        "y": 180,
+        "wires": [
+            [
+                "b73763bef878743f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "30efda375178f75f",
+        "type": "delay",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 445,
+        "y": 180,
+        "wires": [
+            [
+                "330ab008da58ac93"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8e72ce414e21b54f",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "config.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 445,
+        "y": 100,
+        "wires": [
+            [
+                "7df31641fc2fe59a"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "02c4b9524d361ade",
@@ -3154,12 +3407,12 @@
         "type": "template",
         "z": "42b9663b67dbd983",
         "g": "8a2206d682028469",
-        "name": "",
+        "name": "Content",
         "field": "payload",
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n  \"developer_mode\": true,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/mysite/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"user_data\": \"userdata/\"\n}",
+        "template": "{\n  \"developer_mode\": true,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/mysite/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
         "output": "json",
         "x": 1500,
         "y": 380,
@@ -3235,6 +3488,94 @@
         "statusType": "auto",
         "x": 1860,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "742f2f88646c543a",
+        "type": "template",
+        "z": "42b9663b67dbd983",
+        "g": "690ee27cf3eee484",
+        "name": "Content",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n  \"api_url\": \"http://glpi/apirest.php/\",\n  \"authorization\": \"user_token W6Ay7cdu38KuQCpYaZw5E7fxk4q8dYSrz38EsPuK\",\n  \"app_token\": \"SwiMCd61d6qcfCoFCziotpJgBafl15vQCdRwHJ47\",\n  \"category_id_automation_task\": \"2\",\n  \"debug_on\": false\n}",
+        "output": "json",
+        "x": 1500,
+        "y": 500,
+        "wires": [
+            [
+                "da2cb448945babee"
+            ]
+        ]
+    },
+    {
+        "id": "b54ff25c1e83a094",
+        "type": "inject",
+        "z": "42b9663b67dbd983",
+        "g": "690ee27cf3eee484",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1340,
+        "y": 500,
+        "wires": [
+            [
+                "742f2f88646c543a"
+            ]
+        ]
+    },
+    {
+        "id": "da2cb448945babee",
+        "type": "file",
+        "z": "42b9663b67dbd983",
+        "g": "690ee27cf3eee484",
+        "name": "",
+        "filename": "config.glpi.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1700,
+        "y": 500,
+        "wires": [
+            [
+                "d5627c7a12528006"
+            ]
+        ]
+    },
+    {
+        "id": "d5627c7a12528006",
+        "type": "debug",
+        "z": "42b9663b67dbd983",
+        "g": "690ee27cf3eee484",
+        "name": "Config Written",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 500,
         "wires": []
     },
     {
@@ -5070,10 +5411,12 @@
         "y": 1640,
         "wires": [
             [
-                "8d9fa9fe704e74be"
+                "8d9fa9fe704e74be",
+                "89073d15986953eb"
             ],
             [
-                "9c55bf6229fa740c"
+                "9c55bf6229fa740c",
+                "e60fd80a68fb6b67"
             ]
         ],
         "outputLabels": [
@@ -5359,7 +5702,7 @@
         "z": "8179bf22c4c31682",
         "g": "95c7670ef9039295",
         "name": "Validate Token File",
-        "func": "var msg1 = null;\nvar msg2 = null;\nmsg.authorized = false;\n\n\nif( msg.payload.datetime > Date.now() ) {\n    msg.authorized = true;\n    node.send([msg, null]);\n} else {\n    //msg2 = msg;\n    node.send([null, msg]);\n}\n",
+        "func": "var msg1 = null;\nvar msg2 = null;\n\nif( msg.payload.datetime > Date.now() ) {\n    msg.authorized = true;\n    node.send([msg, null]);\n} else {\n    //msg2 = msg;\n    node.send([null, msg]);\n}\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -5482,7 +5825,7 @@
         "z": "8179bf22c4c31682",
         "g": "bbd929c437c592ea",
         "name": "Auth Type",
-        "func": "var token = null;\nvar auth = null;\n\nvar use_cookie = false;\nvar use_token = false;\n\nif ( Object.keys(msg.req.cookies || {}).length > 0 ) {\n    if (msg.req.cookies.hasOwnProperty(\"token\")) {\n\n        use_cookie = true;\n    }\n\n} else if (Object.keys(msg.req.query || {}).length > 0 ) {\n\n    if (msg.req.query.hasOwnProperty(\"token\")) {\n        \n        use_token = true;\n    }\n}\n\nif( use_cookie ) {\n\n    msg.filename = msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if ( use_token ) {\n\n    msg.filename = msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
+        "func": "var token = null;\nvar auth = null;\n\nvar use_cookie = false;\nvar use_token = false;\n\nmsg.authorized = false;\n\nif (msg.req.cookies.hasOwnProperty(\"token\")) {\n\n        use_cookie = true;\n        node.warn(\"cookie11\");\n\n} else if (Object.keys(msg.req.query || {}).length > 0) {\n    node.warn(\"token11\");\n\n    if (msg.req.query.hasOwnProperty(\"token\")) {\n        \n        use_token = true;\n        node.warn(\"token12\");\n    }\n}\n\nif (use_cookie) {\n    node.warn(\"cookie21\");\n\n    msg.filename = msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if (use_token) {\n    node.warn(\"token21\");\n\n    msg.filename = msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -5492,10 +5835,12 @@
         "y": 1720,
         "wires": [
             [
-                "bc039e4b516adf37"
+                "bc039e4b516adf37",
+                "f5a5044976f70b47"
             ],
             [
-                "627a72eee1e26ae6"
+                "627a72eee1e26ae6",
+                "b264bf19808a760c"
             ]
         ],
         "outputLabels": [
@@ -6313,6 +6658,74 @@
         "wires": []
     },
     {
+        "id": "f5a5044976f70b47",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 109",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "b264bf19808a760c",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 110",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 988.5714721679688,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "89073d15986953eb",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 111",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "e60fd80a68fb6b67",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "name": "debug 112",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 1500,
+        "wires": []
+    },
+    {
         "id": "17f893c2bb347668",
         "type": "inject",
         "z": "104f7938a23fe82f",
@@ -6357,36 +6770,36 @@
                 "t": "set",
                 "p": "authorization",
                 "pt": "msg",
-                "to": "user_token W6Ay7cdu38KuQCpYaZw5E7fxk4q8dYSrz38EsPuK",
-                "tot": "str"
+                "to": "config.glpi.authorization",
+                "tot": "global"
             },
             {
                 "t": "set",
                 "p": "app_token",
                 "pt": "msg",
-                "to": "SwiMCd61d6qcfCoFCziotpJgBafl15vQCdRwHJ47",
-                "tot": "str"
+                "to": "config.glpi.app_token",
+                "tot": "global"
             },
             {
                 "t": "set",
                 "p": "api_url",
                 "pt": "msg",
-                "to": "http://glpi/apirest.php",
-                "tot": "str"
+                "to": "config.glpi.api_url",
+                "tot": "global"
             },
             {
                 "t": "set",
                 "p": "debug_on",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
+                "pt": "global",
+                "to": "config.glpi.debug_on",
+                "tot": "global"
             },
             {
                 "t": "set",
                 "p": "category_id_automation_task",
-                "pt": "msg",
-                "to": "2",
-                "tot": "num"
+                "pt": "global",
+                "to": "config.glpi.category_id_automation_task",
+                "tot": "global"
             }
         ],
         "action": "",
@@ -6705,6 +7118,75 @@
         "statusType": "auto",
         "x": 1600,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b3adfbc257af34d9",
+        "type": "function",
+        "z": "104f7938a23fe82f",
+        "name": "Config Exists",
+        "func": "var exists = null;\nvar absent = null;\nvar config_not_loaded = null;\n\nfs.stat('config.glpi.json', function (err) {\n    if (err) {\n        absent = msg;\n    } else {\n        if( global.get('config') != null ) {\n            exists = msg;\n        }else{\n            config_not_loaded = msg;\n        }\n    }\n});\n\nnode.send([exists, absent, config_not_loaded]);\n",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 930,
+        "y": 220,
+        "wires": [
+            [
+                "82183bee2dd412fe"
+            ],
+            [
+                "e4ec88859fe76e54"
+            ],
+            [
+                "59a9bd1194a20f9f"
+            ]
+        ],
+        "outputLabels": [
+            "Exists",
+            "Absent",
+            "NoConfigLoaded"
+        ]
+    },
+    {
+        "id": "e4ec88859fe76e54",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "No GLPI Config File",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "59a9bd1194a20f9f",
+        "type": "debug",
+        "z": "104f7938a23fe82f",
+        "name": "No Global Config Loaded",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 300,
         "wires": []
     },
     {
@@ -11032,7 +11514,9 @@
         "type": "link call",
         "z": "f6f2187d.f17ca8",
         "name": "GLPI: Get Session",
-        "links": [],
+        "links": [
+            "e930fc18412ba052"
+        ],
         "linkType": "static",
         "timeout": "30",
         "x": 470,
