@@ -648,13 +648,12 @@
             "2f7615b7afa603aa",
             "0107c5fd18462084",
             "99a20ee6c80595d1",
-            "158aa20b662c7f8f",
             "9bb0664a91ae9b97",
             "f08e22fcc829d7b2"
         ],
         "x": 214,
         "y": 1919,
-        "w": 1112,
+        "w": 952,
         "h": 82
     },
     {
@@ -5632,49 +5631,14 @@
         "filename": "filename",
         "filenameType": "msg",
         "appendNewline": true,
-        "createDir": false,
+        "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1080,
+        "x": 920,
         "y": 1960,
         "wires": [
             [
                 "f08e22fcc829d7b2"
-            ]
-        ]
-    },
-    {
-        "id": "158aa20b662c7f8f",
-        "type": "change",
-        "z": "8179bf22c4c31682",
-        "g": "1b2783bfbb09503e",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "$string(msg.hash.value & '.json')",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t    \"datetime\": $number(msg.expires)\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 1960,
-        "wires": [
-            [
-                "9bb0664a91ae9b97"
             ]
         ]
     },
@@ -5692,7 +5656,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1210,
+        "x": 1050,
         "y": 1960,
         "wires": []
     },
@@ -5786,8 +5750,8 @@
         "type": "function",
         "z": "8179bf22c4c31682",
         "g": "1b2783bfbb09503e",
-        "name": "expiry",
-        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\nreturn msg;\n",
+        "name": "Data",
+        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\nmsg.payload = { \"datetime\": msg.expires };\nmsg.filename = global.get('config.paths.token_sessions') + msg.hash.value + '.json';\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5797,7 +5761,7 @@
         "y": 1960,
         "wires": [
             [
-                "158aa20b662c7f8f"
+                "9bb0664a91ae9b97"
             ]
         ]
     },
@@ -5825,7 +5789,7 @@
         "z": "8179bf22c4c31682",
         "g": "bbd929c437c592ea",
         "name": "Auth Type",
-        "func": "var token = null;\nvar auth = null;\n\nvar use_cookie = false;\nvar use_token = false;\n\nmsg.authorized = false;\n\nif (msg.req.cookies.hasOwnProperty(\"token\")) {\n\n        use_cookie = true;\n        node.warn(\"cookie11\");\n\n} else if (Object.keys(msg.req.query || {}).length > 0) {\n    node.warn(\"token11\");\n\n    if (msg.req.query.hasOwnProperty(\"token\")) {\n        \n        use_token = true;\n        node.warn(\"token12\");\n    }\n}\n\nif (use_cookie) {\n    node.warn(\"cookie21\");\n\n    msg.filename = msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if (use_token) {\n    node.warn(\"token21\");\n\n    msg.filename = msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
+        "func": "var token = null;\nvar auth = null;\n\nvar use_cookie = false;\nvar use_token = false;\n\nmsg.authorized = false;\n\nif (msg.req.cookies.hasOwnProperty(\"token\")) {\n\n        use_cookie = true;\n        node.warn(\"cookie11\");\n\n} else if (Object.keys(msg.req.query || {}).length > 0) {\n    node.warn(\"token11\");\n\n    if (msg.req.query.hasOwnProperty(\"token\")) {\n        \n        use_token = true;\n        node.warn(\"token12\");\n    }\n}\n\nif (use_cookie) {\n    node.warn(\"cookie21\");\n\n    msg.filename = global.get('config.paths.token_sessions') + msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if (use_token) {\n    node.warn(\"token21\");\n\n    msg.filename = global.get('config.paths.token_sessions') + msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -6935,16 +6899,6 @@
                 "e2fdc9ac8f0f5378"
             ]
         ]
-    },
-    {
-        "id": "efca7293ea947912",
-        "type": "comment",
-        "z": "104f7938a23fe82f",
-        "name": "Within the Defaults node below\\n You will need to sutup the app token\\n and the user token for this automation to work.",
-        "info": "Within the Defaults node below\\n\nYou will need to sutup the app token\\n\nand the user token for this automation to work.\n",
-        "x": 1130,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "271a0053b235aad2",
