@@ -1622,13 +1622,12 @@
         "y": 2140,
         "wires": [
             [
-                "96b9e9bd2edabf78",
-                "4e856f29a7148cf0",
                 "f0b8ea2876129114",
                 "4b51a5788a45d420",
                 "f710a0c68b11ee76",
                 "04d760f9b1988f4b",
-                "baa846245c4d19de"
+                "baa846245c4d19de",
+                "432e2ad61476d045"
             ]
         ]
     },
@@ -1907,6 +1906,18 @@
         "wires": [
             [
                 "0f30a271d9c71f74"
+            ]
+        ]
+    },
+    {
+        "id": "8d9762cb45d1a09d",
+        "type": "junction",
+        "z": "f6f2187d.f17ca8",
+        "x": 3020,
+        "y": 2040,
+        "wires": [
+            [
+                "e5548020922347cc"
             ]
         ]
     },
@@ -7439,7 +7450,7 @@
         "z": "8179bf22c4c31682",
         "g": "ed0645c12f7435b2",
         "name": "msg.form",
-        "func": "\n\nmsg.form = {\n  \"approval_required\": msg.payload.data.ticket.approval_required,\n  \"data\": msg.payload.data,\n  \"name\": \"\",\n  \"requester_id\": msg.itsm.user.id,\n  \"requesttypes_id\": msg.payload.data.ticket.requesttype_id,\n  \"ticket_category\": msg.payload.data.ticket.category_id,\n  \"ticket_entity\": msg.payload.data.ticket.entity_id\n}\n\nmsg.task_category = global.get('config.itsm.ticket.task_category_id');\n\nreturn msg;\n",
+        "func": "\n\nmsg.form = {\n  \"approval_required\": msg.payload.data.ticket.approval_required,\n  \"data\": msg.payload.data,\n  \"name\": \"\",\n  \"requester_id\": msg.itsm.user.id,\n  \"requesttypes_id\": msg.payload.data.ticket.requesttype_id,\n  \"ticket_category\": msg.payload.data.ticket.category_id,\n  \"ticket_entity\": msg.payload.data.ticket.entity_id,\n  \"auto_assign\": true\n}\n\nmsg.task_category = global.get('config.itsm.ticket.task_category_id');\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8911,47 +8922,6 @@
         ]
     },
     {
-        "id": "96b9e9bd2edabf78",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "Add Requester to ticket",
-        "rules": [
-            {
-                "t": "set",
-                "p": "url",
-                "pt": "msg",
-                "to": "msg.api_url & '/Ticket/' & msg.payload.id & '/Ticket_User'",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t  \"input\": [\t        {\t          \"users_id\": msg.form.requester_id,\t          \"tickets_id\": msg.payload.id,\t          \"type\": 1,\t          \"use_notification\": 1,\t          \"alternative_email\": \"\",\t          \"links\": [\t            {\t              \"rel\": \"Ticket\",\t              \"href\": $string('http://127.0.0.1/apirest.php/Ticket/' & msg.payload.id, prettify)\t            },\t            {\t              \"rel\": \"User\",\t              \"href\": $string('http://127.0.0.1/apirest.php/User/' & msg.form.requester_id, prettify)\t              \t            }\t          ]\t\t        }\t    ]\t  }",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "method",
-                "pt": "msg",
-                "to": "post",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2850,
-        "y": 2020,
-        "wires": [
-            [
-                "e5548020922347cc"
-            ]
-        ]
-    },
-    {
         "id": "40bba4658693fcf0",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
@@ -9196,47 +9166,6 @@
         "wires": []
     },
     {
-        "id": "4e856f29a7148cf0",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "Assign to Bot User",
-        "rules": [
-            {
-                "t": "set",
-                "p": "url",
-                "pt": "msg",
-                "to": "msg.api_url & '/Ticket/' & msg.payload.id & '/Ticket_User'",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t  \"input\": [\t        {\t          \"users_id\": msg.session_details.session.glpiID,\t          \"tickets_id\": msg.payload.id,\t          \"type\": 3,\t          \"use_notification\": 0,\t          \"alternative_email\": \"\",\t          \"links\": [\t            {\t              \"rel\": \"Ticket\",\t              \"href\": $string('http://127.0.0.1/apirest.php/Ticket/' & msg.payload.id, prettify)\t            },\t            {\t              \"rel\": \"User\",\t              \"href\": $string('http://127.0.0.1/apirest.php/User/' & session_details.session.glpiID, prettify)\t              \t            }\t          ]\t\t        }\t    ]\t  }",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "method",
-                "pt": "msg",
-                "to": "post",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2870,
-        "y": 2060,
-        "wires": [
-            [
-                "e5548020922347cc"
-            ]
-        ]
-    },
-    {
         "id": "d50561ffddac19e4",
         "type": "comment",
         "z": "f6f2187d.f17ca8",
@@ -9289,8 +9218,8 @@
         "z": "f6f2187d.f17ca8",
         "name": "Ticket Details",
         "info": "",
-        "x": 2850,
-        "y": 1980,
+        "x": 2890,
+        "y": 1960,
         "wires": []
     },
     {
@@ -12607,58 +12536,6 @@
         "wires": []
     },
     {
-        "id": "c9f51df946e2038a",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "form.answer",
-                "pt": "msg",
-                "to": "$replace( msg.payload.description, /(\\&\\#\\d{2}\\;\\/?[a-z]+\\&\\#\\d{2}\\;|\\r\\n)/, '')\t",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 1260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d00cd10c985b1d91",
-        "type": "switch",
-        "z": "f6f2187d.f17ca8",
-        "name": "Description Field as Value",
-        "property": "form.field_type",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "hidden",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 1200,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "d5037ce5a29693fc",
         "type": "function",
         "z": "f6f2187d.f17ca8",
@@ -12726,7 +12603,8 @@
                 "aecf1787ccb37139"
             ]
         ],
-        "l": true
+        "l": true,
+        "info": "# Create Ticket using Ticket Template\n\nThis node is an entrypoint for the start of a workflow that uses the provided category to fetch the ticket template and use it to build the ticket.\n\nthe input object is `msg.form` with the following structure\n\n```json\n{\n  \"approval_required\": msg.payload.data.ticket.approval_required,\n  \"data\": msg.payload.data,\n  \"name\": \"\",\n  \"requester_id\": msg.itsm.user.id,\n  \"requesttypes_id\": msg.payload.data.ticket.requesttype_id,\n  \"ticket_category\": msg.payload.data.ticket.category_id,\n  \"ticket_entity\": msg.payload.data.ticket.entity_id,\n  \"auto_assign\": true\n  \"technician\": 0  //Optional, int\n}\n```\n\n| Property | Type | Description |\n|:---|:---:|:---|\n| technician | `int` | _Optional_ Set to the GLPI User id of the user to assign as the technician |\n"
     },
     {
         "id": "34d02c8cfe43bbe6",
@@ -12859,6 +12737,38 @@
             ]
         ],
         "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "432e2ad61476d045",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Assign Ticket",
+        "func": "msg.url = global.get('config.glpi.api_url') + 'Ticket/' + msg.payload.id + '/Ticket_User';\nmsg.method = \"POST\";\n\nvar statusMessage = \"Added: \";\nvar ticketID = msg.payload.id;\n\n\nif (msg.form.hasOwnProperty(\"requester_id\") ) {\n\n    msg.payload = {\n        \"input\": {\n            \"users_id\": msg.form.requester_id,\n            \"tickets_id\": ticketID,\n            \"type\": 1,\n            \"use_notification\": 1\n        }\n    }\n\n    node.send([\n        msg,\n        null,\n        null\n    ]);\n\n    statusMessage += \"requester \" + msg.form.requester_id + \" \";\n\n}\n\nif ( msg.form.auto_assign || false ) {\n    \n    msg.payload = {\n        \"input\": {\n            \"users_id\": msg.session_details.session.glpiID,\n            \"tickets_id\": ticketID,\n            \"type\": 2,\n            \"use_notification\": 0\n        }\n    };\n\n    node.send([\n        null,\n        null,\n        msg\n    ]);\n\n    statusMessage += \"technician \" + msg.session_details.session.glpiID + \" \";\n\n}\n\nif (msg.form.hasOwnProperty('technician_id') ) {\n\n    msg.payload = {\n        \"input\": {\n            \"users_id\": msg.form.technician_id,\n            \"tickets_id\": ticketID,\n            \"type\": 2,\n            \"use_notification\": 1\n        }\n    };\n\n    node.send([\n        null,\n        null,\n        msg\n    ]);\n\n    statusMessage += \"technician \" + msg.form.technician_id + \" \";\n\n}\n\n// always assign the API account as a watcher\nmsg.payload = {\n    \"input\": {\n        \"users_id\": msg.session_details.session.glpiID,\n        \"tickets_id\": ticketID,\n        \"type\": 3,\n        \"use_notification\": 0\n    }\n};\n\nnode.send([\n    null,\n    msg,\n    null\n]);\n\nstatusMessage += \"watcher[Always] \" + msg.session_details.session.glpiID + \" \";\n\nnode.status({fill:\"blue\",shape:\"dot\",text:statusMessage});\n",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2890,
+        "y": 2040,
+        "wires": [
+            [
+                "8d9762cb45d1a09d"
+            ],
+            [
+                "8d9762cb45d1a09d"
+            ],
+            [
+                "8d9762cb45d1a09d"
+            ]
+        ],
+        "outputLabels": [
+            "Requester",
+            "Watcher",
+            "Technician"
+        ],
+        "icon": "font-awesome/fa-exchange",
+        "info": "# Assign the Ticket\n\nThis node generates the json body to assign the ticket. Currenty supports setting watcher and technician.\n\nTo assign the ticket set the following properties:\n\n- watcher is assigned automagically and is the user who is accessing the api.\n\n- Technician:\n\n    - set the property `msg.form.auto_assign` to assign to the API user as the technician\n\n    - set the property `msg.form.technician` to the id of the user to assign that user\n"
     },
     {
         "id": "8e0d9bd8043dd53b",
