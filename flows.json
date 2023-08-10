@@ -343,9 +343,7 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119,
-        "w": 2312,
-        "h": 182
+        "y": 119
     },
     {
         "id": "10a6c6b12749dda9",
@@ -412,8 +410,6 @@
         ],
         "x": 128,
         "y": 333,
-        "w": 2798,
-        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
@@ -544,8 +540,6 @@
         ],
         "x": 128,
         "y": 1133,
-        "w": 4704,
-        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -623,9 +617,7 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99,
-        "w": 1192,
-        "h": 282
+        "y": 99
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -651,9 +643,7 @@
             "966779cca7297dec"
         ],
         "x": 1294,
-        "y": 99,
-        "w": 1612,
-        "h": 122
+        "y": 99
     },
     {
         "id": "aea0a3398dafab4c",
@@ -672,9 +662,7 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999,
-        "w": 512,
-        "h": 82
+        "y": 999
     },
     {
         "id": "9858d84dc9d001be",
@@ -715,9 +703,7 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899,
-        "w": 512,
-        "h": 82
+        "y": 899
     },
     {
         "id": "d0dc259791aed430",
@@ -740,9 +726,7 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959,
-        "w": 1432,
-        "h": 122
+        "y": 959
     },
     {
         "id": "95c7670ef9039295",
@@ -815,9 +799,7 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819,
-        "w": 912,
-        "h": 122
+        "y": 819
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -843,9 +825,7 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519,
-        "w": 1752,
-        "h": 122
+        "y": 519
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -871,9 +851,7 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659,
-        "w": 1452,
-        "h": 142
+        "y": 659
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -896,9 +874,7 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159,
-        "w": 1072,
-        "h": 122
+        "y": 1159
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -1129,8 +1105,6 @@
         ],
         "x": 154,
         "y": 359,
-        "w": 972,
-        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1153,9 +1127,56 @@
         ],
         "x": 154,
         "y": 1159,
-        "w": 812,
-        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
+    },
+    {
+        "id": "1e614fa32322f125",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b247f5e5d90963e",
+        "name": "Check Current Password",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "23292bc7d78b9d1d",
+            "ffaae19e230436cf",
+            "f17566766d0b5a53",
+            "abef97c0bb13b432",
+            "aab2d165deacdab6",
+            "c57cf198943aef16"
+        ],
+        "x": 2214,
+        "y": 1159,
+        "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
+    },
+    {
+        "id": "0c16bf9634323276",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b247f5e5d90963e",
+        "name": "Change User Password",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "f093762ba0afe7d2",
+            "53df7c8ab13e33de",
+            "7b9797b6bc354e56",
+            "e7fa19cf8785fd90",
+            "f16ae7601e3dce19",
+            "f8b9e1b1537129ec",
+            "5897178ac3448e41"
+        ],
+        "x": 3394,
+        "y": 1159,
+        "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
         "id": "ed0645c12f7435b2",
@@ -1309,59 +1330,6 @@
         "y": 1119,
         "w": 1612,
         "h": 82
-    },
-    {
-        "id": "1e614fa32322f125",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "3b247f5e5d90963e",
-        "name": "Check Current Password",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#dbcbe7",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "23292bc7d78b9d1d",
-            "ffaae19e230436cf",
-            "f17566766d0b5a53",
-            "abef97c0bb13b432",
-            "aab2d165deacdab6",
-            "c57cf198943aef16"
-        ],
-        "x": 2214,
-        "y": 1159,
-        "w": 1152,
-        "h": 122,
-        "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
-    },
-    {
-        "id": "0c16bf9634323276",
-        "type": "group",
-        "z": "4b5e055cd6b1e387",
-        "g": "3b247f5e5d90963e",
-        "name": "Change User Password",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#dbcbe7",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "f093762ba0afe7d2",
-            "53df7c8ab13e33de",
-            "7b9797b6bc354e56",
-            "e7fa19cf8785fd90",
-            "f16ae7601e3dce19",
-            "f8b9e1b1537129ec",
-            "5897178ac3448e41"
-        ],
-        "x": 3394,
-        "y": 1159,
-        "w": 1412,
-        "h": 122,
-        "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
         "id": "5798e39cbc3730ae",
@@ -2037,7 +2005,7 @@
         "z": "379c65a27117b46c",
         "g": "ec8733df4e619869",
         "name": "Routing",
-        "property": " $split(req._parsedUrl.pathname, '/', limit)[2]",
+        "property": " $split(req._parsedUrl.pathname, '/', limit)[1]",
         "propertyType": "jsonata",
         "rules": [
             {
@@ -2132,13 +2100,6 @@
                 "pt": "msg",
                 "to": "req.connection.remoteAddress",
                 "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "url",
-                "pt": "msg",
-                "to": "/mysite/",
-                "tot": "str"
             }
         ],
         "action": "",
@@ -2308,7 +2269,7 @@
         "z": "379c65a27117b46c",
         "g": "8363d385051fc5c0",
         "name": "Routing",
-        "property": " $split(req._parsedUrl.pathname, '/', limit)[2]",
+        "property": " $split(req._parsedUrl.pathname, '/')[1]",
         "propertyType": "jsonata",
         "rules": [
             {
@@ -2327,12 +2288,17 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "updatedetails",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
+        "outputs": 5,
         "x": 1700,
         "y": 1120,
         "wires": [
@@ -2346,6 +2312,7 @@
             [
                 "64c99b312f9c601c"
             ],
+            [],
             []
         ]
     },
@@ -2446,7 +2413,7 @@
         "z": "379c65a27117b46c",
         "g": "5706252b01492258",
         "name": "File Name",
-        "property": "$split(req.url, '/', limit)[$count($split(req.url, '/', limit)) + 2]\t\t",
+        "property": "$split(req.url, '/', limit)[$count($split(req.url, '/', limit)) + 1]\t\t",
         "propertyType": "jsonata",
         "rules": [
             {
@@ -3058,7 +3025,7 @@
         "z": "379c65a27117b46c",
         "g": "ec8733df4e619869",
         "name": "Valid Path?",
-        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/')\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\n\nif ( msg.http.path[1] + '/' == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\n// node.warn(String(msg.req.originalUrl).indexOf('.'));\n// node.warn(String(msg.req.originalUrl).indexOf('?'))\n// node.warn(String(msg.req.originalUrl).split('?')[0].split('/'));\n\nif ( String(msg.req.originalUrl).indexOf('?') > 0 ) {\n\n    msg.http.path = String(msg.req.originalUrl).split('?')[0].split('/');\n\n}else{\n    msg.http.path = String(msg.req.originalUrl).split('/');\n}\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\n// node.warn(msg.http.path[0]);\n// node.warn(global.get('config.http_path'));\n\n\nif ( msg.http.path[0] == global.get('config.http_path') ) {\n\n    validPath = msg;\n    node.warn(\"here1\");\n\n} else if (String(msg.req.originalUrl).indexOf('.') > 0 ) {\n\n    validPath = msg;\n    node.warn(\"here2\");\n    \n} else {\n\n    http_404 = msg;\n    node.warn(\"here2\");\n\n}\n\nnode.send([validPath, http_404])\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -3137,7 +3104,7 @@
         "z": "379c65a27117b46c",
         "g": "8363d385051fc5c0",
         "name": "Valid Path?",
-        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/')\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\n\nif ( msg.http.path[1] + '/' == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/');\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\nif ( msg.http.path[0] == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -3813,7 +3780,7 @@
         "fieldType": "msg",
         "format": "html",
         "syntax": "mustache",
-        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\" value=\"{{{ payload.0.question }}}\" placeholder=\"Type Question one here\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\" value=\"{{{ payload.1.question }}}\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\" value=\"{{{ payload.2.question }}}\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
+        "template": "    <fieldset id=\"form\" style=\"width: 800px;\">\n      <legend style=\"text-align: left;\"><h2>Password reset Questions</h2></legend>\n\n      <form method=\"post\" action=\"{{{ global.config.http_path }}}passwordquestions\" ajax=\"true\">\n        <p>For ensuring that only you can reset your password, you are required to provide three questions and answers. These questions will then as part of the self-service password reset process to confirm that it's you who is requesting the password reset.</p>\n        <p>When choosing your questions, it's important to ensure that the questions that you use, only you would know the answers. This is to ensure that no one could guess the answers as only you would know the answers.</p>\n        <p>In the fields below type out your question and answer, don't include punctuation or the use of any special characters. Valid characters are A-Z, a-z and 0-9. Any character entered into the form that are not part of this list will be removed.</p>\n        <div id=\"question_multicolumn\">\n          <label for=\"q1\">Question One</label>\n          <label for=\"a1\">Answer One</label>\n          <input type=\"text\" id=\"q1\" name=\"q1\" value=\"{{{ payload.0.question }}}\" placeholder=\"Type Question one here\">\n          <input type=\"text\" id=\"a1\" name=\"a1\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q2\">Question Two</label>\n          <label for=\"a2\">Answer Two</label>\n          <input type=\"text\" id=\"q2\" name=\"q2\" value=\"{{{ payload.1.question }}}\">\n          <input type=\"text\" id=\"a2\" name=\"a2\">\n        </div>\n\n        <div id=\"question_multicolumn\">\n          <label for=\"q3\">Question Three</label>\n          <label for=\"a3\">Answer One</label>\n          <input type=\"text\" id=\"q3\" name=\"q3\" value=\"{{{ payload.2.question }}}\">\n          <input type=\"text\" id=\"a3\" name=\"a3\">\n        </div>\n\n        <p>On Form submission, your answers will be hashed before storage. As such, no one will be able to view the answers, this includes you. This method however, still enables us to confirm an answer to a question as would occur during the password reset process.</p>\n\n        <input type=\"submit\" value=\"Submit\">\n        <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}';\">Home</button>\n      </form>\n    </fieldset>\n\n    <fieldset id=\"response\">\n      <legend style=\"text-align: left;\">Results</legend>\n      <span id=\"result\"></span>\n    </fieldset>\n    <div >\n        <span id=\"result\"></span>\n    </div>\n",
         "output": "str",
         "x": 1670,
         "y": 860,
@@ -4097,7 +4064,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>Main Menu</h2></legend>\n\n    <p style=\"text-align: left;\">G'Day {{{ auth.user.fname}}}</p>\n\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}details';\">My Details</button>\n{{/global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>Main Menu</h2></legend>\n\n    <p style=\"text-align: left;\">G'Day {{{ auth.user.fname}}}</p>\n\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
         "x": 450,
         "y": 340,
         "wires": [
@@ -4310,9 +4277,9 @@
         "name": "HTML",
         "field": "html.body",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "html",
         "syntax": "mustache",
-        "template": "account details",
+        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Account Details</h2></legend>\n\n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}updatedetails\" ajax=\"true\">\n          <p style=\"padding: 15px;\"></p>\n\n          <label for=\"givenName\">First Name</label>\n          <input type=\"text\" id=\"givenName\" name=\"givenName\" disabled value=\"{{{ auth.user.fname }}}\">\n\n          <label for=\"sn\">Last Name</label>\n          <input type=\"text\" id=\"sn\" name=\"sn\" disabled value=\"{{{ auth.user.lname }}}\">\n\n          <label for=\"uid\">User Name</label>\n          <input type=\"text\" id=\"uid\" name=\"uid\"  disabled value=\"{{{ auth.user.username }}}\">\n\n          <label for=\"mail\">E-Mail</label>\n          <input type=\"text\" id=\"mail\" name=\"mail\" disabled value=\"{{{ auth.user.mail }}}\">\n\n          <input type=\"submit\" value=\"Updating Not Available\" disabled>\n          <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}/';\">Home</button>\n        </form>\n      </fieldset>\n\n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
         "x": 450,
         "y": 460,
         "wires": [
@@ -4384,7 +4351,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"c_password\">Current Password</label>\n          <input type=\"password\" id=\"c_password\" name=\"c_password\" placeholder=\"current password\">\n      \n          <label for=\"n_password_1\">New Password</label>\n          <input type=\"password\" id=\"n_password_1\" name=\"n_password_1\" placeholder=\"new password\">\n      \n          <label for=\"n_password_2\">Confirm New Password</label>\n          <input type=\"password\" id=\"n_password_2\" name=\"n_password_2\" placeholder=\"re-type new password\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n          <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}/';\">Home</button>\n        </form>\n      </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
+        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"c_password\">Current Password</label>\n          <input type=\"password\" id=\"c_password\" name=\"c_password\" placeholder=\"current password\">\n      \n          <label for=\"n_password_1\">New Password</label>\n          <input type=\"password\" id=\"n_password_1\" name=\"n_password_1\" placeholder=\"new password\">\n      \n          <label for=\"n_password_2\">Confirm New Password</label>\n          <input type=\"password\" id=\"n_password_2\" name=\"n_password_2\" placeholder=\"re-type new password\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n          <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}/';\">Home</button>\n        </form>\n      </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
         "x": 470,
         "y": 580,
         "wires": [
@@ -4664,7 +4631,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"selfservice/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
+        "template": "{\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
         "output": "json",
         "x": 1580,
         "y": 240,
