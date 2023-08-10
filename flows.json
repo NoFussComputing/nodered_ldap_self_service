@@ -93,13 +93,12 @@
             "f3b55ea2.f4d51",
             "bf098463143ac8ad",
             "457583335831f826",
-            "317930c679e833d1",
-            "67c01c10760d189a"
+            "317930c679e833d1"
         ],
         "x": 154,
-        "y": 639,
+        "y": 679,
         "w": 1092,
-        "h": 122
+        "h": 82
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -4629,17 +4628,6 @@
         "statusType": "auto",
         "x": 1960,
         "y": 360,
-        "wires": []
-    },
-    {
-        "id": "67c01c10760d189a",
-        "type": "comment",
-        "z": "42b9663b67dbd983",
-        "g": "ad0235dd3aa9eb7d",
-        "name": "ToDo: on clicking submit, disable the button",
-        "info": "required as multiple clicks will create multiple jobs.",
-        "x": 640,
-        "y": 680,
         "wires": []
     },
     {
