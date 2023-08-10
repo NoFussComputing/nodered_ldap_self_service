@@ -535,14 +535,18 @@
             "color": "#ffff00"
         },
         "nodes": [
-            "1df8ab6bb55ff621",
             "f8ec4a6290dc7e20",
-            "dca25b6e2b3f3068"
+            "b75415bd2541b6df",
+            "a6c8721721fc267e",
+            "dba3741d6cc275c9",
+            "1e614fa32322f125",
+            "0c16bf9634323276"
         ],
-        "x": 134,
-        "y": 1153,
-        "w": 1038,
-        "h": 148
+        "x": 128,
+        "y": 1133,
+        "w": 4704,
+        "h": 228,
+        "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
         "id": "9d9f0106c9ca9adf",
@@ -594,6 +598,61 @@
         "x": 1354,
         "y": 99,
         "w": 1192,
+        "h": 122
+    },
+    {
+        "id": "b5d607bb9a62875f",
+        "type": "group",
+        "z": "24deed6b10f37f8f",
+        "name": "Trigger",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "8e0d9bd8043dd53b",
+            "79e414f65b0e157b",
+            "8f313772a6e82e96",
+            "7e6699ce0159226a",
+            "61115e9c6e619dae",
+            "2d78bd7d0f411721",
+            "47f68cd20a8a528b",
+            "348b594ba5acb470",
+            "2bcdbb78b4e9181f"
+        ],
+        "x": 54,
+        "y": 99,
+        "w": 1192,
+        "h": 282
+    },
+    {
+        "id": "f7c0a5bee0e0df33",
+        "type": "group",
+        "z": "24deed6b10f37f8f",
+        "name": "Task: Clean Expired Tokens",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "8c5bb81ae0b14703",
+            "b2e1cdc1778fd936",
+            "f4da55e70a4f8c2c",
+            "44c01ba9bfc47ee8",
+            "55d7ad6e4958f882",
+            "bb5ccb49f1aa1036",
+            "f5f9e14092781e29",
+            "e25b155a2a29f16d",
+            "0f30a271d9c71f74",
+            "966779cca7297dec"
+        ],
+        "x": 1294,
+        "y": 99,
+        "w": 1612,
         "h": 122
     },
     {
@@ -831,12 +890,15 @@
         "nodes": [
             "6ef14d9fb582d42e",
             "30264cfad476079a",
-            "f9a7dd399871111b"
+            "53fce6f461eec779",
+            "553d0da331015252",
+            "1619699cd34defb4",
+            "815ce9e0380e642f"
         ],
-        "x": 554,
-        "y": 1179,
-        "w": 592,
-        "h": 82
+        "x": 1074,
+        "y": 1159,
+        "w": 1072,
+        "h": 122
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -879,11 +941,12 @@
         "nodes": [
             "564400f9ec708521",
             "e3043367c9a89a90",
-            "7db929503cf13635"
+            "7db929503cf13635",
+            "3af3d2ae3286ffe0"
         ],
-        "x": 2414,
+        "x": 2294,
         "y": 1099,
-        "w": 452,
+        "w": 572,
         "h": 122
     },
     {
@@ -1018,6 +1081,81 @@
         "y": 519,
         "w": 492,
         "h": 202
+    },
+    {
+        "id": "923268ee62c6a7db",
+        "type": "group",
+        "z": "379c65a27117b46c",
+        "g": "9d9f0106c9ca9adf",
+        "name": "Authorization Check",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffcf3f",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "2f1060b185e19215",
+            "6728a85f5b044738",
+            "46d8b11bdef459aa",
+            "1c16492a7fe8e77b",
+            "e282aea37a90acdc",
+            "be8652f99185b1aa",
+            "5f2f87eeebd5bf6e"
+        ],
+        "x": 794,
+        "y": 339,
+        "w": 912,
+        "h": 202,
+        "info": "# Authorization Check\n\nThis group is the second step within the http workflow. \n\nThis sub-group is responsible for ensuring that **ALL** requests to the http endpoint are authorized.\n"
+    },
+    {
+        "id": "02dc457b6549ba4e",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "Form Validation",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffffbf",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "cdde8116fcac6e5d",
+            "0354e185d6df3087",
+            "c7b7522a20abbb47",
+            "3e44bc1a5e60ec3d"
+        ],
+        "x": 154,
+        "y": 359,
+        "w": 972,
+        "h": 142,
+        "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
+    },
+    {
+        "id": "dba3741d6cc275c9",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b247f5e5d90963e",
+        "name": "Form Validation",
+        "style": {
+            "label": true,
+            "stroke": "#ff0000",
+            "fill": "#ffffbf",
+            "color": "#777777"
+        },
+        "nodes": [
+            "98364b7271054017",
+            "1df8ab6bb55ff621",
+            "0239e19c34a9baaa",
+            "0efd3333091c9999"
+        ],
+        "x": 154,
+        "y": 1159,
+        "w": 812,
+        "h": 122,
+        "info": "# Form Validation\n\nValidate the password change form."
     },
     {
         "id": "ed0645c12f7435b2",
@@ -1173,110 +1311,57 @@
         "h": 82
     },
     {
-        "id": "923268ee62c6a7db",
-        "type": "group",
-        "z": "379c65a27117b46c",
-        "g": "9d9f0106c9ca9adf",
-        "name": "Authorization Check",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#ffcf3f",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "2f1060b185e19215",
-            "6728a85f5b044738",
-            "46d8b11bdef459aa",
-            "1c16492a7fe8e77b",
-            "e282aea37a90acdc",
-            "be8652f99185b1aa",
-            "5f2f87eeebd5bf6e"
-        ],
-        "x": 794,
-        "y": 339,
-        "w": 912,
-        "h": 202,
-        "info": "# Authorization Check\n\nThis group is the second step within the http workflow. \n\nThis sub-group is responsible for ensuring that **ALL** requests to the http endpoint are authorized.\n"
-    },
-    {
-        "id": "02dc457b6549ba4e",
+        "id": "1e614fa32322f125",
         "type": "group",
         "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
-        "name": "Form Validation",
+        "g": "3b247f5e5d90963e",
+        "name": "Check Current Password",
         "style": {
             "stroke": "#ff0000",
-            "fill": "#ffffbf",
+            "fill": "#dbcbe7",
             "label": true,
             "color": "#777777"
         },
         "nodes": [
-            "cdde8116fcac6e5d",
-            "0354e185d6df3087",
-            "c7b7522a20abbb47",
-            "3e44bc1a5e60ec3d"
+            "23292bc7d78b9d1d",
+            "ffaae19e230436cf",
+            "f17566766d0b5a53",
+            "abef97c0bb13b432",
+            "aab2d165deacdab6",
+            "c57cf198943aef16"
         ],
-        "x": 154,
-        "y": 359,
-        "w": 972,
-        "h": 142,
-        "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
+        "x": 2214,
+        "y": 1159,
+        "w": 1152,
+        "h": 122,
+        "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
-        "id": "b5d607bb9a62875f",
+        "id": "0c16bf9634323276",
         "type": "group",
-        "z": "24deed6b10f37f8f",
-        "name": "Trigger",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b247f5e5d90963e",
+        "name": "Change User Password",
         "style": {
-            "stroke": "#92d04f",
-            "fill": "#bfdbef",
+            "stroke": "#ff0000",
+            "fill": "#dbcbe7",
             "label": true,
             "color": "#777777"
         },
         "nodes": [
-            "8e0d9bd8043dd53b",
-            "79e414f65b0e157b",
-            "8f313772a6e82e96",
-            "7e6699ce0159226a",
-            "61115e9c6e619dae",
-            "2d78bd7d0f411721",
-            "47f68cd20a8a528b",
-            "348b594ba5acb470",
-            "2bcdbb78b4e9181f"
+            "f093762ba0afe7d2",
+            "53df7c8ab13e33de",
+            "7b9797b6bc354e56",
+            "e7fa19cf8785fd90",
+            "f16ae7601e3dce19",
+            "f8b9e1b1537129ec",
+            "5897178ac3448e41"
         ],
-        "x": 54,
-        "y": 99,
-        "w": 1192,
-        "h": 282
-    },
-    {
-        "id": "f7c0a5bee0e0df33",
-        "type": "group",
-        "z": "24deed6b10f37f8f",
-        "name": "Task: Clean Expired Tokens",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "8c5bb81ae0b14703",
-            "b2e1cdc1778fd936",
-            "f4da55e70a4f8c2c",
-            "44c01ba9bfc47ee8",
-            "55d7ad6e4958f882",
-            "bb5ccb49f1aa1036",
-            "f5f9e14092781e29",
-            "e25b155a2a29f16d",
-            "0f30a271d9c71f74",
-            "966779cca7297dec"
-        ],
-        "x": 1294,
-        "y": 99,
-        "w": 1612,
-        "h": 122
+        "x": 3394,
+        "y": 1159,
+        "w": 1412,
+        "h": 122,
+        "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
         "id": "5798e39cbc3730ae",
@@ -2312,14 +2397,15 @@
             "e5ae19af5f6d6561",
             "f1dcd5b6e32fb905",
             "4cdbeaa8f5f3ddb7",
-            "b54c063d6519c463"
+            "b54c063d6519c463",
+            "a6c8721721fc267e",
+            "960bf96fa54c65c0"
         ],
-        "x": 2520,
+        "x": 2400,
         "y": 1180,
         "wires": [
             [
-                "e3043367c9a89a90",
-                "564400f9ec708521"
+                "3af3d2ae3286ffe0"
             ]
         ],
         "l": true
@@ -2332,7 +2418,7 @@
         "name": "HTTP Response",
         "statusCode": "",
         "headers": {},
-        "x": 2720,
+        "x": 2740,
         "y": 1180,
         "wires": []
     },
@@ -2958,8 +3044,8 @@
         "name": "Password: Change",
         "mode": "link",
         "links": [
-            "bb8102ee0c070ff2",
-            "1df8ab6bb55ff621"
+            "1df8ab6bb55ff621",
+            "a36e4f9e4921b12a"
         ],
         "x": 1910,
         "y": 1160,
@@ -3671,6 +3757,33 @@
         "l": true
     },
     {
+        "id": "3af3d2ae3286ffe0",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "755ff25cc29a08a1",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "_event",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2570,
+        "y": 1180,
+        "wires": [
+            [
+                "e3043367c9a89a90",
+                "564400f9ec708521"
+            ]
+        ]
+    },
+    {
         "id": "02c4b9524d361ade",
         "type": "link in",
         "z": "42b9663b67dbd983",
@@ -4271,7 +4384,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"lname\">Current Password</label>\n          <input type=\"password\" id=\"sn\" name=\"sn\">\n      \n          <label for=\"lname\">New Password</label>\n          <input type=\"password\" id=\"mail\" name=\"mail\">\n      \n          <label for=\"lname\">Confirm New Password</label>\n          <input type=\"password\" id=\"uid\" name=\"uid\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n          <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}/';\">Home</button>\n        </form>\n      </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
+        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"c_password\">Current Password</label>\n          <input type=\"password\" id=\"c_password\" name=\"c_password\" placeholder=\"current password\">\n      \n          <label for=\"n_password_1\">New Password</label>\n          <input type=\"password\" id=\"n_password_1\" name=\"n_password_1\" placeholder=\"new password\">\n      \n          <label for=\"n_password_2\">Confirm New Password</label>\n          <input type=\"password\" id=\"n_password_2\" name=\"n_password_2\" placeholder=\"re-type new password\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n          <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}/';\">Home</button>\n        </form>\n      </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
         "x": 470,
         "y": 580,
         "wires": [
@@ -4724,8 +4837,7 @@
         "g": "3b96ab15b1a54e33",
         "name": "Process: Password Reset Questions",
         "links": [
-            "9c92aaf02fee52b5",
-            "64c99b312f9c601c"
+            "9c92aaf02fee52b5"
         ],
         "x": 300,
         "y": 240,
@@ -5799,15 +5911,17 @@
         "id": "1df8ab6bb55ff621",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
-        "g": "3b247f5e5d90963e",
+        "g": "dba3741d6cc275c9",
         "name": "Process: Password Change",
         "links": [
             "64c99b312f9c601c"
         ],
-        "x": 280,
+        "x": 300,
         "y": 1220,
         "wires": [
-            []
+            [
+                "98364b7271054017"
+            ]
         ],
         "l": true
     },
@@ -5821,9 +5935,9 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
+        "template": "(&(objectclass=*)(cn={{ auth.user.fname }} {{ auth.user.lname }})(givenName={{ auth.user.fname }})(sn={{ auth.user.lname }})(uid={{ auth.user.username }})(mail={{ auth.user.mail }}))",
         "output": "str",
-        "x": 700,
+        "x": 1460,
         "y": 1220,
         "wires": [
             [
@@ -5841,53 +5955,14 @@
         "baseDn": "dc=nww",
         "searchScope": "sub",
         "filter": "",
-        "attributes": "dn,cn,givenName,sn,uid,mail",
-        "x": 900,
+        "attributes": "dn,cn,givenName,sn,uid,mail,userpassword",
+        "x": 1680,
         "y": 1220,
         "wires": [
             [
-                "f9a7dd399871111b"
+                "53fce6f461eec779"
             ]
         ]
-    },
-    {
-        "id": "f9a7dd399871111b",
-        "type": "switch",
-        "z": "4b5e055cd6b1e387",
-        "g": "f8ec4a6290dc7e20",
-        "name": "User Found",
-        "property": "$count(msg.payload)",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1\t",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1050,
-        "y": 1220,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "dca25b6e2b3f3068",
-        "type": "comment",
-        "z": "4b5e055cd6b1e387",
-        "g": "3b247f5e5d90963e",
-        "name": "STOP: can't be implemented until User Auth done",
-        "info": "",
-        "x": 340,
-        "y": 1260,
-        "wires": []
     },
     {
         "id": "f0a7ae298ec9e423",
@@ -6001,6 +6076,468 @@
         "x": 3170,
         "y": 980,
         "wires": []
+    },
+    {
+        "id": "53fce6f461eec779",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "f8ec4a6290dc7e20",
+        "name": "Process LDAP Search",
+        "func": "var found = null;\nvar not_found = null;\n\ndelete msg.filter;\ndelete msg._event;\n\nnode.status({fill:\"red\",shape:\"ring\",text:\"No User Found\"});\n\n\nif( Array(msg.payload).length > 0 ) {\n\n    msg.ldap = msg.payload[0];\n    found = msg;\n    node.status({ fill: \"green\", shape: \"ring\", text: \"User Found\" });\n\n}\n\n\nnode.send([\n    found,\n    not_found,\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1880,
+        "y": 1220,
+        "wires": [
+            [
+                "1619699cd34defb4"
+            ],
+            [
+                "815ce9e0380e642f"
+            ]
+        ],
+        "outputLabels": [
+            "Found User",
+            "No User Found"
+        ],
+        "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "98364b7271054017",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "dba3741d6cc275c9",
+        "name": "Form and user details must match",
+        "func": "var success = null;\nvar failure = null;\n\nvar status_colour = 'red';\nvar status_text = 'Validation did not complete';\n\n\nif( msg.req.body.c_password == '' ) {\n\n    status_colour = 'yellow';\n    status_text =\"Missing current password\";\n\n    failure = msg;\n}\n\nif( msg.req.body.n_password_1 != msg.req.body.n_password_2 ) {\n\n    status_colour = 'yellow';\n    status_text = \"New password doesn't match\";\n\n    failure = msg;\n\n}\n\nif( status_colour == 'red' ) {\n\n    status_colour = 'green';\n    status_text = \"form validation OK\";\n    success = msg;\n\n}\n\nif (status_colour == 'yellow') {\n\n    msg.payload = status_text;\n\n}\n\nnode.status({ fill: status_colour, shape: \"ring\", text: status_text });\n\nnode.send([\n    success,\n    failure\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1220,
+        "wires": [
+            [
+                "0239e19c34a9baaa"
+            ],
+            [
+                "0efd3333091c9999"
+            ]
+        ],
+        "outputLabels": [
+            "Success",
+            "Failure"
+        ],
+        "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "a6c8721721fc267e",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b247f5e5d90963e",
+        "name": "Response",
+        "mode": "link",
+        "links": [
+            "7db929503cf13635"
+        ],
+        "x": 4740,
+        "y": 1320,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "b75415bd2541b6df",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "3b247f5e5d90963e",
+        "name": "Complete: Password Change",
+        "links": [
+            "0efd3333091c9999",
+            "815ce9e0380e642f",
+            "f17566766d0b5a53",
+            "53df7c8ab13e33de",
+            "f093762ba0afe7d2"
+        ],
+        "x": 4560,
+        "y": 1320,
+        "wires": [
+            [
+                "a6c8721721fc267e"
+            ]
+        ],
+        "icon": "font-awesome/fa-flag-checkered",
+        "l": true
+    },
+    {
+        "id": "0efd3333091c9999",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "dba3741d6cc275c9",
+        "name": "Failed",
+        "mode": "link",
+        "links": [
+            "b75415bd2541b6df"
+        ],
+        "x": 890,
+        "y": 1240,
+        "wires": [],
+        "icon": "font-awesome/fa-exclamation-circle",
+        "l": true
+    },
+    {
+        "id": "553d0da331015252",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "f8ec4a6290dc7e20",
+        "name": "Process: Password Change",
+        "links": [
+            "0239e19c34a9baaa"
+        ],
+        "x": 1220,
+        "y": 1220,
+        "wires": [
+            [
+                "6ef14d9fb582d42e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "0239e19c34a9baaa",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "dba3741d6cc275c9",
+        "name": "Success",
+        "mode": "link",
+        "links": [
+            "553d0da331015252"
+        ],
+        "x": 880,
+        "y": 1200,
+        "wires": [],
+        "icon": "font-awesome/fa-check-circle",
+        "l": true
+    },
+    {
+        "id": "c57cf198943aef16",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "1e614fa32322f125",
+        "name": "Continue: Check Passwords",
+        "links": [
+            "1619699cd34defb4"
+        ],
+        "x": 2360,
+        "y": 1220,
+        "wires": [
+            [
+                "aab2d165deacdab6"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "abef97c0bb13b432",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "1e614fa32322f125",
+        "name": "",
+        "links": [
+            "c19ba5f86ea40757"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2830,
+        "y": 1220,
+        "wires": [
+            [
+                "23292bc7d78b9d1d"
+            ]
+        ]
+    },
+    {
+        "id": "aab2d165deacdab6",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "1e614fa32322f125",
+        "name": "Convert current password",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "req.body.c_password",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "item",
+                "pt": "msg",
+                "to": "c_password",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2590,
+        "y": 1220,
+        "wires": [
+            [
+                "abef97c0bb13b432"
+            ]
+        ]
+    },
+    {
+        "id": "1619699cd34defb4",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "f8ec4a6290dc7e20",
+        "name": "Success",
+        "mode": "link",
+        "links": [
+            "c57cf198943aef16"
+        ],
+        "x": 2060,
+        "y": 1200,
+        "wires": [],
+        "icon": "font-awesome/fa-check-circle",
+        "l": true
+    },
+    {
+        "id": "815ce9e0380e642f",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "f8ec4a6290dc7e20",
+        "name": "Failed",
+        "mode": "link",
+        "links": [
+            "b75415bd2541b6df"
+        ],
+        "x": 2070,
+        "y": 1240,
+        "wires": [],
+        "icon": "font-awesome/fa-exclamation-circle",
+        "l": true
+    },
+    {
+        "id": "23292bc7d78b9d1d",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "1e614fa32322f125",
+        "name": "Check Current Password",
+        "func": "var success = null;\nvar failure = null;\n\n// delete msg.payload.n_password_1.item;\n// delete msg.payload.n_password_1.ldap;\n// delete msg.payload.n_password_1.rc;\n// delete msg.payload.n_password_1._event;\n\n//var new_msg = msg.payload.n_password_1;\n// var new_msg = {};\n\n// new_msg.req = msg.payload.c_password.req;\n// new_msg.res = msg.payload.c_password.res;\n// new_msg._msgid = msg.payload.c_password._msgid;\n// new_msg.ldap = msg.payload.c_password.ldap;\n// new_msg.cookies = msg.payload.c_password.cookies;\n\nif ( msg.payload == msg.ldap.userPassword ) {\n\n    node.status({fill:\"green\",shape:\"ring\",text:\"Current Password Matches\"});\n\n    success = msg;\n\n} else {\n\n    msg.payload = String(\"Current Password Incorrect\");\n\n    node.status({ fill: \"yellow\", shape: \"ring\", text: msg.payload });\n\n    failure = msg;\n\n}\n\nnode.send([\n    success,\n    failure\n]);\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3090,
+        "y": 1220,
+        "wires": [
+            [
+                "ffaae19e230436cf"
+            ],
+            [
+                "f17566766d0b5a53"
+            ]
+        ],
+        "outputLabels": [
+            "Success",
+            "Failure"
+        ],
+        "icon": "font-awesome/fa-lock",
+        "info": "# Check Current Password\n\nConfirm that the user entered password matches the current password store within LDAP.\n\nOutputs are:\n\n- success, password matches\n\n- failure, password does not matches\n"
+    },
+    {
+        "id": "f17566766d0b5a53",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "1e614fa32322f125",
+        "name": "Failed",
+        "mode": "link",
+        "links": [
+            "b75415bd2541b6df"
+        ],
+        "x": 3290,
+        "y": 1240,
+        "wires": [],
+        "icon": "font-awesome/fa-exclamation-circle",
+        "l": true
+    },
+    {
+        "id": "ffaae19e230436cf",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "1e614fa32322f125",
+        "name": "Success",
+        "mode": "link",
+        "links": [
+            "5897178ac3448e41"
+        ],
+        "x": 3280,
+        "y": 1200,
+        "wires": [],
+        "icon": "font-awesome/fa-unlock",
+        "l": true
+    },
+    {
+        "id": "5897178ac3448e41",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Change Users Password",
+        "links": [
+            "ffaae19e230436cf"
+        ],
+        "x": 3530,
+        "y": 1220,
+        "wires": [
+            [
+                "f8b9e1b1537129ec"
+            ]
+        ],
+        "icon": "font-awesome/fa-rotate-right",
+        "l": true
+    },
+    {
+        "id": "e7fa19cf8785fd90",
+        "type": "ldap-update in",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Update Password",
+        "ldap": "160d0b5ed597dc51",
+        "operation": "replace",
+        "dn": "",
+        "attribute": "userPassword",
+        "value": "",
+        "x": 4290,
+        "y": 1220,
+        "wires": [
+            [
+                "7b9797b6bc354e56"
+            ]
+        ]
+    },
+    {
+        "id": "f16ae7601e3dce19",
+        "type": "link call",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Convert Password to LDAP Hashed Password",
+        "links": [
+            "c19ba5f86ea40757"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 4000,
+        "y": 1220,
+        "wires": [
+            [
+                "e7fa19cf8785fd90"
+            ]
+        ]
+    },
+    {
+        "id": "f8b9e1b1537129ec",
+        "type": "change",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Prepare LDAP data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$string(msg.req.body.n_password_1)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "dn",
+                "pt": "msg",
+                "to": "ldap.dn",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3730,
+        "y": 1220,
+        "wires": [
+            [
+                "f16ae7601e3dce19"
+            ]
+        ]
+    },
+    {
+        "id": "7b9797b6bc354e56",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Check Current Password",
+        "func": "var success = null;\nvar failure = msg;\n\nvar status_colour = 'yellow';\nvar status_text = 'Failure, password not changed';\n\nmsg.payload = status_text;\n\nif (msg.ldapStatus.success ) {\n\n    status_colour = 'green';\n    status_text = \"Password Changed\";\n\n    msg.payload = status_text;\n\n    success = msg;\n    failure = null;\n\n}\n\nnode.status({ fill: status_colour, shape: \"ring\", text: status_text });\n\nnode.send([\n    success,\n    failure\n]);\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4510,
+        "y": 1220,
+        "wires": [
+            [
+                "f093762ba0afe7d2"
+            ],
+            [
+                "53df7c8ab13e33de"
+            ]
+        ],
+        "outputLabels": [
+            "Success",
+            "Failure"
+        ],
+        "icon": "font-awesome/fa-question",
+        "info": "# Check Current Password\n\nConfirm that the user entered password matches the current password store within LDAP.\n\nOutputs are:\n\n- success, password matches\n\n- failure, password does not matches\n"
+    },
+    {
+        "id": "53df7c8ab13e33de",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Failed",
+        "mode": "link",
+        "links": [
+            "b75415bd2541b6df"
+        ],
+        "x": 4730,
+        "y": 1240,
+        "wires": [],
+        "icon": "font-awesome/fa-exclamation-circle",
+        "l": true
+    },
+    {
+        "id": "f093762ba0afe7d2",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "0c16bf9634323276",
+        "name": "Success",
+        "mode": "link",
+        "links": [
+            "b75415bd2541b6df"
+        ],
+        "x": 4720,
+        "y": 1200,
+        "wires": [],
+        "icon": "font-awesome/fa-check-circle",
+        "l": true
     },
     {
         "id": "0eeaba70b043a226",
