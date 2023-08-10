@@ -73,7 +73,9 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 122
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -91,10 +93,13 @@
             "f3b55ea2.f4d51",
             "bf098463143ac8ad",
             "457583335831f826",
-            "317930c679e833d1"
+            "317930c679e833d1",
+            "67c01c10760d189a"
         ],
         "x": 154,
-        "y": 679
+        "y": 639,
+        "w": 1092,
+        "h": 122
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -113,7 +118,9 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299
+        "y": 299,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -133,7 +140,9 @@
             "781d23c946457b30"
         ],
         "x": 1314,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 122
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -151,7 +160,9 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -170,7 +181,9 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419
+        "y": 419,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -189,7 +202,9 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539
+        "y": 539,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "d3393ec35cb20a93",
@@ -207,7 +222,9 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139
+        "y": 139,
+        "w": 462,
+        "h": 82
     },
     {
         "id": "3e330505ea1e9cba",
@@ -225,7 +242,9 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139
+        "y": 139,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "b447a1f691eb02df",
@@ -244,7 +263,9 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 999
+        "y": 999,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "0d96945ec7d069cb",
@@ -435,7 +456,9 @@
             "befac3bb99b2c2cc"
         ],
         "x": 1314,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "b994fe21efb223a9",
@@ -488,7 +511,9 @@
             "d5627c7a12528006"
         ],
         "x": 1314,
-        "y": 319
+        "y": 319,
+        "w": 772,
+        "h": 82
     },
     {
         "id": "3b247f5e5d90963e",
@@ -3467,7 +3492,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\">\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\">\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\">\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\">\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}';\">Home</button>\n  </form>\n</fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\"{{#auth.user}} value=\"{{auth.user.fname}}\" readonly{{/auth.user}}>\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\"{{#auth.user}} value=\"{{auth.user.lname}}\" readonly{{/auth.user}}>\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\"{{#auth.user}} value=\"{{auth.user.mail}}\" readonly{{/auth.user}}>\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\"{{#auth.user}} value=\"{{auth.user.username}}\" readonly{{/auth.user}}>\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n    <button id=\"navigation\" onclick=\"window.location.href='/{{{ global.config.http_path }}}';\">Home</button>\n  </form>\n</fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
         "x": 850,
         "y": 720,
         "wires": [
@@ -4395,6 +4420,17 @@
         "wires": []
     },
     {
+        "id": "67c01c10760d189a",
+        "type": "comment",
+        "z": "42b9663b67dbd983",
+        "g": "ad0235dd3aa9eb7d",
+        "name": "ToDo: on clicking submit, disable the button",
+        "info": "required as multiple clicks will create multiple jobs.",
+        "x": 640,
+        "y": 680,
+        "wires": []
+    },
+    {
         "id": "bb8102ee0c070ff2",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
@@ -4792,7 +4828,8 @@
         "y": 400,
         "wires": [
             [
-                "faa5e7380a3092a2"
+                "faa5e7380a3092a2",
+                "f0a7ae298ec9e423"
             ]
         ],
         "l": true
@@ -5560,6 +5597,23 @@
         "info": "",
         "x": 340,
         "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f0a7ae298ec9e423",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "name": "debug 115",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 340,
         "wires": []
     },
     {
