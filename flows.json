@@ -559,7 +559,8 @@
         "x": 148,
         "y": 313,
         "w": 2744,
-        "h": 934
+        "h": 934,
+        "info": "# HTTP Server\n\nThis group provides the entrypoint for the application. it's broken down into further sub-groups that have their own individual responsibilities for processing a part of the HTTP servers workflow."
     },
     {
         "id": "1b2783bfbb09503e",
@@ -845,11 +846,12 @@
             "482740e98dda9d35",
             "1e0841f1.ac68fe",
             "5de0bbd4.6c8574",
-            "28713941e03e2bf5"
+            "28713941e03e2bf5",
+            "adbfd4257ea1c230"
         ],
         "x": 174,
         "y": 339,
-        "w": 412,
+        "w": 492,
         "h": 162
     },
     {
@@ -913,7 +915,8 @@
         "x": 794,
         "y": 579,
         "w": 1292,
-        "h": 382
+        "h": 382,
+        "info": "# Fetch Content\n\nOnce authorized, this workflow fetches the html content to be displayed within the browser."
     },
     {
         "id": "8363d385051fc5c0",
@@ -939,8 +942,7 @@
             "64c99b312f9c601c",
             "9c92aaf02fee52b5",
             "b7fde07e47cc852e",
-            "2189bf4e56868e51",
-            "e7016076f4733039"
+            "2189bf4e56868e51"
         ],
         "x": 794,
         "y": 999,
@@ -1182,7 +1184,8 @@
         "x": 794,
         "y": 339,
         "w": 912,
-        "h": 202
+        "h": 202,
+        "info": "# Authorization Check\n\nThis group is the second step within the http workflow. it's sole purpose is to ensure that **ALL** requests to the http endpoint are authorized."
     },
     {
         "id": "5798e39cbc3730ae",
@@ -1791,6 +1794,19 @@
         ]
     },
     {
+        "id": "adbfd4257ea1c230",
+        "type": "junction",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "x": 360,
+        "y": 420,
+        "wires": [
+            [
+                "28713941e03e2bf5"
+            ]
+        ]
+    },
+    {
         "id": "160d0b5ed597dc51",
         "type": "ldap",
         "host": "ldap://ldap",
@@ -1811,7 +1827,7 @@
         "wires": [
             [
                 "c80657a01a03012d",
-                "28713941e03e2bf5"
+                "adbfd4257ea1c230"
             ]
         ]
     },
@@ -1986,7 +2002,7 @@
         "wires": [
             [
                 "482740e98dda9d35",
-                "28713941e03e2bf5"
+                "adbfd4257ea1c230"
             ]
         ]
     },
@@ -3114,7 +3130,7 @@
                 "a834b786ac4c71f9"
             ]
         ],
-        "icon": "font-awesome/fa-unlock",
+        "icon": "font-awesome/fa-lock",
         "l": true
     },
     {
@@ -3337,17 +3353,6 @@
         ]
     },
     {
-        "id": "e7016076f4733039",
-        "type": "comment",
-        "z": "379c65a27117b46c",
-        "g": "8363d385051fc5c0",
-        "name": "ToDo: ADD Authorization to path ",
-        "info": "",
-        "x": 990,
-        "y": 1060,
-        "wires": []
-    },
-    {
         "id": "702a6efc7be81391",
         "type": "comment",
         "z": "379c65a27117b46c",
@@ -3544,7 +3549,7 @@
         "links": [
             "2f1060b185e19215"
         ],
-        "x": 490,
+        "x": 570,
         "y": 420,
         "wires": [],
         "icon": "font-awesome/fa-lock",
