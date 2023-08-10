@@ -395,18 +395,19 @@
         },
         "nodes": [
             "aea0a3398dafab4c",
-            "cdde8116fcac6e5d",
             "4cdbeaa8f5f3ddb7",
             "82ccba0e0a13970a",
             "d0dc259791aed430",
             "d1b4f7ad9e8ea4f0",
             "4cdebccc4a1f08ed",
-            "9926c0ba3f91aca8"
+            "9926c0ba3f91aca8",
+            "02dc457b6549ba4e"
         ],
-        "x": 134,
-        "y": 353,
-        "w": 2732,
-        "h": 614
+        "x": 128,
+        "y": 333,
+        "w": 2798,
+        "h": 774,
+        "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
         "id": "bbd929c437c592ea",
@@ -532,7 +533,7 @@
             "dca25b6e2b3f3068"
         ],
         "x": 134,
-        "y": 1013,
+        "y": 1153,
         "w": 1038,
         "h": 148
     },
@@ -604,8 +605,8 @@
             "72721ec69edf230f",
             "8eca6e69b809790c"
         ],
-        "x": 2154,
-        "y": 859,
+        "x": 2214,
+        "y": 999,
         "w": 512,
         "h": 82
     },
@@ -647,8 +648,8 @@
             "b1bc2e62654b04e2",
             "f125e4c474dd2e5c"
         ],
-        "x": 2154,
-        "y": 759,
+        "x": 2214,
+        "y": 899,
         "w": 512,
         "h": 82
     },
@@ -672,8 +673,8 @@
             "ec52cbc3aa0fec25",
             "13711f1826f83198"
         ],
-        "x": 514,
-        "y": 819,
+        "x": 574,
+        "y": 959,
         "w": 1432,
         "h": 122
     },
@@ -747,8 +748,8 @@
             "dce8db9b841faf7f",
             "1a29880acc851ff5"
         ],
-        "x": 774,
-        "y": 679,
+        "x": 834,
+        "y": 819,
         "w": 912,
         "h": 122
     },
@@ -772,11 +773,12 @@
             "fe1f0a50300d9224",
             "b10e8a45ff44f80d",
             "0308c42b587c3794",
-            "04818ddd8782b0a1"
+            "04818ddd8782b0a1",
+            "5cfc1e5277013397"
         ],
-        "x": 454,
-        "y": 379,
-        "w": 1552,
+        "x": 434,
+        "y": 519,
+        "w": 1752,
         "h": 122
     },
     {
@@ -802,8 +804,8 @@
             "58d1108b52842808",
             "f6fc2010d0af1e33"
         ],
-        "x": 514,
-        "y": 519,
+        "x": 574,
+        "y": 659,
         "w": 1452,
         "h": 142
     },
@@ -825,7 +827,7 @@
             "f9a7dd399871111b"
         ],
         "x": 554,
-        "y": 1039,
+        "y": 1179,
         "w": 592,
         "h": 82
     },
@@ -1189,6 +1191,30 @@
         "w": 912,
         "h": 202,
         "info": "# Authorization Check\n\nThis group is the second step within the http workflow. \n\nThis sub-group is responsible for ensuring that **ALL** requests to the http endpoint are authorized.\n"
+    },
+    {
+        "id": "02dc457b6549ba4e",
+        "type": "group",
+        "z": "4b5e055cd6b1e387",
+        "g": "a9d52eb951c5f037",
+        "name": "Form Validation",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffffbf",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "cdde8116fcac6e5d",
+            "0354e185d6df3087",
+            "c7b7522a20abbb47",
+            "3e44bc1a5e60ec3d"
+        ],
+        "x": 154,
+        "y": 359,
+        "w": 972,
+        "h": 142,
+        "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
         "id": "5798e39cbc3730ae",
@@ -4911,8 +4937,8 @@
         "searchScope": "sub",
         "filter": "",
         "attributes": "dn,cn,givenName,sn,uid,mail",
-        "x": 800,
-        "y": 440,
+        "x": 980,
+        "y": 580,
         "wires": [
             [
                 "fe1f0a50300d9224"
@@ -4929,10 +4955,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
+        "template": "(&(objectclass=*)(cn={{ auth.user.fname }} {{ auth.user.lname }})(givenName={{ auth.user.fname }})(sn={{ auth.user.lname }})(uid={{ auth.user.username }})(mail={{ auth.user.mail }}))",
         "output": "str",
-        "x": 600,
-        "y": 440,
+        "x": 760,
+        "y": 580,
         "wires": [
             [
                 "311e184a2397eb19"
@@ -4960,8 +4986,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 950,
-        "y": 440,
+        "x": 1130,
+        "y": 580,
         "wires": [
             [
                 "04818ddd8782b0a1"
@@ -4981,8 +5007,8 @@
         "links": [
             "4a4676456c27f256"
         ],
-        "x": 1890,
-        "y": 420,
+        "x": 2070,
+        "y": 560,
         "wires": [],
         "l": true
     },
@@ -4996,8 +5022,8 @@
         "links": [
             "72721ec69edf230f"
         ],
-        "x": 1170,
-        "y": 460,
+        "x": 1350,
+        "y": 600,
         "wires": [],
         "l": true
     },
@@ -5005,17 +5031,17 @@
         "id": "cdde8116fcac6e5d",
         "type": "link in",
         "z": "4b5e055cd6b1e387",
-        "g": "a9d52eb951c5f037",
+        "g": "02dc457b6549ba4e",
         "name": "Process: Password Reset",
         "links": [
             "b7fde07e47cc852e"
         ],
-        "x": 270,
-        "y": 400,
+        "x": 290,
+        "y": 420,
         "wires": [
             [
-                "faa5e7380a3092a2",
-                "f0a7ae298ec9e423"
+                "f0a7ae298ec9e423",
+                "0354e185d6df3087"
             ]
         ],
         "l": true
@@ -5028,10 +5054,11 @@
         "name": "Respond: Invalid User",
         "links": [
             "0308c42b587c3794",
-            "58d1108b52842808"
+            "58d1108b52842808",
+            "c7b7522a20abbb47"
         ],
-        "x": 2280,
-        "y": 900,
+        "x": 2340,
+        "y": 1040,
         "wires": [
             [
                 "8eca6e69b809790c"
@@ -5051,8 +5078,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2520,
-        "y": 900,
+        "x": 2580,
+        "y": 1040,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -5069,8 +5096,8 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 2780,
-        "y": 800,
+        "x": 2840,
+        "y": 940,
         "wires": [],
         "l": true
     },
@@ -5083,8 +5110,8 @@
         "links": [
             "b10e8a45ff44f80d"
         ],
-        "x": 640,
-        "y": 600,
+        "x": 700,
+        "y": 740,
         "wires": [
             [
                 "a43bd1f944ef851c"
@@ -5111,8 +5138,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 850,
-        "y": 600,
+        "x": 910,
+        "y": 740,
         "wires": [
             [
                 "bc29c53d4ef04184"
@@ -5133,8 +5160,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1290,
-        "y": 580,
+        "x": 1350,
+        "y": 720,
         "wires": [
             [
                 "445623ba528e5df1"
@@ -5161,8 +5188,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
-        "y": 420,
+        "x": 1340,
+        "y": 560,
         "wires": [
             [
                 "c66c2a0c3817433c"
@@ -5181,8 +5208,8 @@
         "syntax": "mustache",
         "template": "{\n    \"data\": {\n        \"givenName\": \"{{ ldap.givenName }}\",\n        \"sn\": \"{{ ldap.sn }}\",\n        \"uid\": \"{{ ldap.uid }}\"\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}",
         "output": "json",
-        "x": 1130,
-        "y": 580,
+        "x": 1190,
+        "y": 720,
         "wires": [
             [
                 "eeb2b5a4e44d0c24"
@@ -5201,8 +5228,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2520,
-        "y": 800,
+        "x": 2580,
+        "y": 940,
         "wires": [
             [
                 "4cdbeaa8f5f3ddb7"
@@ -5218,8 +5245,8 @@
         "links": [
             "07ed8c85583c5a2e"
         ],
-        "x": 2270,
-        "y": 800,
+        "x": 2330,
+        "y": 940,
         "wires": [
             [
                 "b1bc2e62654b04e2"
@@ -5237,8 +5264,8 @@
         "links": [
             "1a29880acc851ff5"
         ],
-        "x": 1850,
-        "y": 600,
+        "x": 1910,
+        "y": 740,
         "wires": [],
         "l": true
     },
@@ -5252,8 +5279,8 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1080,
-        "y": 620,
+        "x": 1140,
+        "y": 760,
         "wires": [],
         "l": true
     },
@@ -5266,8 +5293,8 @@
         "links": [
             "68628b6f32ec8b74"
         ],
-        "x": 890,
-        "y": 740,
+        "x": 950,
+        "y": 880,
         "wires": [
             [
                 "dce8db9b841faf7f"
@@ -5294,8 +5321,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1060,
-        "y": 740,
+        "x": 1120,
+        "y": 880,
         "wires": [
             [
                 "93434028042529b8"
@@ -5315,8 +5342,8 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1240,
-        "y": 760,
+        "x": 1300,
+        "y": 900,
         "wires": [],
         "l": true
     },
@@ -5332,8 +5359,8 @@
         "syntax": "mustache",
         "template": "{\n    \"data\": {\n        \"task\": {\n            \"body\": {\n                \"name\": \"LDAP Password Reset\",\n                \"human_task_duration\": {{ global.config.itsm.human_task_duration_time }},\n                \"platform\": \"NodeRed\",\n                \"details\": {\n                    \"url\": \"{{{ req.url }}}\",\n                    \"client_address\": \"{{{ req.connection.remoteAddress }}}\",\n                    \"request_method\": \"{{{ req.method }}}\"\n                },\n                \"form\": {\n                    \"fname\": \"{{{ http.form.givenName }}}\",\n                    \"lname\": \"{{{ http.form.sn }}}\",\n                    \"mail\": \"{{{ http.form.mail }}}\",\n                    \"username\": \"{{{ http.form.uid }}}\"\n                }\n            },\n            \"category\": 6\n        },\n        \"ticket\": {\n            \"approval_required\": {{ global.config.itsm.ticket.approval_required }},\n            \"category_id\": {{ global.config.itsm.ticket.category_id }},\n            \"entity_id\": {{ global.config.itsm.ticket.entity_id }},\n            \"requester_id\": {{ itsm.user.id }},\n            \"requesttype_id\":{{ global.config.itsm.ticket.requesttype_id }},\n            \"task_category_id\": {{ global.config.itsm.ticket.task_category_id }}\n        }\n        \n    },\n    \"platform\": \"{{ global.config.itsm.platform }}\",\n    \"action\": \"create\",\n    \"action_for\": \"ticket\"\n}\n",
         "output": "json",
-        "x": 1270,
-        "y": 720,
+        "x": 1330,
+        "y": 860,
         "wires": [
             [
                 "00066fdae59433b8"
@@ -5350,8 +5377,8 @@
         "links": [
             "073709e754dd98a3"
         ],
-        "x": 1580,
-        "y": 720,
+        "x": 1640,
+        "y": 860,
         "wires": [],
         "l": true
     },
@@ -5366,8 +5393,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1450,
-        "y": 720,
+        "x": 1510,
+        "y": 860,
         "wires": [
             [
                 "8dd7c0779eac59f0"
@@ -5395,8 +5422,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1410,
-        "y": 580,
+        "x": 1470,
+        "y": 720,
         "wires": [
             [
                 "f6fc2010d0af1e33"
@@ -5416,8 +5443,8 @@
         "links": [
             "72721ec69edf230f"
         ],
-        "x": 1630,
-        "y": 620,
+        "x": 1690,
+        "y": 760,
         "wires": [],
         "l": true
     },
@@ -5441,8 +5468,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1600,
-        "y": 560,
+        "x": 1660,
+        "y": 700,
         "wires": [
             [
                 "68628b6f32ec8b74",
@@ -5461,8 +5488,8 @@
         "dn": "",
         "attribute": "userPassword",
         "value": "",
-        "x": 1390,
-        "y": 880,
+        "x": 1450,
+        "y": 1020,
         "wires": [
             [
                 "9090daaf8a5892b0"
@@ -5480,8 +5507,8 @@
             "ad66e8c05ee9a664",
             "dbeedddce12963de"
         ],
-        "x": 650,
-        "y": 880,
+        "x": 710,
+        "y": 1020,
         "wires": [
             [
                 "c710ba5a1416cfd8"
@@ -5500,8 +5527,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1120,
-        "y": 880,
+        "x": 1180,
+        "y": 1020,
         "wires": [
             [
                 "853e6c15b5317007"
@@ -5519,8 +5546,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1430,
-        "y": 420,
+        "x": 1610,
+        "y": 560,
         "wires": [
             [
                 "c08e353c85cde934"
@@ -5554,8 +5581,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 880,
+        "x": 910,
+        "y": 1020,
         "wires": [
             [
                 "142f9ce43cb63dd7"
@@ -5576,8 +5603,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1810,
-        "y": 900,
+        "x": 1870,
+        "y": 1040,
         "wires": []
     },
     {
@@ -5599,8 +5626,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1570,
-        "y": 880,
+        "x": 1630,
+        "y": 1020,
         "wires": [
             [
                 "13711f1826f83198"
@@ -5620,8 +5647,8 @@
         "links": [
             "f125e4c474dd2e5c"
         ],
-        "x": 1850,
-        "y": 560,
+        "x": 1910,
+        "y": 700,
         "wires": [],
         "l": true
     },
@@ -5645,8 +5672,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1680,
-        "y": 420,
+        "x": 1860,
+        "y": 560,
         "wires": [
             [
                 "b10e8a45ff44f80d"
@@ -5667,8 +5694,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1820,
-        "y": 860,
+        "x": 1880,
+        "y": 1000,
         "wires": []
     },
     {
@@ -5701,7 +5728,7 @@
             "64c99b312f9c601c"
         ],
         "x": 280,
-        "y": 1080,
+        "y": 1220,
         "wires": [
             []
         ],
@@ -5720,7 +5747,7 @@
         "template": "(&(objectclass=*)(cn={{ http.form.givenName }} {{ http.form.sn }})(givenName={{ http.form.givenName }})(sn={{ http.form.sn }})(uid={{ http.form.uid }})(mail={{ http.form.mail }}))",
         "output": "str",
         "x": 700,
-        "y": 1080,
+        "y": 1220,
         "wires": [
             [
                 "30264cfad476079a"
@@ -5739,7 +5766,7 @@
         "filter": "",
         "attributes": "dn,cn,givenName,sn,uid,mail",
         "x": 900,
-        "y": 1080,
+        "y": 1220,
         "wires": [
             [
                 "f9a7dd399871111b"
@@ -5768,7 +5795,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1050,
-        "y": 1080,
+        "y": 1220,
         "wires": [
             [],
             []
@@ -5782,7 +5809,7 @@
         "name": "STOP: can't be implemented until User Auth done",
         "info": "",
         "x": 340,
-        "y": 1120,
+        "y": 1260,
         "wires": []
     },
     {
@@ -5801,6 +5828,85 @@
         "x": 690,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "0354e185d6df3087",
+        "type": "function",
+        "z": "4b5e055cd6b1e387",
+        "g": "02dc457b6549ba4e",
+        "name": "Form and user details must match",
+        "func": "var success = null;\nvar failure = null;\n\nnode.status({fill:\"yellow\",shape:\"ring\",text:\"User Details Dont match\"});\n\nif(\n    msg.auth.user.username == msg.req.body.uid &&\n    msg.auth.user.fname == msg.req.body.givenName &&\n    msg.auth.user.lname == msg.req.body.sn &&\n    msg.auth.user.mail == msg.req.body.mail\n) {\n    node.status({ fill: \"green\", shape: \"dot\", text: \"User Details match\" });\n\n    success = msg;\n}\n\nnode.send([\n    success,\n    failure\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "3e44bc1a5e60ec3d"
+            ],
+            [
+                "c7b7522a20abbb47"
+            ]
+        ],
+        "outputLabels": [
+            "Success",
+            "Failure"
+        ],
+        "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "c7b7522a20abbb47",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "02dc457b6549ba4e",
+        "name": "User details don't match",
+        "mode": "link",
+        "links": [
+            "72721ec69edf230f"
+        ],
+        "x": 890,
+        "y": 460,
+        "wires": [],
+        "icon": "font-awesome/fa-hand-stop-o",
+        "l": true
+    },
+    {
+        "id": "3e44bc1a5e60ec3d",
+        "type": "link out",
+        "z": "4b5e055cd6b1e387",
+        "g": "02dc457b6549ba4e",
+        "name": "Process Form: Password Reset",
+        "mode": "link",
+        "links": [
+            "5cfc1e5277013397"
+        ],
+        "x": 970,
+        "y": 400,
+        "wires": [],
+        "icon": "font-awesome/fa-check",
+        "l": true
+    },
+    {
+        "id": "5cfc1e5277013397",
+        "type": "link in",
+        "z": "4b5e055cd6b1e387",
+        "g": "4cdebccc4a1f08ed",
+        "name": "LDAP: User Search",
+        "links": [
+            "3e44bc1a5e60ec3d"
+        ],
+        "x": 550,
+        "y": 580,
+        "wires": [
+            [
+                "faa5e7380a3092a2"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
     },
     {
         "id": "0eeaba70b043a226",
