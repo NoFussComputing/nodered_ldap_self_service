@@ -50,6 +50,14 @@
         "info": "# GLPI: FormCreator Automation\nThis flow search for the forms from the GLPI Plugin formcreator.\nOn finding a form, creates a ticket from that form."
     },
     {
+        "id": "24deed6b10f37f8f",
+        "type": "tab",
+        "label": "Cron",
+        "disabled": false,
+        "info": "# Cron\n\nThis flow contains any tasks that need to be run automagically",
+        "env": []
+    },
+    {
         "id": "8ad5fe68ad170e2d",
         "type": "group",
         "z": "42b9663b67dbd983",
@@ -1214,6 +1222,33 @@
         "w": 972,
         "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
+    },
+    {
+        "id": "b5d607bb9a62875f",
+        "type": "group",
+        "z": "24deed6b10f37f8f",
+        "name": "Trigger",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "8e0d9bd8043dd53b",
+            "79e414f65b0e157b",
+            "8f313772a6e82e96",
+            "7e6699ce0159226a",
+            "61115e9c6e619dae",
+            "2d78bd7d0f411721",
+            "47f68cd20a8a528b",
+            "348b594ba5acb470",
+            "2bcdbb78b4e9181f"
+        ],
+        "x": 54,
+        "y": 99,
+        "w": 1192,
+        "h": 282
     },
     {
         "id": "5798e39cbc3730ae",
@@ -12764,5 +12799,216 @@
             ]
         ],
         "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "8e0d9bd8043dd53b",
+        "type": "inject",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Cron Trigger",
+        "props": [
+            {
+                "p": "cron.start",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "79e414f65b0e157b"
+            ]
+        ]
+    },
+    {
+        "id": "79e414f65b0e157b",
+        "type": "function",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Route: Time based",
+        "func": "var minute = msg;\nvar hour = null;\nvar day = null;\nvar week = null;\nvar month = null;\n\nvar date;\ndate = new Date(msg.cron.start);\n\n// node.warn(msg.start);\n// node.warn(String(\"minute: \" + date.getMinutes()))\n// node.warn(String(\"seconds: \" + String(date.getSeconds()).padStart(2, \"0\")))\n// node.warn(String(\"hour: \" + String(date.getHours()).padStart(2, \"0\")))\n// node.warn(String(\"day: \" + String(date.getDay()).padStart(2, \"0\")))\n// node.warn(String(\"date: \" + String(date.getDate()).padStart(2, \"0\")))\n\nmsg.cron.trigger = 'minute';\n\n\n\nif(\n    String(date.getMinutes()).padStart(2, \"0\") == \"00\" \n) { // Hour\n\n    msg.cron.trigger = \"hour\";\n\n}\n\nif (\n    String(date.getHours()).padStart(2, \"0\") == \"00\" &&\n    String(date.getMinutes()).padStart(2, \"0\") == \"00\"\n) { // Daily\n\n    msg.cron.trigger = \"day\";\n\n}\n\nif (\n    String(date.getDay()).padStart(2, \"0\") == \"00\" &&\n    String(date.getHours()).padStart(2, \"0\") == \"00\" &&\n    String(date.getMinutes()).padStart(2, \"0\") == \"00\"\n) { // Weekly\n\n    msg.cron.trigger = \"week\";\n\n}\n\nif (\n    String(date.getDate()).padStart(2, \"0\") == \"01\" &&\n    String(date.getDay()).padStart(2, \"0\") == \"00\" &&\n    String(date.getHours()).padStart(2, \"0\") == \"00\" &&\n    String(date.getMinutes()).padStart(2, \"0\") == \"00\"\n) { // Weekly\n\n    msg.cron.trigger = \"month\";\n\n}\n\nnode.send([\n    minute,\n    hour,\n    day,\n    week,\n    month\n]);",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "7e6699ce0159226a",
+                "8f313772a6e82e96"
+            ],
+            [
+                "61115e9c6e619dae"
+            ],
+            [
+                "2d78bd7d0f411721"
+            ],
+            [
+                "47f68cd20a8a528b"
+            ],
+            [
+                "348b594ba5acb470"
+            ]
+        ],
+        "outputLabels": [
+            "minute",
+            "hour",
+            "day",
+            "week",
+            "month"
+        ],
+        "icon": "node-red/timer.svg"
+    },
+    {
+        "id": "8f313772a6e82e96",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Minute",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7e6699ce0159226a",
+        "type": "link call",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Clean Expired Tokens",
+        "links": [
+            "e25b155a2a29f16d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 860,
+        "y": 140,
+        "wires": [
+            [
+                "2bcdbb78b4e9181f"
+            ]
+        ]
+    },
+    {
+        "id": "61115e9c6e619dae",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Hourly",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2d78bd7d0f411721",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Daily",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "47f68cd20a8a528b",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Weekly",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "348b594ba5acb470",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Monthly",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fab1ebda3a4ee2db",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "name": "debug 116",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2390,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2bcdbb78b4e9181f",
+        "type": "debug",
+        "z": "24deed6b10f37f8f",
+        "g": "b5d607bb9a62875f",
+        "name": "Cron Complete",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 260,
+        "wires": []
     }
 ]
