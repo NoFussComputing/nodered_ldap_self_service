@@ -852,7 +852,8 @@
         "x": 174,
         "y": 339,
         "w": 492,
-        "h": 162
+        "h": 162,
+        "info": "# Methods\n\nThis sub-group is provides the http endpoints for the supported methods."
     },
     {
         "id": "755ff25cc29a08a1",
@@ -916,7 +917,7 @@
         "y": 579,
         "w": 1292,
         "h": 382,
-        "info": "# Fetch Content\n\nOnce authorized, this workflow fetches the html content to be displayed within the browser."
+        "info": "# Fetch Content\n\nThis sub-group is the third step in the http workflow.\n\nOnce authorized, this workflow fetches the html content to be displayed within the browser.\n"
     },
     {
         "id": "8363d385051fc5c0",
@@ -947,7 +948,8 @@
         "x": 794,
         "y": 999,
         "w": 1292,
-        "h": 222
+        "h": 222,
+        "info": "# Process Forms\n\nThis sub-group is the third step in the http workflow.\n\nThis sub-group is responsible for processing any forms that are sent to the server.\n"
     },
     {
         "id": "5706252b01492258",
@@ -977,7 +979,8 @@
         "x": 2174,
         "y": 579,
         "w": 692,
-        "h": 382
+        "h": 382,
+        "info": "# Fetch CSS / JS Files\n\nThis sub-group is the forth step in the http workflow, and specifically for HTTP/Get methods only.\n\nThis sub-group is responsible for fetching the appropriate CSS Style or JS Script that is required to fulfill the page request.\n"
     },
     {
         "id": "f3aa07300888f0a4",
@@ -1185,7 +1188,7 @@
         "y": 339,
         "w": 912,
         "h": 202,
-        "info": "# Authorization Check\n\nThis group is the second step within the http workflow. it's sole purpose is to ensure that **ALL** requests to the http endpoint are authorized."
+        "info": "# Authorization Check\n\nThis group is the second step within the http workflow. \n\nThis sub-group is responsible for ensuring that **ALL** requests to the http endpoint are authorized.\n"
     },
     {
         "id": "5798e39cbc3730ae",
