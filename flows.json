@@ -1251,6 +1251,34 @@
         "h": 282
     },
     {
+        "id": "f7c0a5bee0e0df33",
+        "type": "group",
+        "z": "24deed6b10f37f8f",
+        "name": "Task: Clean Expired Tokens",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "8c5bb81ae0b14703",
+            "b2e1cdc1778fd936",
+            "f4da55e70a4f8c2c",
+            "44c01ba9bfc47ee8",
+            "55d7ad6e4958f882",
+            "bb5ccb49f1aa1036",
+            "f5f9e14092781e29",
+            "e25b155a2a29f16d",
+            "0f30a271d9c71f74",
+            "966779cca7297dec"
+        ],
+        "x": 1294,
+        "y": 99,
+        "w": 1612,
+        "h": 122
+    },
+    {
         "id": "5798e39cbc3730ae",
         "type": "junction",
         "z": "42b9663b67dbd983",
@@ -1866,6 +1894,19 @@
         "wires": [
             [
                 "28713941e03e2bf5"
+            ]
+        ]
+    },
+    {
+        "id": "966779cca7297dec",
+        "type": "junction",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "x": 2540,
+        "y": 180,
+        "wires": [
+            [
+                "0f30a271d9c71f74"
             ]
         ]
     },
@@ -3823,7 +3864,7 @@
         "fieldType": "msg",
         "format": "javascript",
         "syntax": "plain",
-        "template": "\n$(document).ready(function(e) {\n    \n    $(\"form[ajax=true]\").submit(function(e) {\n\n        $(\"input[type=submit]\").attr(\"disabled\", true);\n        $(\"input[type=submit]\").attr(\"value\", \"Sent\");\n\n        e.preventDefault();\n        \n        var form_data = $(this).serialize();\n        var form_url = $(this).attr(\"action\");\n        var form_method = $(this).attr(\"method\").toUpperCase();\n        \n        $(\"#loadingimg\").show();\n\n        $.ajax({\n            url: form_url, \n            type: form_method,      \n            data: form_data,     \n            cache: false,\n            success: function(returnhtml){                          \n                \n                html(returnhtml); \n                $(\"#loadingimg\").hide();                    \n            }           \n        });    \n        \n    });\n    \n});\n",
+        "template": "\n$(document).ready(function(e) {\n    \n    $(\"form[ajax=true]\").submit(function(e) {\n\n        $(\"input[type=submit]\").attr(\"disabled\", true);\n        $(\"input[type=submit]\").attr(\"value\", \"Sent\");\n\n        e.preventDefault();\n        \n        var form_data = $(this).serialize();\n        var form_url = $(this).attr(\"action\");\n        var form_method = $(this).attr(\"method\").toUpperCase();\n        \n        $(\"#loadingimg\").show();\n\n        $.ajax({\n            url: form_url, \n            type: form_method,      \n            data: form_data,     \n            cache: false,\n            success: function(returnhtml){                          \n                \n                $(\"#result\").html(returnhtml); \n                $(\"#loadingimg\").hide();                    \n            }           \n        });    \n        \n    });\n    \n});\n",
         "x": 930,
         "y": 180,
         "wires": [
@@ -4499,7 +4540,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n  \"developer_mode\": true,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"selfservice/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
+        "template": "{\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"selfservice/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
         "output": "json",
         "x": 1580,
         "y": 240,
@@ -5105,7 +5146,8 @@
         "y": 1040,
         "wires": [
             [
-                "4cdbeaa8f5f3ddb7"
+                "4cdbeaa8f5f3ddb7",
+                "23439ba609bdc6d9"
             ]
         ]
     },
@@ -5255,7 +5297,8 @@
         "y": 940,
         "wires": [
             [
-                "4cdbeaa8f5f3ddb7"
+                "4cdbeaa8f5f3ddb7",
+                "23439ba609bdc6d9"
             ]
         ]
     },
@@ -5930,6 +5973,23 @@
         ],
         "icon": "node-red/arrow-in.svg",
         "l": true
+    },
+    {
+        "id": "23439ba609bdc6d9",
+        "type": "debug",
+        "z": "4b5e055cd6b1e387",
+        "name": "debug 116",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3170,
+        "y": 980,
+        "wires": []
     },
     {
         "id": "0eeaba70b043a226",
@@ -12977,23 +13037,6 @@
         "wires": []
     },
     {
-        "id": "fab1ebda3a4ee2db",
-        "type": "debug",
-        "z": "24deed6b10f37f8f",
-        "name": "debug 116",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2390,
-        "y": 60,
-        "wires": []
-    },
-    {
         "id": "2bcdbb78b4e9181f",
         "type": "debug",
         "z": "24deed6b10f37f8f",
@@ -13010,5 +13053,186 @@
         "x": 1120,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "8c5bb81ae0b14703",
+        "type": "fs-list",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "fetch token files",
+        "path": "path",
+        "pathType": "msg",
+        "pattern": "*.json",
+        "patternType": "str",
+        "filter": "files",
+        "recursive": false,
+        "follow": false,
+        "property": "files",
+        "propertyType": "msg",
+        "x": 1780,
+        "y": 160,
+        "wires": [
+            [
+                "f4da55e70a4f8c2c"
+            ]
+        ]
+    },
+    {
+        "id": "b2e1cdc1778fd936",
+        "type": "function",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Build Path",
+        "func": "msg.cron.name = 'Remove expired token'\nmsg.path = String(env.get('HOME') + '/' + global.get('config.paths.token_sessions'));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 160,
+        "wires": [
+            [
+                "8c5bb81ae0b14703"
+            ]
+        ],
+        "icon": "node-red-contrib-filesystem/fs-mkdir.svg"
+    },
+    {
+        "id": "f4da55e70a4f8c2c",
+        "type": "function",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Build Path",
+        "func": "\nvar files = msg.files;\nvar filesfound = files.length;\n\nvar new_msg = {\n    \"cron\": msg.cron,\n    \"_linkSource\": msg._linkSource\n};\n\nnode.status({fill:\"blue\",shape:\"dot\",text:String( filesfound + \" found\")});\n\n\nfor (var i = 0; i < filesfound; i++ ) {\n\n    new_msg.path = msg.path;\n    new_msg.filename = String(msg.path + msg.files[i]);\n    node.send(new_msg);\n\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1970,
+        "y": 160,
+        "wires": [
+            [
+                "44c01ba9bfc47ee8"
+            ]
+        ]
+    },
+    {
+        "id": "44c01ba9bfc47ee8",
+        "type": "file in",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Read Token File",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2120,
+        "y": 160,
+        "wires": [
+            [
+                "55d7ad6e4958f882"
+            ]
+        ]
+    },
+    {
+        "id": "55d7ad6e4958f882",
+        "type": "json",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 2250,
+        "y": 160,
+        "wires": [
+            [
+                "bb5ccb49f1aa1036"
+            ]
+        ],
+        "icon": "font-awesome/fa-exchange"
+    },
+    {
+        "id": "bb5ccb49f1aa1036",
+        "type": "function",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Process Token File",
+        "func": "var file_delete = msg;\nvar file_keep = null;\n\n\nmsg.cron.task = 'delete'\nmsg.cron.data = {\n    \"filename\": msg.filename\n}\n\nif( msg.payload.hasOwnProperty('datetime') ) {\n\n    if( msg.payload.datetime > Date.now() ) {\n\n        if ( msg.payload.hasOwnProperty('user') ){\n\n            if(\n                msg.payload.user.hasOwnProperty('username') &&\n                msg.payload.user.hasOwnProperty('fname') &&\n                msg.payload.user.hasOwnProperty('lname') &&\n                msg.payload.user.hasOwnProperty('mail')\n            ){\n\n                file_delete = null;\n                msg.cron.task = 'do nothing'\n                file_keep = msg;\n\n            } else {\n\n                node.status({ fill: \"yellow\", shape: \"dot\", text: \"missing a required user field\" });\n\n            }\n\n        } else {\n\n            node.status({ fill: \"yellow\", shape: \"dot\", text: \"user field\" });\n\n        }\n\n    } else {\n\n        node.status({ fill: \"yellow\", shape: \"dot\", text: \"expired\" });\n\n    }\n\n} else {\n\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"missing datetime\"});\n\n}\n\ndelete msg.path;\ndelete msg.filename;\ndelete msg.payload;\n\nnode.send([\n    file_delete,\n    file_keep\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2410,
+        "y": 160,
+        "wires": [
+            [
+                "f5f9e14092781e29"
+            ],
+            [
+                "966779cca7297dec"
+            ]
+        ],
+        "outputLabels": [
+            "Delete",
+            "Keep"
+        ],
+        "icon": "font-awesome/fa-repeat"
+    },
+    {
+        "id": "f5f9e14092781e29",
+        "type": "fs-remove",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "path": "",
+        "pathType": "msg",
+        "filename": "filename",
+        "filenameType": "msg",
+        "recursive": false,
+        "exist": true,
+        "name": "Delete Token File",
+        "x": 2630,
+        "y": 140,
+        "wires": [
+            [
+                "0f30a271d9c71f74"
+            ]
+        ]
+    },
+    {
+        "id": "e25b155a2a29f16d",
+        "type": "link in",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Clean expired Tokens",
+        "links": [],
+        "x": 1420,
+        "y": 160,
+        "wires": [
+            [
+                "b2e1cdc1778fd936"
+            ]
+        ],
+        "icon": "font-awesome/fa-paint-brush",
+        "l": true
+    },
+    {
+        "id": "0f30a271d9c71f74",
+        "type": "link out",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Return",
+        "mode": "return",
+        "links": [],
+        "x": 2830,
+        "y": 180,
+        "wires": [],
+        "l": true
     }
 ]
