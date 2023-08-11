@@ -3806,7 +3806,7 @@
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
         "name": "Details",
-        "func": "msg.http = {\n    \"client\": msg.req.connection.remoteAddress,\n    \"headers\": msg.req.headers\n}\nreturn msg;",
+        "func": "msg.http = {\n    \"client\": msg.req.connection.remoteAddress,\n    \"headers\": msg.req.headers,\n    \"timestamp\": Date.now()\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
