@@ -3777,6 +3777,13 @@
                 "t": "delete",
                 "p": "_event",
                 "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "http.response_size",
+                "pt": "msg",
+                "to": "$length(msg.payload)\t",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -3784,7 +3791,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2570,
+        "x": 2560,
         "y": 1180,
         "wires": [
             [
