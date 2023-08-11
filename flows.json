@@ -7258,7 +7258,7 @@
         "z": "8179bf22c4c31682",
         "g": "95c7670ef9039295",
         "name": "Token File Check",
-        "func": "\nvar msg1 = null;\nvar msg2 = null;\n\nmsg.cookies = {\n    token: {\n        value: \"\",\n        expires: Date.now()\n\n    }\n};\n//msg.filename = msg.req.query.token + '.json';\n\nfs.stat(msg.filename, function (err) {\n    if (err) {\n        node.status({ fill: \"yellow\", shape: \"ring\", text: \"false\" });\n        node.send([null, msg]);\n    } else {\n        node.status({ fill: \"green\", shape: \"ring\", text: \"true\" });\n        node.send([msg, null]);\n    }\n});\n\n//node.send([msg1, msg2]);\n\n",
+        "func": "\nvar msg1 = null;\nvar msg2 = null;\n\nmsg.cookies = {\n    token: {\n        value: \"\",\n        Expires: Date.now()\n\n    }\n};\n//msg.filename = msg.req.query.token + '.json';\n\nfs.stat(msg.filename, function (err) {\n    if (err) {\n        node.status({ fill: \"yellow\", shape: \"ring\", text: \"false\" });\n        node.send([null, msg]);\n    } else {\n        node.status({ fill: \"green\", shape: \"ring\", text: \"true\" });\n        node.send([msg, null]);\n    }\n});\n\n//node.send([msg1, msg2]);\n\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
