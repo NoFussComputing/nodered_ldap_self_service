@@ -43,4 +43,6 @@ RUN  chown node-red:node-red -R /data; \
 
 USER node-red
 
+HEALTHCHECK CMD curl http://localhost:1880/admin || exit 1
+
 VOLUME [ "/data", "/usr/src/node-red" ]
