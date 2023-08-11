@@ -25,18 +25,22 @@ LABEL \
   org.opencontainers.image.vendor="No Fuss Computing"
   # org.opencontainers.image.version="{git tag}"
 
-USER root
-
-COPY --from=CloneRepo /tmp/self_service/* /data/
-
 COPY includes/ /
 
-RUN chown node-red:node-red -R /data; \
+
+COPY --from=CloneRepo /tmp/self_service/package.json /data/package.json
+
+RUN cd /data; \
+  npm install --unsafe-perm --no-update-notifier --no-fund --only=production
+
+COPY --from=CloneRepo /tmp/self_service/flows_cred.json /data/flows_cred.json
+COPY --from=CloneRepo /tmp/self_service/flows.json /data/flows.json
+
+USER root
+
+RUN  chown node-red:node-red -R /data; \
   chown node-red:node-red -R /usr/src/node-red;
 
 USER node-red
-
-RUN cd /data; \
-  npm install package.json
 
 VOLUME [ "/data", "/usr/src/node-red" ]
