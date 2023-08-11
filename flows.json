@@ -343,7 +343,9 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119
+        "y": 119,
+        "w": 2312,
+        "h": 182
     },
     {
         "id": "10a6c6b12749dda9",
@@ -410,6 +412,8 @@
         ],
         "x": 128,
         "y": 333,
+        "w": 2798,
+        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
@@ -426,20 +430,19 @@
         "nodes": [
             "f17afdbfc8c07889",
             "53a5ee55ee916cec",
-            "4c583f2fab47bd8a",
-            "61ac44522e8da07f",
             "6c790a65bbdc61a5",
             "bc039e4b516adf37",
             "95c7670ef9039295",
             "627a72eee1e26ae6",
             "311c966bd1fa946e",
             "32fbc01a34859498",
-            "7ccb5fae05b5c6a6"
+            "7ccb5fae05b5c6a6",
+            "c10e09e4bfbddfd7"
         ],
         "x": 94,
         "y": 1493,
-        "w": 1932,
-        "h": 548,
+        "w": 1952,
+        "h": 394,
         "info": "# Authorization\n\nThis flow is responsible for ensuring the user is authorized to access the system. Any valid user account that authenticates to the system is authorized.\n\n\n## Data\n\nAuthorization data is stored in object `msg.auth` with the following structure.\n\n``` json\n{\n  \"auth\": {\n    \"access\": true,\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    }\n  }\n}\n\n```"
     },
     {
@@ -540,6 +543,8 @@
         ],
         "x": 128,
         "y": 1133,
+        "w": 4704,
+        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -668,7 +673,9 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999
+        "y": 999,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "9858d84dc9d001be",
@@ -709,7 +716,9 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899
+        "y": 899,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "d0dc259791aed430",
@@ -732,7 +741,9 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959
+        "y": 959,
+        "w": 1432,
+        "h": 122
     },
     {
         "id": "95c7670ef9039295",
@@ -748,18 +759,18 @@
         },
         "nodes": [
             "cbd58f491456eb8c",
-            "366892fde876296f",
             "42a1e057dda56f95",
             "0593c236e186e0bb",
             "8d9fa9fe704e74be",
-            "9c55bf6229fa740c",
             "0e55ee565cde91d7",
             "8b1fef39c34f5513",
-            "d88479a7fb5c2f94"
+            "d88479a7fb5c2f94",
+            "366892fde876296f",
+            "9c55bf6229fa740c"
         ],
         "x": 674,
         "y": 1519,
-        "w": 1072,
+        "w": 1112,
         "h": 182
     },
     {
@@ -780,7 +791,7 @@
             "13126d75aae301a2",
             "13ebe1d63226e702"
         ],
-        "x": 694,
+        "x": 674,
         "y": 1754,
         "w": 672,
         "h": 107
@@ -805,7 +816,9 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819
+        "y": 819,
+        "w": 912,
+        "h": 122
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -831,7 +844,9 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519
+        "y": 519,
+        "w": 1752,
+        "h": 122
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -857,7 +872,9 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659
+        "y": 659,
+        "w": 1452,
+        "h": 142
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -880,7 +897,9 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159
+        "y": 1159,
+        "w": 1072,
+        "h": 122
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -1111,6 +1130,8 @@
         ],
         "x": 154,
         "y": 359,
+        "w": 972,
+        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1133,6 +1154,8 @@
         ],
         "x": 154,
         "y": 1159,
+        "w": 812,
+        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
     },
     {
@@ -1157,6 +1180,8 @@
         ],
         "x": 2214,
         "y": 1159,
+        "w": 1152,
+        "h": 122,
         "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
@@ -1182,6 +1207,8 @@
         ],
         "x": 3394,
         "y": 1159,
+        "w": 1412,
+        "h": 122,
         "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
@@ -1355,7 +1382,7 @@
         "type": "junction",
         "z": "8179bf22c4c31682",
         "g": "311c966bd1fa946e",
-        "x": 1200,
+        "x": 1180,
         "y": 1780,
         "wires": [
             [
@@ -3307,7 +3334,6 @@
         "links": [
             "13126d75aae301a2",
             "366892fde876296f",
-            "9c55bf6229fa740c",
             "be8652f99185b1aa"
         ],
         "x": 260,
@@ -7273,12 +7299,10 @@
         "y": 1640,
         "wires": [
             [
-                "8d9fa9fe704e74be",
-                "89073d15986953eb"
+                "8d9fa9fe704e74be"
             ],
             [
-                "9c55bf6229fa740c",
-                "e60fd80a68fb6b67"
+                "9c55bf6229fa740c"
             ]
         ],
         "outputLabels": [
@@ -7294,10 +7318,9 @@
         "name": "Authentication Check",
         "links": [],
         "x": 220,
-        "y": 1720,
+        "y": 1560,
         "wires": [
             [
-                "4c583f2fab47bd8a",
                 "6c790a65bbdc61a5"
             ]
         ],
@@ -7308,31 +7331,13 @@
         "type": "link out",
         "z": "8179bf22c4c31682",
         "g": "bbd929c437c592ea",
-        "name": "Return",
+        "name": "Auth: Return",
         "mode": "return",
         "links": [],
         "x": 1950,
-        "y": 2000,
+        "y": 1840,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "4c583f2fab47bd8a",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "name": "debug 102",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 570,
-        "y": 1660,
-        "wires": []
     },
     {
         "id": "8d9fa9fe704e74be",
@@ -7351,8 +7356,7 @@
         "y": 1620,
         "wires": [
             [
-                "0593c236e186e0bb",
-                "bb208d66453aa4c6"
+                "0593c236e186e0bb"
             ]
         ]
     },
@@ -7375,7 +7379,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1080,
+        "x": 1060,
         "y": 1800,
         "wires": [
             [
@@ -7391,28 +7395,14 @@
         "type": "link out",
         "z": "8179bf22c4c31682",
         "g": "311c966bd1fa946e",
-        "name": "HTTP/401",
+        "name": "OpenID: Fail",
         "mode": "link",
         "links": [
-            "58479d9fdbd86ed8"
+            "58479d9fdbd86ed8",
+            "c10e09e4bfbddfd7"
         ],
-        "x": 1270,
+        "x": 1250,
         "y": 1820,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "9c55bf6229fa740c",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "HTTP/401",
-        "mode": "link",
-        "links": [
-            "58479d9fdbd86ed8"
-        ],
-        "x": 1190,
-        "y": 1660,
         "wires": [],
         "l": true
     },
@@ -7437,7 +7427,6 @@
         "y": 1620,
         "wires": [
             [
-                "61ac44522e8da07f",
                 "d88479a7fb5c2f94"
             ],
             [
@@ -7462,25 +7451,9 @@
         "y": 1620,
         "wires": [
             [
-                "42a1e057dda56f95",
-                "734fc04cab63eaa2"
+                "42a1e057dda56f95"
             ]
         ]
-    },
-    {
-        "id": "366892fde876296f",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "HTTP/401",
-        "mode": "link",
-        "links": [
-            "58479d9fdbd86ed8"
-        ],
-        "x": 1650,
-        "y": 1640,
-        "wires": [],
-        "l": true
     },
     {
         "id": "cbd58f491456eb8c",
@@ -7498,28 +7471,9 @@
         "y": 1560,
         "wires": [
             [
-                "61ac44522e8da07f",
                 "32fbc01a34859498"
             ]
         ]
-    },
-    {
-        "id": "61ac44522e8da07f",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "name": "debug 108",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1560,
-        "wires": []
     },
     {
         "id": "6c790a65bbdc61a5",
@@ -7534,15 +7488,13 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 1720,
+        "y": 1560,
         "wires": [
             [
-                "bc039e4b516adf37",
-                "f5a5044976f70b47"
+                "bc039e4b516adf37"
             ],
             [
-                "627a72eee1e26ae6",
-                "b264bf19808a760c"
+                "627a72eee1e26ae6"
             ]
         ],
         "outputLabels": [
@@ -7561,7 +7513,7 @@
             "8b1fef39c34f5513"
         ],
         "x": 550,
-        "y": 1700,
+        "y": 1540,
         "wires": [],
         "l": true
     },
@@ -7594,7 +7546,7 @@
             "9f416bc258c1a60c"
         ],
         "x": 560,
-        "y": 1740,
+        "y": 1580,
         "wires": [],
         "l": true
     },
@@ -7607,7 +7559,7 @@
         "links": [
             "627a72eee1e26ae6"
         ],
-        "x": 820,
+        "x": 800,
         "y": 1800,
         "wires": [
             [
@@ -7775,50 +7727,6 @@
         ]
     },
     {
-        "id": "553c6471a13c3a67",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "name": "debug 52",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2680,
-        "y": 1600,
-        "wires": []
-    },
-    {
-        "id": "71cb9eac9872c9a9",
-        "type": "switch",
-        "z": "8179bf22c4c31682",
-        "name": "Password Changed",
-        "property": "ldapStatus.success",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 2210,
-        "y": 1560,
-        "wires": [
-            [],
-            [
-                "f43efd743ef3e33e"
-            ]
-        ]
-    },
-    {
         "id": "96766518a046855d",
         "type": "template",
         "z": "8179bf22c4c31682",
@@ -7889,20 +7797,6 @@
         ],
         "x": 3560,
         "y": 1300,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "f43efd743ef3e33e",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "name": "Error: LDAP Password Change",
-        "mode": "link",
-        "links": [
-            "469a324c5a76451f"
-        ],
-        "x": 2490,
-        "y": 1600,
         "wires": [],
         "l": true
     },
@@ -8360,106 +8254,54 @@
         "wires": []
     },
     {
-        "id": "f5a5044976f70b47",
-        "type": "debug",
+        "id": "366892fde876296f",
+        "type": "link out",
         "z": "8179bf22c4c31682",
-        "name": "debug 109",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 1500,
-        "wires": []
+        "g": "95c7670ef9039295",
+        "name": "Fail: Token Check",
+        "mode": "link",
+        "links": [
+            "58479d9fdbd86ed8",
+            "c10e09e4bfbddfd7"
+        ],
+        "x": 1670,
+        "y": 1640,
+        "wires": [],
+        "l": true
     },
     {
-        "id": "b264bf19808a760c",
-        "type": "debug",
+        "id": "9c55bf6229fa740c",
+        "type": "link out",
         "z": "8179bf22c4c31682",
-        "name": "debug 110",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 988.5714721679688,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "89073d15986953eb",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "name": "debug 111",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
+        "g": "95c7670ef9039295",
+        "name": "Fail: No Token File",
+        "mode": "link",
+        "links": [
+            "c10e09e4bfbddfd7"
+        ],
         "x": 1210,
-        "y": 1480,
-        "wires": []
+        "y": 1660,
+        "wires": [],
+        "l": true
     },
     {
-        "id": "e60fd80a68fb6b67",
-        "type": "debug",
+        "id": "c10e09e4bfbddfd7",
+        "type": "link in",
         "z": "8179bf22c4c31682",
-        "name": "debug 112",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "734fc04cab63eaa2",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "name": "debug 113",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1790,
-        "y": 1480,
-        "wires": []
-    },
-    {
-        "id": "bb208d66453aa4c6",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "name": "debug 114",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1550,
-        "y": 1480,
-        "wires": []
+        "g": "bbd929c437c592ea",
+        "name": "Auth: Finish",
+        "links": [
+            "9c55bf6229fa740c",
+            "366892fde876296f",
+            "13126d75aae301a2"
+        ],
+        "x": 1865,
+        "y": 1840,
+        "wires": [
+            [
+                "53a5ee55ee916cec"
+            ]
+        ]
     },
     {
         "id": "17f893c2bb347668",
