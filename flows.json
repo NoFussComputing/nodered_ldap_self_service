@@ -290,7 +290,9 @@
             "540882a95f65754c"
         ],
         "x": 94,
-        "y": 159
+        "y": 159,
+        "w": 972,
+        "h": 109.5
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -308,7 +310,9 @@
             "0f2ff2f433d17eef"
         ],
         "x": 94,
-        "y": 319
+        "y": 319,
+        "w": 912,
+        "h": 82
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -356,7 +360,9 @@
             "e62119d30db09cce"
         ],
         "x": 94,
-        "y": 459
+        "y": 459,
+        "w": 832,
+        "h": 122
     },
     {
         "id": "9b1493c4ae19a935",
@@ -377,6 +383,8 @@
         ],
         "x": 94,
         "y": 639,
+        "w": 4744,
+        "h": 834,
         "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
@@ -430,6 +438,8 @@
         ],
         "x": 94,
         "y": 1493,
+        "w": 1932,
+        "h": 548,
         "info": "# Authorization\n\nThis flow is responsible for ensuring the user is authorized to access the system. Any valid user account that authenticates to the system is authorized.\n\n\n## Data\n\nAuthorization data is stored in object `msg.auth` with the following structure.\n\n``` json\n{\n  \"auth\": {\n    \"access\": true,\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    }\n  }\n}\n\n```"
     },
     {
@@ -633,12 +643,13 @@
             "e25b155a2a29f16d",
             "0f30a271d9c71f74",
             "966779cca7297dec",
-            "a3bd692422c0fcf5"
+            "a3bd692422c0fcf5",
+            "291408859782056d"
         ],
         "x": 1274,
         "y": 99,
-        "w": 1812,
-        "h": 122
+        "w": 1872,
+        "h": 142
     },
     {
         "id": "aea0a3398dafab4c",
@@ -678,7 +689,9 @@
             "d7dbd3970c891c33"
         ],
         "x": 234,
-        "y": 813
+        "y": 813,
+        "w": 4578,
+        "h": 634
     },
     {
         "id": "82ccba0e0a13970a",
@@ -745,7 +758,9 @@
             "d88479a7fb5c2f94"
         ],
         "x": 674,
-        "y": 1519
+        "y": 1519,
+        "w": 1072,
+        "h": 182
     },
     {
         "id": "311c966bd1fa946e",
@@ -766,7 +781,9 @@
             "13ebe1d63226e702"
         ],
         "x": 694,
-        "y": 1754
+        "y": 1754,
+        "w": 672,
+        "h": 107
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -1198,7 +1215,9 @@
             "5a961504d7ca5be3"
         ],
         "x": 754,
-        "y": 1051.5
+        "y": 1051.5,
+        "w": 4032,
+        "h": 369.5
     },
     {
         "id": "d7dbd3970c891c33",
@@ -1223,7 +1242,9 @@
             "a888a2ed9a053acc"
         ],
         "x": 754,
-        "y": 839
+        "y": 839,
+        "w": 1412,
+        "h": 182
     },
     {
         "id": "85fa24886e126df7",
@@ -1245,7 +1266,9 @@
             "285f57c0fee687a1"
         ],
         "x": 2234,
-        "y": 1259
+        "y": 1259,
+        "w": 1472,
+        "h": 82
     },
     {
         "id": "aa5626527a9df701",
@@ -1263,7 +1286,9 @@
             "f17ccfa845461657"
         ],
         "x": 2228,
-        "y": 1093
+        "y": 1093,
+        "w": 2204,
+        "h": 134
     },
     {
         "id": "351440700b3e2ecc",
@@ -1282,7 +1307,9 @@
             "e0660324da4581dd"
         ],
         "x": 2254,
-        "y": 1119
+        "y": 1119,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "f17ccfa845461657",
@@ -1306,7 +1333,9 @@
             "fdf014eff1962329"
         ],
         "x": 2794,
-        "y": 1119
+        "y": 1119,
+        "w": 1612,
+        "h": 82
     },
     {
         "id": "5798e39cbc3730ae",
@@ -1931,8 +1960,8 @@
         "type": "junction",
         "z": "24deed6b10f37f8f",
         "g": "f7c0a5bee0e0df33",
-        "x": 2720,
-        "y": 180,
+        "x": 2780,
+        "y": 200,
         "wires": [
             [
                 "0f30a271d9c71f74"
@@ -1948,6 +1977,19 @@
         "wires": [
             [
                 "e5548020922347cc"
+            ]
+        ]
+    },
+    {
+        "id": "291408859782056d",
+        "type": "junction",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "x": 2280,
+        "y": 200,
+        "wires": [
+            [
+                "966779cca7297dec"
             ]
         ]
     },
@@ -4627,20 +4669,16 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1420,
+        "x": 1430,
         "y": 240,
         "wires": [
             [
@@ -4723,12 +4761,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1420,
+        "x": 1430,
         "y": 360,
         "wires": [
             [
@@ -13495,8 +13533,8 @@
         "z": "24deed6b10f37f8f",
         "g": "f7c0a5bee0e0df33",
         "name": "Build Path",
-        "func": "\nvar files = msg.files;\nvar filesfound = files.length;\n\nvar new_msg = {\n    \"cron\": msg.cron,\n    \"_linkSource\": msg._linkSource\n};\n\nnode.status({fill:\"blue\",shape:\"dot\",text:String( filesfound + \" found\")});\n\n\nfor (var i = 0; i < filesfound; i++ ) {\n\n    new_msg.path = msg.path;\n    new_msg.filename = String(msg.path + msg.files[i]);\n    node.send(new_msg);\n\n}\n",
-        "outputs": 1,
+        "func": "\nvar files = msg.files;\nvar filesfound = files.length;\n\nvar new_msg = {\n    \"cron\": msg.cron,\n    \"_linkSource\": msg._linkSource\n};\n\nnode.status({fill:\"blue\",shape:\"dot\",text:String( filesfound + \" found\")});\n\n\nfor (var i = 0; i < filesfound; i++ ) {\n\n    new_msg.path = msg.path;\n    new_msg.filename = String(msg.path + msg.files[i]);\n    node.send([new_msg, null]);\n\n}\n\nif (filesfound == 0 ) {\n\n    new_msg.cron.task = 'No Tokens Found';\n\n    node.send([null, new_msg]);\n\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -13506,7 +13544,14 @@
         "wires": [
             [
                 "44c01ba9bfc47ee8"
+            ],
+            [
+                "291408859782056d"
             ]
+        ],
+        "outputLabels": [
+            "Continue",
+            "No Action Required"
         ]
     },
     {
@@ -13522,7 +13567,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2300,
+        "x": 2360,
         "y": 160,
         "wires": [
             [
@@ -13539,7 +13584,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 2430,
+        "x": 2490,
         "y": 160,
         "wires": [
             [
@@ -13554,13 +13599,13 @@
         "z": "24deed6b10f37f8f",
         "g": "f7c0a5bee0e0df33",
         "name": "Process Token File",
-        "func": "var file_delete = msg;\nvar file_keep = null;\n\n\nmsg.cron.task = 'delete'\nmsg.cron.data = {\n    \"filename\": msg.filename\n}\n\nif( msg.payload.hasOwnProperty('datetime') ) {\n\n    if( msg.payload.datetime > Date.now() ) {\n\n        if ( msg.payload.hasOwnProperty('user') ){\n\n            if(\n                msg.payload.user.hasOwnProperty('username') &&\n                msg.payload.user.hasOwnProperty('fname') &&\n                msg.payload.user.hasOwnProperty('lname') &&\n                msg.payload.user.hasOwnProperty('mail')\n            ){\n\n                file_delete = null;\n                msg.cron.task = 'do nothing'\n                file_keep = msg;\n\n            } else {\n\n                node.status({ fill: \"yellow\", shape: \"dot\", text: \"missing a required user field\" });\n\n            }\n\n        } else {\n\n            node.status({ fill: \"yellow\", shape: \"dot\", text: \"user field\" });\n\n        }\n\n    } else {\n\n        node.status({ fill: \"yellow\", shape: \"dot\", text: \"expired\" });\n\n    }\n\n} else {\n\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"missing datetime\"});\n\n}\n\ndelete msg.path;\ndelete msg.filename;\ndelete msg.payload;\n\nnode.send([\n    file_delete,\n    file_keep\n]);",
+        "func": "var file_delete = msg;\nvar file_keep = null;\n\nnode.status({ fill: \"red\", shape: \"dot\", text: \"function did not complete\" });\n\nmsg.cron.task = 'delete'\nmsg.cron.data = {\n    \"filename\": msg.filename\n}\n\nif( msg.payload.hasOwnProperty('datetime') ) {\n\n    if( msg.payload.datetime > Date.now() ) {\n\n        if ( msg.payload.hasOwnProperty('user') ){\n\n            if(\n                msg.payload.user.hasOwnProperty('username') &&\n                msg.payload.user.hasOwnProperty('fname') &&\n                msg.payload.user.hasOwnProperty('lname') &&\n                msg.payload.user.hasOwnProperty('mail')\n            ){\n\n                file_delete = null;\n                msg.cron.task = 'do nothing'\n                file_keep = msg;\n\n            } else {\n\n                node.status({ fill: \"yellow\", shape: \"dot\", text: \"missing a required user field\" });\n\n            }\n\n        } else {\n\n            node.status({ fill: \"yellow\", shape: \"dot\", text: \"user field\" });\n\n        }\n\n    } else {\n\n        node.status({ fill: \"yellow\", shape: \"dot\", text: \"expired\" });\n\n    }\n\n} else {\n\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"missing datetime\"});\n\n}\n\ndelete msg.path;\ndelete msg.filename;\ndelete msg.payload;\n\nnode.send([\n    file_delete,\n    file_keep\n]);",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2590,
+        "x": 2650,
         "y": 160,
         "wires": [
             [
@@ -13588,7 +13633,7 @@
         "recursive": false,
         "exist": true,
         "name": "Delete Token File",
-        "x": 2810,
+        "x": 2870,
         "y": 140,
         "wires": [
             [
@@ -13621,8 +13666,8 @@
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 3010,
-        "y": 180,
+        "x": 3070,
+        "y": 200,
         "wires": [],
         "l": true
     },
