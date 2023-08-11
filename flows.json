@@ -918,11 +918,12 @@
             "1e0841f1.ac68fe",
             "5de0bbd4.6c8574",
             "28713941e03e2bf5",
-            "adbfd4257ea1c230"
+            "adbfd4257ea1c230",
+            "c6360f6028e1512c"
         ],
         "x": 174,
         "y": 339,
-        "w": 492,
+        "w": 532,
         "h": 162,
         "info": "# Methods\n\nThis sub-group is provides the http endpoints for the supported methods."
     },
@@ -1977,7 +1978,7 @@
         "y": 420,
         "wires": [
             [
-                "28713941e03e2bf5"
+                "c6360f6028e1512c"
             ]
         ]
     },
@@ -3599,7 +3600,7 @@
         "z": "379c65a27117b46c",
         "g": "923268ee62c6a7db",
         "name": "HTTP Method Routing",
-        "func": "var http_get = null;\nvar http_post = null;\nvar failsafe_auth = null;\nvar http_unsupported = null;\n\nmsg.http = {\n    \"client\": msg.req.connection.remoteAddress\n}\n\nif( msg.auth.access ) {\n    switch (String(msg.req.method).toLocaleLowerCase() ) {\n\n        case 'get':\n            node.status({fill:\"green\",shape:\"ring\",text:\"GET\"});\n            http_get = msg;\n            break;\n        \n        case 'post':\n            node.status({ fill: \"green\", shape: \"ring\", text: \"POST\" });\n            http_post = msg;\n            break;\n\n        default:\n            node.status({ fill: \"yellow\", shape: \"ring\", text: \"unsupported\" });\n            http_unsupported = msg;\n            break;\n\n    };\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Not Authorized\" });\n    \n    failsafe_auth = msg;\n\n}\nnode.send([\n    http_get,\n    http_post,\n    failsafe_auth,\n    http_unsupported\n]);\n",
+        "func": "var http_get = null;\nvar http_post = null;\nvar failsafe_auth = null;\nvar http_unsupported = null;\n\nif( msg.auth.access ) {\n    switch (String(msg.req.method).toLocaleLowerCase() ) {\n\n        case 'get':\n            node.status({fill:\"green\",shape:\"ring\",text:\"GET\"});\n            http_get = msg;\n            break;\n        \n        case 'post':\n            node.status({ fill: \"green\", shape: \"ring\", text: \"POST\" });\n            http_post = msg;\n            break;\n\n        default:\n            node.status({ fill: \"yellow\", shape: \"ring\", text: \"unsupported\" });\n            http_unsupported = msg;\n            break;\n\n    };\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Not Authorized\" });\n    \n    failsafe_auth = msg;\n\n}\nnode.send([\n    http_get,\n    http_post,\n    failsafe_auth,\n    http_unsupported\n]);\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -3759,7 +3760,7 @@
         "links": [
             "2f1060b185e19215"
         ],
-        "x": 570,
+        "x": 610,
         "y": 420,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -3791,6 +3792,28 @@
                 "564400f9ec708521"
             ]
         ]
+    },
+    {
+        "id": "c6360f6028e1512c",
+        "type": "function",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "name": "Details",
+        "func": "msg.http = {\n    \"client\": msg.req.connection.remoteAddress,\n    \"headers\": msg.req.headers\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "28713941e03e2bf5"
+            ]
+        ],
+        "icon": "font-awesome/fa-info-circle",
+        "info": "# Details\n\nAdds the HTTP request details to object `msg.http`."
     },
     {
         "id": "02c4b9524d361ade",
