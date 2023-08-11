@@ -607,7 +607,9 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99
+        "y": 99,
+        "w": 1192,
+        "h": 282
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -630,10 +632,13 @@
             "f5f9e14092781e29",
             "e25b155a2a29f16d",
             "0f30a271d9c71f74",
-            "966779cca7297dec"
+            "966779cca7297dec",
+            "a3bd692422c0fcf5"
         ],
-        "x": 1294,
-        "y": 99
+        "x": 1274,
+        "y": 99,
+        "w": 1812,
+        "h": 122
     },
     {
         "id": "aea0a3398dafab4c",
@@ -1926,7 +1931,7 @@
         "type": "junction",
         "z": "24deed6b10f37f8f",
         "g": "f7c0a5bee0e0df33",
-        "x": 2540,
+        "x": 2720,
         "y": 180,
         "wires": [
             [
@@ -7484,7 +7489,7 @@
         "z": "8179bf22c4c31682",
         "g": "bbd929c437c592ea",
         "name": "Auth Type",
-        "func": "var token = null;\nvar auth = null;\n\nvar use_cookie = false;\nvar use_token = false;\n\nmsg.auth = {\n    \"access\": false\n};\n\n\nif (Object.keys(msg.req.query || {}).length > 0) {\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"Incomplete, use cookie token\" });\n\n    if (msg.req.query.hasOwnProperty(\"token\")) {\n        node.status({ fill: \"yellow\", shape: \"ring\", text: \"Incomplete, use cookie has token\" });\n\n        use_token = true;\n\n    }\n} else if (msg.req.cookies.hasOwnProperty(\"token\")) {\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"Incomplete, use cookie token\" });\n\n        use_cookie = true;\n\n\n}\n\nif (use_cookie) {\n    node.status({ fill: \"green\", shape: \"ring\", text: \"Use cookie token\" });\n\n    msg.filename = global.get('config.paths.token_sessions') + msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if (use_token) {\n    node.status({ fill: \"green\", shape: \"ring\", text: \"Use query string token\" });\n\n    msg.filename = global.get('config.paths.token_sessions') + msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n    node.status({ fill: \"blue\", shape: \"ring\", text: \"Use other auth method\" });\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
+        "func": "var token = null;\nvar auth = null;\n\nvar use_cookie = false;\nvar use_token = false;\n\nmsg.auth = {\n    \"access\": false\n};\n\n\nif (Object.keys(msg.req.query || {}).length > 0) {\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"Incomplete, use cookie token\" });\n\n    if (msg.req.query.hasOwnProperty(\"token\")) {\n        node.status({ fill: \"yellow\", shape: \"ring\", text: \"Incomplete, use cookie has token\" });\n\n        use_token = true;\n\n    }\n} else if( Object.keys(msg.req.cookies || {}).length > 0 ) {\n    \n    if (msg.req.cookies.hasOwnProperty(\"token\")) {\n\n        node.status({ fill: \"yellow\", shape: \"ring\", text: \"Incomplete, use cookie token\" });\n\n        use_cookie = true;\n\n}\n}\n\nif (use_cookie) {\n    node.status({ fill: \"green\", shape: \"ring\", text: \"Use cookie token\" });\n\n    msg.filename = global.get('config.paths.token_sessions') + msg.req.cookies.token + '.json';\n    msg.cookie_exists = true;\n    msg.token = msg.req.cookies.token;\n    token = msg;\n\n} else if (use_token) {\n    node.status({ fill: \"green\", shape: \"ring\", text: \"Use query string token\" });\n\n    msg.filename = global.get('config.paths.token_sessions') + msg.req.query.token + '.json';\n    msg.cookie_exists = false;\n    msg.token = msg.req.query.token;\n    token = msg;\n\n} else {\n    node.status({ fill: \"blue\", shape: \"ring\", text: \"Use other auth method\" });\n\n    auth = msg;\n}\n\nnode.send([token, auth]);\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -13455,7 +13460,7 @@
         "follow": false,
         "property": "files",
         "propertyType": "msg",
-        "x": 1780,
+        "x": 1960,
         "y": 160,
         "wires": [
             [
@@ -13475,11 +13480,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
+        "x": 1570,
         "y": 160,
         "wires": [
             [
-                "8c5bb81ae0b14703"
+                "a3bd692422c0fcf5"
             ]
         ],
         "icon": "node-red-contrib-filesystem/fs-mkdir.svg"
@@ -13496,7 +13501,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1970,
+        "x": 2150,
         "y": 160,
         "wires": [
             [
@@ -13517,7 +13522,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2120,
+        "x": 2300,
         "y": 160,
         "wires": [
             [
@@ -13534,7 +13539,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 2250,
+        "x": 2430,
         "y": 160,
         "wires": [
             [
@@ -13555,7 +13560,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2410,
+        "x": 2590,
         "y": 160,
         "wires": [
             [
@@ -13583,7 +13588,7 @@
         "recursive": false,
         "exist": true,
         "name": "Delete Token File",
-        "x": 2630,
+        "x": 2810,
         "y": 140,
         "wires": [
             [
@@ -13598,7 +13603,7 @@
         "g": "f7c0a5bee0e0df33",
         "name": "Clean expired Tokens",
         "links": [],
-        "x": 1420,
+        "x": 1400,
         "y": 160,
         "wires": [
             [
@@ -13616,9 +13621,35 @@
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 2830,
+        "x": 3010,
         "y": 180,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "a3bd692422c0fcf5",
+        "type": "fs-mkdir",
+        "z": "24deed6b10f37f8f",
+        "g": "f7c0a5bee0e0df33",
+        "name": "Create Dirs if not exist",
+        "purpose": "reg",
+        "path": "",
+        "pathType": "msg",
+        "foldername": "path",
+        "foldernameType": "msg",
+        "recursive": true,
+        "exists": false,
+        "prefix": "",
+        "prefixType": "str",
+        "mode": "777",
+        "property": "payload",
+        "propertyType": "msg",
+        "x": 1760,
+        "y": 160,
+        "wires": [
+            [
+                "8c5bb81ae0b14703"
+            ]
+        ]
     }
 ]
