@@ -343,9 +343,7 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119,
-        "w": 2312,
-        "h": 182
+        "y": 119
     },
     {
         "id": "10a6c6b12749dda9",
@@ -412,15 +410,13 @@
         ],
         "x": 128,
         "y": 333,
-        "w": 2798,
-        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
         "id": "bbd929c437c592ea",
         "type": "group",
         "z": "8179bf22c4c31682",
-        "name": "Authorization",
+        "name": "Authentication",
         "style": {
             "stroke": "#6f2fa0",
             "fill": "#ffbfbf",
@@ -429,21 +425,21 @@
         },
         "nodes": [
             "f17afdbfc8c07889",
-            "53a5ee55ee916cec",
             "6c790a65bbdc61a5",
             "bc039e4b516adf37",
-            "95c7670ef9039295",
             "627a72eee1e26ae6",
-            "311c966bd1fa946e",
-            "32fbc01a34859498",
-            "7ccb5fae05b5c6a6",
-            "c10e09e4bfbddfd7"
+            "177a7aba70483ccb",
+            "7225c45ad941c14f",
+            "e80aabc47c664088",
+            "724a142f28c3b6e4",
+            "f9550cdd015b52ae",
+            "cc33365c2aa59e35"
         ],
-        "x": 94,
-        "y": 1499,
-        "w": 1952,
-        "h": 388,
-        "info": "# Authorization\n\nThis flow is responsible for ensuring the user is authorized to access the system. Any valid user account that authenticates to the system is authorized.\n\n\n## Data\n\nAuthorization data is stored in object `msg.auth` with the following structure.\n\n``` json\n{\n  \"auth\": {\n    \"access\": true,\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    }\n  }\n}\n\n```"
+        "x": 88,
+        "y": 1513,
+        "w": 2398,
+        "h": 954,
+        "info": "# Authentication\n\nThis group is responsible for ensuring the user is authorized to access the system. \nAny valid user account that authenticates to the system is authorized.\n\nFrom entry the next step in the process is cookie validation.\n\n## Input Data\n\nThis group has two paths for entry: \n\n1. Cookie Found - `msg.req.cookies.auth` key exists\n\n    > Value is the session name.\n\n1. No Cookie Found - `msg.req.cookies.auth` key does not exist\n\n    > User to be redirected to authentication method\n\n\n## Output Data\n\nThis group does not always not return data. \nData returned is only stored in `msg.session`.\n\n### Authenticated User\n\n`msg.session` is returned with the Authentication data contained. \n\nThis data will either be from a stored session (user authenticated previously) or be created via the authentication method.\nThere are two session types and they are `token` and `oauth2`. Session types are directly tied to the method of authentication.\n\n`msg.session` structure\n\n``` json\n{\n  \"session\": {\n    \"datetime\": \"{session expiry}\",\n    \"type\": \"token\",\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    },\n    \"oauth2\": {\n      // Only if type=oauth2\n    }\n  }\n}\n\n```\n\n### Non-Authenticated User\n\nNo data is returned if the user is not authenticated. The absense of `msg.session` denotes an unauthenticated user.\n"
     },
     {
         "id": "8a2206d682028469",
@@ -543,8 +539,6 @@
         ],
         "x": 128,
         "y": 1133,
-        "w": 4704,
-        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -622,9 +616,7 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99,
-        "w": 1192,
-        "h": 282
+        "y": 99
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -652,9 +644,7 @@
             "291408859782056d"
         ],
         "x": 1274,
-        "y": 99,
-        "w": 1872,
-        "h": 142
+        "y": 99
     },
     {
         "id": "aea0a3398dafab4c",
@@ -673,9 +663,7 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999,
-        "w": 512,
-        "h": 82
+        "y": 999
     },
     {
         "id": "9858d84dc9d001be",
@@ -716,9 +704,7 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899,
-        "w": 512,
-        "h": 82
+        "y": 899
     },
     {
         "id": "d0dc259791aed430",
@@ -741,59 +727,7 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959,
-        "w": 1432,
-        "h": 122
-    },
-    {
-        "id": "95c7670ef9039295",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "name": "Token",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#ffdf7f",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "42a1e057dda56f95",
-            "0593c236e186e0bb",
-            "8d9fa9fe704e74be",
-            "0e55ee565cde91d7",
-            "8b1fef39c34f5513",
-            "d88479a7fb5c2f94",
-            "366892fde876296f",
-            "9c55bf6229fa740c"
-        ],
-        "x": 674,
-        "y": 1574,
-        "w": 1112,
-        "h": 127
-    },
-    {
-        "id": "311c966bd1fa946e",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "name": "OpenID",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#ffdf7f",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "9f416bc258c1a60c",
-            "4939f66d56cdd4f8",
-            "13126d75aae301a2",
-            "13ebe1d63226e702"
-        ],
-        "x": 674,
-        "y": 1754,
-        "w": 672,
-        "h": 107
+        "y": 959
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -815,9 +749,7 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819,
-        "w": 912,
-        "h": 122
+        "y": 819
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -843,9 +775,7 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519,
-        "w": 1752,
-        "h": 122
+        "y": 519
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -871,9 +801,7 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659,
-        "w": 1452,
-        "h": 142
+        "y": 659
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -896,9 +824,7 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159,
-        "w": 1072,
-        "h": 122
+        "y": 1159
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -1130,8 +1056,6 @@
         ],
         "x": 154,
         "y": 359,
-        "w": 972,
-        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1154,8 +1078,6 @@
         ],
         "x": 154,
         "y": 1159,
-        "w": 812,
-        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
     },
     {
@@ -1180,8 +1102,6 @@
         ],
         "x": 2214,
         "y": 1159,
-        "w": 1152,
-        "h": 122,
         "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
@@ -1207,8 +1127,6 @@
         ],
         "x": 3394,
         "y": 1159,
-        "w": 1412,
-        "h": 122,
         "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
@@ -1365,6 +1283,149 @@
         "h": 82
     },
     {
+        "id": "177a7aba70483ccb",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Cookie Validation",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffffbf",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "bcaed4334222c14a"
+        ],
+        "x": 114,
+        "y": 1539,
+        "w": 1152,
+        "h": 182
+    },
+    {
+        "id": "cc33365c2aa59e35",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Token",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "7ccb5fae05b5c6a6",
+            "32fbc01a34859498",
+            "c10e09e4bfbddfd7",
+            "53a5ee55ee916cec",
+            "95c7670ef9039295",
+            "75c44e5f7f101beb",
+            "a4bc5830daf9801a"
+        ],
+        "x": 654,
+        "y": 1768,
+        "w": 1232,
+        "h": 338
+    },
+    {
+        "id": "75c44e5f7f101beb",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "cc33365c2aa59e35",
+        "name": "Token Session",
+        "style": {
+            "label": true,
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "42a1e057dda56f95",
+            "366892fde876296f",
+            "8b1fef39c34f5513",
+            "95f44fbb0ddd39fc"
+        ],
+        "x": 894,
+        "y": 1799,
+        "w": 672,
+        "h": 122
+    },
+    {
+        "id": "7225c45ad941c14f",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Oauth2",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#ffffbf",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "9f416bc258c1a60c",
+            "dbe86357f31c79d1",
+            "1fe34e17a81dce9e",
+            "bc5ca736a6e324e5",
+            "8964a5bda9eb7113",
+            "60a97c78327c3a6a",
+            "8ad6190854001584",
+            "21ec376b58ac0c54"
+        ],
+        "x": 654,
+        "y": 2159,
+        "w": 1232,
+        "h": 282
+    },
+    {
+        "id": "bcaed4334222c14a",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "177a7aba70483ccb",
+        "name": "Cookie Validation",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "33f25da80ef87e72",
+            "73b63d7562fe9cce",
+            "e897aec8ea7c81c5",
+            "9c05ca2751f619a7",
+            "2dee51842e868755",
+            "2a858bd15a2d257e",
+            "f20711a44b43b7d4",
+            "9cbf4beaceba5255",
+            "da0811fbd7963934"
+        ],
+        "x": 654,
+        "y": 1539,
+        "w": 1152,
+        "h": 182,
+        "info": "# Cookie Validation\n\nThis path is always executed and is the first step in the authentication workflow. \n\nThis groups workflow is as follows:\n\n1. fetch the value of `msg.req.cookies.auth`\n\n    * if empty/null. User needs to logon\n\n    * value found, goto step 2\n\n2. open the session file using the value of `msg.req.cookies.auth`\n\n3. set `msg.session` with the contents of the file\n\n4. Route for further validation based off of type `oauth2` or `token`.\n\nthe existance of path `msg.req.cookies.auth` alludes to a user that has authenticated previously. \nWhilst this value could be guessed, it is highly unlikely.\n"
+    },
+    {
+        "id": "dbe86357f31c79d1",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Oauth2: Session",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "20aae4d90a07f156"
+        ],
+        "x": 914,
+        "y": 2299,
+        "w": 212,
+        "h": 82
+    },
+    {
         "id": "5798e39cbc3730ae",
         "type": "junction",
         "z": "42b9663b67dbd983",
@@ -1374,45 +1435,6 @@
         "wires": [
             [
                 "365ba07c1f4721ec"
-            ]
-        ]
-    },
-    {
-        "id": "13ebe1d63226e702",
-        "type": "junction",
-        "z": "8179bf22c4c31682",
-        "g": "311c966bd1fa946e",
-        "x": 1180,
-        "y": 1780,
-        "wires": [
-            [
-                "7ccb5fae05b5c6a6"
-            ]
-        ]
-    },
-    {
-        "id": "32fbc01a34859498",
-        "type": "junction",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "x": 1820,
-        "y": 1600,
-        "wires": [
-            [
-                "53a5ee55ee916cec"
-            ]
-        ]
-    },
-    {
-        "id": "7ccb5fae05b5c6a6",
-        "type": "junction",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "x": 1540,
-        "y": 1780,
-        "wires": [
-            [
-                "53a5ee55ee916cec"
             ]
         ]
     },
@@ -1953,19 +1975,6 @@
             [
                 "28ac8fd21056642c",
                 "d81c931de5a63675"
-            ]
-        ]
-    },
-    {
-        "id": "d88479a7fb5c2f94",
-        "type": "junction",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "x": 1580,
-        "y": 1600,
-        "wires": [
-            [
-                "32fbc01a34859498"
             ]
         ]
     },
@@ -3491,7 +3500,7 @@
         "z": "379c65a27117b46c",
         "g": "1b2783bfbb09503e",
         "name": "Data",
-        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\n\nmsg.payload = { \n    \"datetime\": msg.expires,\n    \"user\": msg.auth.user\n    };\nmsg.filename = global.get('config.paths.token_sessions') + msg.hash.value + '.json';\n\nreturn msg;\n",
+        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\n\nmsg.payload = { \n    \"datetime\": msg.expires,\n    \"type\": \"token\",\n    \"user\": msg.auth.user\n    };\nmsg.filename = global.get('config.paths.token_sessions') + msg.hash.value + '.json';\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3581,7 +3590,7 @@
         "g": "923268ee62c6a7db",
         "name": "Authentication",
         "links": [
-            "f17afdbfc8c07889"
+            "33f25da80ef87e72"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -3600,7 +3609,7 @@
         "z": "379c65a27117b46c",
         "g": "923268ee62c6a7db",
         "name": "HTTP Method Routing",
-        "func": "var http_get = null;\nvar http_post = null;\nvar failsafe_auth = null;\nvar http_unsupported = null;\n\nif( msg.auth.access ) {\n    switch (String(msg.req.method).toLocaleLowerCase() ) {\n\n        case 'get':\n            node.status({fill:\"green\",shape:\"ring\",text:\"GET\"});\n            http_get = msg;\n            break;\n        \n        case 'post':\n            node.status({ fill: \"green\", shape: \"ring\", text: \"POST\" });\n            http_post = msg;\n            break;\n\n        default:\n            node.status({ fill: \"yellow\", shape: \"ring\", text: \"unsupported\" });\n            http_unsupported = msg;\n            break;\n\n    };\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Not Authorized\" });\n    \n    failsafe_auth = msg;\n\n}\nnode.send([\n    http_get,\n    http_post,\n    failsafe_auth,\n    http_unsupported\n]);\n",
+        "func": "var http_get = null;\nvar http_post = null;\nvar failsafe_auth = null;\nvar http_unsupported = null;\n\nif( msg.hasOwnPropertiy('session') ) {\n    switch (String(msg.req.method).toLocaleLowerCase() ) {\n\n        case 'get':\n            node.status({fill:\"green\",shape:\"ring\",text:\"GET\"});\n            http_get = msg;\n            break;\n        \n        case 'post':\n            node.status({ fill: \"green\", shape: \"ring\", text: \"POST\" });\n            http_post = msg;\n            break;\n\n        default:\n            node.status({ fill: \"yellow\", shape: \"ring\", text: \"unsupported\" });\n            http_unsupported = msg;\n            break;\n\n    };\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Not Authorized\" });\n    \n    failsafe_auth = msg;\n\n}\nnode.send([\n    http_get,\n    http_post,\n    failsafe_auth,\n    http_unsupported\n]);\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -7305,180 +7314,21 @@
         "l": true
     },
     {
-        "id": "0e55ee565cde91d7",
-        "type": "function",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "Token File Check",
-        "func": "\nvar msg1 = null;\nvar msg2 = null;\n\nmsg.cookies = {\n    token: {\n        value: \"\",\n        Expires: Date.now()\n\n    }\n};\n//msg.filename = msg.req.query.token + '.json';\n\nfs.stat(msg.filename, function (err) {\n    if (err) {\n        node.status({ fill: \"yellow\", shape: \"ring\", text: \"false\" });\n        node.send([null, msg]);\n    } else {\n        node.status({ fill: \"green\", shape: \"ring\", text: \"true\" });\n        node.send([msg, null]);\n    }\n});\n\n//node.send([msg1, msg2]);\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "fs",
-                "module": "fs"
-            }
-        ],
-        "x": 990,
-        "y": 1640,
-        "wires": [
-            [
-                "8d9fa9fe704e74be"
-            ],
-            [
-                "9c55bf6229fa740c"
-            ]
-        ],
-        "outputLabels": [
-            "True",
-            "False"
-        ]
-    },
-    {
         "id": "f17afdbfc8c07889",
         "type": "link in",
         "z": "8179bf22c4c31682",
         "g": "bbd929c437c592ea",
-        "name": "Authentication Check",
+        "name": "Authentication Begin",
         "links": [],
-        "x": 220,
-        "y": 1560,
+        "x": 210,
+        "y": 1580,
         "wires": [
             [
-                "6c790a65bbdc61a5"
+                "f9550cdd015b52ae"
             ]
         ],
+        "icon": "node-red/arrow-in.svg",
         "l": true
-    },
-    {
-        "id": "53a5ee55ee916cec",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "name": "Auth: Return",
-        "mode": "return",
-        "links": [],
-        "x": 1950,
-        "y": 1840,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "8d9fa9fe704e74be",
-        "type": "file in",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1180,
-        "y": 1620,
-        "wires": [
-            [
-                "0593c236e186e0bb"
-            ]
-        ]
-    },
-    {
-        "id": "4939f66d56cdd4f8",
-        "type": "switch",
-        "z": "8179bf22c4c31682",
-        "g": "311c966bd1fa946e",
-        "name": "OpenID Auth?",
-        "property": "oidc",
-        "propertyType": "env",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1060,
-        "y": 1800,
-        "wires": [
-            [
-                "13ebe1d63226e702"
-            ],
-            [
-                "13126d75aae301a2"
-            ]
-        ]
-    },
-    {
-        "id": "13126d75aae301a2",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "311c966bd1fa946e",
-        "name": "OpenID: Fail",
-        "mode": "link",
-        "links": [
-            "c10e09e4bfbddfd7"
-        ],
-        "x": 1250,
-        "y": 1820,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "42a1e057dda56f95",
-        "type": "function",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "Validate Token File",
-        "func": "var success = null;\nvar failure = null;\n\nif( msg.payload.datetime > Date.now() ) {\n\n    if( msg.payload.hasOwnProperty(\"user\") ) {\n\n        if (\n            msg.payload.user.hasOwnProperty(\"fname\") &&\n            msg.payload.user.hasOwnProperty(\"lname\") &&\n            msg.payload.user.hasOwnProperty(\"username\") &&\n            msg.payload.user.hasOwnProperty(\"mail\")\n        ) {\n\n            node.status({ fill: \"green\", shape: \"ring\", text: \"Authorized\" });\n            msg.auth.access = true;\n            msg.auth.user = msg.payload.user;\n\n            msg.cookies = {\n                token: {\n                    value: String(msg.token),\n                    expires: 0\n                }\n            };\n\n            delete msg.token;\n            delete msg.payload;\n            success = msg\n\n        } else {\n\n            node.status({ fill: \"grey\", shape: \"ring\", text: \"Missing User details, not Authorized\" });\n            \n            delete msg.token;\n            delete msg.payload;\n            failure = msg;\n\n        }\n    } else{\n\n        node.status({ fill: \"grey\", shape: \"ring\", text: \"Missing User, not Authorized\" });\n\n        delete msg.token;\n        delete msg.payload;\n        failure = msg;\n\n    }\n    \n\n} else {\n\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"Not Authorized\" });\n    delete msg.token;\n    delete msg.payload;\n    failure = msg;\n}\n\n\nnode.send([success, failure]);",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "fs",
-                "module": "fs"
-            }
-        ],
-        "x": 1450,
-        "y": 1620,
-        "wires": [
-            [
-                "d88479a7fb5c2f94"
-            ],
-            [
-                "366892fde876296f"
-            ]
-        ],
-        "outputLabels": [
-            "True",
-            "False"
-        ]
-    },
-    {
-        "id": "0593c236e186e0bb",
-        "type": "json",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 1290,
-        "y": 1620,
-        "wires": [
-            [
-                "42a1e057dda56f95"
-            ]
-        ]
     },
     {
         "id": "6c790a65bbdc61a5",
@@ -7492,8 +7342,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 1560,
+        "x": 200,
+        "y": 1840,
         "wires": [
             [
                 "bc039e4b516adf37"
@@ -7514,30 +7364,10 @@
         "g": "bbd929c437c592ea",
         "name": "Token",
         "mode": "link",
-        "links": [
-            "8b1fef39c34f5513"
-        ],
-        "x": 550,
-        "y": 1540,
+        "links": [],
+        "x": 350,
+        "y": 1820,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "8b1fef39c34f5513",
-        "type": "link in",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "Process Token Auth",
-        "links": [
-            "bc039e4b516adf37"
-        ],
-        "x": 790,
-        "y": 1640,
-        "wires": [
-            [
-                "0e55ee565cde91d7"
-            ]
-        ],
         "l": true
     },
     {
@@ -7548,10 +7378,11 @@
         "name": "OpenID",
         "mode": "link",
         "links": [
-            "9f416bc258c1a60c"
+            "9f416bc258c1a60c",
+            "566184a95b7ad334"
         ],
-        "x": 560,
-        "y": 1580,
+        "x": 360,
+        "y": 1860,
         "wires": [],
         "l": true
     },
@@ -7559,18 +7390,17 @@
         "id": "9f416bc258c1a60c",
         "type": "link in",
         "z": "8179bf22c4c31682",
-        "g": "311c966bd1fa946e",
-        "name": "Process OpenID Auth",
+        "g": "7225c45ad941c14f",
+        "name": "Oauth2: Begin",
         "links": [
             "627a72eee1e26ae6"
         ],
-        "x": 800,
-        "y": 1800,
+        "x": 750,
+        "y": 2300,
         "wires": [
-            [
-                "4939f66d56cdd4f8"
-            ]
+            []
         ],
+        "icon": "node-red/arrow-in.svg",
         "l": true
     },
     {
@@ -8259,53 +8089,512 @@
         "wires": []
     },
     {
-        "id": "366892fde876296f",
+        "id": "9cbf4beaceba5255",
         "type": "link out",
         "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "Fail: Token Check",
+        "g": "bcaed4334222c14a",
+        "name": "Session: Oauth2",
         "mode": "link",
         "links": [
-            "c10e09e4bfbddfd7"
+            "b4a253cb29efc244",
+            "20aae4d90a07f156"
         ],
-        "x": 1670,
-        "y": 1640,
+        "x": 1690,
+        "y": 1580,
         "wires": [],
+        "icon": "node-red/arrow-in.svg",
         "l": true
     },
     {
-        "id": "9c55bf6229fa740c",
+        "id": "f20711a44b43b7d4",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "debug 149",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "2a858bd15a2d257e",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "Session Type",
+        "func": "var oauth2 = null;\nvar token = null;\n\nvar status =  {fill:\"red\",shape:\"ring\",text:\"ERR: Incomplete\"};\n\nmsg.session = JSON.parse(msg.payload);\ndelete msg.payload;\n\nif( msg.session.type == 'oauth2' ) {\n\n    status.text = \"Oauth2\";\n    status.fill = 'blue';\n    oauth2 = msg;\n\n} else if( msg.session.type == 'token' ) {\n\n    status.text = \"Token\";\n    status.fill = 'green';\n    token = msg;\n\n}\n\nnode.status(status);\n\nnode.send([\n    oauth2,\n    token\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 1600,
+        "wires": [
+            [
+                "9cbf4beaceba5255"
+            ],
+            [
+                "da0811fbd7963934"
+            ]
+        ],
+        "outputLabels": [
+            "Oauth2",
+            "Token"
+        ],
+        "icon": "font-awesome/fa-question",
+        "info": "ToDo: add date check of session file"
+    },
+    {
+        "id": "e897aec8ea7c81c5",
+        "type": "file in",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "Fetch Saved session",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1300,
+        "y": 1600,
+        "wires": [
+            [
+                "f20711a44b43b7d4",
+                "2a858bd15a2d257e"
+            ]
+        ]
+    },
+    {
+        "id": "9c05ca2751f619a7",
         "type": "link out",
         "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "name": "Fail: No Token File",
+        "g": "bcaed4334222c14a",
+        "name": "No Saved Session",
         "mode": "link",
         "links": [
-            "c10e09e4bfbddfd7"
+            "e80aabc47c664088"
         ],
-        "x": 1210,
-        "y": 1660,
+        "x": 1290,
+        "y": 1640,
         "wires": [],
+        "icon": "font-awesome/fa-lock",
+        "l": true,
+        "info": "# No Saved Session\n\n> No Session could be found with the cookie value\n\nThis path has set HTTP/303 with the location set to the oauth2 provider authentication url."
+    },
+    {
+        "id": "2dee51842e868755",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "debug 148",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "73b63d7562fe9cce",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "Session: Load and Check",
+        "func": "var have_session = null;\nvar no_session = msg;\n\nvar status = { fill: \"red\", shape: \"ring\", text: \"incomplete\"};\n\nvar url = '/auth';\n\nvar filename = msg.req.cookies.auth + '.json';\n\nif ( msg.req.cookies.hasOwnProperty('auth')) {\n\n    fs.stat( filename, function (err) {\n\n        if (err) {\n            status.text = \"No Saved Session\";\n            status.fill = \"yellow\";\n\n            var auth_url = \"https://auth.nofusscomputing.com/realms/NoFussComputing/protocol/openid-connect/auth?response_type=code&client_id=boowho&redirect_uri=\" + encodeURIComponent(\"http://127.0.0.1:1880/callback\") + \"&scope=openid&state=\" + String(Date.now());\n\n            msg.statusCode = 303;\n\n            msg.headers = {\n                Location: auth_url\n            }\n\n        } else {\n            status.text = \"Saved Session Exists\";\n            status.fill = \"green\";\n\n            msg.filename = filename;\n\n            have_session = msg;\n            no_session = null;\n\n        }\n\n        node.status(status);\n\n        node.send([\n            have_session,\n            no_session\n        ]);\n\n    })\n\n} else{\n    \n    status.text = \"No Cookie\";\n    status.fill = \"yellow\";\n    \n    node.status(status);\n\n    node.send([\n        have_session,\n        no_session\n    ]);\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 1030,
+        "y": 1620,
+        "wires": [
+            [
+                "e897aec8ea7c81c5"
+            ],
+            [
+                "2dee51842e868755",
+                "9c05ca2751f619a7"
+            ]
+        ],
+        "outputLabels": [
+            "Session Found",
+            "Session Not Found"
+        ],
+        "icon": "font-awesome/fa-question",
+        "info": "\nsuccess = session found from cookie value\nfailure = need to logon, redirect"
+    },
+    {
+        "id": "33f25da80ef87e72",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "Cookie: Begin Validation",
+        "links": [
+            "5c30dbcce4f3e71e",
+            "f9550cdd015b52ae"
+        ],
+        "x": 790,
+        "y": 1620,
+        "wires": [
+            [
+                "73b63d7562fe9cce"
+            ]
+        ],
+        "icon": "font-awesome/fa-unlock-alt",
+        "l": true
+    },
+    {
+        "id": "da0811fbd7963934",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bcaed4334222c14a",
+        "name": "Session: Token",
+        "mode": "link",
+        "links": [
+            "8b1fef39c34f5513"
+        ],
+        "x": 1680,
+        "y": 1620,
+        "wires": [],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "20aae4d90a07f156",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "dbe86357f31c79d1",
+        "name": "Session: Oauth2",
+        "links": [
+            "9cbf4beaceba5255"
+        ],
+        "x": 1020,
+        "y": 2340,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/arrow-in.svg",
         "l": true
     },
     {
         "id": "c10e09e4bfbddfd7",
         "type": "link in",
         "z": "8179bf22c4c31682",
-        "g": "bbd929c437c592ea",
-        "name": "Auth: Finish",
+        "g": "cc33365c2aa59e35",
+        "name": "Token: Finish",
         "links": [
-            "9c55bf6229fa740c",
             "366892fde876296f",
-            "13126d75aae301a2"
+            "9c55bf6229fa740c",
+            "95f44fbb0ddd39fc"
         ],
-        "x": 1865,
-        "y": 1840,
+        "x": 1630,
+        "y": 2060,
         "wires": [
             [
                 "53a5ee55ee916cec"
             ]
+        ],
+        "icon": "font-awesome/fa-flag-checkered",
+        "l": true
+    },
+    {
+        "id": "53a5ee55ee916cec",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "cc33365c2aa59e35",
+        "name": "Token: Return",
+        "mode": "link",
+        "links": [
+            "e80aabc47c664088"
+        ],
+        "x": 1780,
+        "y": 2060,
+        "wires": [],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "366892fde876296f",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "75c44e5f7f101beb",
+        "name": "Fail: Token Check",
+        "mode": "link",
+        "links": [
+            "c10e09e4bfbddfd7"
+        ],
+        "x": 1430,
+        "y": 1880,
+        "wires": [],
+        "icon": "font-awesome/fa-refresh",
+        "l": true
+    },
+    {
+        "id": "42a1e057dda56f95",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "75c44e5f7f101beb",
+        "name": "Validate Token File",
+        "func": "var success = null;\nvar failure = null;\n\nif( msg.session.datetime > Date.now() ) {\n\n    if( msg.session.hasOwnProperty(\"user\") ) {\n\n        if (\n            msg.session.user.hasOwnProperty(\"fname\") &&\n            msg.session.user.hasOwnProperty(\"lname\") &&\n            msg.session.user.hasOwnProperty(\"username\") &&\n            msg.session.user.hasOwnProperty(\"mail\")\n        ) {\n\n            node.status({ fill: \"green\", shape: \"ring\", text: \"Authorized\" });\n            msg.auth.access = true;\n            msg.auth.user = msg.session.user;\n\n            msg.cookies = {\n                token: {\n                    value: String(msg.token),\n                    expires: 0\n                }\n            };\n\n            delete msg.token;\n            delete msg.payload;\n            success = msg\n\n        } else {\n\n            node.status({ fill: \"grey\", shape: \"ring\", text: \"Missing User details, not Authorized\" });\n            \n            delete msg.token;\n            delete msg.payload;\n            failure = msg;\n\n        }\n    } else{\n\n        node.status({ fill: \"grey\", shape: \"ring\", text: \"Missing User, not Authorized\" });\n\n        delete msg.token;\n        delete msg.payload;\n        failure = msg;\n\n    }\n    \n\n} else {\n\n    node.status({ fill: \"yellow\", shape: \"ring\", text: \"Not Authorized\" });\n    delete msg.token;\n    delete msg.payload;\n    failure = msg;\n}\n\n\nnode.send([success, failure]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 1210,
+        "y": 1860,
+        "wires": [
+            [
+                "95f44fbb0ddd39fc"
+            ],
+            [
+                "366892fde876296f"
+            ]
+        ],
+        "outputLabels": [
+            "True",
+            "False"
         ]
+    },
+    {
+        "id": "8b1fef39c34f5513",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "75c44e5f7f101beb",
+        "name": "Session: Token",
+        "links": [
+            "da0811fbd7963934"
+        ],
+        "x": 1000,
+        "y": 1860,
+        "wires": [
+            [
+                "42a1e057dda56f95"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "95f44fbb0ddd39fc",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "75c44e5f7f101beb",
+        "name": "Success: Token Check",
+        "mode": "link",
+        "links": [
+            "c10e09e4bfbddfd7"
+        ],
+        "x": 1440,
+        "y": 1840,
+        "wires": [],
+        "icon": "font-awesome/fa-unlock",
+        "l": true
+    },
+    {
+        "id": "e80aabc47c664088",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Auth: Finish",
+        "links": [
+            "53a5ee55ee916cec",
+            "9c05ca2751f619a7",
+            "8ad6190854001584"
+        ],
+        "x": 2250,
+        "y": 2360,
+        "wires": [
+            [
+                "724a142f28c3b6e4"
+            ]
+        ],
+        "icon": "font-awesome/fa-flag-checkered",
+        "l": true
+    },
+    {
+        "id": "724a142f28c3b6e4",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Auth: Return",
+        "mode": "return",
+        "links": [],
+        "x": 2390,
+        "y": 2360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f9550cdd015b52ae",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Cookie Check",
+        "mode": "link",
+        "links": [
+            "33f25da80ef87e72"
+        ],
+        "x": 380,
+        "y": 1580,
+        "wires": [],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "a4bc5830daf9801a",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "cc33365c2aa59e35",
+        "name": "Token: Begin",
+        "links": [],
+        "x": 750,
+        "y": 1820,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "1fe34e17a81dce9e",
+        "type": "http in",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "",
+        "url": "/callback",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 750,
+        "y": 2220,
+        "wires": [
+            [
+                "bc5ca736a6e324e5"
+            ]
+        ]
+    },
+    {
+        "id": "bc5ca736a6e324e5",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Valid",
+        "func": "msg.token_refresh = false;\n\nvar callback = null;\nvar request = msg;\n\nvar status = { fill: \"red\", shape: \"ring\", text: \"Incomplete\" }\n\n\nif( Object.keys(msg.req.query || {}).length > 0 ){\n\n    if (\n        msg.req.query.hasOwnProperty('state') &&\n        msg.req.query.hasOwnProperty('session_state') &&\n        msg.req.query.hasOwnProperty('code')\n    ){\n\n        status.text = \"Callback\";\n        msg.oauth2 = msg.payload;\n        delete msg.payload;\n        \n        callback = msg;\n        request = null;\n\n    }\n\n} else if (Object.keys(msg.req.cookie || {}).length > 0) {\n    \n    \n} else {\n\n    status.text = \"Request\";\n    callback = null;\n    request = msg;\n\n}\n\nnode.status(status);\n\nnode.send([\n    callback,\n    request\n]);\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 2220,
+        "wires": [
+            [
+                "60a97c78327c3a6a"
+            ],
+            [
+                "8964a5bda9eb7113"
+            ]
+        ],
+        "outputLabels": [
+            "Callback",
+            "Request"
+        ],
+        "icon": "font-awesome/fa-question",
+        "info": "# Query Type\n\nThere are two types of query:\n\n- callback\n\n- request\n\n## Callback\n\nA user has authenticated with the oauth2 provider, with the details of the authentication contained in the request. \nFurther processing is required for the user to be granted access.\n\nDuring the processing, a auth cookie must be set so that authentication confirmation can occur in subsequent non-callback requests.\n\n## Request\n\nA Normal non-callback `GET` request that is assumed to be the users web browser. This path must confirm if the users cookie is present and load the user details using the value of a cookie from the session cache.\n"
+    },
+    {
+        "id": "60a97c78327c3a6a",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Callback Valid",
+        "mode": "link",
+        "links": [
+            "de76019e24c52ae0"
+        ],
+        "x": 1040,
+        "y": 2200,
+        "wires": [],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "8964a5bda9eb7113",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "HTTP/400",
+        "mode": "link",
+        "links": [
+            "21ec376b58ac0c54"
+        ],
+        "x": 1030,
+        "y": 2240,
+        "wires": [],
+        "icon": "font-awesome/fa-exclamation-triangle",
+        "l": true
+    },
+    {
+        "id": "21ec376b58ac0c54",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Oauth2: Finish",
+        "links": [
+            "8964a5bda9eb7113"
+        ],
+        "x": 1640,
+        "y": 2400,
+        "wires": [
+            [
+                "8ad6190854001584"
+            ]
+        ],
+        "icon": "font-awesome/fa-flag-checkered",
+        "l": true
+    },
+    {
+        "id": "8ad6190854001584",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Oauth2: Return",
+        "mode": "link",
+        "links": [
+            "e80aabc47c664088"
+        ],
+        "x": 1780,
+        "y": 2400,
+        "wires": [],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
     },
     {
         "id": "17f893c2bb347668",
