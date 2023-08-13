@@ -559,11 +559,12 @@
             "8363d385051fc5c0",
             "5706252b01492258",
             "f3aa07300888f0a4",
-            "923268ee62c6a7db"
+            "923268ee62c6a7db",
+            "f3aa07300888f0a4"
         ],
-        "x": 148,
+        "x": 8,
         "y": 313,
-        "w": 2744,
+        "w": 2884,
         "h": 934,
         "info": "# HTTP Server\n\nThis group provides the entrypoint for the application. it's broken down into further sub-groups that have their own individual responsibilities for processing a part of the HTTP servers workflow."
     },
@@ -995,19 +996,17 @@
         },
         "nodes": [
             "434d74f494db7cfc",
-            "782fc77ff667cc29",
-            "4d40709eea926ab1",
-            "58479d9fdbd86ed8",
-            "a834b786ac4c71f9",
             "d17512b4de05ede1",
-            "016a312564d6612e",
-            "6727656e3769c5a8",
-            "0ec392291c3fda2f"
+            "0ec392291c3fda2f",
+            "c43678f82d52004f",
+            "43603c3760e7ae56",
+            "5ad10ea406e2d3a7",
+            "c058f11dfd8d01b2"
         ],
-        "x": 174,
-        "y": 519,
-        "w": 492,
-        "h": 202
+        "x": 34,
+        "y": 536.5,
+        "w": 692,
+        "h": 244.5
     },
     {
         "id": "923268ee62c6a7db",
@@ -1027,13 +1026,12 @@
             "46d8b11bdef459aa",
             "1c16492a7fe8e77b",
             "e282aea37a90acdc",
-            "be8652f99185b1aa",
             "5f2f87eeebd5bf6e"
         ],
         "x": 794,
         "y": 339,
-        "w": 912,
-        "h": 202,
+        "w": 932,
+        "h": 162,
         "info": "# Authorization Check\n\nThis group is the second step within the http workflow. \n\nThis sub-group is responsible for ensuring that **ALL** requests to the http endpoint are authorized.\n"
     },
     {
@@ -3285,142 +3283,34 @@
         "l": true
     },
     {
-        "id": "a834b786ac4c71f9",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "401",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Not Authorized",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 620,
-        "wires": [
-            [
-                "d17512b4de05ede1"
-            ]
-        ]
-    },
-    {
         "id": "d17512b4de05ede1",
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "f3aa07300888f0a4",
-        "name": "Process Error",
+        "name": "HTTP/401",
         "mode": "link",
         "links": [
             "fd80fd11fc971e2c"
         ],
-        "x": 560,
-        "y": 620,
+        "x": 630,
+        "y": 700,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "58479d9fdbd86ed8",
-        "type": "link in",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "HTTP/401",
-        "links": [
-            "be8652f99185b1aa"
-        ],
-        "x": 260,
-        "y": 620,
-        "wires": [
-            [
-                "a834b786ac4c71f9"
-            ]
-        ],
         "icon": "font-awesome/fa-lock",
         "l": true
-    },
-    {
-        "id": "782fc77ff667cc29",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "404",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Not Found",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 680,
-        "wires": [
-            [
-                "434d74f494db7cfc"
-            ]
-        ]
     },
     {
         "id": "434d74f494db7cfc",
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "f3aa07300888f0a4",
-        "name": "Process Error",
+        "name": "HTTP/404",
         "mode": "link",
         "links": [
             "fd80fd11fc971e2c"
         ],
-        "x": 560,
-        "y": 680,
+        "x": 630,
+        "y": 740,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "4d40709eea926ab1",
-        "type": "link in",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "HTTP/404",
-        "links": [
-            "4716d2916d6de31e",
-            "c0e5efefb8395690",
-            "d81c931de5a63675"
-        ],
-        "x": 260,
-        "y": 680,
-        "wires": [
-            [
-                "782fc77ff667cc29"
-            ]
-        ],
         "icon": "font-awesome/fa-question",
         "l": true
     },
@@ -3595,7 +3485,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1110,
-        "y": 440,
+        "y": 420,
         "wires": [
             [
                 "46d8b11bdef459aa"
@@ -3609,14 +3499,14 @@
         "z": "379c65a27117b46c",
         "g": "923268ee62c6a7db",
         "name": "HTTP Method Routing",
-        "func": "var http_get = null;\nvar http_post = null;\nvar failsafe_auth = null;\nvar http_unsupported = null;\n\nif( msg.hasOwnPropertiy('session') ) {\n    switch (String(msg.req.method).toLocaleLowerCase() ) {\n\n        case 'get':\n            node.status({fill:\"green\",shape:\"ring\",text:\"GET\"});\n            http_get = msg;\n            break;\n        \n        case 'post':\n            node.status({ fill: \"green\", shape: \"ring\", text: \"POST\" });\n            http_post = msg;\n            break;\n\n        default:\n            node.status({ fill: \"yellow\", shape: \"ring\", text: \"unsupported\" });\n            http_unsupported = msg;\n            break;\n\n    };\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Not Authorized\" });\n    \n    failsafe_auth = msg;\n\n}\nnode.send([\n    http_get,\n    http_post,\n    failsafe_auth,\n    http_unsupported\n]);\n",
-        "outputs": 4,
+        "func": "var http_get = null;\nvar http_post = null;\nvar statuscode = null;\n\nvar status = { fill: \"red\", shape: \"ring\", text: \"Incomplete\" };\n\nif (msg.hasOwnProperty('statusCode') ) {\n\n    status.fill = \"yellow\";\n    status.text = \"HTTP/\"+ msg.statusCode;\n\n    statuscode = msg;\n\n    \n} else {\n\n    if (msg.hasOwnPropertiy('session')) {\n\n        switch (String(msg.req.method).toLocaleLowerCase()) {\n\n            case 'get':\n                status.fill = \"green\";\n                status.text = \"GET\";\n\n                http_get = msg;\n                break;\n\n            case 'post':\n                status.fill = \"green\";\n                status.text = \"POST\";\n\n                http_post = msg;\n                break;\n\n            default:\n                status.fill = \"yellow\";\n                status.text = \"unsupported\";\n\n                msg.statusCode = 400;\n                statuscode = msg;\n                break;\n\n        };\n\n    } else { // no msg.session, force logon\n        status.fill = \"yellow\";\n        status.text = \"Not Authorized\";\n\n\n        if (!msg.hasOwnProperty('statusCode')) {\n            msg.statusCode = 401;\n            // ToDo: add location header to auth method\n        }\n\n        statuscode = msg;\n\n    }\n}\n\nnode.status(status);\n\nnode.send([\n    http_get,\n    http_post,\n    statuscode\n]);\n",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1340,
-        "y": 440,
+        "y": 420,
         "wires": [
             [
                 "1c16492a7fe8e77b"
@@ -3625,17 +3515,13 @@
                 "e282aea37a90acdc"
             ],
             [
-                "be8652f99185b1aa"
-            ],
-            [
                 "5f2f87eeebd5bf6e"
             ]
         ],
         "outputLabels": [
             "Get",
             "Post",
-            "Failsafe Not Authorized",
-            "Not-Supported"
+            "Non HTTP/20x"
         ],
         "icon": "node-red/arrow-in.svg"
     },
@@ -3649,7 +3535,7 @@
             "28713941e03e2bf5"
         ],
         "x": 910,
-        "y": 440,
+        "y": 420,
         "wires": [
             [
                 "6728a85f5b044738"
@@ -3659,88 +3545,19 @@
         "l": true
     },
     {
-        "id": "be8652f99185b1aa",
-        "type": "link out",
-        "z": "379c65a27117b46c",
-        "g": "923268ee62c6a7db",
-        "name": "HTTP/401",
-        "mode": "link",
-        "links": [
-            "58479d9fdbd86ed8"
-        ],
-        "x": 1610,
-        "y": 460,
-        "wires": [],
-        "icon": "font-awesome/fa-hand-stop-o",
-        "l": true
-    },
-    {
-        "id": "016a312564d6612e",
-        "type": "link in",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "HTTP/400",
-        "links": [
-            "5f2f87eeebd5bf6e"
-        ],
-        "x": 260,
-        "y": 560,
-        "wires": [
-            [
-                "6727656e3769c5a8"
-            ]
-        ],
-        "icon": "font-awesome/fa-warning",
-        "l": true
-    },
-    {
-        "id": "6727656e3769c5a8",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "400",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Bad Request",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 560,
-        "wires": [
-            [
-                "0ec392291c3fda2f"
-            ]
-        ]
-    },
-    {
         "id": "0ec392291c3fda2f",
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "f3aa07300888f0a4",
-        "name": "Process Error",
+        "name": "HTTP/400",
         "mode": "link",
         "links": [
             "fd80fd11fc971e2c"
         ],
-        "x": 560,
-        "y": 560,
+        "x": 630,
+        "y": 660,
         "wires": [],
+        "icon": "font-awesome/fa-exclamation-triangle",
         "l": true
     },
     {
@@ -3748,13 +3565,13 @@
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "923268ee62c6a7db",
-        "name": "HTTP/400",
+        "name": "Non HTTP/20x",
         "mode": "link",
         "links": [
-            "016a312564d6612e"
+            "5ad10ea406e2d3a7"
         ],
-        "x": 1610,
-        "y": 500,
+        "x": 1620,
+        "y": 460,
         "wires": [],
         "icon": "font-awesome/fa-warning",
         "l": true
@@ -3830,6 +3647,115 @@
         ],
         "icon": "font-awesome/fa-info-circle",
         "info": "# Details\n\nAdds the HTTP request details to object `msg.http`."
+    },
+    {
+        "id": "c43678f82d52004f",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "HTTP/302",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 630,
+        "y": 580,
+        "wires": [],
+        "icon": "font-awesome/fa-refresh",
+        "l": true
+    },
+    {
+        "id": "43603c3760e7ae56",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "HTTP/303",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 630,
+        "y": 620,
+        "wires": [],
+        "icon": "font-awesome/fa-refresh",
+        "l": true
+    },
+    {
+        "id": "5ad10ea406e2d3a7",
+        "type": "link in",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "HTTP/StatusCode",
+        "links": [
+            "5f2f87eeebd5bf6e"
+        ],
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "c058f11dfd8d01b2"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "c058f11dfd8d01b2",
+        "type": "switch",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "Route",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "302",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "303",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "400",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "401",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "404",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 350,
+        "y": 600,
+        "wires": [
+            [
+                "c43678f82d52004f"
+            ],
+            [
+                "43603c3760e7ae56"
+            ],
+            [
+                "0ec392291c3fda2f"
+            ],
+            [
+                "d17512b4de05ede1"
+            ],
+            [
+                "434d74f494db7cfc"
+            ]
+        ]
     },
     {
         "id": "02c4b9524d361ade",
@@ -4197,7 +4123,9 @@
         "links": [
             "d17512b4de05ede1",
             "434d74f494db7cfc",
-            "0ec392291c3fda2f"
+            "0ec392291c3fda2f",
+            "c43678f82d52004f",
+            "43603c3760e7ae56"
         ],
         "x": 1410,
         "y": 100,
