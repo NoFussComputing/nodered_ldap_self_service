@@ -41,7 +41,7 @@ links:
 
 - [Merge Requests (Pull Requests)](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests)
 
-- [Documentation](https://nofusscomputing.com/projects/ldap_self_service/)
+- [Documentation](http://nofusscomputing.com/projects/ldap_self_service/)
 
 
 ## Contributing
