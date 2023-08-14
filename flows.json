@@ -3924,7 +3924,8 @@
             [
                 "02812e8708980b09"
             ]
-        ]
+        ],
+        "info": "# Oauth2 Configuration\n\nThis node stores it's values within `flows_cred.json` and therefor takes advantage of encrypting the values.\n\n## Structure\n\n``` json\n\n{\n    \"client_secret\": \"\",\n    \"client_id\": \"\",\n    \"url\": {\n        \"token\": \"\",\n        \"auth\": \"\",\n        \"callback\": \"http://127.0.0.1:1881/callback\"\n    }\n}\n\n```\n\n| item | type | description |\n|:---:|:---:|:---|\n| client_secret | `string` | client secret |\n| client_id | `string` | client id |\n| url.token | `string` | Token URL |\n| url.auth | `string` | Auth URL |\n| url.callback | `string` | Authentication Callback URL, this value must always be `{protocol}://{domain}/callback`. i.e. `http://127.0.0.1:1881/callback` |\n "
     },
     {
         "id": "02812e8708980b09",
