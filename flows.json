@@ -81,7 +81,9 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 122
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -102,7 +104,9 @@
             "317930c679e833d1"
         ],
         "x": 154,
-        "y": 679
+        "y": 679,
+        "w": 1092,
+        "h": 82
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -121,7 +125,9 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299
+        "y": 299,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -143,7 +149,9 @@
             "4ed718e1ae800bad"
         ],
         "x": 1314,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 127
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -161,7 +169,9 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -180,7 +190,9 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419
+        "y": 419,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -199,7 +211,9 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539
+        "y": 539,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "d3393ec35cb20a93",
@@ -217,7 +231,9 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139
+        "y": 139,
+        "w": 462,
+        "h": 82
     },
     {
         "id": "3e330505ea1e9cba",
@@ -235,7 +251,9 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139
+        "y": 139,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "b447a1f691eb02df",
@@ -254,7 +272,9 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 999
+        "y": 999,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "0d96945ec7d069cb",
@@ -272,7 +292,9 @@
             "540882a95f65754c"
         ],
         "x": 114,
-        "y": 79
+        "y": 79,
+        "w": 972,
+        "h": 109.5
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -290,7 +312,9 @@
             "0f2ff2f433d17eef"
         ],
         "x": 114,
-        "y": 239
+        "y": 239,
+        "w": 912,
+        "h": 82
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -339,7 +363,9 @@
             "8e670403cf071aaf"
         ],
         "x": 114,
-        "y": 359
+        "y": 359,
+        "w": 1012,
+        "h": 122
     },
     {
         "id": "9b1493c4ae19a935",
@@ -360,6 +386,8 @@
         ],
         "x": 94,
         "y": 639,
+        "w": 4744,
+        "h": 834,
         "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
@@ -412,6 +440,8 @@
         ],
         "x": 94,
         "y": 1487,
+        "w": 3372,
+        "h": 1554,
         "info": "# Authentication\n\nThis group is responsible for ensuring the user is authorized to access the system. \nAny valid user account that authenticates to the system is authorized.\n\nFrom entry the next step in the process is cookie validation.\n\n## Input Data\n\nThis group has two paths for entry: \n\n1. Cookie Found - `msg.req.cookies.auth` key exists\n\n    > Value is the session name.\n\n1. No Cookie Found - `msg.req.cookies.auth` key does not exist\n\n    > User to be redirected to authentication method\n\n\n## Output Data\n\nThis group does not always not return data. \nData returned is only stored in `msg.session`.\n\n### Authenticated User\n\n`msg.session` is returned with the Authentication data contained. \n\nThis data will either be from a stored session (user authenticated previously) or be created via the authentication method.\nThere are two session types and they are `token` and `oauth2`. Session types are directly tied to the method of authentication.\n\n`msg.session` structure\n\n``` json\n{\n  \"session\": {\n    \"datetime\": \"{session expiry}\",\n    \"type\": \"token\",\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    },\n    \"oauth2\": {\n      // Only if type=oauth2\n    }\n  }\n}\n\n```\n\n### Non-Authenticated User\n\nNo data is returned if the user is not authenticated. The absense of `msg.session` denotes an unauthenticated user.\n"
     },
     {
@@ -432,7 +462,9 @@
             "befac3bb99b2c2cc"
         ],
         "x": 1314,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "b994fe21efb223a9",
@@ -487,7 +519,9 @@
             "d5627c7a12528006"
         ],
         "x": 1314,
-        "y": 319
+        "y": 319,
+        "w": 772,
+        "h": 82
     },
     {
         "id": "3b247f5e5d90963e",
@@ -635,7 +669,9 @@
             "b595d8148f247f69"
         ],
         "x": 114,
-        "y": 519
+        "y": 519,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "aea0a3398dafab4c",
@@ -675,7 +711,9 @@
             "d7dbd3970c891c33"
         ],
         "x": 234,
-        "y": 813
+        "y": 813,
+        "w": 4578,
+        "h": 634
     },
     {
         "id": "82ccba0e0a13970a",
@@ -841,7 +879,7 @@
         "x": 174,
         "y": 339,
         "w": 552,
-        "h": 162,
+        "h": 202,
         "info": "# Methods\n\nThis sub-group is provides the http endpoints for the supported methods."
     },
     {
@@ -1133,7 +1171,9 @@
             "bcaed4334222c14a"
         ],
         "x": 628,
-        "y": 1513
+        "y": 1513,
+        "w": 1204,
+        "h": 234
     },
     {
         "id": "cc33365c2aa59e35",
@@ -1153,7 +1193,9 @@
             "a4bc5830daf9801a"
         ],
         "x": 654,
-        "y": 1773
+        "y": 1773,
+        "w": 2172,
+        "h": 328
     },
     {
         "id": "7225c45ad941c14f",
@@ -1182,6 +1224,8 @@
         ],
         "x": 654,
         "y": 2153,
+        "w": 2358,
+        "h": 828,
         "info": "# Oauth2 Authentication\n\n"
     },
     {
@@ -1215,7 +1259,9 @@
             "5a961504d7ca5be3"
         ],
         "x": 754,
-        "y": 1051.5
+        "y": 1051.5,
+        "w": 4032,
+        "h": 369.5
     },
     {
         "id": "d7dbd3970c891c33",
@@ -1240,7 +1286,9 @@
             "a888a2ed9a053acc"
         ],
         "x": 754,
-        "y": 839
+        "y": 839,
+        "w": 1412,
+        "h": 182
     },
     {
         "id": "75c44e5f7f101beb",
@@ -1260,7 +1308,9 @@
             "95f44fbb0ddd39fc"
         ],
         "x": 894,
-        "y": 1799
+        "y": 1799,
+        "w": 672,
+        "h": 122
     },
     {
         "id": "bcaed4334222c14a",
@@ -1287,6 +1337,8 @@
         ],
         "x": 654,
         "y": 1539,
+        "w": 1152,
+        "h": 182,
         "info": "# Cookie Validation\n\nThis path is always executed and is the first step in the authentication workflow. \n\nThis groups workflow is as follows:\n\n1. fetch the value of `msg.req.cookies.auth`\n\n    * if empty/null. User needs to logon\n\n    * value found, goto step 2\n\n2. open the session file using the value of `msg.req.cookies.auth`\n\n3. set `msg.session` with the contents of the file\n\n4. Route for further validation based off of type `oauth2` or `token`.\n\nthe existance of path `msg.req.cookies.auth` alludes to a user that has authenticated previously. \nWhilst this value could be guessed, it is highly unlikely.\n"
     },
     {
@@ -1310,7 +1362,9 @@
             "444cde06405f24e3"
         ],
         "x": 1174,
-        "y": 2399
+        "y": 2399,
+        "w": 972,
+        "h": 122
     },
     {
         "id": "f5e65e1ae7e8b812",
@@ -1338,7 +1392,9 @@
             "54e638b390e13c61"
         ],
         "x": 1174,
-        "y": 2179
+        "y": 2179,
+        "w": 1532,
+        "h": 202
     },
     {
         "id": "69f0d6271fe16536",
@@ -1367,7 +1423,9 @@
             "4ff84724b26afc75"
         ],
         "x": 1174,
-        "y": 2539
+        "y": 2539,
+        "w": 1812,
+        "h": 182
     },
     {
         "id": "85fa24886e126df7",
@@ -1389,7 +1447,9 @@
             "285f57c0fee687a1"
         ],
         "x": 2234,
-        "y": 1259
+        "y": 1259,
+        "w": 1472,
+        "h": 82
     },
     {
         "id": "aa5626527a9df701",
@@ -1407,7 +1467,9 @@
             "f17ccfa845461657"
         ],
         "x": 2228,
-        "y": 1093
+        "y": 1093,
+        "w": 2204,
+        "h": 134
     },
     {
         "id": "351440700b3e2ecc",
@@ -1426,7 +1488,9 @@
             "e0660324da4581dd"
         ],
         "x": 2254,
-        "y": 1119
+        "y": 1119,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "f17ccfa845461657",
@@ -1450,7 +1514,9 @@
             "fdf014eff1962329"
         ],
         "x": 2794,
-        "y": 1119
+        "y": 1119,
+        "w": 1612,
+        "h": 82
     },
     {
         "id": "5798e39cbc3730ae",
@@ -1983,8 +2049,8 @@
         "type": "junction",
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
-        "x": 360,
-        "y": 420,
+        "x": 380,
+        "y": 440,
         "wires": [
             [
                 "c6360f6028e1512c"
@@ -2112,7 +2178,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "c80657a01a03012d",
@@ -2280,7 +2346,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "482740e98dda9d35",
@@ -2319,8 +2385,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 460,
+        "x": 450,
+        "y": 500,
         "wires": []
     },
     {
@@ -3159,7 +3225,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
+        "x": 450,
         "y": 380,
         "wires": []
     },
@@ -3602,7 +3668,7 @@
             "2f1060b185e19215"
         ],
         "x": 630,
-        "y": 380,
+        "y": 400,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3647,14 +3713,14 @@
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
         "name": "Details",
-        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.oauth2\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n    msg.http = {\n        \"client\": msg.req.connection.remoteAddress,\n        \"headers\": msg.req.headers,\n        \"timestamp\": Date.now()\n    }\n\n    if (msg.req.params[\"0\"] == 'callback' ){\n\n        status.fill = 'blue';\n        status.text = 'Oauth2 Callback';\n\n        callback = msg;\n\n    }else{\n\n        status.fill = 'green';\n        status.text = 'Continue';\n\n        cont = msg;\n\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured\n]);\n",
+        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.auth_method\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n\n    if ( \n        Array(global.get(\"config.auth_method\")).includes('oauth2') &&\n        global.get(\"config.oauth2\") == undefined\n    ) {\n\n        status.text = 'No OAuth2 Config';\n\n        msg.statusCode = 400;\n\n        not_configured = msg;\n\n    }else{\n\n        msg.http = {\n            \"client\": msg.req.connection.remoteAddress,\n            \"headers\": msg.req.headers,\n            \"timestamp\": Date.now()\n        }\n\n        if (msg.req.params[\"0\"] == 'callback' ){\n\n            status.fill = 'blue';\n            status.text = 'Oauth2 Callback';\n\n            callback = msg;\n\n        }else{\n\n            status.fill = 'green';\n            status.text = 'Continue';\n\n            cont = msg;\n\n        }\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured\n]);\n",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 470,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "28713941e03e2bf5"
@@ -3796,7 +3862,7 @@
             "9f416bc258c1a60c"
         ],
         "x": 630,
-        "y": 420,
+        "y": 440,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3951,7 +4017,7 @@
             "5ad10ea406e2d3a7"
         ],
         "x": 620,
-        "y": 460,
+        "y": 480,
         "wires": [],
         "icon": "font-awesome/fa-hand-stop-o",
         "l": true
@@ -4818,7 +4884,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
+        "template": "{\n  \"auth_method\": [ \"oauth\", \"token\" ],\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n",
         "output": "json",
         "x": 1580,
         "y": 240,
