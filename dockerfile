@@ -8,7 +8,7 @@ RUN apt update \
   && apt install -yq \
     git
 
-RUN git clone --depth=1 -b genesis https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service.git /tmp/self_service ; ls -l /tmp/self_service
+RUN git clone --depth=1 -b development https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service.git /tmp/self_service ; ls -l /tmp/self_service
 
 
 FROM --platform=$TARGETPLATFORM nodered/node-red:3.0.2-18
