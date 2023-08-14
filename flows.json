@@ -345,7 +345,9 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119
+        "y": 119,
+        "w": 2312,
+        "h": 182
     },
     {
         "id": "10a6c6b12749dda9",
@@ -413,6 +415,8 @@
         ],
         "x": 128,
         "y": 333,
+        "w": 2798,
+        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
@@ -518,6 +522,8 @@
         ],
         "x": 128,
         "y": 1133,
+        "w": 4704,
+        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -664,7 +670,9 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999
+        "y": 999,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "9858d84dc9d001be",
@@ -705,7 +713,9 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899
+        "y": 899,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "d0dc259791aed430",
@@ -728,7 +738,9 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959
+        "y": 959,
+        "w": 1432,
+        "h": 122
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -750,7 +762,9 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819
+        "y": 819,
+        "w": 912,
+        "h": 122
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -776,7 +790,9 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519
+        "y": 519,
+        "w": 1752,
+        "h": 122
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -802,7 +818,9 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659
+        "y": 659,
+        "w": 1452,
+        "h": 142
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -825,7 +843,9 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159
+        "y": 1159,
+        "w": 1072,
+        "h": 122
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -1056,6 +1076,8 @@
         ],
         "x": 154,
         "y": 359,
+        "w": 972,
+        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1078,6 +1100,8 @@
         ],
         "x": 154,
         "y": 1159,
+        "w": 812,
+        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
     },
     {
@@ -1102,6 +1126,8 @@
         ],
         "x": 2214,
         "y": 1159,
+        "w": 1152,
+        "h": 122,
         "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
@@ -1127,6 +1153,8 @@
         ],
         "x": 3394,
         "y": 1159,
+        "w": 1412,
+        "h": 122,
         "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
@@ -1194,11 +1222,11 @@
             "f5e65e1ae7e8b812",
             "1e2dce9d25c567d6",
             "69f0d6271fe16536",
-            "5be3701c83cdafea"
+            "54179a47b3037bcb"
         ],
-        "x": 654,
+        "x": 288,
         "y": 2153,
-        "w": 2358,
+        "w": 2724,
         "h": 828,
         "info": "# Oauth2 Authentication\n\n"
     },
@@ -1384,7 +1412,6 @@
         },
         "nodes": [
             "d24ebda198149601",
-            "a2c275f8fe4ac5bd",
             "1380f91c814b8e2f",
             "c3a8957e4400e12f",
             "05880bb4ed6cab41",
@@ -1394,11 +1421,17 @@
             "bcab3f1c2966f5aa",
             "150344ba8db2ceee",
             "5b97592fe62125c7",
-            "4ff84724b26afc75"
+            "4ff84724b26afc75",
+            "3f5bfeb6ef2a9467",
+            "b51064e9a331947d",
+            "5eaba17d961e2efb",
+            "fb600cd457e87c43",
+            "431bb2a5b956dd2c",
+            "e2cbcdcc69e9ce21"
         ],
-        "x": 1174,
+        "x": 314,
         "y": 2539,
-        "w": 1812,
+        "w": 2672,
         "h": 182
     },
     {
@@ -2132,6 +2165,20 @@
         "wires": [
             [
                 "e5ae19af5f6d6561"
+            ]
+        ]
+    },
+    {
+        "id": "3f5bfeb6ef2a9467",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "69f0d6271fe16536",
+        "x": 1580,
+        "y": 2620,
+        "wires": [
+            [
+                "3629b0bb901c20a7",
+                "10120b4cdade08c6"
             ]
         ]
     },
@@ -8525,7 +8572,7 @@
             "7873f07f92e9be20",
             "a30dab395f333826"
         ],
-        "x": 2580,
+        "x": 2760,
         "y": 2940,
         "wires": [
             [
@@ -8545,7 +8592,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2720,
+        "x": 2900,
         "y": 2940,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8836,7 +8883,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
+        "x": 850,
         "y": 2680,
         "wires": []
     },
@@ -8850,7 +8897,7 @@
             "e6f37f07e9217707",
             "8b072412d6eea267"
         ],
-        "x": 1300,
+        "x": 440,
         "y": 2640,
         "wires": [
             [
@@ -8873,12 +8920,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1500,
-        "y": 2640,
+        "x": 660,
+        "y": 2660,
         "wires": [
             [
-                "3629b0bb901c20a7",
-                "10120b4cdade08c6"
+                "5eaba17d961e2efb"
             ],
             [
                 "d43b2afbfaad2d31"
@@ -8974,10 +9020,11 @@
                 "d24ebda198149601"
             ],
             [
-                "a2c275f8fe4ac5bd",
                 "4ff84724b26afc75"
             ],
-            []
+            [
+                "54179a47b3037bcb"
+            ]
         ],
         "outputLabels": [
             "Success",
@@ -9001,24 +9048,6 @@
         "wires": [],
         "icon": "node-red/arrow-in.svg",
         "l": true
-    },
-    {
-        "id": "a2c275f8fe4ac5bd",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "g": "69f0d6271fe16536",
-        "name": "debug 155",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2490,
-        "y": 2680,
-        "wires": []
     },
     {
         "id": "a49db4bcea29097d",
@@ -9063,7 +9092,7 @@
         "z": "8179bf22c4c31682",
         "g": "9f3711f96411e2cc",
         "name": "create token packet",
-        "func": "\n\nmsg.url = global.get('config.oauth.url.token');\n\nmsg.method = \"POST\";\nmsg.headers = {}\nmsg.headers[\"content-type\"] = \"application/x-www-form-urlencoded\"\n\nmsg.payload = \"grant_type=authorization_code&scope=openid&client_id=\" + global.get('config.oauth.client_id') + \"&client_secret=\" + global.get('config.oauth.client_secret') + \"&redirect_uri=\" + global.get('config.oauth.url.callback') + \"&code=\" + msg.oauth2.code\n\n\n//delete msg.oauth2Request;\n//delete msg.req;\n//delete msg.res;\ndelete msg.retry;\n//delete msg.payloal;\n\nreturn msg;",
+        "func": "\n\nmsg.url = global.get('config.oauth.url.token');\n\nmsg.method = \"POST\";\nmsg.headers = {}\nmsg.headers[\"content-type\"] = \"application/x-www-form-urlencoded\"\n\nmsg.payload = \"grant_type=authorization_code&scope=openid&client_id=\" + global.get('config.oauth.client_id') + \"&client_secret=\" + global.get('config.oauth.client_secret') + \"&redirect_uri=\" + global.get('config.oauth.url.callback') + \"&code=\" + msg.oauth2.code\n\n\n//delete msg.oauth2Request;\n//delete msg.req;\n//delete msg.res;\ndelete msg.retry;\ndelete msg.oauth2;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9151,24 +9180,6 @@
                 "804feccd90b3276c"
             ]
         ]
-    },
-    {
-        "id": "5be3701c83cdafea",
-        "type": "debug",
-        "z": "8179bf22c4c31682",
-        "g": "7225c45ad941c14f",
-        "name": "debug 160",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1990,
-        "y": 2760,
-        "wires": []
     },
     {
         "id": "17276c106d99423c",
@@ -9303,6 +9314,140 @@
         "headers": {},
         "x": 2590,
         "y": 2620,
+        "wires": []
+    },
+    {
+        "id": "e2cbcdcc69e9ce21",
+        "type": "change",
+        "z": "8179bf22c4c31682",
+        "g": "69f0d6271fe16536",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload[0]",
+                "pt": "msg",
+                "to": "ldap",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "session.user.fname",
+                "pt": "msg",
+                "to": "ldap.givenName",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "session.user.lname",
+                "pt": "msg",
+                "to": "ldap.sn",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 2620,
+        "wires": [
+            [
+                "3f5bfeb6ef2a9467"
+            ]
+        ]
+    },
+    {
+        "id": "431bb2a5b956dd2c",
+        "type": "switch",
+        "z": "8179bf22c4c31682",
+        "g": "69f0d6271fe16536",
+        "name": "User Found",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1\t",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1270,
+        "y": 2640,
+        "wires": [
+            [
+                "e2cbcdcc69e9ce21"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fb600cd457e87c43",
+        "type": "ldap-search in",
+        "z": "8179bf22c4c31682",
+        "g": "69f0d6271fe16536",
+        "name": "Find LDAP User",
+        "ldap": "160d0b5ed597dc51",
+        "baseDn": "dc=nww",
+        "searchScope": "sub",
+        "filter": "",
+        "attributes": "dn,cn,givenName,sn,uid,mail",
+        "x": 1120,
+        "y": 2640,
+        "wires": [
+            [
+                "431bb2a5b956dd2c"
+            ]
+        ]
+    },
+    {
+        "id": "5eaba17d961e2efb",
+        "type": "template",
+        "z": "8179bf22c4c31682",
+        "g": "69f0d6271fe16536",
+        "name": "Create LDAP Search Filter",
+        "field": "filter",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "(&(objectclass=*)(uid={{ session.user.username }})(mail={{ session.user.mail }}))",
+        "output": "str",
+        "x": 900,
+        "y": 2640,
+        "wires": [
+            [
+                "fb600cd457e87c43"
+            ]
+        ]
+    },
+    {
+        "id": "54179a47b3037bcb",
+        "type": "debug",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "debug 163",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2550,
+        "y": 2800,
         "wires": []
     },
     {
