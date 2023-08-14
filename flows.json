@@ -440,12 +440,13 @@
             "e80aabc47c664088",
             "724a142f28c3b6e4",
             "f9550cdd015b52ae",
-            "cc33365c2aa59e35"
+            "cc33365c2aa59e35",
+            "69f0d6271fe16536"
         ],
         "x": 94,
         "y": 1487,
-        "w": 3372,
-        "h": 1554,
+        "w": 3012,
+        "h": 1334,
         "info": "# Authentication\n\nThis group is responsible for ensuring the user is authorized to access the system. \nAny valid user account that authenticates to the system is authorized.\n\nFrom entry the next step in the process is cookie validation.\n\n## Input Data\n\nThis group has two paths for entry: \n\n1. Cookie Found - `msg.req.cookies.auth` key exists\n\n    > Value is the session name.\n\n1. No Cookie Found - `msg.req.cookies.auth` key does not exist\n\n    > User to be redirected to authentication method\n\n\n## Output Data\n\nThis group does not always not return data. \nData returned is only stored in `msg.session`.\n\n### Authenticated User\n\n`msg.session` is returned with the Authentication data contained. \n\nThis data will either be from a stored session (user authenticated previously) or be created via the authentication method.\nThere are two session types and they are `token` and `oauth2`. Session types are directly tied to the method of authentication.\n\n`msg.session` structure\n\n``` json\n{\n  \"session\": {\n    \"datetime\": \"{session expiry}\",\n    \"type\": \"token\",\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    },\n    \"oauth2\": {\n      // Only if type=oauth2\n    }\n  }\n}\n\n```\n\n### Non-Authenticated User\n\nNo data is returned if the user is not authenticated. The absense of `msg.session` denotes an unauthenticated user.\n"
     },
     {
@@ -1172,7 +1173,7 @@
         "nodes": [
             "bcaed4334222c14a"
         ],
-        "x": 628,
+        "x": 508,
         "y": 1513,
         "w": 1204,
         "h": 234
@@ -1194,9 +1195,9 @@
             "75c44e5f7f101beb",
             "a4bc5830daf9801a"
         ],
-        "x": 654,
+        "x": 514,
         "y": 1773,
-        "w": 2172,
+        "w": 2072,
         "h": 328
     },
     {
@@ -1221,13 +1222,13 @@
             "9f3711f96411e2cc",
             "f5e65e1ae7e8b812",
             "1e2dce9d25c567d6",
-            "69f0d6271fe16536",
-            "54179a47b3037bcb"
+            "261436c730a46051",
+            "97fb6e1471c0f7cd"
         ],
-        "x": 288,
+        "x": 514,
         "y": 2153,
-        "w": 2724,
-        "h": 828,
+        "w": 2078,
+        "h": 394,
         "info": "# Oauth2 Authentication\n\n"
     },
     {
@@ -1309,7 +1310,7 @@
             "8b1fef39c34f5513",
             "95f44fbb0ddd39fc"
         ],
-        "x": 894,
+        "x": 754,
         "y": 1799,
         "w": 672,
         "h": 122
@@ -1337,7 +1338,7 @@
             "9cbf4beaceba5255",
             "da0811fbd7963934"
         ],
-        "x": 654,
+        "x": 534,
         "y": 1539,
         "w": 1152,
         "h": 182,
@@ -1363,7 +1364,7 @@
             "a49db4bcea29097d",
             "444cde06405f24e3"
         ],
-        "x": 1174,
+        "x": 1034,
         "y": 2399,
         "w": 972,
         "h": 122
@@ -1393,7 +1394,7 @@
             "36c7736ada06ef15",
             "54e638b390e13c61"
         ],
-        "x": 1174,
+        "x": 1034,
         "y": 2179,
         "w": 1532,
         "h": 202
@@ -1402,8 +1403,8 @@
         "id": "69f0d6271fe16536",
         "type": "group",
         "z": "8179bf22c4c31682",
-        "g": "7225c45ad941c14f",
-        "name": "Oauth2: Save Session",
+        "g": "bbd929c437c592ea",
+        "name": "Auth: Save Session",
         "style": {
             "stroke": "#0070c0",
             "fill": "#e3f3d3",
@@ -1420,7 +1421,6 @@
             "d43b2afbfaad2d31",
             "bcab3f1c2966f5aa",
             "150344ba8db2ceee",
-            "5b97592fe62125c7",
             "4ff84724b26afc75",
             "3f5bfeb6ef2a9467",
             "b51064e9a331947d",
@@ -1429,9 +1429,9 @@
             "431bb2a5b956dd2c",
             "e2cbcdcc69e9ce21"
         ],
-        "x": 314,
-        "y": 2539,
-        "w": 2672,
+        "x": 234,
+        "y": 2599,
+        "w": 2352,
         "h": 182
     },
     {
@@ -2173,8 +2173,8 @@
         "type": "junction",
         "z": "8179bf22c4c31682",
         "g": "69f0d6271fe16536",
-        "x": 1580,
-        "y": 2620,
+        "x": 1500,
+        "y": 2680,
         "wires": [
             [
                 "3629b0bb901c20a7",
@@ -7424,7 +7424,7 @@
             "627a72eee1e26ae6",
             "b174f7bc1d398a56"
         ],
-        "x": 750,
+        "x": 610,
         "y": 2200,
         "wires": [
             [
@@ -8131,7 +8131,7 @@
             "20aae4d90a07f156",
             "54e638b390e13c61"
         ],
-        "x": 1690,
+        "x": 1570,
         "y": 1580,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8151,7 +8151,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
+        "x": 1370,
         "y": 1660,
         "wires": []
     },
@@ -8167,7 +8167,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1500,
+        "x": 1380,
         "y": 1600,
         "wires": [
             [
@@ -8197,7 +8197,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1300,
+        "x": 1180,
         "y": 1600,
         "wires": [
             [
@@ -8216,7 +8216,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 1290,
+        "x": 1170,
         "y": 1640,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -8237,7 +8237,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
+        "x": 1150,
         "y": 1680,
         "wires": []
     },
@@ -8258,7 +8258,7 @@
                 "module": "fs"
             }
         ],
-        "x": 1030,
+        "x": 910,
         "y": 1620,
         "wires": [
             [
@@ -8286,7 +8286,7 @@
             "5c30dbcce4f3e71e",
             "f9550cdd015b52ae"
         ],
-        "x": 790,
+        "x": 670,
         "y": 1620,
         "wires": [
             [
@@ -8306,7 +8306,7 @@
         "links": [
             "8b1fef39c34f5513"
         ],
-        "x": 1680,
+        "x": 1560,
         "y": 1620,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8323,7 +8323,7 @@
             "9c55bf6229fa740c",
             "95f44fbb0ddd39fc"
         ],
-        "x": 2570,
+        "x": 2330,
         "y": 2060,
         "wires": [
             [
@@ -8343,7 +8343,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2720,
+        "x": 2480,
         "y": 2060,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8359,7 +8359,7 @@
         "links": [
             "c10e09e4bfbddfd7"
         ],
-        "x": 1430,
+        "x": 1290,
         "y": 1880,
         "wires": [],
         "icon": "font-awesome/fa-refresh",
@@ -8382,7 +8382,7 @@
                 "module": "fs"
             }
         ],
-        "x": 1210,
+        "x": 1070,
         "y": 1860,
         "wires": [
             [
@@ -8406,7 +8406,7 @@
         "links": [
             "da0811fbd7963934"
         ],
-        "x": 1000,
+        "x": 860,
         "y": 1860,
         "wires": [
             [
@@ -8426,7 +8426,7 @@
         "links": [
             "c10e09e4bfbddfd7"
         ],
-        "x": 1440,
+        "x": 1300,
         "y": 1840,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8441,10 +8441,12 @@
         "links": [
             "53a5ee55ee916cec",
             "9c05ca2751f619a7",
-            "8ad6190854001584"
+            "8ad6190854001584",
+            "413dbeb6f2d0d2d0",
+            "d24ebda198149601"
         ],
-        "x": 3230,
-        "y": 3000,
+        "x": 2870,
+        "y": 2780,
         "wires": [
             [
                 "724a142f28c3b6e4"
@@ -8461,8 +8463,8 @@
         "name": "Auth: Return",
         "mode": "return",
         "links": [],
-        "x": 3370,
-        "y": 3000,
+        "x": 3010,
+        "y": 2780,
         "wires": [],
         "l": true
     },
@@ -8489,7 +8491,7 @@
         "g": "cc33365c2aa59e35",
         "name": "Token: Begin",
         "links": [],
-        "x": 750,
+        "x": 610,
         "y": 1820,
         "wires": [
             []
@@ -8509,7 +8511,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
+        "x": 750,
         "y": 2200,
         "wires": [
             [
@@ -8537,7 +8539,7 @@
             "de76019e24c52ae0",
             "9d0d1d9a6c596428"
         ],
-        "x": 1060,
+        "x": 920,
         "y": 2200,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8553,7 +8555,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1050,
+        "x": 910,
         "y": 2240,
         "wires": [],
         "icon": "font-awesome/fa-exclamation-triangle",
@@ -8566,14 +8568,12 @@
         "g": "7225c45ad941c14f",
         "name": "Oauth2: Finish",
         "links": [
-            "8964a5bda9eb7113",
-            "d24ebda198149601",
-            "7923367c9c33bf46",
             "7873f07f92e9be20",
+            "8964a5bda9eb7113",
             "a30dab395f333826"
         ],
-        "x": 2760,
-        "y": 2940,
+        "x": 2240,
+        "y": 2500,
         "wires": [
             [
                 "8ad6190854001584"
@@ -8592,8 +8592,8 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2900,
-        "y": 2940,
+        "x": 2460,
+        "y": 2500,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
         "l": true
@@ -8607,7 +8607,7 @@
         "links": [
             "9cbf4beaceba5255"
         ],
-        "x": 1330,
+        "x": 1190,
         "y": 2280,
         "wires": [
             [
@@ -8629,7 +8629,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
+        "x": 1440,
         "y": 2280,
         "wires": [
             [
@@ -8661,7 +8661,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1780,
+        "x": 1640,
         "y": 2260,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8678,7 +8678,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1790,
+        "x": 1650,
         "y": 2300,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -8699,7 +8699,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
+        "x": 1630,
         "y": 2340,
         "wires": []
     },
@@ -8717,7 +8717,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2030,
+        "x": 1890,
         "y": 2240,
         "wires": []
     },
@@ -8733,7 +8733,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2060,
+        "x": 1920,
         "y": 2280,
         "wires": [
             [
@@ -8758,7 +8758,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2240,
+        "x": 2100,
         "y": 2280,
         "wires": [
             [
@@ -8787,7 +8787,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2370,
+        "x": 2230,
         "y": 2280,
         "wires": [
             [
@@ -8813,7 +8813,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2520,
+        "x": 2380,
         "y": 2220,
         "wires": []
     },
@@ -8825,9 +8825,9 @@
         "name": "Oauth2: Token Refresh",
         "mode": "link",
         "links": [
-            "150344ba8db2ceee"
+            "97fb6e1471c0f7cd"
         ],
-        "x": 2570,
+        "x": 2430,
         "y": 2260,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8847,7 +8847,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2530,
+        "x": 2390,
         "y": 2320,
         "wires": []
     },
@@ -8865,8 +8865,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 2580,
+        "x": 1610,
+        "y": 2640,
         "wires": []
     },
     {
@@ -8883,8 +8883,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 2680,
+        "x": 770,
+        "y": 2740,
         "wires": []
     },
     {
@@ -8892,13 +8892,12 @@
         "type": "link in",
         "z": "8179bf22c4c31682",
         "g": "69f0d6271fe16536",
-        "name": "Oauth2: Process Token",
+        "name": "Session: Save Token",
         "links": [
-            "e6f37f07e9217707",
-            "8b072412d6eea267"
+            "261436c730a46051"
         ],
-        "x": 440,
-        "y": 2640,
+        "x": 360,
+        "y": 2700,
         "wires": [
             [
                 "bcab3f1c2966f5aa"
@@ -8920,8 +8919,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 2660,
+        "x": 580,
+        "y": 2720,
         "wires": [
             [
                 "5eaba17d961e2efb"
@@ -8947,8 +8946,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1720,
-        "y": 2620,
+        "x": 1640,
+        "y": 2680,
         "wires": [
             [
                 "05880bb4ed6cab41"
@@ -8968,8 +8967,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
-        "y": 2620,
+        "x": 1840,
+        "y": 2680,
         "wires": [
             [
                 "c3a8957e4400e12f"
@@ -8988,8 +8987,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2070,
-        "y": 2620,
+        "x": 1990,
+        "y": 2680,
         "wires": [
             [
                 "1380f91c814b8e2f"
@@ -9013,8 +9012,8 @@
                 "module": "fs"
             }
         ],
-        "x": 2260,
-        "y": 2620,
+        "x": 2180,
+        "y": 2680,
         "wires": [
             [
                 "d24ebda198149601"
@@ -9041,10 +9040,10 @@
         "name": "Session Saved",
         "mode": "link",
         "links": [
-            "21ec376b58ac0c54"
+            "e80aabc47c664088"
         ],
-        "x": 2480,
-        "y": 2580,
+        "x": 2400,
+        "y": 2640,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
         "l": true
@@ -9063,7 +9062,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2030,
+        "x": 1890,
         "y": 2480,
         "wires": []
     },
@@ -9076,7 +9075,7 @@
         "links": [
             "60a97c78327c3a6a"
         ],
-        "x": 1300,
+        "x": 1160,
         "y": 2480,
         "wires": [
             [
@@ -9098,7 +9097,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
+        "x": 1350,
         "y": 2480,
         "wires": [
             [
@@ -9124,7 +9123,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1680,
+        "x": 1540,
         "y": 2480,
         "wires": [
             [
@@ -9142,9 +9141,9 @@
         "name": "Process Token",
         "mode": "link",
         "links": [
-            "150344ba8db2ceee"
+            "97fb6e1471c0f7cd"
         ],
-        "x": 1860,
+        "x": 1720,
         "y": 2480,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -9157,7 +9156,7 @@
         "g": "9f3711f96411e2cc",
         "name": "ToDo",
         "info": "check for http 400, and return error on screen",
-        "x": 1870,
+        "x": 1730,
         "y": 2440,
         "wires": []
     },
@@ -9289,22 +9288,6 @@
         ]
     },
     {
-        "id": "5b97592fe62125c7",
-        "type": "link out",
-        "z": "8179bf22c4c31682",
-        "g": "69f0d6271fe16536",
-        "name": "Callback redirect",
-        "mode": "link",
-        "links": [
-            "5ad10ea406e2d3a7"
-        ],
-        "x": 2870,
-        "y": 2620,
-        "wires": [],
-        "icon": "node-red/arrow-in.svg",
-        "l": true
-    },
-    {
         "id": "4ff84724b26afc75",
         "type": "http response",
         "z": "8179bf22c4c31682",
@@ -9312,8 +9295,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 2590,
-        "y": 2620,
+        "x": 2510,
+        "y": 2680,
         "wires": []
     },
     {
@@ -9355,8 +9338,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1460,
-        "y": 2620,
+        "x": 1380,
+        "y": 2680,
         "wires": [
             [
                 "3f5bfeb6ef2a9467"
@@ -9384,8 +9367,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1270,
-        "y": 2640,
+        "x": 1190,
+        "y": 2700,
         "wires": [
             [
                 "e2cbcdcc69e9ce21"
@@ -9404,8 +9387,8 @@
         "searchScope": "sub",
         "filter": "",
         "attributes": "dn,cn,givenName,sn,uid,mail",
-        "x": 1120,
-        "y": 2640,
+        "x": 1040,
+        "y": 2700,
         "wires": [
             [
                 "431bb2a5b956dd2c"
@@ -9424,8 +9407,8 @@
         "syntax": "mustache",
         "template": "(&(objectclass=*)(uid={{ session.user.username }})(mail={{ session.user.mail }}))",
         "output": "str",
-        "x": 900,
-        "y": 2640,
+        "x": 820,
+        "y": 2700,
         "wires": [
             [
                 "fb600cd457e87c43"
@@ -9436,7 +9419,6 @@
         "id": "54179a47b3037bcb",
         "type": "debug",
         "z": "8179bf22c4c31682",
-        "g": "7225c45ad941c14f",
         "name": "debug 163",
         "active": true,
         "tosidebar": true,
@@ -9446,9 +9428,45 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2550,
-        "y": 2800,
+        "x": 2710,
+        "y": 3320,
         "wires": []
+    },
+    {
+        "id": "97fb6e1471c0f7cd",
+        "type": "link in",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Oauth2: Success",
+        "links": [
+            "8b072412d6eea267",
+            "e6f37f07e9217707"
+        ],
+        "x": 2240,
+        "y": 2440,
+        "wires": [
+            [
+                "261436c730a46051"
+            ]
+        ],
+        "icon": "font-awesome/fa-unlock",
+        "l": true
+    },
+    {
+        "id": "261436c730a46051",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "7225c45ad941c14f",
+        "name": "Oauth2: Process Token",
+        "mode": "link",
+        "links": [
+            "150344ba8db2ceee"
+        ],
+        "x": 2430,
+        "y": 2440,
+        "wires": [],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
     },
     {
         "id": "17f893c2bb347668",
