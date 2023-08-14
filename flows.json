@@ -81,9 +81,7 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819,
-        "w": 1912,
-        "h": 122
+        "y": 819
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -104,9 +102,7 @@
             "317930c679e833d1"
         ],
         "x": 154,
-        "y": 679,
-        "w": 1092,
-        "h": 82
+        "y": 679
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -125,9 +121,7 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299,
-        "w": 812,
-        "h": 82
+        "y": 299
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -149,9 +143,7 @@
             "4ed718e1ae800bad"
         ],
         "x": 1314,
-        "y": 19,
-        "w": 812,
-        "h": 127
+        "y": 19
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -169,9 +161,7 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19,
-        "w": 692,
-        "h": 82
+        "y": 19
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -190,9 +180,7 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419,
-        "w": 812,
-        "h": 82
+        "y": 419
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -211,9 +199,7 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539,
-        "w": 812,
-        "h": 82
+        "y": 539
     },
     {
         "id": "d3393ec35cb20a93",
@@ -231,9 +217,7 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139,
-        "w": 462,
-        "h": 82
+        "y": 139
     },
     {
         "id": "3e330505ea1e9cba",
@@ -251,9 +235,7 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139,
-        "w": 492,
-        "h": 82
+        "y": 139
     },
     {
         "id": "b447a1f691eb02df",
@@ -272,9 +254,7 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 999,
-        "w": 812,
-        "h": 82
+        "y": 999
     },
     {
         "id": "0d96945ec7d069cb",
@@ -292,9 +272,7 @@
             "540882a95f65754c"
         ],
         "x": 114,
-        "y": 79,
-        "w": 972,
-        "h": 109.5
+        "y": 79
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -312,9 +290,7 @@
             "0f2ff2f433d17eef"
         ],
         "x": 114,
-        "y": 239,
-        "w": 912,
-        "h": 82
+        "y": 239
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -345,9 +321,7 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119,
-        "w": 2312,
-        "h": 182
+        "y": 119
     },
     {
         "id": "10a6c6b12749dda9",
@@ -365,9 +339,7 @@
             "8e670403cf071aaf"
         ],
         "x": 114,
-        "y": 359,
-        "w": 1012,
-        "h": 122
+        "y": 359
     },
     {
         "id": "9b1493c4ae19a935",
@@ -388,8 +360,6 @@
         ],
         "x": 94,
         "y": 639,
-        "w": 4744,
-        "h": 834,
         "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
@@ -415,8 +385,6 @@
         ],
         "x": 128,
         "y": 333,
-        "w": 2798,
-        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
@@ -444,8 +412,6 @@
         ],
         "x": 94,
         "y": 1487,
-        "w": 3372,
-        "h": 1554,
         "info": "# Authentication\n\nThis group is responsible for ensuring the user is authorized to access the system. \nAny valid user account that authenticates to the system is authorized.\n\nFrom entry the next step in the process is cookie validation.\n\n## Input Data\n\nThis group has two paths for entry: \n\n1. Cookie Found - `msg.req.cookies.auth` key exists\n\n    > Value is the session name.\n\n1. No Cookie Found - `msg.req.cookies.auth` key does not exist\n\n    > User to be redirected to authentication method\n\n\n## Output Data\n\nThis group does not always not return data. \nData returned is only stored in `msg.session`.\n\n### Authenticated User\n\n`msg.session` is returned with the Authentication data contained. \n\nThis data will either be from a stored session (user authenticated previously) or be created via the authentication method.\nThere are two session types and they are `token` and `oauth2`. Session types are directly tied to the method of authentication.\n\n`msg.session` structure\n\n``` json\n{\n  \"session\": {\n    \"datetime\": \"{session expiry}\",\n    \"type\": \"token\",\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    },\n    \"oauth2\": {\n      // Only if type=oauth2\n    }\n  }\n}\n\n```\n\n### Non-Authenticated User\n\nNo data is returned if the user is not authenticated. The absense of `msg.session` denotes an unauthenticated user.\n"
     },
     {
@@ -466,9 +432,7 @@
             "befac3bb99b2c2cc"
         ],
         "x": 1314,
-        "y": 199,
-        "w": 752,
-        "h": 82
+        "y": 199
     },
     {
         "id": "b994fe21efb223a9",
@@ -523,9 +487,7 @@
             "d5627c7a12528006"
         ],
         "x": 1314,
-        "y": 319,
-        "w": 772,
-        "h": 82
+        "y": 319
     },
     {
         "id": "3b247f5e5d90963e",
@@ -548,8 +510,6 @@
         ],
         "x": 128,
         "y": 1133,
-        "w": 4704,
-        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -628,9 +588,7 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99,
-        "w": 1192,
-        "h": 282
+        "y": 99
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -658,9 +616,7 @@
             "291408859782056d"
         ],
         "x": 1274,
-        "y": 99,
-        "w": 1872,
-        "h": 142
+        "y": 99
     },
     {
         "id": "e8558844b3710e7b",
@@ -679,9 +635,7 @@
             "b595d8148f247f69"
         ],
         "x": 114,
-        "y": 519,
-        "w": 992,
-        "h": 82
+        "y": 519
     },
     {
         "id": "aea0a3398dafab4c",
@@ -700,9 +654,7 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999,
-        "w": 512,
-        "h": 82
+        "y": 999
     },
     {
         "id": "9858d84dc9d001be",
@@ -723,9 +675,7 @@
             "d7dbd3970c891c33"
         ],
         "x": 234,
-        "y": 813,
-        "w": 4578,
-        "h": 634
+        "y": 813
     },
     {
         "id": "82ccba0e0a13970a",
@@ -743,9 +693,7 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899,
-        "w": 512,
-        "h": 82
+        "y": 899
     },
     {
         "id": "d0dc259791aed430",
@@ -768,9 +716,7 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959,
-        "w": 1432,
-        "h": 122
+        "y": 959
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -792,9 +738,7 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819,
-        "w": 912,
-        "h": 122
+        "y": 819
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -820,9 +764,7 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519,
-        "w": 1752,
-        "h": 122
+        "y": 519
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -848,9 +790,7 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659,
-        "w": 1452,
-        "h": 142
+        "y": 659
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -873,9 +813,7 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159,
-        "w": 1072,
-        "h": 122
+        "y": 1159
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -1105,8 +1043,6 @@
         ],
         "x": 154,
         "y": 359,
-        "w": 972,
-        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1129,8 +1065,6 @@
         ],
         "x": 154,
         "y": 1159,
-        "w": 812,
-        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
     },
     {
@@ -1155,8 +1089,6 @@
         ],
         "x": 2214,
         "y": 1159,
-        "w": 1152,
-        "h": 122,
         "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
@@ -1182,8 +1114,6 @@
         ],
         "x": 3394,
         "y": 1159,
-        "w": 1412,
-        "h": 122,
         "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
@@ -1202,9 +1132,7 @@
             "bcaed4334222c14a"
         ],
         "x": 628,
-        "y": 1513,
-        "w": 1204,
-        "h": 234
+        "y": 1513
     },
     {
         "id": "cc33365c2aa59e35",
@@ -1224,9 +1152,7 @@
             "a4bc5830daf9801a"
         ],
         "x": 654,
-        "y": 1773,
-        "w": 2172,
-        "h": 328
+        "y": 1773
     },
     {
         "id": "7225c45ad941c14f",
@@ -1255,8 +1181,6 @@
         ],
         "x": 654,
         "y": 2153,
-        "w": 2358,
-        "h": 828,
         "info": "# Oauth2 Authentication\n\n"
     },
     {
@@ -1290,9 +1214,7 @@
             "5a961504d7ca5be3"
         ],
         "x": 754,
-        "y": 1051.5,
-        "w": 4032,
-        "h": 369.5
+        "y": 1051.5
     },
     {
         "id": "d7dbd3970c891c33",
@@ -1317,9 +1239,7 @@
             "a888a2ed9a053acc"
         ],
         "x": 754,
-        "y": 839,
-        "w": 1412,
-        "h": 182
+        "y": 839
     },
     {
         "id": "75c44e5f7f101beb",
@@ -1339,9 +1259,7 @@
             "95f44fbb0ddd39fc"
         ],
         "x": 894,
-        "y": 1799,
-        "w": 672,
-        "h": 122
+        "y": 1799
     },
     {
         "id": "bcaed4334222c14a",
@@ -1368,8 +1286,6 @@
         ],
         "x": 654,
         "y": 1539,
-        "w": 1152,
-        "h": 182,
         "info": "# Cookie Validation\n\nThis path is always executed and is the first step in the authentication workflow. \n\nThis groups workflow is as follows:\n\n1. fetch the value of `msg.req.cookies.auth`\n\n    * if empty/null. User needs to logon\n\n    * value found, goto step 2\n\n2. open the session file using the value of `msg.req.cookies.auth`\n\n3. set `msg.session` with the contents of the file\n\n4. Route for further validation based off of type `oauth2` or `token`.\n\nthe existance of path `msg.req.cookies.auth` alludes to a user that has authenticated previously. \nWhilst this value could be guessed, it is highly unlikely.\n"
     },
     {
@@ -1393,9 +1309,7 @@
             "444cde06405f24e3"
         ],
         "x": 1174,
-        "y": 2399,
-        "w": 972,
-        "h": 122
+        "y": 2399
     },
     {
         "id": "f5e65e1ae7e8b812",
@@ -1423,9 +1337,7 @@
             "54e638b390e13c61"
         ],
         "x": 1174,
-        "y": 2179,
-        "w": 1532,
-        "h": 202
+        "y": 2179
     },
     {
         "id": "69f0d6271fe16536",
@@ -1454,9 +1366,7 @@
             "4ff84724b26afc75"
         ],
         "x": 1174,
-        "y": 2539,
-        "w": 1812,
-        "h": 182
+        "y": 2539
     },
     {
         "id": "85fa24886e126df7",
@@ -1478,9 +1388,7 @@
             "285f57c0fee687a1"
         ],
         "x": 2234,
-        "y": 1259,
-        "w": 1472,
-        "h": 82
+        "y": 1259
     },
     {
         "id": "aa5626527a9df701",
@@ -1498,9 +1406,7 @@
             "f17ccfa845461657"
         ],
         "x": 2228,
-        "y": 1093,
-        "w": 2204,
-        "h": 134
+        "y": 1093
     },
     {
         "id": "351440700b3e2ecc",
@@ -1519,9 +1425,7 @@
             "e0660324da4581dd"
         ],
         "x": 2254,
-        "y": 1119,
-        "w": 492,
-        "h": 82
+        "y": 1119
     },
     {
         "id": "f17ccfa845461657",
@@ -1545,9 +1449,7 @@
             "fdf014eff1962329"
         ],
         "x": 2794,
-        "y": 1119,
-        "w": 1612,
-        "h": 82
+        "y": 1119
     },
     {
         "id": "5798e39cbc3730ae",
