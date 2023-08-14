@@ -141,15 +141,17 @@
         },
         "nodes": [
             "fd80fd11fc971e2c",
-            "274e4e6606cb379a",
             "50d19d3ce5cf88f2",
             "e5ae19af5f6d6561",
-            "781d23c946457b30"
+            "781d23c946457b30",
+            "9d93b8dfe83bf3ca",
+            "e551d77d5412aced",
+            "4ed718e1ae800bad"
         ],
         "x": 1314,
         "y": 19,
         "w": 812,
-        "h": 122
+        "h": 127
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -567,12 +569,13 @@
             "8363d385051fc5c0",
             "5706252b01492258",
             "f3aa07300888f0a4",
-            "923268ee62c6a7db"
+            "923268ee62c6a7db",
+            "f3aa07300888f0a4"
         ],
         "x": 148,
         "y": 313,
-        "w": 2744,
-        "h": 934,
+        "w": 2944,
+        "h": 914,
         "info": "# HTTP Server\n\nThis group provides the entrypoint for the application. it's broken down into further sub-groups that have their own individual responsibilities for processing a part of the HTTP servers workflow."
     },
     {
@@ -596,8 +599,8 @@
             "e350059bd801a5ab",
             "702a6efc7be81391"
         ],
-        "x": 1354,
-        "y": 99,
+        "x": 2174,
+        "y": 79,
         "w": 1192,
         "h": 122
     },
@@ -921,7 +924,8 @@
             "5de0bbd4.6c8574",
             "28713941e03e2bf5",
             "adbfd4257ea1c230",
-            "c6360f6028e1512c"
+            "c6360f6028e1512c",
+            "b174f7bc1d398a56"
         ],
         "x": 174,
         "y": 339,
@@ -947,8 +951,8 @@
             "7db929503cf13635",
             "3af3d2ae3286ffe0"
         ],
-        "x": 2294,
-        "y": 1099,
+        "x": 2494,
+        "y": 1079,
         "w": 572,
         "h": 122
     },
@@ -988,8 +992,8 @@
             "7f4255c2cbe633a5",
             "09cd31dda9fa3c50"
         ],
-        "x": 794,
-        "y": 579,
+        "x": 994,
+        "y": 559,
         "w": 1292,
         "h": 382,
         "info": "# Fetch Content\n\nThis sub-group is the third step in the http workflow.\n\nOnce authorized, this workflow fetches the html content to be displayed within the browser.\n"
@@ -1020,8 +1024,8 @@
             "b7fde07e47cc852e",
             "2189bf4e56868e51"
         ],
-        "x": 794,
-        "y": 999,
+        "x": 994,
+        "y": 979,
         "w": 1292,
         "h": 222,
         "info": "# Process Forms\n\nThis sub-group is the third step in the http workflow.\n\nThis sub-group is responsible for processing any forms that are sent to the server.\n"
@@ -1051,8 +1055,8 @@
             "e01b059fbd4cb54f",
             "dce9621aba915bd4"
         ],
-        "x": 2174,
-        "y": 579,
+        "x": 2374,
+        "y": 559,
         "w": 692,
         "h": 382,
         "info": "# Fetch CSS / JS Files\n\nThis sub-group is the forth step in the http workflow, and specifically for HTTP/Get methods only.\n\nThis sub-group is responsible for fetching the appropriate CSS Style or JS Script that is required to fulfill the page request.\n"
@@ -1071,19 +1075,17 @@
         },
         "nodes": [
             "434d74f494db7cfc",
-            "782fc77ff667cc29",
-            "4d40709eea926ab1",
-            "58479d9fdbd86ed8",
-            "a834b786ac4c71f9",
             "d17512b4de05ede1",
-            "016a312564d6612e",
-            "6727656e3769c5a8",
-            "0ec392291c3fda2f"
+            "0ec392291c3fda2f",
+            "c43678f82d52004f",
+            "43603c3760e7ae56",
+            "5ad10ea406e2d3a7",
+            "c058f11dfd8d01b2"
         ],
         "x": 174,
-        "y": 519,
-        "w": 492,
-        "h": 202
+        "y": 576.5,
+        "w": 692,
+        "h": 244.5
     },
     {
         "id": "923268ee62c6a7db",
@@ -2129,19 +2131,6 @@
         ]
     },
     {
-        "id": "d88479a7fb5c2f94",
-        "type": "junction",
-        "z": "8179bf22c4c31682",
-        "g": "95c7670ef9039295",
-        "x": 1580,
-        "y": 1600,
-        "wires": [
-            [
-                "32fbc01a34859498"
-            ]
-        ]
-    },
-    {
         "id": "adbfd4257ea1c230",
         "type": "junction",
         "z": "379c65a27117b46c",
@@ -2327,8 +2316,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 1540,
-        "y": 720,
+        "x": 1740,
+        "y": 700,
         "wires": [
             [
                 "09cd31dda9fa3c50"
@@ -2427,8 +2416,8 @@
             "2dc375bf57ad8daa",
             "86d0cb173ed572b5"
         ],
-        "x": 1960,
-        "y": 740,
+        "x": 2160,
+        "y": 720,
         "wires": [],
         "l": true
     },
@@ -2460,8 +2449,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1290,
-        "y": 1100,
+        "x": 1490,
+        "y": 1080,
         "wires": [
             [
                 "539d65720b0ff630"
@@ -2500,8 +2489,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1700,
-        "y": 1160,
+        "x": 1900,
+        "y": 1140,
         "wires": []
     },
     {
@@ -3253,14 +3242,14 @@
         "z": "379c65a27117b46c",
         "g": "ec8733df4e619869",
         "name": "Valid Path?",
-        "func": "var validPath = null;\nvar http_404 = null;\n\n//msg.http = {};\n\n// node.warn(String(msg.req.originalUrl).indexOf('.'));\n// node.warn(String(msg.req.originalUrl).indexOf('?'))\n// node.warn(String(msg.req.originalUrl).split('?')[0].split('/'));\n\nif ( String(msg.req.originalUrl).indexOf('?') > 0 ) {\n\n    msg.http.path = String(msg.req.originalUrl).split('?')[0].split('/');\n    node.warn('boo1');\n\n}else{\n    msg.http.path = String(msg.req.originalUrl).split('/');\n    node.warn('boo2');\n}\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\n// node.warn(msg.http.path[0]);\n// node.warn(global.get('config.http_path'));\n// node.warn(String(msg.req.originalUrl).indexOf('.'));\n\nif (\n    msg.http.path[0] == global.get('config.http_path') ||\n    msg.http.path[0] + '/' == global.get('config.http_path')\n) {\n\n    validPath = msg;\n    // node.warn(\"here1\");\n\n} else if (String(msg.req.originalUrl).indexOf('.') > 0 ) {\n\n    validPath = msg;\n    // node.warn(\"here2\");\n    \n} else {\n\n    http_404 = msg;\n    // node.warn(\"here3\");\n\n}\n\nnode.send([validPath, http_404])\n",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nif ( String(msg.req.originalUrl).indexOf('?') > 0 ) {\n\n    msg.http.path = String(msg.req.originalUrl).split('?')[0].split('/');\n\n}else{\n    msg.http.path = String(msg.req.originalUrl).split('/');\n\n}\n\nif (\n    msg.http.path[0] == global.get('config.http_path') ||\n    msg.http.path[0] + '/' == global.get('config.http_path')\n) {\n\n    validPath = msg;\n\n\n} else if (String(msg.req.originalUrl).indexOf('.') > 0 ) {\n\n    validPath = msg;\n    \n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 740,
+        "x": 1270,
+        "y": 720,
         "wires": [
             [
                 "eae031f35d9a1e9e"
@@ -3285,8 +3274,8 @@
         "links": [
             "4d40709eea926ab1"
         ],
-        "x": 1270,
-        "y": 760,
+        "x": 1470,
+        "y": 740,
         "wires": [],
         "l": true
     },
@@ -3304,8 +3293,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 800,
+        "x": 1470,
+        "y": 780,
         "wires": []
     },
     {
@@ -3338,8 +3327,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 1120,
+        "x": 1310,
+        "y": 1100,
         "wires": [
             [
                 "75913f37.78e6e"
@@ -3364,8 +3353,8 @@
         "links": [
             "4d40709eea926ab1"
         ],
-        "x": 1310,
-        "y": 1140,
+        "x": 1510,
+        "y": 1120,
         "wires": [],
         "l": true
     },
@@ -3383,8 +3372,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 1180,
+        "x": 1510,
+        "y": 1160,
         "wires": []
     },
     {
@@ -3397,7 +3386,7 @@
         "links": [
             "5c05dcd676fcb02a"
         ],
-        "x": 1610,
+        "x": 1810,
         "y": 380,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -3412,8 +3401,8 @@
         "links": [
             "1c16492a7fe8e77b"
         ],
-        "x": 910,
-        "y": 740,
+        "x": 1110,
+        "y": 720,
         "wires": [
             [
                 "3ada862ebc07a99d"
@@ -3432,7 +3421,7 @@
         "links": [
             "9cbf4027b4ab1c04"
         ],
-        "x": 1610,
+        "x": 1810,
         "y": 420,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -3447,8 +3436,8 @@
         "links": [
             "e282aea37a90acdc"
         ],
-        "x": 920,
-        "y": 1120,
+        "x": 1120,
+        "y": 1100,
         "wires": [
             [
                 "7c38c172df490c56"
@@ -3458,142 +3447,34 @@
         "l": true
     },
     {
-        "id": "a834b786ac4c71f9",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "401",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Not Authorized",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 620,
-        "wires": [
-            [
-                "d17512b4de05ede1"
-            ]
-        ]
-    },
-    {
         "id": "d17512b4de05ede1",
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "f3aa07300888f0a4",
-        "name": "Process Error",
+        "name": "HTTP/401",
         "mode": "link",
         "links": [
             "fd80fd11fc971e2c"
         ],
-        "x": 560,
-        "y": 620,
+        "x": 770,
+        "y": 740,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "58479d9fdbd86ed8",
-        "type": "link in",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "HTTP/401",
-        "links": [
-            "be8652f99185b1aa"
-        ],
-        "x": 260,
-        "y": 620,
-        "wires": [
-            [
-                "a834b786ac4c71f9"
-            ]
-        ],
         "icon": "font-awesome/fa-lock",
         "l": true
-    },
-    {
-        "id": "782fc77ff667cc29",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "404",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Not Found",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 680,
-        "wires": [
-            [
-                "434d74f494db7cfc"
-            ]
-        ]
     },
     {
         "id": "434d74f494db7cfc",
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "f3aa07300888f0a4",
-        "name": "Process Error",
+        "name": "HTTP/404",
         "mode": "link",
         "links": [
             "fd80fd11fc971e2c"
         ],
-        "x": 560,
-        "y": 680,
+        "x": 770,
+        "y": 780,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "4d40709eea926ab1",
-        "type": "link in",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "HTTP/404",
-        "links": [
-            "4716d2916d6de31e",
-            "c0e5efefb8395690",
-            "d81c931de5a63675"
-        ],
-        "x": 260,
-        "y": 680,
-        "wires": [
-            [
-                "782fc77ff667cc29"
-            ]
-        ],
         "icon": "font-awesome/fa-question",
         "l": true
     },
@@ -3620,8 +3501,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1490,
-        "y": 180,
+        "x": 2310,
+        "y": 160,
         "wires": [
             [
                 "e350059bd801a5ab"
@@ -3640,8 +3521,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 180,
+        "x": 2730,
+        "y": 160,
         "wires": [
             [
                 "0107c5fd18462084"
@@ -3659,8 +3540,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 2070,
-        "y": 180,
+        "x": 2890,
+        "y": 160,
         "wires": [
             [
                 "99a20ee6c80595d1"
@@ -3673,14 +3554,14 @@
         "z": "379c65a27117b46c",
         "g": "1b2783bfbb09503e",
         "name": "Data",
-        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\n\nmsg.payload = { \n    \"datetime\": msg.expires,\n    \"user\": msg.auth.user\n    };\nmsg.filename = global.get('config.paths.token_sessions') + msg.hash.value + '.json';\n\nreturn msg;\n",
+        "func": "\nvar date = new Date();\nvar timestamp = date.getTime();\nmsg.timestamp = timestamp;\n\nmsg.expires = timestamp + (86400 * 1000);\n\nmsg.payload = { \n    \"datetime\": msg.expires,\n    \"type\": \"token\",\n    \"user\": msg.auth.user\n    };\nmsg.filename = global.get('config.paths.token_sessions') + msg.hash.value + '.json';\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2190,
-        "y": 180,
+        "x": 3010,
+        "y": 160,
         "wires": [
             [
                 "9bb0664a91ae9b97"
@@ -3699,8 +3580,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2300,
-        "y": 180,
+        "x": 3120,
+        "y": 160,
         "wires": [
             [
                 "f08e22fcc829d7b2"
@@ -3721,8 +3602,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2430,
-        "y": 180,
+        "x": 3250,
+        "y": 160,
         "wires": []
     },
     {
@@ -3737,8 +3618,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1700,
-        "y": 180,
+        "x": 2520,
+        "y": 160,
         "wires": [
             [
                 "2f7615b7afa603aa"
@@ -3752,8 +3633,8 @@
         "g": "1b2783bfbb09503e",
         "name": "ToDo: add random salt to hash generation",
         "info": "",
-        "x": 1840,
-        "y": 140,
+        "x": 2660,
+        "y": 120,
         "wires": []
     },
     {
@@ -3763,15 +3644,16 @@
         "g": "923268ee62c6a7db",
         "name": "Authentication",
         "links": [
-            "f17afdbfc8c07889"
+            "33f25da80ef87e72"
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1110,
-        "y": 440,
+        "x": 1310,
+        "y": 420,
         "wires": [
             [
-                "46d8b11bdef459aa"
+                "46d8b11bdef459aa",
+                "719e034af3c723aa"
             ]
         ],
         "icon": "font-awesome/fa-lock"
@@ -3782,14 +3664,14 @@
         "z": "379c65a27117b46c",
         "g": "923268ee62c6a7db",
         "name": "HTTP Method Routing",
-        "func": "var http_get = null;\nvar http_post = null;\nvar failsafe_auth = null;\nvar http_unsupported = null;\n\nif( msg.auth.access ) {\n    switch (String(msg.req.method).toLocaleLowerCase() ) {\n\n        case 'get':\n            node.status({fill:\"green\",shape:\"ring\",text:\"GET\"});\n            http_get = msg;\n            break;\n        \n        case 'post':\n            node.status({ fill: \"green\", shape: \"ring\", text: \"POST\" });\n            http_post = msg;\n            break;\n\n        default:\n            node.status({ fill: \"yellow\", shape: \"ring\", text: \"unsupported\" });\n            http_unsupported = msg;\n            break;\n\n    };\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Not Authorized\" });\n    \n    failsafe_auth = msg;\n\n}\nnode.send([\n    http_get,\n    http_post,\n    failsafe_auth,\n    http_unsupported\n]);\n",
-        "outputs": 4,
+        "func": "var http_get = null;\nvar http_post = null;\nvar statuscode = null;\n\nvar status = { fill: \"red\", shape: \"ring\", text: \"Incomplete\" };\n\nif (msg.hasOwnProperty('statusCode') ) {\n\n    status.fill = \"yellow\";\n    status.text = \"HTTP/\"+ msg.statusCode;\n\n    statuscode = msg;\n\n    \n} else {\n\n    if (msg.hasOwnProperty('session')) {\n\n        switch (String(msg.req.method).toLocaleLowerCase()) {\n\n            case 'get':\n                status.fill = \"green\";\n                status.text = \"GET\";\n\n                http_get = msg;\n                break;\n\n            case 'post':\n                status.fill = \"green\";\n                status.text = \"POST\";\n\n                http_post = msg;\n                break;\n\n            default:\n                status.fill = \"yellow\";\n                status.text = \"unsupported\";\n\n                msg.statusCode = 400;\n                statuscode = msg;\n                break;\n\n        };\n\n    } else { // no msg.session, force logon\n        status.fill = \"yellow\";\n        status.text = \"Not Authorized\";\n\n\n        if (!msg.hasOwnProperty('statusCode')) {\n            msg.statusCode = 401;\n            // ToDo: add location header to auth method\n        }\n\n        statuscode = msg;\n\n    }\n}\n\nnode.status(status);\n\nnode.send([\n    http_get,\n    http_post,\n    statuscode\n]);\n",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 440,
+        "x": 1540,
+        "y": 420,
         "wires": [
             [
                 "1c16492a7fe8e77b"
@@ -3798,17 +3680,14 @@
                 "e282aea37a90acdc"
             ],
             [
-                "be8652f99185b1aa"
-            ],
-            [
-                "5f2f87eeebd5bf6e"
+                "5f2f87eeebd5bf6e",
+                "4ded783ceb23864d"
             ]
         ],
         "outputLabels": [
             "Get",
             "Post",
-            "Failsafe Not Authorized",
-            "Not-Supported"
+            "Non HTTP/20x"
         ],
         "icon": "node-red/arrow-in.svg"
     },
@@ -3819,10 +3698,11 @@
         "g": "923268ee62c6a7db",
         "name": "Process: Authorized",
         "links": [
-            "28713941e03e2bf5"
+            "28713941e03e2bf5",
+            "2ed31116a1e83c99"
         ],
-        "x": 910,
-        "y": 440,
+        "x": 1110,
+        "y": 420,
         "wires": [
             [
                 "6728a85f5b044738"
@@ -3832,88 +3712,19 @@
         "l": true
     },
     {
-        "id": "be8652f99185b1aa",
-        "type": "link out",
-        "z": "379c65a27117b46c",
-        "g": "923268ee62c6a7db",
-        "name": "HTTP/401",
-        "mode": "link",
-        "links": [
-            "58479d9fdbd86ed8"
-        ],
-        "x": 1610,
-        "y": 460,
-        "wires": [],
-        "icon": "font-awesome/fa-hand-stop-o",
-        "l": true
-    },
-    {
-        "id": "016a312564d6612e",
-        "type": "link in",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "HTTP/400",
-        "links": [
-            "5f2f87eeebd5bf6e"
-        ],
-        "x": 260,
-        "y": 560,
-        "wires": [
-            [
-                "6727656e3769c5a8"
-            ]
-        ],
-        "icon": "font-awesome/fa-warning",
-        "l": true
-    },
-    {
-        "id": "6727656e3769c5a8",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "f3aa07300888f0a4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "400",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "http.error",
-                "pt": "msg",
-                "to": "Bad Request",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 560,
-        "wires": [
-            [
-                "0ec392291c3fda2f"
-            ]
-        ]
-    },
-    {
         "id": "0ec392291c3fda2f",
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "f3aa07300888f0a4",
-        "name": "Process Error",
+        "name": "HTTP/400",
         "mode": "link",
         "links": [
             "fd80fd11fc971e2c"
         ],
-        "x": 560,
-        "y": 560,
+        "x": 770,
+        "y": 700,
         "wires": [],
+        "icon": "font-awesome/fa-exclamation-triangle",
         "l": true
     },
     {
@@ -3921,13 +3732,13 @@
         "type": "link out",
         "z": "379c65a27117b46c",
         "g": "923268ee62c6a7db",
-        "name": "HTTP/400",
+        "name": "Non HTTP/20x",
         "mode": "link",
         "links": [
-            "016a312564d6612e"
+            "5ad10ea406e2d3a7"
         ],
-        "x": 1610,
-        "y": 500,
+        "x": 1820,
+        "y": 460,
         "wires": [],
         "icon": "font-awesome/fa-warning",
         "l": true
@@ -3943,7 +3754,196 @@
             "2f1060b185e19215"
         ],
         "x": 610,
+        "y": 400,
+        "wires": [],
+        "icon": "font-awesome/fa-lock",
+        "l": true
+    },
+    {
+        "id": "3af3d2ae3286ffe0",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "755ff25cc29a08a1",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "_event",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "http.response_size",
+                "pt": "msg",
+                "to": "$length(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2760,
+        "y": 1160,
+        "wires": [
+            [
+                "e3043367c9a89a90",
+                "564400f9ec708521"
+            ]
+        ]
+    },
+    {
+        "id": "c6360f6028e1512c",
+        "type": "function",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "name": "Details",
+        "func": "var cont = null;\nvar callback = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nmsg.http = {\n    \"client\": msg.req.connection.remoteAddress,\n    \"headers\": msg.req.headers,\n    \"timestamp\": Date.now()\n}\n\nif (msg.req.params[\"0\"] == 'callback' ){\n\n    status.fill = 'blue';\n    status.text = 'Oauth2 Callback';\n\n    callback = msg;\n\n}else{\n\n    status.fill = 'green';\n    status.text = 'Continue';\n\n    cont = msg;\n\n}\n\nnode.status( status );\n\nnode.send([\n    cont,\n    callback\n]);\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
         "y": 420,
+        "wires": [
+            [
+                "28713941e03e2bf5"
+            ],
+            [
+                "b174f7bc1d398a56"
+            ]
+        ],
+        "outputLabels": [
+            "Continue",
+            "Oauth2 Callback"
+        ],
+        "icon": "font-awesome/fa-info-circle",
+        "info": "# Details\n\nAdds the HTTP request details to object `msg.http`."
+    },
+    {
+        "id": "c43678f82d52004f",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "HTTP/302",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 770,
+        "y": 620,
+        "wires": [],
+        "icon": "font-awesome/fa-refresh",
+        "l": true
+    },
+    {
+        "id": "43603c3760e7ae56",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "HTTP/303",
+        "mode": "link",
+        "links": [
+            "fd80fd11fc971e2c"
+        ],
+        "x": 770,
+        "y": 660,
+        "wires": [],
+        "icon": "font-awesome/fa-refresh",
+        "l": true
+    },
+    {
+        "id": "5ad10ea406e2d3a7",
+        "type": "link in",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "HTTP/StatusCode",
+        "links": [
+            "5f2f87eeebd5bf6e",
+            "5b97592fe62125c7"
+        ],
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "c058f11dfd8d01b2"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": true
+    },
+    {
+        "id": "c058f11dfd8d01b2",
+        "type": "switch",
+        "z": "379c65a27117b46c",
+        "g": "f3aa07300888f0a4",
+        "name": "Route",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "302",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "303",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "400",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "401",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "404",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "c43678f82d52004f"
+            ],
+            [
+                "43603c3760e7ae56"
+            ],
+            [
+                "0ec392291c3fda2f"
+            ],
+            [
+                "d17512b4de05ede1"
+            ],
+            [
+                "434d74f494db7cfc"
+            ]
+        ]
+    },
+    {
+        "id": "b174f7bc1d398a56",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "name": "Oauth2 call",
+        "mode": "link",
+        "links": [
+            "9f416bc258c1a60c"
+        ],
+        "x": 610,
+        "y": 440,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -4415,37 +4415,19 @@
         "links": [
             "d17512b4de05ede1",
             "434d74f494db7cfc",
-            "0ec392291c3fda2f"
+            "0ec392291c3fda2f",
+            "c43678f82d52004f",
+            "43603c3760e7ae56"
         ],
         "x": 1410,
         "y": 100,
         "wires": [
             [
-                "274e4e6606cb379a"
+                "9d93b8dfe83bf3ca"
             ]
         ],
         "icon": "node-red/file.svg",
         "l": true
-    },
-    {
-        "id": "274e4e6606cb379a",
-        "type": "template",
-        "z": "42b9663b67dbd983",
-        "g": "a64f4a2c837d5c3c",
-        "name": "HTML",
-        "field": "html.body",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<h1>{{ statusCode }}: {{ http.error }}<h1>",
-        "output": "str",
-        "x": 1610,
-        "y": 100,
-        "wires": [
-            [
-                "781d23c946457b30"
-            ]
-        ]
     },
     {
         "id": "50d19d3ce5cf88f2",
@@ -4492,7 +4474,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1790,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
                 "e5ae19af5f6d6561",
@@ -5090,6 +5072,34 @@
         "x": 1960,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "9d93b8dfe83bf3ca",
+        "type": "function",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "name": "HTML",
+        "func": "var content = null;\nvar redirect = null;\n\nif ( msg.statusCode > 399 && msg.statusCode < 300 ){\n    msg.payload = \"<h1>{{ statusCode }}: {{ http.error }}<h1>\";\n    content = msg;\n\n} else {\n    // Redirect\n    delete msg.payload;\n    redirect = msg;\n}\n\nnode.send([\n    content,\n    redirect\n])\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 100,
+        "wires": [
+            [
+                "781d23c946457b30"
+            ],
+            [
+                "e551d77d5412aced"
+            ]
+        ],
+        "outputLabels": [
+            "Content",
+            "Redirect"
+        ],
+        "icon": "font-awesome/fa-question"
     },
     {
         "id": "bb8102ee0c070ff2",
