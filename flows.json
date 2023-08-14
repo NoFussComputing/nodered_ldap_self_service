@@ -489,16 +489,18 @@
             "b73763bef878743f",
             "a42b269766d80f74",
             "842ade29052f7e66",
-            "3a543f0ac74f2891",
-            "f7ac866b468babe1",
             "330ab008da58ac93",
-            "30efda375178f75f",
-            "8e72ce414e21b54f"
+            "957b63c9fc58a139",
+            "02812e8708980b09",
+            "e83ed4274d3959f3",
+            "271cd66b841705be",
+            "06b5d27bbf1e5b16",
+            "32d8df5c0bb564cb"
         ],
         "x": 154,
-        "y": 99,
-        "w": 1142,
-        "h": 162
+        "y": 39,
+        "w": 1732,
+        "h": 202
     },
     {
         "id": "690ee27cf3eee484",
@@ -2191,6 +2193,72 @@
         ]
     },
     {
+        "id": "e83ed4274d3959f3",
+        "type": "junction",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "x": 1640,
+        "y": 140,
+        "wires": [
+            [
+                "de01a4559aecf1c4"
+            ]
+        ]
+    },
+    {
+        "id": "06b5d27bbf1e5b16",
+        "type": "junction",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "x": 1000,
+        "y": 140,
+        "wires": [
+            [
+                "957b63c9fc58a139",
+                "330ab008da58ac93"
+            ]
+        ]
+    },
+    {
+        "id": "32d8df5c0bb564cb",
+        "type": "junction",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "7df31641fc2fe59a"
+            ]
+        ]
+    },
+    {
+        "id": "e551d77d5412aced",
+        "type": "junction",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "x": 1720,
+        "y": 120,
+        "wires": [
+            [
+                "4ed718e1ae800bad"
+            ]
+        ]
+    },
+    {
+        "id": "4ed718e1ae800bad",
+        "type": "junction",
+        "z": "42b9663b67dbd983",
+        "g": "a64f4a2c837d5c3c",
+        "x": 1860,
+        "y": 120,
+        "wires": [
+            [
+                "e5ae19af5f6d6561"
+            ]
+        ]
+    },
+    {
         "id": "160d0b5ed597dc51",
         "type": "ldap",
         "host": "ldap://ldap",
@@ -2921,20 +2989,20 @@
         "props": [
             {
                 "p": "filename",
-                "v": "config.json",
+                "v": "/usr/src/node-red/config.json",
                 "vt": "str"
             }
         ],
         "repeat": "300",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "2",
         "topic": "",
         "x": 290,
-        "y": 180,
+        "y": 100,
         "wires": [
             [
-                "3a543f0ac74f2891"
+                "32d8df5c0bb564cb"
             ]
         ]
     },
@@ -2952,7 +3020,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 630,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "d109fc9821987d4f"
@@ -2969,7 +3037,7 @@
         "action": "obj",
         "pretty": false,
         "x": 770,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "e9127065159b9f0f"
@@ -3004,10 +3072,10 @@
         "to": "",
         "reg": false,
         "x": 890,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
-                "f7ac866b468babe1"
+                "06b5d27bbf1e5b16"
             ]
         ]
     },
@@ -3025,8 +3093,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1180,
-        "y": 180,
+        "x": 1770,
+        "y": 200,
         "wires": []
     },
     {
@@ -3041,7 +3109,7 @@
         "y": 140,
         "wires": [
             [
-                "3a543f0ac74f2891"
+                "32d8df5c0bb564cb"
             ]
         ]
     },
@@ -3053,11 +3121,11 @@
         "name": "",
         "files": "config.glpi.json",
         "recursive": "",
-        "x": 300,
-        "y": 220,
+        "x": 920,
+        "y": 200,
         "wires": [
             [
-                "3a543f0ac74f2891"
+                "330ab008da58ac93"
             ]
         ]
     },
@@ -3074,8 +3142,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 670,
-        "y": 220,
+        "x": 1190,
+        "y": 200,
         "wires": [
             [
                 "a42b269766d80f74"
@@ -3091,8 +3159,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 820,
-        "y": 220,
+        "x": 1340,
+        "y": 200,
         "wires": [
             [
                 "842ade29052f7e66"
@@ -3126,8 +3194,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 220,
+        "x": 1480,
+        "y": 200,
         "wires": [
             [
                 "de01a4559aecf1c4"
@@ -3154,67 +3222,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 555,
-        "y": 220,
+        "x": 1075,
+        "y": 200,
         "wires": [
             [
                 "b73763bef878743f"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "30efda375178f75f",
-        "type": "delay",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 525,
-        "y": 220,
-        "wires": [
-            [
-                "330ab008da58ac93"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "8e72ce414e21b54f",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "config.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 525,
-        "y": 140,
-        "wires": [
-            [
-                "7df31641fc2fe59a"
             ]
         ],
         "l": false
@@ -3230,8 +3242,8 @@
             "1df8ab6bb55ff621",
             "a36e4f9e4921b12a"
         ],
-        "x": 1910,
-        "y": 1160,
+        "x": 2110,
+        "y": 1140,
         "wires": [],
         "l": true
     },
@@ -3937,23 +3949,54 @@
         "l": true
     },
     {
-        "id": "3af3d2ae3286ffe0",
-        "type": "change",
+        "id": "957b63c9fc58a139",
+        "type": "credentials",
         "z": "379c65a27117b46c",
-        "g": "755ff25cc29a08a1",
-        "name": "",
-        "rules": [
+        "g": "b994fe21efb223a9",
+        "name": "Oauth2",
+        "props": [
             {
-                "t": "delete",
-                "p": "_event",
-                "pt": "msg"
+                "value": "config.oauth.client_secret",
+                "type": "global"
             },
             {
+                "value": "config.oauth.client_id",
+                "type": "global"
+            },
+            {
+                "value": "config.oauth.url.token",
+                "type": "global"
+            },
+            {
+                "value": "config.oauth.url.auth",
+                "type": "global"
+            },
+            {
+                "value": "config.oauth.url.callback",
+                "type": "global"
+            }
+        ],
+        "x": 1100,
+        "y": 140,
+        "wires": [
+            [
+                "02812e8708980b09"
+            ]
+        ]
+    },
+    {
+        "id": "02812e8708980b09",
+        "type": "change",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "global.config",
+        "rules": [
+            {
                 "t": "set",
-                "p": "http.response_size",
+                "p": "config.oauth",
                 "pt": "msg",
-                "to": "$length(msg.payload)\t",
-                "tot": "jsonata"
+                "to": "config.oauth",
+                "tot": "global"
             }
         ],
         "action": "",
@@ -3961,18 +4004,32 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2560,
-        "y": 1180,
+        "x": 1230,
+        "y": 140,
         "wires": [
             [
-                "e3043367c9a89a90",
-                "564400f9ec708521"
+                "e83ed4274d3959f3"
             ]
         ]
     },
     {
-        "id": "c6360f6028e1512c",
-        "type": "function",
+        "id": "271cd66b841705be",
+        "type": "debug",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "Config read",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 80,
+        "wires": []
+    },
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
         "name": "Details",
