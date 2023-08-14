@@ -4,7 +4,8 @@
     "version": "0.0.1",
     "dependencies": {
         "node-red-contrib-better-ldap": "0.1.2",
-        "node-red-contrib-filesystem": "1.0.0"
+        "node-red-contrib-filesystem": "1.0.0",
+        "node-red-contrib-credentials": "0.2.2"
     },
     "node-red": {
         "settings": {
