@@ -1,0 +1,28 @@
+variables:
+  MY_PROJECT_ID: "48321671"
+  GIT_SYNC_URL: "https://$GITHUB_USERNAME_ROBOT:$GITHUB_TOKEN_ROBOT@github.com/NoFussComputing/nodered_ldap_self_service.git"
+  
+  DOCKER_IMAGE_BUILD_TARGET_PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
+  DOCKER_IMAGE_PUBLISH_NAME: 'ldap-selfservice'
+  DOCKER_IMAGE_PUBLISH_REGISTRY: docker.io/nofusscomputing
+  DOCKER_IMAGE_PUBLISH_URL: https://hub.docker.com/r/nofusscomputing/$DOCKER_IMAGE_PUBLISH_NAME
+  PAGES_ENVIRONMENT_PATH: projects/ldap_self_service/
+
+include:
+  - project: nofusscomputing/projects/gitlab-ci
+    ref: development
+    file:
+      - template/automagic.gitlab-ci.yaml
+
+
+Github (Push --mirror):
+  extends:
+    - .git_push_mirror
+  needs: []
+  rules:
+    - if: $GIT_SYNC_URL == null
+      when: never
+    - if: # Always sync including working branches
+        $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
