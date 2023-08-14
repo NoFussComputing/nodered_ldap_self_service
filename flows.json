@@ -484,44 +484,18 @@
             "e9127065159b9f0f",
             "de01a4559aecf1c4",
             "36cf43c754570ebd",
-            "1fb718bcdd65dc23",
-            "b73763bef878743f",
-            "a42b269766d80f74",
             "842ade29052f7e66",
-            "330ab008da58ac93",
             "957b63c9fc58a139",
             "02812e8708980b09",
             "e83ed4274d3959f3",
-            "271cd66b841705be",
             "06b5d27bbf1e5b16",
-            "32d8df5c0bb564cb"
+            "32d8df5c0bb564cb",
+            "fb7fea44905cf7a4"
         ],
         "x": 154,
-        "y": 39,
-        "w": 1732,
-        "h": 202
-    },
-    {
-        "id": "690ee27cf3eee484",
-        "type": "group",
-        "z": "42b9663b67dbd983",
-        "name": "Development: Create GLPI Config File",
-        "style": {
-            "stroke": "#0070c0",
-            "fill": "#b797cf",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "742f2f88646c543a",
-            "b54ff25c1e83a094",
-            "da2cb448945babee",
-            "d5627c7a12528006"
-        ],
-        "x": 1314,
-        "y": 319,
-        "w": 772,
-        "h": 82
+        "y": 59,
+        "w": 1432,
+        "h": 182
     },
     {
         "id": "3b247f5e5d90963e",
@@ -2100,7 +2074,7 @@
         "type": "junction",
         "z": "379c65a27117b46c",
         "g": "b994fe21efb223a9",
-        "x": 1640,
+        "x": 1340,
         "y": 140,
         "wires": [
             [
@@ -2118,7 +2092,7 @@
         "wires": [
             [
                 "957b63c9fc58a139",
-                "330ab008da58ac93"
+                "fb7fea44905cf7a4"
             ]
         ]
     },
@@ -2996,7 +2970,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
+        "x": 1470,
         "y": 200,
         "wires": []
     },
@@ -3017,73 +2991,12 @@
         ]
     },
     {
-        "id": "1fb718bcdd65dc23",
-        "type": "watch",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "",
-        "files": "config.glpi.json",
-        "recursive": "",
-        "x": 920,
-        "y": 200,
-        "wires": [
-            [
-                "330ab008da58ac93"
-            ]
-        ]
-    },
-    {
-        "id": "b73763bef878743f",
-        "type": "file in",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "Open GLPI  Config File",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1190,
-        "y": 200,
-        "wires": [
-            [
-                "a42b269766d80f74"
-            ]
-        ]
-    },
-    {
-        "id": "a42b269766d80f74",
-        "type": "json",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 1340,
-        "y": 200,
-        "wires": [
-            [
-                "842ade29052f7e66"
-            ]
-        ]
-    },
-    {
         "id": "842ade29052f7e66",
         "type": "change",
         "z": "379c65a27117b46c",
         "g": "b994fe21efb223a9",
         "name": "global.config.glpi",
         "rules": [
-            {
-                "t": "set",
-                "p": "config.glpi",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
             {
                 "t": "set",
                 "p": "CurrentGlobalConfig",
@@ -3097,42 +3010,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
+        "x": 1250,
         "y": 200,
         "wires": [
             [
                 "de01a4559aecf1c4"
             ]
         ]
-    },
-    {
-        "id": "330ab008da58ac93",
-        "type": "change",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "config.glpi.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1075,
-        "y": 200,
-        "wires": [
-            [
-                "b73763bef878743f"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "64c99b312f9c601c",
@@ -3566,8 +3450,7 @@
         "y": 420,
         "wires": [
             [
-                "46d8b11bdef459aa",
-                "719e034af3c723aa"
+                "46d8b11bdef459aa"
             ]
         ],
         "icon": "font-awesome/fa-lock"
@@ -3594,8 +3477,7 @@
                 "e282aea37a90acdc"
             ],
             [
-                "5f2f87eeebd5bf6e",
-                "4ded783ceb23864d"
+                "5f2f87eeebd5bf6e"
             ]
         ],
         "outputLabels": [
@@ -3936,9 +3818,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "config.oauth",
+                "p": "CurrentGlobalConfig",
                 "pt": "msg",
-                "to": "config.oauth",
+                "to": "config",
                 "tot": "global"
             }
         ],
@@ -3956,58 +3838,6 @@
         ]
     },
     {
-        "id": "271cd66b841705be",
-        "type": "debug",
-        "z": "379c65a27117b46c",
-        "g": "b994fe21efb223a9",
-        "name": "Config read",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "4ded783ceb23864d",
-        "type": "debug",
-        "z": "379c65a27117b46c",
-        "name": "debug 156",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2070,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "719e034af3c723aa",
-        "type": "debug",
-        "z": "379c65a27117b46c",
-        "name": "debug 157",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1510,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "3dc07bb0a7d4f647",
         "type": "link out",
         "z": "379c65a27117b46c",
@@ -4022,6 +3852,43 @@
         "wires": [],
         "icon": "font-awesome/fa-hand-stop-o",
         "l": true
+    },
+    {
+        "id": "fb7fea44905cf7a4",
+        "type": "credentials",
+        "z": "379c65a27117b46c",
+        "g": "b994fe21efb223a9",
+        "name": "GLPI",
+        "props": [
+            {
+                "value": "config.glpi.api_url",
+                "type": "global"
+            },
+            {
+                "value": "config.glpi.authorization",
+                "type": "global"
+            },
+            {
+                "value": "config.glpi.app_token",
+                "type": "global"
+            },
+            {
+                "value": "config.glpi.category_id_automation_task",
+                "type": "global"
+            },
+            {
+                "value": "config.glpi.debug_on",
+                "type": "global"
+            }
+        ],
+        "x": 1110,
+        "y": 200,
+        "wires": [
+            [
+                "842ade29052f7e66"
+            ]
+        ],
+        "info": "# GLPI Configuration\n\nThis node stores it's values within `flows_cred.json` and therefor takes advantage of encrypting the values.\n\n## Structure\n\n``` json\n\n{\n  \"api_url\": \"http://glpi/apirest.php/\",\n  \"authorization\": \"user_token ***\",\n  \"app_token\": \"\",\n  \"category_id_automation_task\": 0,\n  \"debug_on\": false\n}\n\n```\n\n| item | type | description |\n|:---:|:---:|:---|\n| api_url | `string` | URL for the API `{protocol}://{domain}/apirest.php/` |\n| authorization | `string` | Auth token suffixed with `user_token` |\n| app_token | `string` | Application token |\n| category_id_automation_task | `int` | the category for this automation task to be applied to the ticket task |\n| debug_on | `bool` | Authentication Callback URL, this value must always be `{protocol}://{domain}/callback`. i.e. `http://127.0.0.1:1881/callback` |\n "
     },
     {
         "id": "02c4b9524d361ade",
@@ -4957,94 +4824,6 @@
         "statusType": "auto",
         "x": 1940,
         "y": 240,
-        "wires": []
-    },
-    {
-        "id": "742f2f88646c543a",
-        "type": "template",
-        "z": "42b9663b67dbd983",
-        "g": "690ee27cf3eee484",
-        "name": "Content",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{\n  \"api_url\": \"http://glpi/apirest.php/\",\n  \"authorization\": \"user_token W6Ay7cdu38KuQCpYaZw5E7fxk4q8dYSrz38EsPuK\",\n  \"app_token\": \"SwiMCd61d6qcfCoFCziotpJgBafl15vQCdRwHJ47\",\n  \"category_id_automation_task\": \"2\",\n  \"debug_on\": false\n}",
-        "output": "json",
-        "x": 1580,
-        "y": 360,
-        "wires": [
-            [
-                "da2cb448945babee"
-            ]
-        ]
-    },
-    {
-        "id": "b54ff25c1e83a094",
-        "type": "inject",
-        "z": "42b9663b67dbd983",
-        "g": "690ee27cf3eee484",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1430,
-        "y": 360,
-        "wires": [
-            [
-                "742f2f88646c543a"
-            ]
-        ]
-    },
-    {
-        "id": "da2cb448945babee",
-        "type": "file",
-        "z": "42b9663b67dbd983",
-        "g": "690ee27cf3eee484",
-        "name": "",
-        "filename": "config.glpi.json",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1780,
-        "y": 360,
-        "wires": [
-            [
-                "d5627c7a12528006"
-            ]
-        ]
-    },
-    {
-        "id": "d5627c7a12528006",
-        "type": "debug",
-        "z": "42b9663b67dbd983",
-        "g": "690ee27cf3eee484",
-        "name": "Config Written",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1960,
-        "y": 360,
         "wires": []
     },
     {
