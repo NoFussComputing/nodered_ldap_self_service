@@ -835,11 +835,12 @@
             "28713941e03e2bf5",
             "adbfd4257ea1c230",
             "c6360f6028e1512c",
-            "b174f7bc1d398a56"
+            "b174f7bc1d398a56",
+            "3dc07bb0a7d4f647"
         ],
         "x": 174,
         "y": 339,
-        "w": 532,
+        "w": 552,
         "h": 162,
         "info": "# Methods\n\nThis sub-group is provides the http endpoints for the supported methods."
     },
@@ -3600,8 +3601,8 @@
         "links": [
             "2f1060b185e19215"
         ],
-        "x": 610,
-        "y": 400,
+        "x": 630,
+        "y": 380,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3646,13 +3647,13 @@
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
         "name": "Details",
-        "func": "var cont = null;\nvar callback = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nmsg.http = {\n    \"client\": msg.req.connection.remoteAddress,\n    \"headers\": msg.req.headers,\n    \"timestamp\": Date.now()\n}\n\nif (msg.req.params[\"0\"] == 'callback' ){\n\n    status.fill = 'blue';\n    status.text = 'Oauth2 Callback';\n\n    callback = msg;\n\n}else{\n\n    status.fill = 'green';\n    status.text = 'Continue';\n\n    cont = msg;\n\n}\n\nnode.status( status );\n\nnode.send([\n    cont,\n    callback\n]);\n",
-        "outputs": 2,
+        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.oauth2\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n    msg.http = {\n        \"client\": msg.req.connection.remoteAddress,\n        \"headers\": msg.req.headers,\n        \"timestamp\": Date.now()\n    }\n\n    if (msg.req.params[\"0\"] == 'callback' ){\n\n        status.fill = 'blue';\n        status.text = 'Oauth2 Callback';\n\n        callback = msg;\n\n    }else{\n\n        status.fill = 'green';\n        status.text = 'Continue';\n\n        cont = msg;\n\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured\n]);\n",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 470,
         "y": 420,
         "wires": [
             [
@@ -3660,11 +3661,15 @@
             ],
             [
                 "b174f7bc1d398a56"
+            ],
+            [
+                "3dc07bb0a7d4f647"
             ]
         ],
         "outputLabels": [
             "Continue",
-            "Oauth2 Callback"
+            "Oauth2 Callback",
+            "Server Not Configured"
         ],
         "icon": "font-awesome/fa-info-circle",
         "info": "# Details\n\nAdds the HTTP request details to object `msg.http`."
@@ -3709,7 +3714,8 @@
         "name": "HTTP/StatusCode",
         "links": [
             "5f2f87eeebd5bf6e",
-            "5b97592fe62125c7"
+            "5b97592fe62125c7",
+            "3dc07bb0a7d4f647"
         ],
         "x": 290,
         "y": 640,
@@ -3789,8 +3795,8 @@
         "links": [
             "9f416bc258c1a60c"
         ],
-        "x": 610,
-        "y": 440,
+        "x": 630,
+        "y": 420,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3933,6 +3939,22 @@
         "x": 1510,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "3dc07bb0a7d4f647",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "name": "No Config",
+        "mode": "link",
+        "links": [
+            "5ad10ea406e2d3a7"
+        ],
+        "x": 620,
+        "y": 460,
+        "wires": [],
+        "icon": "font-awesome/fa-hand-stop-o",
+        "l": true
     },
     {
         "id": "02c4b9524d361ade",
