@@ -9,19 +9,22 @@ edit_uri: '/-/ide/project/nofusscomputing/projects/nodered_ldap_self_service/edi
 nav:
 - Home: index.md
 
-- Articles: 
+- Articles:
 
   - articles/index.md
 
-- Projects: 
+- Projects:
 
   - projects/index.md
 
   - projects/ldap_self_service/index.md
 
-- Operations: 
+  - docker:
+
+    - projects/ldap_self_service/docker.md
+
+- Operations:
 
   - operations/index.md
 
 - Contact Us: contact.md
-

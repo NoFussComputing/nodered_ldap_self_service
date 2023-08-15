@@ -35,6 +35,8 @@ General Features:
 
     - Remove expired sessions
 
+- scripts to (en/de)crypt the `flows_cred.json`
+
 
 ## Usage
 
@@ -42,30 +44,8 @@ There are two ways to use this NodeRed flow:
 
 1. Clone to the data directory of your NodeRED insance
 
-1. Use our pre-built docker image
-
-
-### Docker Image
-
-!!! info
-    The docker image is available via `docker pull nofusscomputing/ldap-selfservice` available tags are detailed below
-
-
-Available tags for the docker image is as follows:
-
-- `dev` The current working head of the repositories `development` branch.
-
-- `{\d}.{\d}.{\d}rc{\d}` The tag on the repositories `development` branch.
-
-- `{\d}.{\d}.{\d}` The tag on the repositories `master` branch. _considered stable_
-
-- `latest` The current working head of the repositories `master` branch. _considered stable_
-
-
-[This docker image](https://hub.docker.com/r/nofusscomputing/ldap-selfservice) is designed to be behind a reverse-proxy. The proxy will be the service that provides ingress logging and `HTTPS` termination. NodeRED serves the the Self-Service site on `HTTP/80` at the `/` path with `/admin` path available for administering the flows. If when starting the docker container you specify an environmental variable of `NODE_RED_CREDENTIAL_SECRET` it will be used by NodeRED to decrypt your `flows_cred.json` file.
-
-Data for the container is stored in two volumes `/data` and `/usr/src/node-red`. The repo does contain a `flows_cred.json` file, however this is our credential file. It's recommended that you log into the flows admin and set the credentials to your desired values. Export it and as part of the deployment process, mount a read-only copy of your `flows_cred.json` file to path `/data/flows_cred.json` within the container.
+1. [Use our pre-built docker image](docker.md)
 
 !!! danger "Security"
-    Path `/admin` should not be made publically available, as access to this path grants full access to the backend as well as access to passwords and secrets from your `flows_cred.json` file.
+    if you choose your own NodeRED instance to deploy LDAP Self-Service, Care must be taken to ensure that the path the flows admin is on not be publically available, as access to this path grants full access to the backend as well as access to passwords and secrets from your `flows_cred.json` file.
 
