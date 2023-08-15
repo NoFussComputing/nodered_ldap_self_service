@@ -81,7 +81,9 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 122
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -102,7 +104,9 @@
             "317930c679e833d1"
         ],
         "x": 154,
-        "y": 679
+        "y": 679,
+        "w": 1092,
+        "h": 82
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -121,7 +125,9 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299
+        "y": 299,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -143,7 +149,9 @@
             "4ed718e1ae800bad"
         ],
         "x": 1314,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 127
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -161,7 +169,9 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -180,7 +190,9 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419
+        "y": 419,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -199,7 +211,9 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539
+        "y": 539,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "d3393ec35cb20a93",
@@ -217,7 +231,9 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139
+        "y": 139,
+        "w": 462,
+        "h": 82
     },
     {
         "id": "3e330505ea1e9cba",
@@ -235,7 +251,9 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139
+        "y": 139,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "b447a1f691eb02df",
@@ -254,7 +272,9 @@
             "b19bd0621d479d66"
         ],
         "x": 154,
-        "y": 999
+        "y": 999,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "0d96945ec7d069cb",
@@ -272,9 +292,7 @@
             "540882a95f65754c"
         ],
         "x": 114,
-        "y": 79,
-        "w": 972,
-        "h": 109.5
+        "y": 79
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -292,9 +310,7 @@
             "0f2ff2f433d17eef"
         ],
         "x": 114,
-        "y": 239,
-        "w": 912,
-        "h": 82
+        "y": 239
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -343,9 +359,7 @@
             "8e670403cf071aaf"
         ],
         "x": 114,
-        "y": 359,
-        "w": 1012,
-        "h": 122
+        "y": 359
     },
     {
         "id": "9b1493c4ae19a935",
@@ -366,8 +380,6 @@
         ],
         "x": 94,
         "y": 639,
-        "w": 4744,
-        "h": 834,
         "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
@@ -421,8 +433,6 @@
         ],
         "x": 94,
         "y": 1527,
-        "w": 3012,
-        "h": 1334,
         "info": "# Authentication\n\nThis group is responsible for ensuring the user is authorized to access the system. \nAny valid user account that authenticates to the system is authorized.\n\nFrom entry the next step in the process is cookie validation.\n\n## Input Data\n\nThis group has two paths for entry: \n\n1. Cookie Found - `msg.req.cookies.auth` key exists\n\n    > Value is the session name.\n\n1. No Cookie Found - `msg.req.cookies.auth` key does not exist\n\n    > User to be redirected to authentication method\n\n\n## Output Data\n\nThis group does not always not return data. \nData returned is only stored in `msg.session`.\n\n### Authenticated User\n\n`msg.session` is returned with the Authentication data contained. \n\nThis data will either be from a stored session (user authenticated previously) or be created via the authentication method.\nThere are two session types and they are `token` and `oauth2`. Session types are directly tied to the method of authentication.\n\n`msg.session` structure\n\n``` json\n{\n  \"session\": {\n    \"datetime\": \"{session expiry}\",\n    \"type\": \"token\",\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    },\n    \"oauth2\": {\n      // Only if type=oauth2\n    }\n  }\n}\n\n```\n\n### Non-Authenticated User\n\nNo data is returned if the user is not authenticated. The absense of `msg.session` denotes an unauthenticated user.\n"
     },
     {
@@ -443,7 +453,9 @@
             "befac3bb99b2c2cc"
         ],
         "x": 1314,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "b994fe21efb223a9",
@@ -596,9 +608,24 @@
             "b595d8148f247f69"
         ],
         "x": 114,
-        "y": 519,
-        "w": 992,
-        "h": 82
+        "y": 519
+    },
+    {
+        "id": "8f9d362a10096ca7",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [],
+        "x": 0,
+        "y": 0
     },
     {
         "id": "aea0a3398dafab4c",
@@ -638,9 +665,7 @@
             "d7dbd3970c891c33"
         ],
         "x": 234,
-        "y": 813,
-        "w": 4578,
-        "h": 634
+        "y": 813
     },
     {
         "id": "82ccba0e0a13970a",
@@ -1098,9 +1123,7 @@
             "bcaed4334222c14a"
         ],
         "x": 508,
-        "y": 1553,
-        "w": 1204,
-        "h": 234
+        "y": 1553
     },
     {
         "id": "cc33365c2aa59e35",
@@ -1121,9 +1144,7 @@
             "5851acefa1f1b5ff"
         ],
         "x": 514,
-        "y": 1813,
-        "w": 2072,
-        "h": 334
+        "y": 1813
     },
     {
         "id": "7225c45ad941c14f",
@@ -1152,8 +1173,6 @@
         ],
         "x": 514,
         "y": 2193,
-        "w": 2078,
-        "h": 394,
         "info": "# Oauth2 Authentication\n\n"
     },
     {
@@ -1186,9 +1205,7 @@
             "e2cbcdcc69e9ce21"
         ],
         "x": 234,
-        "y": 2639,
-        "w": 2352,
-        "h": 182
+        "y": 2639
     },
     {
         "id": "ed0645c12f7435b2",
@@ -1221,9 +1238,7 @@
             "5a961504d7ca5be3"
         ],
         "x": 754,
-        "y": 1051.5,
-        "w": 4032,
-        "h": 369.5
+        "y": 1051.5
     },
     {
         "id": "d7dbd3970c891c33",
@@ -1248,9 +1263,7 @@
             "a888a2ed9a053acc"
         ],
         "x": 754,
-        "y": 839,
-        "w": 1412,
-        "h": 182
+        "y": 839
     },
     {
         "id": "75c44e5f7f101beb",
@@ -1270,9 +1283,7 @@
             "95f44fbb0ddd39fc"
         ],
         "x": 754,
-        "y": 1839,
-        "w": 672,
-        "h": 122
+        "y": 1839
     },
     {
         "id": "bcaed4334222c14a",
@@ -1299,8 +1310,6 @@
         ],
         "x": 534,
         "y": 1579,
-        "w": 1152,
-        "h": 182,
         "info": "# Cookie Validation\n\nThis path is always executed and is the first step in the authentication workflow. \n\nThis groups workflow is as follows:\n\n1. fetch the value of `msg.req.cookies.auth`\n\n    * if empty/null. User needs to logon\n\n    * value found, goto step 2\n\n2. open the session file using the value of `msg.req.cookies.auth`\n\n3. set `msg.session` with the contents of the file\n\n4. Route for further validation based off of type `oauth2` or `token`.\n\nthe existance of path `msg.req.cookies.auth` alludes to a user that has authenticated previously. \nWhilst this value could be guessed, it is highly unlikely.\n"
     },
     {
@@ -1324,9 +1333,7 @@
             "444cde06405f24e3"
         ],
         "x": 1034,
-        "y": 2439,
-        "w": 972,
-        "h": 122
+        "y": 2439
     },
     {
         "id": "f5e65e1ae7e8b812",
@@ -1354,119 +1361,7 @@
             "54e638b390e13c61"
         ],
         "x": 1034,
-        "y": 2219,
-        "w": 1532,
-        "h": 202
-    },
-    {
-        "id": "85fa24886e126df7",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "ed0645c12f7435b2",
-        "name": "Ticket Solution",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#bfdbef",
-            "label": true
-        },
-        "nodes": [
-            "40208ed719417cac",
-            "803a8b65fc7a5087",
-            "96766518a046855d",
-            "242b471ad711a4f1",
-            "1305e2f195ec5ede",
-            "285f57c0fee687a1"
-        ],
-        "x": 2234,
-        "y": 1259,
-        "w": 1472,
-        "h": 82
-    },
-    {
-        "id": "aa5626527a9df701",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "ed0645c12f7435b2",
-        "name": "Ticket Task",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#bfdbef",
-            "label": true
-        },
-        "nodes": [
-            "351440700b3e2ecc",
-            "f17ccfa845461657"
-        ],
-        "x": 2228,
-        "y": 1093,
-        "w": 2204,
-        "h": 134
-    },
-    {
-        "id": "351440700b3e2ecc",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "aa5626527a9df701",
-        "name": "Create",
-        "style": {
-            "stroke": "#001f60",
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "fb6750555645b873",
-            "e0660324da4581dd"
-        ],
-        "x": 2254,
-        "y": 1119,
-        "w": 492,
-        "h": 82
-    },
-    {
-        "id": "f17ccfa845461657",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "aa5626527a9df701",
-        "name": "Update",
-        "style": {
-            "stroke": "#001f60",
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "eacbafc05d06b95a",
-            "76cd564b69443419",
-            "ca1b9c48c3c0c522",
-            "d64e9c631ee7ec87",
-            "cafa50da13d9e5d9",
-            "c2f8e99492223cfb",
-            "fdf014eff1962329"
-        ],
-        "x": 2794,
-        "y": 1119,
-        "w": 1612,
-        "h": 82
-    },
-    {
-        "id": "8f9d362a10096ca7",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [],
-        "x": null,
-        "y": null,
-        "w": 40,
-        "h": 40
+        "y": 2219
     },
     {
         "id": "5851acefa1f1b5ff",
@@ -1494,9 +1389,90 @@
         ],
         "x": 754,
         "y": 1999,
-        "w": 1302,
-        "h": 122,
         "info": "# Token Generate\n\nThis sub-group contains the nodes required to generate an authentication token.\n\nThere are two entrypoints for this group:\n\n1. _(Development)_ Click on the generate token to create one for a abritary user\n\n1. `Token: Generate` Link-In node. This is used for other flows which may require a token to be generated for a user. Details must be provided.\n\nThe latter is useful if you create a user with a random password and they need a method to be able to reset it.\n\n## Input Data\n\nthis node requires an object at path `msg.auth.user`.\n\n``` json\n\nmsg.auth.user = {\n    \"username\": \"barny.gumble\",\n    \"fname\": \"Barny\",\n    \"lname\": \"Gumble\",\n    \"mail\": \"barney.gumble@dinomail.com\"\n    };\n\n```\n\n**NOTE:** _Missing any of the `json` attributes will prevent the user from resetting their password as all of these fields are required._\n"
+    },
+    {
+        "id": "85fa24886e126df7",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Ticket Solution",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "40208ed719417cac",
+            "803a8b65fc7a5087",
+            "96766518a046855d",
+            "242b471ad711a4f1",
+            "1305e2f195ec5ede",
+            "285f57c0fee687a1"
+        ],
+        "x": 2234,
+        "y": 1259
+    },
+    {
+        "id": "aa5626527a9df701",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "ed0645c12f7435b2",
+        "name": "Ticket Task",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "351440700b3e2ecc",
+            "f17ccfa845461657"
+        ],
+        "x": 2228,
+        "y": 1093
+    },
+    {
+        "id": "351440700b3e2ecc",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "aa5626527a9df701",
+        "name": "Create",
+        "style": {
+            "stroke": "#001f60",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "fb6750555645b873",
+            "e0660324da4581dd"
+        ],
+        "x": 2254,
+        "y": 1119
+    },
+    {
+        "id": "f17ccfa845461657",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "aa5626527a9df701",
+        "name": "Update",
+        "style": {
+            "stroke": "#001f60",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "eacbafc05d06b95a",
+            "76cd564b69443419",
+            "ca1b9c48c3c0c522",
+            "d64e9c631ee7ec87",
+            "cafa50da13d9e5d9",
+            "c2f8e99492223cfb",
+            "fdf014eff1962329"
+        ],
+        "x": 2794,
+        "y": 1119
     },
     {
         "id": "5798e39cbc3730ae",
@@ -4065,7 +4041,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>Main Menu</h2></legend>\n\n    <p style=\"text-align: left;\">G'Day {{{ session.user.fname}}}</p>\n\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>Main Menu</h2></legend>\n\n    <p style=\"text-align: left;\">G'Day {{{ session.user.fname}}}</p>\n\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n{{/global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}logout';\">Log Out</button>\n\n</fieldset>",
         "x": 450,
         "y": 340,
         "wires": [
