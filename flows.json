@@ -292,7 +292,9 @@
             "540882a95f65754c"
         ],
         "x": 114,
-        "y": 79
+        "y": 79,
+        "w": 972,
+        "h": 109.5
     },
     {
         "id": "bcd2727d77a80ce3",
@@ -310,7 +312,9 @@
             "0f2ff2f433d17eef"
         ],
         "x": 114,
-        "y": 239
+        "y": 239,
+        "w": 912,
+        "h": 82
     },
     {
         "id": "3b96ab15b1a54e33",
@@ -341,7 +345,9 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119
+        "y": 119,
+        "w": 2312,
+        "h": 182
     },
     {
         "id": "10a6c6b12749dda9",
@@ -359,7 +365,9 @@
             "8e670403cf071aaf"
         ],
         "x": 114,
-        "y": 359
+        "y": 359,
+        "w": 1012,
+        "h": 122
     },
     {
         "id": "9b1493c4ae19a935",
@@ -380,6 +388,8 @@
         ],
         "x": 94,
         "y": 639,
+        "w": 4744,
+        "h": 834,
         "info": "# Input Format\n\n``` json\n{\n    \"data\": {\n        // contains the data for the action\n    },\n    \"action\": \"search\",\n    \"action_for\": \"user\"\n}\n```"
     },
     {
@@ -405,6 +415,8 @@
         ],
         "x": 128,
         "y": 333,
+        "w": 2798,
+        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
@@ -514,6 +526,8 @@
         ],
         "x": 128,
         "y": 1133,
+        "w": 4704,
+        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -566,7 +580,9 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99
+        "y": 99,
+        "w": 1192,
+        "h": 282
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -594,7 +610,9 @@
             "291408859782056d"
         ],
         "x": 1274,
-        "y": 99
+        "y": 99,
+        "w": 1872,
+        "h": 142
     },
     {
         "id": "e8558844b3710e7b",
@@ -613,7 +631,9 @@
             "b595d8148f247f69"
         ],
         "x": 114,
-        "y": 519
+        "y": 519,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "8f9d362a10096ca7",
@@ -630,7 +650,9 @@
         },
         "nodes": [],
         "x": 0,
-        "y": 0
+        "y": 0,
+        "w": 40,
+        "h": 40
     },
     {
         "id": "aea0a3398dafab4c",
@@ -649,7 +671,9 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999
+        "y": 999,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "9858d84dc9d001be",
@@ -670,7 +694,9 @@
             "d7dbd3970c891c33"
         ],
         "x": 234,
-        "y": 813
+        "y": 813,
+        "w": 4578,
+        "h": 634
     },
     {
         "id": "82ccba0e0a13970a",
@@ -688,7 +714,9 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899
+        "y": 899,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "d0dc259791aed430",
@@ -711,7 +739,9 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959
+        "y": 959,
+        "w": 1432,
+        "h": 122
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -733,7 +763,9 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819
+        "y": 819,
+        "w": 912,
+        "h": 122
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -759,7 +791,9 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519
+        "y": 519,
+        "w": 1752,
+        "h": 122
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -785,7 +819,9 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659
+        "y": 659,
+        "w": 1452,
+        "h": 142
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -808,7 +844,9 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159
+        "y": 1159,
+        "w": 1072,
+        "h": 122
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -1039,6 +1077,8 @@
         ],
         "x": 154,
         "y": 359,
+        "w": 972,
+        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1061,6 +1101,8 @@
         ],
         "x": 154,
         "y": 1159,
+        "w": 812,
+        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
     },
     {
@@ -1085,6 +1127,8 @@
         ],
         "x": 2214,
         "y": 1159,
+        "w": 1152,
+        "h": 122,
         "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
@@ -1110,6 +1154,8 @@
         ],
         "x": 3394,
         "y": 1159,
+        "w": 1412,
+        "h": 122,
         "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
@@ -1127,8 +1173,10 @@
         "nodes": [
             "bcaed4334222c14a"
         ],
-        "x": 508,
-        "y": 1553
+        "x": 768,
+        "y": 1553,
+        "w": 1204,
+        "h": 234
     },
     {
         "id": "cc33365c2aa59e35",
@@ -1148,8 +1196,10 @@
             "a4bc5830daf9801a",
             "5851acefa1f1b5ff"
         ],
-        "x": 514,
-        "y": 1813
+        "x": 774,
+        "y": 1813,
+        "w": 2072,
+        "h": 334
     },
     {
         "id": "7225c45ad941c14f",
@@ -1176,8 +1226,10 @@
             "261436c730a46051",
             "97fb6e1471c0f7cd"
         ],
-        "x": 514,
+        "x": 774,
         "y": 2193,
+        "w": 2078,
+        "h": 394,
         "info": "# Oauth2 Authentication\n\n"
     },
     {
@@ -1210,7 +1262,9 @@
             "e2cbcdcc69e9ce21"
         ],
         "x": 234,
-        "y": 2639
+        "y": 2639,
+        "w": 2352,
+        "h": 182
     },
     {
         "id": "ed0645c12f7435b2",
@@ -1243,7 +1297,9 @@
             "5a961504d7ca5be3"
         ],
         "x": 754,
-        "y": 1051.5
+        "y": 1051.5,
+        "w": 4032,
+        "h": 369.5
     },
     {
         "id": "d7dbd3970c891c33",
@@ -1268,7 +1324,9 @@
             "a888a2ed9a053acc"
         ],
         "x": 754,
-        "y": 839
+        "y": 839,
+        "w": 1412,
+        "h": 182
     },
     {
         "id": "75c44e5f7f101beb",
@@ -1287,8 +1345,10 @@
             "8b1fef39c34f5513",
             "95f44fbb0ddd39fc"
         ],
-        "x": 754,
-        "y": 1839
+        "x": 1014,
+        "y": 1839,
+        "w": 672,
+        "h": 122
     },
     {
         "id": "bcaed4334222c14a",
@@ -1313,8 +1373,10 @@
             "9cbf4beaceba5255",
             "da0811fbd7963934"
         ],
-        "x": 534,
+        "x": 794,
         "y": 1579,
+        "w": 1152,
+        "h": 182,
         "info": "# Cookie Validation\n\nThis path is always executed and is the first step in the authentication workflow. \n\nThis groups workflow is as follows:\n\n1. fetch the value of `msg.req.cookies.auth`\n\n    * if empty/null. User needs to logon\n\n    * value found, goto step 2\n\n2. open the session file using the value of `msg.req.cookies.auth`\n\n3. set `msg.session` with the contents of the file\n\n4. Route for further validation based off of type `oauth2` or `token`.\n\nthe existance of path `msg.req.cookies.auth` alludes to a user that has authenticated previously. \nWhilst this value could be guessed, it is highly unlikely.\n"
     },
     {
@@ -1337,8 +1399,10 @@
             "a49db4bcea29097d",
             "444cde06405f24e3"
         ],
-        "x": 1034,
-        "y": 2439
+        "x": 1294,
+        "y": 2439,
+        "w": 972,
+        "h": 122
     },
     {
         "id": "f5e65e1ae7e8b812",
@@ -1365,8 +1429,10 @@
             "36c7736ada06ef15",
             "54e638b390e13c61"
         ],
-        "x": 1034,
-        "y": 2219
+        "x": 1294,
+        "y": 2219,
+        "w": 1532,
+        "h": 202
     },
     {
         "id": "5851acefa1f1b5ff",
@@ -1392,8 +1458,10 @@
             "1dc714dfeaa9a42d",
             "a68c08dfd9ce3d8c"
         ],
-        "x": 754,
+        "x": 1014,
         "y": 1999,
+        "w": 1302,
+        "h": 122,
         "info": "# Token Generate\n\nThis sub-group contains the nodes required to generate an authentication token.\n\nThere are two entrypoints for this group:\n\n1. _(Development)_ Click on the generate token to create one for a abritary user\n\n1. `Token: Generate` Link-In node. This is used for other flows which may require a token to be generated for a user. Details must be provided.\n\nThe latter is useful if you create a user with a random password and they need a method to be able to reset it.\n\n## Input Data\n\nthis node requires an object at path `msg.auth.user`.\n\n``` json\n\nmsg.auth.user = {\n    \"username\": \"barny.gumble\",\n    \"fname\": \"Barny\",\n    \"lname\": \"Gumble\",\n    \"mail\": \"barney.gumble@dinomail.com\"\n    };\n\n```\n\n**NOTE:** _Missing any of the `json` attributes will prevent the user from resetting their password as all of these fields are required._\n"
     },
     {
@@ -1416,7 +1484,9 @@
             "285f57c0fee687a1"
         ],
         "x": 2234,
-        "y": 1259
+        "y": 1259,
+        "w": 1472,
+        "h": 82
     },
     {
         "id": "aa5626527a9df701",
@@ -1434,7 +1504,9 @@
             "f17ccfa845461657"
         ],
         "x": 2228,
-        "y": 1093
+        "y": 1093,
+        "w": 2204,
+        "h": 134
     },
     {
         "id": "351440700b3e2ecc",
@@ -1453,7 +1525,9 @@
             "e0660324da4581dd"
         ],
         "x": 2254,
-        "y": 1119
+        "y": 1119,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "f17ccfa845461657",
@@ -1477,7 +1551,9 @@
             "fdf014eff1962329"
         ],
         "x": 2794,
-        "y": 1119
+        "y": 1119,
+        "w": 1612,
+        "h": 82
     },
     {
         "id": "5798e39cbc3730ae",
@@ -7235,7 +7311,7 @@
             "627a72eee1e26ae6",
             "b174f7bc1d398a56"
         ],
-        "x": 610,
+        "x": 870,
         "y": 2240,
         "wires": [
             [
@@ -7942,7 +8018,7 @@
             "20aae4d90a07f156",
             "54e638b390e13c61"
         ],
-        "x": 1570,
+        "x": 1830,
         "y": 1620,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -7962,7 +8038,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1370,
+        "x": 1630,
         "y": 1700,
         "wires": []
     },
@@ -7978,7 +8054,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1640,
         "y": 1640,
         "wires": [
             [
@@ -8008,7 +8084,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1180,
+        "x": 1440,
         "y": 1640,
         "wires": [
             [
@@ -8027,7 +8103,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 1170,
+        "x": 1430,
         "y": 1680,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -8048,7 +8124,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1150,
+        "x": 1410,
         "y": 1720,
         "wires": []
     },
@@ -8069,7 +8145,7 @@
                 "module": "fs"
             }
         ],
-        "x": 910,
+        "x": 1170,
         "y": 1660,
         "wires": [
             [
@@ -8094,10 +8170,9 @@
         "g": "bcaed4334222c14a",
         "name": "Cookie: Begin Validation",
         "links": [
-            "5c30dbcce4f3e71e",
             "f9550cdd015b52ae"
         ],
-        "x": 670,
+        "x": 930,
         "y": 1660,
         "wires": [
             [
@@ -8117,7 +8192,7 @@
         "links": [
             "8b1fef39c34f5513"
         ],
-        "x": 1560,
+        "x": 1820,
         "y": 1660,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8134,7 +8209,7 @@
             "9c55bf6229fa740c",
             "95f44fbb0ddd39fc"
         ],
-        "x": 2330,
+        "x": 2590,
         "y": 2100,
         "wires": [
             [
@@ -8154,7 +8229,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2480,
+        "x": 2740,
         "y": 2100,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8170,7 +8245,7 @@
         "links": [
             "c10e09e4bfbddfd7"
         ],
-        "x": 1290,
+        "x": 1550,
         "y": 1920,
         "wires": [],
         "icon": "font-awesome/fa-refresh",
@@ -8193,7 +8268,7 @@
                 "module": "fs"
             }
         ],
-        "x": 1070,
+        "x": 1330,
         "y": 1900,
         "wires": [
             [
@@ -8217,7 +8292,7 @@
         "links": [
             "da0811fbd7963934"
         ],
-        "x": 860,
+        "x": 1120,
         "y": 1900,
         "wires": [
             [
@@ -8237,7 +8312,7 @@
         "links": [
             "c10e09e4bfbddfd7"
         ],
-        "x": 1300,
+        "x": 1560,
         "y": 1880,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8254,7 +8329,8 @@
             "9c05ca2751f619a7",
             "8ad6190854001584",
             "413dbeb6f2d0d2d0",
-            "d24ebda198149601"
+            "d24ebda198149601",
+            "3fa2f7ecc012d8c6"
         ],
         "x": 2870,
         "y": 2820,
@@ -8289,7 +8365,7 @@
         "links": [
             "33f25da80ef87e72"
         ],
-        "x": 380,
+        "x": 580,
         "y": 1580,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8302,7 +8378,7 @@
         "g": "cc33365c2aa59e35",
         "name": "Token: Begin",
         "links": [],
-        "x": 610,
+        "x": 870,
         "y": 1860,
         "wires": [
             []
@@ -8322,7 +8398,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
+        "x": 1010,
         "y": 2240,
         "wires": [
             [
@@ -8350,7 +8426,7 @@
             "de76019e24c52ae0",
             "9d0d1d9a6c596428"
         ],
-        "x": 920,
+        "x": 1180,
         "y": 2240,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8366,7 +8442,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 910,
+        "x": 1170,
         "y": 2280,
         "wires": [],
         "icon": "font-awesome/fa-exclamation-triangle",
@@ -8383,7 +8459,7 @@
             "8964a5bda9eb7113",
             "a30dab395f333826"
         ],
-        "x": 2240,
+        "x": 2500,
         "y": 2540,
         "wires": [
             [
@@ -8403,7 +8479,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2460,
+        "x": 2720,
         "y": 2540,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8418,7 +8494,7 @@
         "links": [
             "9cbf4beaceba5255"
         ],
-        "x": 1190,
+        "x": 1450,
         "y": 2320,
         "wires": [
             [
@@ -8440,7 +8516,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
+        "x": 1700,
         "y": 2320,
         "wires": [
             [
@@ -8472,7 +8548,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1640,
+        "x": 1900,
         "y": 2300,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8489,7 +8565,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1650,
+        "x": 1910,
         "y": 2340,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -8510,7 +8586,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1630,
+        "x": 1890,
         "y": 2380,
         "wires": []
     },
@@ -8528,7 +8604,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1890,
+        "x": 2150,
         "y": 2280,
         "wires": []
     },
@@ -8544,7 +8620,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
+        "x": 2180,
         "y": 2320,
         "wires": [
             [
@@ -8569,7 +8645,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2100,
+        "x": 2360,
         "y": 2320,
         "wires": [
             [
@@ -8598,7 +8674,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2230,
+        "x": 2490,
         "y": 2320,
         "wires": [
             [
@@ -8624,7 +8700,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2380,
+        "x": 2640,
         "y": 2260,
         "wires": []
     },
@@ -8638,7 +8714,7 @@
         "links": [
             "97fb6e1471c0f7cd"
         ],
-        "x": 2430,
+        "x": 2690,
         "y": 2300,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8658,7 +8734,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2390,
+        "x": 2650,
         "y": 2360,
         "wires": []
     },
@@ -8873,7 +8949,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1890,
+        "x": 2150,
         "y": 2520,
         "wires": []
     },
@@ -8886,7 +8962,7 @@
         "links": [
             "60a97c78327c3a6a"
         ],
-        "x": 1160,
+        "x": 1420,
         "y": 2520,
         "wires": [
             [
@@ -8908,7 +8984,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
+        "x": 1610,
         "y": 2520,
         "wires": [
             [
@@ -8934,7 +9010,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1540,
+        "x": 1800,
         "y": 2520,
         "wires": [
             [
@@ -8954,7 +9030,7 @@
         "links": [
             "97fb6e1471c0f7cd"
         ],
-        "x": 1720,
+        "x": 1980,
         "y": 2520,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8967,7 +9043,7 @@
         "g": "9f3711f96411e2cc",
         "name": "ToDo",
         "info": "check for http 400, and return error on screen",
-        "x": 1730,
+        "x": 1990,
         "y": 2480,
         "wires": []
     },
@@ -9253,7 +9329,7 @@
             "8b072412d6eea267",
             "e6f37f07e9217707"
         ],
-        "x": 2240,
+        "x": 2500,
         "y": 2480,
         "wires": [
             [
@@ -9273,7 +9349,7 @@
         "links": [
             "150344ba8db2ceee"
         ],
-        "x": 2430,
+        "x": 2690,
         "y": 2480,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -9302,7 +9378,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 890,
+        "x": 1150,
         "y": 2040,
         "wires": [
             [
@@ -9322,7 +9398,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1630,
         "y": 2080,
         "wires": [
             [
@@ -9341,7 +9417,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1530,
+        "x": 1790,
         "y": 2080,
         "wires": [
             [
@@ -9361,7 +9437,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
+        "x": 1910,
         "y": 2080,
         "wires": [
             [
@@ -9381,7 +9457,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1760,
+        "x": 2020,
         "y": 2080,
         "wires": [
             [
@@ -9404,7 +9480,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1930,
+        "x": 2190,
         "y": 2040,
         "wires": []
     },
@@ -9420,7 +9496,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
+        "x": 1380,
         "y": 2040,
         "wires": [
             [
@@ -9435,7 +9511,7 @@
         "g": "5851acefa1f1b5ff",
         "name": "ToDo: add random salt to hash generation",
         "info": "",
-        "x": 1460,
+        "x": 1720,
         "y": 2040,
         "wires": []
     },
@@ -9448,7 +9524,7 @@
         "links": [],
         "linkType": "static",
         "timeout": "30",
-        "x": 870,
+        "x": 1130,
         "y": 2080,
         "wires": [
             [
@@ -9465,7 +9541,7 @@
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 1980,
+        "x": 2240,
         "y": 2080,
         "wires": [],
         "l": true
