@@ -1,2 +1,6 @@
 # Ignore Node-RED backups
 *.backup
+
+# Ignore tmp files
+*.tmp
+tmp.*
