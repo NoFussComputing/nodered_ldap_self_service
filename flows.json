@@ -267,13 +267,13 @@
         },
         "nodes": [
             "fb5301abffede979",
-            "1102d30391c745a6",
             "988765ea19236af0",
-            "b19bd0621d479d66"
+            "abcdd1bd3d9d1892",
+            "c17fe14224b2a367"
         ],
         "x": 154,
         "y": 999,
-        "w": 812,
+        "w": 752,
         "h": 82
     },
     {
@@ -4365,30 +4365,11 @@
         "y": 1040,
         "wires": [
             [
-                "1102d30391c745a6"
+                "abcdd1bd3d9d1892"
             ]
         ],
         "icon": "node-red/file.svg",
         "l": true
-    },
-    {
-        "id": "1102d30391c745a6",
-        "type": "template",
-        "z": "42b9663b67dbd983",
-        "g": "b447a1f691eb02df",
-        "name": "HTML",
-        "field": "html.body",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "logout",
-        "x": 470,
-        "y": 1040,
-        "wires": [
-            [
-                "b19bd0621d479d66"
-            ]
-        ]
     },
     {
         "id": "988765ea19236af0",
@@ -4400,29 +4381,10 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 850,
+        "x": 790,
         "y": 1040,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "b19bd0621d479d66",
-        "type": "link call",
-        "z": "42b9663b67dbd983",
-        "g": "b447a1f691eb02df",
-        "name": "Build HTML",
-        "links": [
-            "3ec10e706b7bdc9d"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 630,
-        "y": 1040,
-        "wires": [
-            [
-                "988765ea19236af0"
-            ]
-        ]
     },
     {
         "id": "52dc13e1fdbf064d",
@@ -4690,6 +4652,47 @@
             "Redirect"
         ],
         "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "abcdd1bd3d9d1892",
+        "type": "function",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "name": "Clear Session",
+        "func": "\nmsg.payload = \"Logged Out\"\n\nmsg.filename = msg.req.cookies.auth + '.json';\n\nmsg.cookies = {\n\n    \"auth\": {\n        maxAge: 1000\n    }\n\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1040,
+        "wires": [
+            [
+                "c17fe14224b2a367"
+            ]
+        ],
+        "info": "# Clear Session\n\nThis node is responsible for ensuring the cookie is expired."
+    },
+    {
+        "id": "c17fe14224b2a367",
+        "type": "fs-remove",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "path": "config.paths.token_sessions",
+        "pathType": "global",
+        "filename": "filename",
+        "filenameType": "msg",
+        "recursive": false,
+        "exist": true,
+        "name": "Remove Token",
+        "x": 600,
+        "y": 1040,
+        "wires": [
+            [
+                "988765ea19236af0"
+            ]
+        ]
     },
     {
         "id": "bb8102ee0c070ff2",
