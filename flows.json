@@ -870,11 +870,12 @@
             "adbfd4257ea1c230",
             "c6360f6028e1512c",
             "b174f7bc1d398a56",
-            "3dc07bb0a7d4f647"
+            "3dc07bb0a7d4f647",
+            "c58cfa3fc57972d1"
         ],
         "x": 174,
         "y": 339,
-        "w": 552,
+        "w": 572,
         "h": 202,
         "info": "# Methods\n\nThis sub-group is provides the http endpoints for the supported methods."
     },
@@ -3481,8 +3482,8 @@
         "links": [
             "2f1060b185e19215"
         ],
-        "x": 630,
-        "y": 400,
+        "x": 650,
+        "y": 380,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3527,8 +3528,8 @@
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
         "name": "Details",
-        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.auth_method\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n\n    if ( \n        Array(global.get(\"config.auth_method\")).includes('oauth2') &&\n        global.get(\"config.oauth2\") == undefined\n    ) {\n\n        status.text = 'No OAuth2 Config';\n\n        msg.statusCode = 400;\n\n        not_configured = msg;\n\n    }else{\n\n        msg.http = {\n            \"client\": msg.req.connection.remoteAddress,\n            \"headers\": msg.req.headers,\n            \"timestamp\": Date.now()\n        }\n\n        if (msg.req.params[\"0\"] == 'callback' ){\n\n            status.fill = 'blue';\n            status.text = 'Oauth2 Callback';\n\n            callback = msg;\n\n        }else{\n\n            status.fill = 'green';\n            status.text = 'Continue';\n\n            cont = msg;\n\n        }\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured\n]);\n",
-        "outputs": 3,
+        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\nvar http_404 = null\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif( msg.req._parsedUrl.path == '/favicon.ico' ) {\n    \n    status.text = 'HTTP/404';\n    status.fill = 'grey';\n\n    msg.statusCode = 404;\n    msg.payload = {};\n\n    http_404 = msg;\n\n} else if (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.auth_method\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n\n    if ( \n        Array(global.get(\"config.auth_method\")).includes('oauth2') &&\n        global.get(\"config.oauth2\") == undefined\n    ) {\n\n        status.text = 'No OAuth2 Config';\n\n        msg.statusCode = 400;\n\n        not_configured = msg;\n\n    }else{\n\n        msg.http = {\n            \"client\": msg.req.connection.remoteAddress,\n            \"headers\": msg.req.headers,\n            \"timestamp\": Date.now()\n        }\n\n        if (msg.req.params[\"0\"] == 'callback' ){\n\n            status.fill = 'blue';\n            status.text = 'Oauth2 Callback';\n\n            callback = msg;\n\n        }else{\n\n            status.fill = 'green';\n            status.text = 'Continue';\n\n            cont = msg;\n\n        }\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured,\n    http_404\n]);\n",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -3544,15 +3545,19 @@
             ],
             [
                 "3dc07bb0a7d4f647"
+            ],
+            [
+                "c58cfa3fc57972d1"
             ]
         ],
         "outputLabels": [
             "Continue",
             "Oauth2 Callback",
-            "Server Not Configured"
+            "Server Not Configured",
+            "HTTP/404"
         ],
         "icon": "font-awesome/fa-info-circle",
-        "info": "# Details\n\nAdds the HTTP request details to object `msg.http`."
+        "info": "# Details\n\nAdds the HTTP request details to object `msg.http`. Also checks for favicon.ico and returns HTTP/404."
     },
     {
         "id": "c43678f82d52004f",
@@ -3595,7 +3600,8 @@
         "links": [
             "5f2f87eeebd5bf6e",
             "5b97592fe62125c7",
-            "3dc07bb0a7d4f647"
+            "3dc07bb0a7d4f647",
+            "c58cfa3fc57972d1"
         ],
         "x": 290,
         "y": 640,
@@ -3675,8 +3681,8 @@
         "links": [
             "9f416bc258c1a60c"
         ],
-        "x": 630,
-        "y": 440,
+        "x": 650,
+        "y": 420,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3779,8 +3785,8 @@
         "links": [
             "5ad10ea406e2d3a7"
         ],
-        "x": 620,
-        "y": 480,
+        "x": 640,
+        "y": 460,
         "wires": [],
         "icon": "font-awesome/fa-hand-stop-o",
         "l": true
@@ -3821,6 +3827,22 @@
             ]
         ],
         "info": "# GLPI Configuration\n\nThis node stores it's values within `flows_cred.json` and therefor takes advantage of encrypting the values.\n\n## Structure\n\n``` json\n\n{\n  \"api_url\": \"http://glpi/apirest.php/\",\n  \"authorization\": \"user_token ***\",\n  \"app_token\": \"\",\n  \"category_id_automation_task\": 0,\n  \"debug_on\": false\n}\n\n```\n\n| item | type | description |\n|:---:|:---:|:---|\n| api_url | `string` | URL for the API `{protocol}://{domain}/apirest.php/` |\n| authorization | `string` | Auth token suffixed with `user_token` |\n| app_token | `string` | Application token |\n| category_id_automation_task | `int` | the category for this automation task to be applied to the ticket task |\n| debug_on | `bool` | Authentication Callback URL, this value must always be `{protocol}://{domain}/callback`. i.e. `http://127.0.0.1:1881/callback` |\n "
+    },
+    {
+        "id": "c58cfa3fc57972d1",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "name": "HTTP/404",
+        "mode": "link",
+        "links": [
+            "5ad10ea406e2d3a7"
+        ],
+        "x": 650,
+        "y": 500,
+        "wires": [],
+        "icon": "font-awesome/fa-hand-stop-o",
+        "l": true
     },
     {
         "id": "02c4b9524d361ade",
