@@ -81,7 +81,9 @@
             "d460346f6ae1673b"
         ],
         "x": 154,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 122
     },
     {
         "id": "ad0235dd3aa9eb7d",
@@ -102,7 +104,9 @@
             "317930c679e833d1"
         ],
         "x": 154,
-        "y": 679
+        "y": 679,
+        "w": 1092,
+        "h": 82
     },
     {
         "id": "1c5c6c543ef047b6",
@@ -121,7 +125,9 @@
             "2f628eec7ca4b343"
         ],
         "x": 154,
-        "y": 299
+        "y": 299,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "a64f4a2c837d5c3c",
@@ -143,7 +149,9 @@
             "4ed718e1ae800bad"
         ],
         "x": 1314,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 127
     },
     {
         "id": "a8e6ecf8ae37659e",
@@ -161,7 +169,9 @@
             "6fc3fe2eef3733b0"
         ],
         "x": 154,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "0abe2cea5975dcfd",
@@ -180,7 +190,9 @@
             "c9323e9dc74c9203"
         ],
         "x": 154,
-        "y": 419
+        "y": 419,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "07f2249ad4b7ccd0",
@@ -199,7 +211,9 @@
             "dcfa3cfba4eb1356"
         ],
         "x": 154,
-        "y": 539
+        "y": 539,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "d3393ec35cb20a93",
@@ -217,7 +231,9 @@
             "f1dcd5b6e32fb905"
         ],
         "x": 164,
-        "y": 139
+        "y": 139,
+        "w": 462,
+        "h": 82
     },
     {
         "id": "3e330505ea1e9cba",
@@ -235,7 +251,9 @@
             "b664f0b9e6c17ad6"
         ],
         "x": 674,
-        "y": 139
+        "y": 139,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "b447a1f691eb02df",
@@ -249,12 +267,15 @@
         },
         "nodes": [
             "fb5301abffede979",
-            "1102d30391c745a6",
             "988765ea19236af0",
-            "b19bd0621d479d66"
+            "abcdd1bd3d9d1892",
+            "c17fe14224b2a367"
         ],
         "x": 154,
-        "y": 999
+        "y": 999,
+        "w": 752,
+        "h": 82,
+        "info": "# Logout\n\nThis group contains the `/logout` path.\nAs part of this groups glow, when navigated to. \nThe users cookie is set to expire and the user session is removed from the filesystem."
     },
     {
         "id": "0d96945ec7d069cb",
@@ -325,7 +346,9 @@
             "05accf0d9a6f0aa8"
         ],
         "x": 134,
-        "y": 119
+        "y": 119,
+        "w": 2312,
+        "h": 182
     },
     {
         "id": "10a6c6b12749dda9",
@@ -393,6 +416,8 @@
         ],
         "x": 128,
         "y": 333,
+        "w": 2798,
+        "h": 774,
         "info": "# Password Reset Form Processing\n\nThis group is responsible for processing the data from the password reset form. the basic workflow is as follows:\n\n- Form validation\n\n- LDAP User Search\n\n- ITSM User Search: if enabled searches for user within itsm system\n\n- ITSM Ticket: if enabled, creates ticket within ITSM system\n\n- Response: User notification\n"
     },
     {
@@ -417,7 +442,10 @@
             "724a142f28c3b6e4",
             "f9550cdd015b52ae",
             "cc33365c2aa59e35",
-            "69f0d6271fe16536"
+            "69f0d6271fe16536",
+            "1552576e6e79e172",
+            "3fa2f7ecc012d8c6",
+            "a67892bd64d2ded4"
         ],
         "x": 94,
         "y": 1527,
@@ -443,7 +471,9 @@
             "befac3bb99b2c2cc"
         ],
         "x": 1314,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "b994fe21efb223a9",
@@ -497,6 +527,8 @@
         ],
         "x": 128,
         "y": 1133,
+        "w": 4704,
+        "h": 228,
         "info": "# Change User Password\n\nThis group contains the workflow to change a users password within LDAP.\n\nThe workflow has th following steps:\n\n1. Validate the form input\n\n1. Check that the new password fields match\n\n1. Confirm that the user entered \"Current Password\" matches what's in LDAP\n\n1. Change the users password within LDAP.\n"
     },
     {
@@ -549,7 +581,9 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99
+        "y": 99,
+        "w": 1192,
+        "h": 282
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -577,7 +611,9 @@
             "291408859782056d"
         ],
         "x": 1274,
-        "y": 99
+        "y": 99,
+        "w": 1872,
+        "h": 142
     },
     {
         "id": "e8558844b3710e7b",
@@ -601,6 +637,25 @@
         "h": 82
     },
     {
+        "id": "8f9d362a10096ca7",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [],
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 40
+    },
+    {
         "id": "aea0a3398dafab4c",
         "type": "group",
         "z": "4b5e055cd6b1e387",
@@ -617,7 +672,9 @@
             "8eca6e69b809790c"
         ],
         "x": 2214,
-        "y": 999
+        "y": 999,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "9858d84dc9d001be",
@@ -658,7 +715,9 @@
             "f125e4c474dd2e5c"
         ],
         "x": 2214,
-        "y": 899
+        "y": 899,
+        "w": 512,
+        "h": 82
     },
     {
         "id": "d0dc259791aed430",
@@ -681,7 +740,9 @@
             "13711f1826f83198"
         ],
         "x": 574,
-        "y": 959
+        "y": 959,
+        "w": 1432,
+        "h": 122
     },
     {
         "id": "d1b4f7ad9e8ea4f0",
@@ -703,7 +764,9 @@
             "1a29880acc851ff5"
         ],
         "x": 834,
-        "y": 819
+        "y": 819,
+        "w": 912,
+        "h": 122
     },
     {
         "id": "4cdebccc4a1f08ed",
@@ -729,7 +792,9 @@
             "5cfc1e5277013397"
         ],
         "x": 434,
-        "y": 519
+        "y": 519,
+        "w": 1752,
+        "h": 122
     },
     {
         "id": "9926c0ba3f91aca8",
@@ -755,7 +820,9 @@
             "f6fc2010d0af1e33"
         ],
         "x": 574,
-        "y": 659
+        "y": 659,
+        "w": 1452,
+        "h": 142
     },
     {
         "id": "f8ec4a6290dc7e20",
@@ -778,7 +845,9 @@
             "815ce9e0380e642f"
         ],
         "x": 1074,
-        "y": 1159
+        "y": 1159,
+        "w": 1072,
+        "h": 122
     },
     {
         "id": "cf2a3f84cb26a12c",
@@ -801,11 +870,12 @@
             "adbfd4257ea1c230",
             "c6360f6028e1512c",
             "b174f7bc1d398a56",
-            "3dc07bb0a7d4f647"
+            "3dc07bb0a7d4f647",
+            "c58cfa3fc57972d1"
         ],
         "x": 174,
         "y": 339,
-        "w": 552,
+        "w": 572,
         "h": 202,
         "info": "# Methods\n\nThis sub-group is provides the http endpoints for the supported methods."
     },
@@ -1009,6 +1079,8 @@
         ],
         "x": 154,
         "y": 359,
+        "w": 972,
+        "h": 142,
         "info": "# Password Reset Form Processing\n\nThis sub-group is the fist step in processing the password reset form.\n\nfor the form workflow to continue processing the form, the form user details entered, must match the authenticated users details. The details **must** match, as without this matching and by design this form can reset the password of any user where the details are correcct."
     },
     {
@@ -1031,6 +1103,8 @@
         ],
         "x": 154,
         "y": 1159,
+        "w": 812,
+        "h": 122,
         "info": "# Form Validation\n\nValidate the password change form."
     },
     {
@@ -1055,6 +1129,8 @@
         ],
         "x": 2214,
         "y": 1159,
+        "w": 1152,
+        "h": 122,
         "info": "# Check Current Password\n\nConfirm that the user entered \"current password\" matches the LDAP value"
     },
     {
@@ -1080,6 +1156,8 @@
         ],
         "x": 3394,
         "y": 1159,
+        "w": 1412,
+        "h": 122,
         "info": "# Change User Password\n\nChange the users password within LDAP"
     },
     {
@@ -1097,7 +1175,7 @@
         "nodes": [
             "bcaed4334222c14a"
         ],
-        "x": 508,
+        "x": 768,
         "y": 1553,
         "w": 1204,
         "h": 234
@@ -1120,7 +1198,7 @@
             "a4bc5830daf9801a",
             "5851acefa1f1b5ff"
         ],
-        "x": 514,
+        "x": 774,
         "y": 1813,
         "w": 2072,
         "h": 334
@@ -1150,7 +1228,7 @@
             "261436c730a46051",
             "97fb6e1471c0f7cd"
         ],
-        "x": 514,
+        "x": 774,
         "y": 2193,
         "w": 2078,
         "h": 394,
@@ -1269,7 +1347,7 @@
             "8b1fef39c34f5513",
             "95f44fbb0ddd39fc"
         ],
-        "x": 754,
+        "x": 1014,
         "y": 1839,
         "w": 672,
         "h": 122
@@ -1297,7 +1375,7 @@
             "9cbf4beaceba5255",
             "da0811fbd7963934"
         ],
-        "x": 534,
+        "x": 794,
         "y": 1579,
         "w": 1152,
         "h": 182,
@@ -1323,7 +1401,7 @@
             "a49db4bcea29097d",
             "444cde06405f24e3"
         ],
-        "x": 1034,
+        "x": 1294,
         "y": 2439,
         "w": 972,
         "h": 122
@@ -1353,10 +1431,40 @@
             "36c7736ada06ef15",
             "54e638b390e13c61"
         ],
-        "x": 1034,
+        "x": 1294,
         "y": 2219,
         "w": 1532,
         "h": 202
+    },
+    {
+        "id": "5851acefa1f1b5ff",
+        "type": "group",
+        "z": "8179bf22c4c31682",
+        "g": "cc33365c2aa59e35",
+        "name": "Token: Generate",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#92d04f",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "f08e22fcc829d7b2",
+            "9bb0664a91ae9b97",
+            "99a20ee6c80595d1",
+            "0107c5fd18462084",
+            "2f7615b7afa603aa",
+            "e350059bd801a5ab",
+            "cb10034e64c15167",
+            "702a6efc7be81391",
+            "1dc714dfeaa9a42d",
+            "a68c08dfd9ce3d8c"
+        ],
+        "x": 1014,
+        "y": 1999,
+        "w": 1302,
+        "h": 122,
+        "info": "# Token Generate\n\nThis sub-group contains the nodes required to generate an authentication token.\n\nThere are two entrypoints for this group:\n\n1. _(Development)_ Click on the generate token to create one for a abritary user\n\n1. `Token: Generate` Link-In node. This is used for other flows which may require a token to be generated for a user. Details must be provided.\n\nThe latter is useful if you create a user with a random password and they need a method to be able to reset it.\n\n## Input Data\n\nthis node requires an object at path `msg.auth.user`.\n\n``` json\n\nmsg.auth.user = {\n    \"username\": \"barny.gumble\",\n    \"fname\": \"Barny\",\n    \"lname\": \"Gumble\",\n    \"mail\": \"barney.gumble@dinomail.com\"\n    };\n\n```\n\n**NOTE:** _Missing any of the `json` attributes will prevent the user from resetting their password as all of these fields are required._\n"
     },
     {
         "id": "85fa24886e126df7",
@@ -1448,55 +1556,6 @@
         "y": 1119,
         "w": 1612,
         "h": 82
-    },
-    {
-        "id": "8f9d362a10096ca7",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [],
-        "x": null,
-        "y": null,
-        "w": 40,
-        "h": 40
-    },
-    {
-        "id": "5851acefa1f1b5ff",
-        "type": "group",
-        "z": "8179bf22c4c31682",
-        "g": "cc33365c2aa59e35",
-        "name": "Token: Generate",
-        "style": {
-            "stroke": "#0070c0",
-            "fill": "#92d04f",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "f08e22fcc829d7b2",
-            "9bb0664a91ae9b97",
-            "99a20ee6c80595d1",
-            "0107c5fd18462084",
-            "2f7615b7afa603aa",
-            "e350059bd801a5ab",
-            "cb10034e64c15167",
-            "702a6efc7be81391",
-            "1dc714dfeaa9a42d",
-            "a68c08dfd9ce3d8c"
-        ],
-        "x": 754,
-        "y": 1999,
-        "w": 1302,
-        "h": 122,
-        "info": "# Token Generate\n\nThis sub-group contains the nodes required to generate an authentication token.\n\nThere are two entrypoints for this group:\n\n1. _(Development)_ Click on the generate token to create one for a abritary user\n\n1. `Token: Generate` Link-In node. This is used for other flows which may require a token to be generated for a user. Details must be provided.\n\nThe latter is useful if you create a user with a random password and they need a method to be able to reset it.\n\n## Input Data\n\nthis node requires an object at path `msg.auth.user`.\n\n``` json\n\nmsg.auth.user = {\n    \"username\": \"barny.gumble\",\n    \"fname\": \"Barny\",\n    \"lname\": \"Gumble\",\n    \"mail\": \"barney.gumble@dinomail.com\"\n    };\n\n```\n\n**NOTE:** _Missing any of the `json` attributes will prevent the user from resetting their password as all of these fields are required._\n"
     },
     {
         "id": "5798e39cbc3730ae",
@@ -2152,6 +2211,19 @@
             [
                 "3629b0bb901c20a7",
                 "10120b4cdade08c6"
+            ]
+        ]
+    },
+    {
+        "id": "a67892bd64d2ded4",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "x": 500,
+        "y": 1620,
+        "wires": [
+            [
+                "3fa2f7ecc012d8c6"
             ]
         ]
     },
@@ -3303,7 +3375,7 @@
         "g": "923268ee62c6a7db",
         "name": "Authentication",
         "links": [
-            "33f25da80ef87e72"
+            "f17afdbfc8c07889"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -3410,8 +3482,8 @@
         "links": [
             "2f1060b185e19215"
         ],
-        "x": 630,
-        "y": 400,
+        "x": 650,
+        "y": 380,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3456,8 +3528,8 @@
         "z": "379c65a27117b46c",
         "g": "cf2a3f84cb26a12c",
         "name": "Details",
-        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.auth_method\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n\n    if ( \n        Array(global.get(\"config.auth_method\")).includes('oauth2') &&\n        global.get(\"config.oauth2\") == undefined\n    ) {\n\n        status.text = 'No OAuth2 Config';\n\n        msg.statusCode = 400;\n\n        not_configured = msg;\n\n    }else{\n\n        msg.http = {\n            \"client\": msg.req.connection.remoteAddress,\n            \"headers\": msg.req.headers,\n            \"timestamp\": Date.now()\n        }\n\n        if (msg.req.params[\"0\"] == 'callback' ){\n\n            status.fill = 'blue';\n            status.text = 'Oauth2 Callback';\n\n            callback = msg;\n\n        }else{\n\n            status.fill = 'green';\n            status.text = 'Continue';\n\n            cont = msg;\n\n        }\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured\n]);\n",
-        "outputs": 3,
+        "func": "var cont = null;\nvar callback = null;\nvar not_configured = null;\nvar http_404 = null\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif( msg.req._parsedUrl.path == '/favicon.ico' ) {\n    \n    status.text = 'HTTP/404';\n    status.fill = 'grey';\n\n    msg.statusCode = 404;\n    msg.payload = {};\n\n    http_404 = msg;\n\n} else if (\n    global.get(\"config\") == undefined ||\n    (\n        global.get(\"config\") != undefined &&\n        global.get(\"config.auth_method\") == undefined\n    )\n) {\n\n    status.text = 'No Config';\n\n    msg.statusCode = 400;\n\n    not_configured = msg;\n\n} else {\n\n    if ( \n        Array(global.get(\"config.auth_method\")).includes('oauth2') &&\n        global.get(\"config.oauth2\") == undefined\n    ) {\n\n        status.text = 'No OAuth2 Config';\n\n        msg.statusCode = 400;\n\n        not_configured = msg;\n\n    }else{\n\n        msg.http = {\n            \"client\": msg.req.connection.remoteAddress,\n            \"headers\": msg.req.headers,\n            \"timestamp\": Date.now()\n        }\n\n        if (msg.req.params[\"0\"] == 'callback' ){\n\n            status.fill = 'blue';\n            status.text = 'Oauth2 Callback';\n\n            callback = msg;\n\n        }else{\n\n            status.fill = 'green';\n            status.text = 'Continue';\n\n            cont = msg;\n\n        }\n    }\n}\nnode.status( status );\n\nnode.send([\n    cont,\n    callback,\n    not_configured,\n    http_404\n]);\n",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -3473,15 +3545,19 @@
             ],
             [
                 "3dc07bb0a7d4f647"
+            ],
+            [
+                "c58cfa3fc57972d1"
             ]
         ],
         "outputLabels": [
             "Continue",
             "Oauth2 Callback",
-            "Server Not Configured"
+            "Server Not Configured",
+            "HTTP/404"
         ],
         "icon": "font-awesome/fa-info-circle",
-        "info": "# Details\n\nAdds the HTTP request details to object `msg.http`."
+        "info": "# Details\n\nAdds the HTTP request details to object `msg.http`. Also checks for favicon.ico and returns HTTP/404."
     },
     {
         "id": "c43678f82d52004f",
@@ -3524,7 +3600,8 @@
         "links": [
             "5f2f87eeebd5bf6e",
             "5b97592fe62125c7",
-            "3dc07bb0a7d4f647"
+            "3dc07bb0a7d4f647",
+            "c58cfa3fc57972d1"
         ],
         "x": 290,
         "y": 640,
@@ -3604,8 +3681,8 @@
         "links": [
             "9f416bc258c1a60c"
         ],
-        "x": 630,
-        "y": 440,
+        "x": 650,
+        "y": 420,
         "wires": [],
         "icon": "font-awesome/fa-lock",
         "l": true
@@ -3708,8 +3785,8 @@
         "links": [
             "5ad10ea406e2d3a7"
         ],
-        "x": 620,
-        "y": 480,
+        "x": 640,
+        "y": 460,
         "wires": [],
         "icon": "font-awesome/fa-hand-stop-o",
         "l": true
@@ -3750,6 +3827,22 @@
             ]
         ],
         "info": "# GLPI Configuration\n\nThis node stores it's values within `flows_cred.json` and therefor takes advantage of encrypting the values.\n\n## Structure\n\n``` json\n\n{\n  \"api_url\": \"http://glpi/apirest.php/\",\n  \"authorization\": \"user_token ***\",\n  \"app_token\": \"\",\n  \"category_id_automation_task\": 0,\n  \"debug_on\": false\n}\n\n```\n\n| item | type | description |\n|:---:|:---:|:---|\n| api_url | `string` | URL for the API `{protocol}://{domain}/apirest.php/` |\n| authorization | `string` | Auth token suffixed with `user_token` |\n| app_token | `string` | Application token |\n| category_id_automation_task | `int` | the category for this automation task to be applied to the ticket task |\n| debug_on | `bool` | Authentication Callback URL, this value must always be `{protocol}://{domain}/callback`. i.e. `http://127.0.0.1:1881/callback` |\n "
+    },
+    {
+        "id": "c58cfa3fc57972d1",
+        "type": "link out",
+        "z": "379c65a27117b46c",
+        "g": "cf2a3f84cb26a12c",
+        "name": "HTTP/404",
+        "mode": "link",
+        "links": [
+            "5ad10ea406e2d3a7"
+        ],
+        "x": 650,
+        "y": 500,
+        "wires": [],
+        "icon": "font-awesome/fa-hand-stop-o",
+        "l": true
     },
     {
         "id": "02c4b9524d361ade",
@@ -4065,7 +4158,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>Main Menu</h2></legend>\n\n    <p style=\"text-align: left;\">G'Day {{{ session.user.fname}}}</p>\n\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}logout';\">Log Out</button>\n{{/global.config.developer_mode}}\n\n</fieldset>",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n    <legend style=\"text-align: left;\"><h2>Main Menu</h2></legend>\n\n    <p style=\"text-align: left;\">G'Day {{{ session.user.fname}}}</p>\n\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}details';\">My Details</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}changepassword';\">Change Password</button>\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordreset';\">Password Reset</button>\n{{#global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}passwordquestions';\">Password Reset Questions</button>\n{{/global.config.developer_mode}}\n    <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}logout';\">Log Out</button>\n\n</fieldset>",
         "x": 450,
         "y": 340,
         "wires": [
@@ -4389,30 +4482,11 @@
         "y": 1040,
         "wires": [
             [
-                "1102d30391c745a6"
+                "abcdd1bd3d9d1892"
             ]
         ],
         "icon": "node-red/file.svg",
         "l": true
-    },
-    {
-        "id": "1102d30391c745a6",
-        "type": "template",
-        "z": "42b9663b67dbd983",
-        "g": "b447a1f691eb02df",
-        "name": "HTML",
-        "field": "html.body",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "logout",
-        "x": 470,
-        "y": 1040,
-        "wires": [
-            [
-                "b19bd0621d479d66"
-            ]
-        ]
     },
     {
         "id": "988765ea19236af0",
@@ -4424,29 +4498,10 @@
         "links": [
             "7db929503cf13635"
         ],
-        "x": 850,
+        "x": 790,
         "y": 1040,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "b19bd0621d479d66",
-        "type": "link call",
-        "z": "42b9663b67dbd983",
-        "g": "b447a1f691eb02df",
-        "name": "Build HTML",
-        "links": [
-            "3ec10e706b7bdc9d"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 630,
-        "y": 1040,
-        "wires": [
-            [
-                "988765ea19236af0"
-            ]
-        ]
     },
     {
         "id": "52dc13e1fdbf064d",
@@ -4714,6 +4769,47 @@
             "Redirect"
         ],
         "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "abcdd1bd3d9d1892",
+        "type": "function",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "name": "Clear Session",
+        "func": "\nmsg.payload = \"Logged Out\"\n\nmsg.filename = msg.req.cookies.auth + '.json';\n\nmsg.cookies = {\n\n    \"auth\": {\n        maxAge: 1000\n    }\n\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1040,
+        "wires": [
+            [
+                "c17fe14224b2a367"
+            ]
+        ],
+        "info": "# Clear Session\n\nThis node is responsible for ensuring the cookie is expired."
+    },
+    {
+        "id": "c17fe14224b2a367",
+        "type": "fs-remove",
+        "z": "42b9663b67dbd983",
+        "g": "b447a1f691eb02df",
+        "path": "config.paths.token_sessions",
+        "pathType": "global",
+        "filename": "filename",
+        "filenameType": "msg",
+        "recursive": false,
+        "exist": false,
+        "name": "Remove Token",
+        "x": 600,
+        "y": 1040,
+        "wires": [
+            [
+                "988765ea19236af0"
+            ]
+        ]
     },
     {
         "id": "bb8102ee0c070ff2",
@@ -7163,10 +7259,10 @@
         "name": "Authentication Begin",
         "links": [],
         "x": 210,
-        "y": 1580,
+        "y": 1600,
         "wires": [
             [
-                "f9550cdd015b52ae"
+                "1552576e6e79e172"
             ]
         ],
         "icon": "node-red/arrow-in.svg",
@@ -7238,7 +7334,7 @@
             "627a72eee1e26ae6",
             "b174f7bc1d398a56"
         ],
-        "x": 610,
+        "x": 870,
         "y": 2240,
         "wires": [
             [
@@ -7945,7 +8041,7 @@
             "20aae4d90a07f156",
             "54e638b390e13c61"
         ],
-        "x": 1570,
+        "x": 1830,
         "y": 1620,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -7965,7 +8061,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1370,
+        "x": 1630,
         "y": 1700,
         "wires": []
     },
@@ -7981,7 +8077,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1640,
         "y": 1640,
         "wires": [
             [
@@ -8011,7 +8107,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1180,
+        "x": 1440,
         "y": 1640,
         "wires": [
             [
@@ -8030,7 +8126,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 1170,
+        "x": 1430,
         "y": 1680,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -8051,7 +8147,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1150,
+        "x": 1410,
         "y": 1720,
         "wires": []
     },
@@ -8072,7 +8168,7 @@
                 "module": "fs"
             }
         ],
-        "x": 910,
+        "x": 1170,
         "y": 1660,
         "wires": [
             [
@@ -8097,10 +8193,9 @@
         "g": "bcaed4334222c14a",
         "name": "Cookie: Begin Validation",
         "links": [
-            "5c30dbcce4f3e71e",
             "f9550cdd015b52ae"
         ],
-        "x": 670,
+        "x": 930,
         "y": 1660,
         "wires": [
             [
@@ -8120,7 +8215,7 @@
         "links": [
             "8b1fef39c34f5513"
         ],
-        "x": 1560,
+        "x": 1820,
         "y": 1660,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8137,7 +8232,7 @@
             "9c55bf6229fa740c",
             "95f44fbb0ddd39fc"
         ],
-        "x": 2330,
+        "x": 2590,
         "y": 2100,
         "wires": [
             [
@@ -8157,7 +8252,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2480,
+        "x": 2740,
         "y": 2100,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8173,7 +8268,7 @@
         "links": [
             "c10e09e4bfbddfd7"
         ],
-        "x": 1290,
+        "x": 1550,
         "y": 1920,
         "wires": [],
         "icon": "font-awesome/fa-refresh",
@@ -8196,7 +8291,7 @@
                 "module": "fs"
             }
         ],
-        "x": 1070,
+        "x": 1330,
         "y": 1900,
         "wires": [
             [
@@ -8220,7 +8315,7 @@
         "links": [
             "da0811fbd7963934"
         ],
-        "x": 860,
+        "x": 1120,
         "y": 1900,
         "wires": [
             [
@@ -8240,7 +8335,7 @@
         "links": [
             "c10e09e4bfbddfd7"
         ],
-        "x": 1300,
+        "x": 1560,
         "y": 1880,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8257,7 +8352,8 @@
             "9c05ca2751f619a7",
             "8ad6190854001584",
             "413dbeb6f2d0d2d0",
-            "d24ebda198149601"
+            "d24ebda198149601",
+            "3fa2f7ecc012d8c6"
         ],
         "x": 2870,
         "y": 2820,
@@ -8292,7 +8388,7 @@
         "links": [
             "33f25da80ef87e72"
         ],
-        "x": 380,
+        "x": 580,
         "y": 1580,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8305,7 +8401,7 @@
         "g": "cc33365c2aa59e35",
         "name": "Token: Begin",
         "links": [],
-        "x": 610,
+        "x": 870,
         "y": 1860,
         "wires": [
             []
@@ -8325,7 +8421,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
+        "x": 1010,
         "y": 2240,
         "wires": [
             [
@@ -8353,7 +8449,7 @@
             "de76019e24c52ae0",
             "9d0d1d9a6c596428"
         ],
-        "x": 920,
+        "x": 1180,
         "y": 2240,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8369,7 +8465,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 910,
+        "x": 1170,
         "y": 2280,
         "wires": [],
         "icon": "font-awesome/fa-exclamation-triangle",
@@ -8386,7 +8482,7 @@
             "8964a5bda9eb7113",
             "a30dab395f333826"
         ],
-        "x": 2240,
+        "x": 2500,
         "y": 2540,
         "wires": [
             [
@@ -8406,7 +8502,7 @@
         "links": [
             "e80aabc47c664088"
         ],
-        "x": 2460,
+        "x": 2720,
         "y": 2540,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8421,7 +8517,7 @@
         "links": [
             "9cbf4beaceba5255"
         ],
-        "x": 1190,
+        "x": 1450,
         "y": 2320,
         "wires": [
             [
@@ -8443,7 +8539,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
+        "x": 1700,
         "y": 2320,
         "wires": [
             [
@@ -8475,7 +8571,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1640,
+        "x": 1900,
         "y": 2300,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8492,7 +8588,7 @@
         "links": [
             "21ec376b58ac0c54"
         ],
-        "x": 1650,
+        "x": 1910,
         "y": 2340,
         "wires": [],
         "icon": "font-awesome/fa-lock",
@@ -8513,7 +8609,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1630,
+        "x": 1890,
         "y": 2380,
         "wires": []
     },
@@ -8531,7 +8627,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1890,
+        "x": 2150,
         "y": 2280,
         "wires": []
     },
@@ -8547,7 +8643,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
+        "x": 2180,
         "y": 2320,
         "wires": [
             [
@@ -8572,7 +8668,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2100,
+        "x": 2360,
         "y": 2320,
         "wires": [
             [
@@ -8601,7 +8697,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2230,
+        "x": 2490,
         "y": 2320,
         "wires": [
             [
@@ -8627,7 +8723,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2380,
+        "x": 2640,
         "y": 2260,
         "wires": []
     },
@@ -8641,7 +8737,7 @@
         "links": [
             "97fb6e1471c0f7cd"
         ],
-        "x": 2430,
+        "x": 2690,
         "y": 2300,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -8661,7 +8757,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2390,
+        "x": 2650,
         "y": 2360,
         "wires": []
     },
@@ -8876,7 +8972,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1890,
+        "x": 2150,
         "y": 2520,
         "wires": []
     },
@@ -8889,7 +8985,7 @@
         "links": [
             "60a97c78327c3a6a"
         ],
-        "x": 1160,
+        "x": 1420,
         "y": 2520,
         "wires": [
             [
@@ -8911,7 +9007,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
+        "x": 1610,
         "y": 2520,
         "wires": [
             [
@@ -8937,7 +9033,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1540,
+        "x": 1800,
         "y": 2520,
         "wires": [
             [
@@ -8957,7 +9053,7 @@
         "links": [
             "97fb6e1471c0f7cd"
         ],
-        "x": 1720,
+        "x": 1980,
         "y": 2520,
         "wires": [],
         "icon": "font-awesome/fa-unlock",
@@ -8970,7 +9066,7 @@
         "g": "9f3711f96411e2cc",
         "name": "ToDo",
         "info": "check for http 400, and return error on screen",
-        "x": 1730,
+        "x": 1990,
         "y": 2480,
         "wires": []
     },
@@ -9256,7 +9352,7 @@
             "8b072412d6eea267",
             "e6f37f07e9217707"
         ],
-        "x": 2240,
+        "x": 2500,
         "y": 2480,
         "wires": [
             [
@@ -9276,7 +9372,7 @@
         "links": [
             "150344ba8db2ceee"
         ],
-        "x": 2430,
+        "x": 2690,
         "y": 2480,
         "wires": [],
         "icon": "node-red/arrow-in.svg",
@@ -9305,7 +9401,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 890,
+        "x": 1150,
         "y": 2040,
         "wires": [
             [
@@ -9325,7 +9421,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1630,
         "y": 2080,
         "wires": [
             [
@@ -9344,7 +9440,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1530,
+        "x": 1790,
         "y": 2080,
         "wires": [
             [
@@ -9364,7 +9460,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
+        "x": 1910,
         "y": 2080,
         "wires": [
             [
@@ -9384,7 +9480,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1760,
+        "x": 2020,
         "y": 2080,
         "wires": [
             [
@@ -9407,7 +9503,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1930,
+        "x": 2190,
         "y": 2040,
         "wires": []
     },
@@ -9423,7 +9519,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
+        "x": 1380,
         "y": 2040,
         "wires": [
             [
@@ -9438,7 +9534,7 @@
         "g": "5851acefa1f1b5ff",
         "name": "ToDo: add random salt to hash generation",
         "info": "",
-        "x": 1460,
+        "x": 1720,
         "y": 2040,
         "wires": []
     },
@@ -9451,7 +9547,7 @@
         "links": [],
         "linkType": "static",
         "timeout": "30",
-        "x": 870,
+        "x": 1130,
         "y": 2080,
         "wires": [
             [
@@ -9468,9 +9564,53 @@
         "name": "Return",
         "mode": "return",
         "links": [],
-        "x": 1980,
+        "x": 2240,
         "y": 2080,
         "wires": [],
+        "l": true
+    },
+    {
+        "id": "1552576e6e79e172",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Logout check",
+        "func": "var authenticate = msg;\nvar logout = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (msg.req._parsedUrl.path == '/logout' ){\n\n    msg.session = {};\n    status.fill = 'green';\n    status.text = 'logout';\n\n    authenticate = null;\n    logout = msg;\n\n}else{\n    status.fill = 'blue';\n    status.text = 'authenticate';\n}\n\nnode.status( status );\n\nnode.send([\n    authenticate,\n    logout\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1600,
+        "wires": [
+            [
+                "f9550cdd015b52ae"
+            ],
+            [
+                "a67892bd64d2ded4"
+            ]
+        ],
+        "outputLabels": [
+            "Authenticate",
+            "Logout"
+        ],
+        "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "3fa2f7ecc012d8c6",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Logout",
+        "mode": "link",
+        "links": [
+            "e80aabc47c664088"
+        ],
+        "x": 610,
+        "y": 1620,
+        "wires": [],
+        "icon": "font-awesome/fa-sign-out",
         "l": true
     },
     {
@@ -14317,7 +14457,7 @@
         "repeat": "60",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "5",
         "topic": "",
         "x": 180,
         "y": 160,
