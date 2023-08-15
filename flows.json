@@ -429,10 +429,15 @@
             "724a142f28c3b6e4",
             "f9550cdd015b52ae",
             "cc33365c2aa59e35",
-            "69f0d6271fe16536"
+            "69f0d6271fe16536",
+            "1552576e6e79e172",
+            "3fa2f7ecc012d8c6",
+            "a67892bd64d2ded4"
         ],
         "x": 94,
         "y": 1527,
+        "w": 3012,
+        "h": 1334,
         "info": "# Authentication\n\nThis group is responsible for ensuring the user is authorized to access the system. \nAny valid user account that authenticates to the system is authorized.\n\nFrom entry the next step in the process is cookie validation.\n\n## Input Data\n\nThis group has two paths for entry: \n\n1. Cookie Found - `msg.req.cookies.auth` key exists\n\n    > Value is the session name.\n\n1. No Cookie Found - `msg.req.cookies.auth` key does not exist\n\n    > User to be redirected to authentication method\n\n\n## Output Data\n\nThis group does not always not return data. \nData returned is only stored in `msg.session`.\n\n### Authenticated User\n\n`msg.session` is returned with the Authentication data contained. \n\nThis data will either be from a stored session (user authenticated previously) or be created via the authentication method.\nThere are two session types and they are `token` and `oauth2`. Session types are directly tied to the method of authentication.\n\n`msg.session` structure\n\n``` json\n{\n  \"session\": {\n    \"datetime\": \"{session expiry}\",\n    \"type\": \"token\",\n    \"user\"{\n      \"username\": \"barny.gumble\",\n      \"fname\": \"Barny\",\n      \"lname\": \"Gumble\",\n      \"mail\": \"barney.gumble@dinomail.com\"\n    },\n    \"oauth2\": {\n      // Only if type=oauth2\n    }\n  }\n}\n\n```\n\n### Non-Authenticated User\n\nNo data is returned if the user is not authenticated. The absense of `msg.session` denotes an unauthenticated user.\n"
     },
     {
@@ -2128,6 +2133,19 @@
             [
                 "3629b0bb901c20a7",
                 "10120b4cdade08c6"
+            ]
+        ]
+    },
+    {
+        "id": "a67892bd64d2ded4",
+        "type": "junction",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "x": 500,
+        "y": 1620,
+        "wires": [
+            [
+                "3fa2f7ecc012d8c6"
             ]
         ]
     },
@@ -7142,10 +7160,10 @@
         "name": "Authentication Begin",
         "links": [],
         "x": 210,
-        "y": 1580,
+        "y": 1600,
         "wires": [
             [
-                "f9550cdd015b52ae"
+                "1552576e6e79e172"
             ]
         ],
         "icon": "node-red/arrow-in.svg",
@@ -9450,6 +9468,50 @@
         "x": 1980,
         "y": 2080,
         "wires": [],
+        "l": true
+    },
+    {
+        "id": "1552576e6e79e172",
+        "type": "function",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Logout check",
+        "func": "var authenticate = msg;\nvar logout = null;\n\nvar status = {fill:\"red\",shape:\"ring\",text:\"Err: Incomplete\"};\n\nif (msg.req._parsedUrl.path == '/logout' ){\n\n    msg.session = {};\n    status.fill = 'green';\n    status.text = 'logout';\n\n    authenticate = null;\n    logout = msg;\n\n}else{\n    status.fill = 'blue';\n    status.text = 'authenticate';\n}\n\nnode.status( status );\n\nnode.send([\n    authenticate,\n    logout\n]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1600,
+        "wires": [
+            [
+                "f9550cdd015b52ae"
+            ],
+            [
+                "a67892bd64d2ded4"
+            ]
+        ],
+        "outputLabels": [
+            "Authenticate",
+            "Logout"
+        ],
+        "icon": "font-awesome/fa-question"
+    },
+    {
+        "id": "3fa2f7ecc012d8c6",
+        "type": "link out",
+        "z": "8179bf22c4c31682",
+        "g": "bbd929c437c592ea",
+        "name": "Logout",
+        "mode": "link",
+        "links": [
+            "e80aabc47c664088"
+        ],
+        "x": 610,
+        "y": 1620,
+        "wires": [],
+        "icon": "font-awesome/fa-sign-out",
         "l": true
     },
     {
