@@ -28,10 +28,12 @@ LABEL \
 COPY includes/ /
 
 
-COPY --from=CloneRepo /tmp/self_service/package.json /data/package.json
+COPY decrypt-flows-cred.sh /bin/decrypt-flows-cred.sh
 
-RUN cd /data; \
-  npm install --unsafe-perm --no-update-notifier --no-fund --only=production
+COPY encrypt-flows-cred.sh /bin/encrypt-flows-cred.sh
+
+
+COPY --from=CloneRepo /tmp/self_service/package.json /data/package.json
 
 COPY --from=CloneRepo /tmp/self_service/flows_cred.json /data/flows_cred.json
 COPY --from=CloneRepo /tmp/self_service/flows.json /data/flows.json
@@ -39,9 +41,17 @@ COPY --from=CloneRepo /tmp/self_service/flows.json /data/flows.json
 USER root
 
 RUN  chown node-red:node-red -R /data; \
-  chown node-red:node-red -R /usr/src/node-red;
+  chown node-red:node-red -R /usr/src/node-red; \
+  chomd +x /bin/decrypt-flows-cred.sh; \
+  chmod +x /bin/encrypt-flows-cred.sh; \
+  apk update; \
+  apk add \
+    jq;
 
 USER node-red
+
+RUN cd /data; \
+  npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 
 HEALTHCHECK CMD curl http://localhost:1880/admin || exit 1
 
