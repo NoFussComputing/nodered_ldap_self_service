@@ -35,9 +35,6 @@ COPY encrypt-flows-cred.sh /bin/encrypt-flows-cred.sh
 
 COPY --from=CloneRepo /tmp/self_service/package.json /data/package.json
 
-RUN cd /data; \
-  npm install --unsafe-perm --no-update-notifier --no-fund --only=production
-
 COPY --from=CloneRepo /tmp/self_service/flows_cred.json /data/flows_cred.json
 COPY --from=CloneRepo /tmp/self_service/flows.json /data/flows.json
 
@@ -52,6 +49,9 @@ RUN  chown node-red:node-red -R /data; \
     jq;
 
 USER node-red
+
+RUN cd /data; \
+  npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 
 HEALTHCHECK CMD curl http://localhost:1880/admin || exit 1
 
