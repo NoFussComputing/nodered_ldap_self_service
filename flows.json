@@ -274,7 +274,8 @@
         "x": 154,
         "y": 999,
         "w": 752,
-        "h": 82
+        "h": 82,
+        "info": "# Logout\n\nThis group contains the `/logout` path.\nAs part of this groups glow, when navigated to. \nThe users cookie is set to expire and the user session is removed from the filesystem."
     },
     {
         "id": "0d96945ec7d069cb",
