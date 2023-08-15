@@ -28,6 +28,11 @@ LABEL \
 COPY includes/ /
 
 
+COPY decrypt-flows-cred.sh /bin/decrypt-flows-cred.sh
+
+COPY encrypt-flows-cred.sh /bin/encrypt-flows-cred.sh
+
+
 COPY --from=CloneRepo /tmp/self_service/package.json /data/package.json
 
 RUN cd /data; \
@@ -39,7 +44,12 @@ COPY --from=CloneRepo /tmp/self_service/flows.json /data/flows.json
 USER root
 
 RUN  chown node-red:node-red -R /data; \
-  chown node-red:node-red -R /usr/src/node-red;
+  chown node-red:node-red -R /usr/src/node-red; \
+  chomd +x /bin/decrypt-flows-cred.sh; \
+  chmod +x /bin/encrypt-flows-cred.sh; \
+  apk update; \
+  apk add \
+    jq;
 
 USER node-red
 
