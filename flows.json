@@ -7110,7 +7110,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "'echo -n \"{sha512}$(echo -n \"$(echo -n ' & msg.payload &'| sha512sum)\" | xxd -r -p | openssl enc -base64 | tr -dc \"A-Za-z0-9+\\\\/=\")\"'",
+                "to": "'echo -n \"{SHA512}$(echo -n \"$(echo -n ' & msg.payload &'| sha512sum)\" | xxd -r -p | openssl enc -base64 | tr -dc \"A-Za-z0-9+\\\\/=\")\"'",
                 "tot": "jsonata"
             }
         ],
