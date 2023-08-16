@@ -5965,7 +5965,7 @@
         "z": "4b5e055cd6b1e387",
         "g": "02dc457b6549ba4e",
         "name": "Form and user details must match",
-        "func": "var success = null;\nvar failure = null;\n\nnode.status({fill:\"yellow\",shape:\"ring\",text:\"User Details Dont match\"});\n\nif(\n    msg.auth.user.username == msg.req.body.uid &&\n    msg.auth.user.fname == msg.req.body.givenName &&\n    msg.auth.user.lname == msg.req.body.sn &&\n    msg.auth.user.mail == msg.req.body.mail\n) {\n    node.status({ fill: \"green\", shape: \"dot\", text: \"User Details match\" });\n\n    success = msg;\n}\n\nnode.send([\n    success,\n    failure\n]);",
+        "func": "var success = null;\nvar failure = null;\n\nnode.status({fill:\"yellow\",shape:\"ring\",text:\"User Details Dont match\"});\n\nif(\n    msg.session.user.username == msg.req.body.uid &&\n    msg.session.user.fname == msg.req.body.givenName &&\n    msg.session.user.lname == msg.req.body.sn &&\n    msg.session.user.mail == msg.req.body.mail\n) {\n    node.status({ fill: \"green\", shape: \"dot\", text: \"User Details match\" });\n\n    success = msg;\n}\n\nnode.send([\n    success,\n    failure\n]);",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
