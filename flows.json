@@ -3208,7 +3208,7 @@
         "z": "379c65a27117b46c",
         "g": "8363d385051fc5c0",
         "name": "Valid Path?",
-        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/');\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\nif ( msg.http.path[0] == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nif (String(msg.req.originalUrl).indexOf('?') > 0) {\n\n    msg.http.path = String(msg.req.originalUrl).split('?')[0].split('/');\n\n} else {\n    msg.http.path = String(msg.req.originalUrl).split('/');\n\n}\n\nif (\n    msg.http.path[0] == global.get('config.http_path') ||\n    msg.http.path[0] + '/' == global.get('config.http_path')\n) {\n\n    validPath = msg;\n\n\n} else if (String(msg.req.originalUrl).indexOf('.') > 0) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
