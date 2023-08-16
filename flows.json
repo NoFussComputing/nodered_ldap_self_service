@@ -457,7 +457,7 @@
         "id": "8a2206d682028469",
         "type": "group",
         "z": "42b9663b67dbd983",
-        "name": "Deveopment: Create Config File",
+        "name": "Development: Create Config File",
         "style": {
             "stroke": "#0070c0",
             "fill": "#b797cf",
@@ -473,7 +473,8 @@
         "x": 1314,
         "y": 199,
         "w": 752,
-        "h": 82
+        "h": 82,
+        "info": "# Config File\n\nThis group contains the configuration for Self-Service.\n\n\n## Structure\n\nExample:\n``` json\n{\n  \"auth_method\": [ \"oauth\", \"token\" ],\n  \"developer_mode\": false,\n  \"html\": {\n    \"logo\": \"http://nofusscomputing.com/assets/nfc_revamp_dark.png\",\n    \"logo_width\": 282,\n    \"logo_height\": 90\n  },\n  \"http_path\": \"/\",\n  \"itsm\": {\n    \"api_url\": \"http://glpi/apirest.php/\",\n    \"create_ticket\": true,\n    \"create_ticket_task\": true,\n    \"platform\": \"glpi\",\n    \"search\": true,\n    \"human_task_duration_time\": 300,\n    \"ticket\": {\n      \"approval_required\": 0,\n      \"category_id\": 6,\n      \"entity_id\": 1,\n      \"requesttype_id\": 6,\n      \"task_category_id\": 2\n    }\n  },\n  \"paths\": {\n    \"user_data\": \"data/users/\",\n    \"token_sessions\": \"data/sessions/\"\n  }\n}\n```\n\n**Note:** paths must not begin with `/` however must end with `/` this includes no sub path i.e. `/`\n\n**Note:** `http_path` must begin and end with `/`"
     },
     {
         "id": "b994fe21efb223a9",
@@ -581,9 +582,7 @@
             "2bcdbb78b4e9181f"
         ],
         "x": 54,
-        "y": 99,
-        "w": 1192,
-        "h": 282
+        "y": 99
     },
     {
         "id": "f7c0a5bee0e0df33",
@@ -611,9 +610,7 @@
             "291408859782056d"
         ],
         "x": 1274,
-        "y": 99,
-        "w": 1872,
-        "h": 142
+        "y": 99
     },
     {
         "id": "e8558844b3710e7b",
@@ -3211,7 +3208,7 @@
         "z": "379c65a27117b46c",
         "g": "8363d385051fc5c0",
         "name": "Valid Path?",
-        "func": "var validPath = null;\nvar http_404 = null;\n\nmsg.http = {};\n\nmsg.http.path = String(msg.req.originalUrl).split('/');\n\n// if ('/' in msg.req.params[\"0\"] && msg.req.params[\"0\"] != \"\" ) {\n\n//     msg.checkpath = String(msg.req.params[\"0\"]).split('/')[0];\n\n// } else if ( msg.req.params[\"0\"] == \"\" ) {\n\n//     msg.checkpath = \"\";\n\n// }\n\nif ( msg.http.path[0] == global.get('config.http_path') ) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
+        "func": "var validPath = null;\nvar http_404 = null;\n\nif (String(msg.req.originalUrl).indexOf('?') > 0) {\n\n    msg.http.path = String(msg.req.originalUrl).split('?')[0].split('/');\n\n} else {\n    msg.http.path = String(msg.req.originalUrl).split('/');\n\n}\n\nif (\n    msg.http.path[0] == global.get('config.http_path') ||\n    msg.http.path[0] + '/' == global.get('config.http_path')\n) {\n\n    validPath = msg;\n\n\n} else if (String(msg.req.originalUrl).indexOf('.') > 0) {\n\n    validPath = msg;\n\n} else {\n\n    http_404 = msg;\n\n}\n\nnode.send([validPath, http_404])\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -3963,7 +3960,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\"{{#session.user}} value=\"{{session.user.fname}}\" readonly{{/session.user}}>\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\"{{#session.user}} value=\"{{session.user.lname}}\" readonly{{/session.user}}>\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\"{{#session.user}} value=\"{{session.user.mail}}\" readonly{{/session.user}}>\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\"{{#session.user}} value=\"{{session.user.username}}\" readonly{{/session.user}}>\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n  </form>\n  <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}';\">Home</button>\n  </fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
+        "template": "<fieldset id=\"form\" style=\"width: 400px;\">\n  <legend style=\"text-align: left;\"><h2>Self-Service Password Reset</h2></legend>\n\n  <form method=\"post\" action=\"{{{ global.config.http_path }}}passwordreset\" ajax=\"true\">\n    <p style=\"padding: 15px;\">To reset your password, ALL fields are Mandatory. On completing this form click 'submit' below. Results will be posted in the results window underneath the submit button.</p>\n    <label for=\"fname\">First Name</label>\n    <input type=\"text\" id=\"givenName\" name=\"givenName\"{{#session.user}} value=\"{{session.user.fname}}\" readonly{{/session.user}}>\n\n    <label for=\"lname\">Last Name</label>\n    <input type=\"text\" id=\"sn\" name=\"sn\"{{#session.user}} value=\"{{session.user.lname}}\" readonly{{/session.user}}>\n\n    <label for=\"lname\">E-Mail Address</label>\n    <input type=\"text\" id=\"mail\" name=\"mail\"{{#session.user}} value=\"{{session.user.mail}}\" readonly{{/session.user}}>\n\n    <label for=\"lname\">User Name</label>\n    <input type=\"text\" id=\"uid\" name=\"uid\"{{#session.user}} value=\"{{session.user.username}}\" readonly{{/session.user}}>\n\n    <label for=\"random\">First half</label><p id=\"labelDescription\">This is the first half of your password</p>\n    <input style=\"font-size: 14pt\" type=\"text\" id=\"random\" name=\"random\" value=\"{{{random}}}\" readonly>\n\n    <input type=\"submit\" value=\"Submit\">\n  </form>\n  <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}';\">Home</button>\n  </fieldset>\n\n<fieldset id=\"response\">\n  <legend style=\"text-align: left;\">Results</legend>\n  <span id=\"result\"></span>\n</fieldset>\n<div >\n    <span id=\"result\"></span>\n</div>\n",
         "x": 850,
         "y": 720,
         "wires": [
@@ -4354,7 +4351,7 @@
         "fieldType": "msg",
         "format": "html",
         "syntax": "mustache",
-        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Account Details</h2></legend>\n\n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}updatedetails\" ajax=\"true\">\n          <p style=\"padding: 15px;\"></p>\n\n          <label for=\"givenName\">First Name</label>\n          <input type=\"text\" id=\"givenName\" name=\"givenName\" disabled value=\"{{{ session.user.fname }}}\">\n\n          <label for=\"sn\">Last Name</label>\n          <input type=\"text\" id=\"sn\" name=\"sn\" disabled value=\"{{{ session.user.lname }}}\">\n\n          <label for=\"uid\">User Name</label>\n          <input type=\"text\" id=\"uid\" name=\"uid\"  disabled value=\"{{{ session.user.username }}}\">\n\n          <label for=\"mail\">E-Mail</label>\n          <input type=\"text\" id=\"mail\" name=\"mail\" disabled value=\"{{{ session.user.mail }}}\">\n\n          <input type=\"submit\" value=\"Updating Not Available\" disabled>\n        </form>\n                  <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}';\">Home</button>\n      </fieldset>\n\n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
+        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Account Details</h2></legend>\n\n        <form method=\"post\" action=\"{{{ global.config.http_path }}}updatedetails\" ajax=\"true\">\n          <p style=\"padding: 15px;\"></p>\n\n          <label for=\"givenName\">First Name</label>\n          <input type=\"text\" id=\"givenName\" name=\"givenName\" disabled value=\"{{{ session.user.fname }}}\">\n\n          <label for=\"sn\">Last Name</label>\n          <input type=\"text\" id=\"sn\" name=\"sn\" disabled value=\"{{{ session.user.lname }}}\">\n\n          <label for=\"uid\">User Name</label>\n          <input type=\"text\" id=\"uid\" name=\"uid\"  disabled value=\"{{{ session.user.username }}}\">\n\n          <label for=\"mail\">E-Mail</label>\n          <input type=\"text\" id=\"mail\" name=\"mail\" disabled value=\"{{{ session.user.mail }}}\">\n\n          <input type=\"submit\" value=\"Updating Not Available\" disabled>\n        </form>\n                  <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}';\">Home</button>\n      </fieldset>\n\n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
         "x": 450,
         "y": 460,
         "wires": [
@@ -4426,7 +4423,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"/{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"c_password\">Current Password</label>\n          <input type=\"password\" id=\"c_password\" name=\"c_password\" placeholder=\"current password\">\n      \n          <label for=\"n_password_1\">New Password</label>\n          <input type=\"password\" id=\"n_password_1\" name=\"n_password_1\" placeholder=\"new password\">\n      \n          <label for=\"n_password_2\">Confirm New Password</label>\n          <input type=\"password\" id=\"n_password_2\" name=\"n_password_2\" placeholder=\"re-type new password\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n        </form>\n\n        <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}';\">Home</button>\n        \n        </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
+        "template": "\n    <fieldset id=\"form\" style=\"width: 400px;\">\n        <legend style=\"text-align: left;\"><h2>Change Password</h2></legend>\n      \n        <form method=\"post\" action=\"{{{ global.config.http_path }}}passwordchange\" ajax=\"true\">\n          <p style=\"padding: 15px;\">To change your password, Complete the fields below. On completing this form click 'Change Password'. Results will be posted in the results window at the bottom of the page.</p>\n      \n          <label for=\"c_password\">Current Password</label>\n          <input type=\"password\" id=\"c_password\" name=\"c_password\" placeholder=\"current password\">\n      \n          <label for=\"n_password_1\">New Password</label>\n          <input type=\"password\" id=\"n_password_1\" name=\"n_password_1\" placeholder=\"new password\">\n      \n          <label for=\"n_password_2\">Confirm New Password</label>\n          <input type=\"password\" id=\"n_password_2\" name=\"n_password_2\" placeholder=\"re-type new password\">\n      \n          <input type=\"submit\" value=\"Change Password\">\n        </form>\n\n        <button id=\"navigation\" onclick=\"window.location.href='{{{ global.config.http_path }}}';\">Home</button>\n        \n        </fieldset>\n      \n      <fieldset id=\"response\">\n        <legend style=\"text-align: left;\">Results</legend>\n        <span id=\"result\"></span>\n      </fieldset>\n      <div >\n          <span id=\"result\"></span>\n      </div>\n",
         "x": 470,
         "y": 580,
         "wires": [
@@ -5916,7 +5913,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "(&(objectclass=*)(cn={{ auth.user.fname }} {{ auth.user.lname }})(givenName={{ auth.user.fname }})(sn={{ auth.user.lname }})(uid={{ auth.user.username }})(mail={{ auth.user.mail }}))",
+        "template": "(&(objectclass=*)(cn={{ session.user.fname }} {{ session.user.lname }})(givenName={{ session.user.fname }})(sn={{ session.user.lname }})(uid={{ session.user.username }})(mail={{ session.user.mail }}))",
         "output": "str",
         "x": 1460,
         "y": 1220,
