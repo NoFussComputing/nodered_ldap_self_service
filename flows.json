@@ -9646,35 +9646,6 @@
         "wires": []
     },
     {
-        "id": "82183bee2dd412fe",
-        "type": "change",
-        "z": "104f7938a23fe82f",
-        "name": "Debug",
-        "rules": [
-            {
-                "t": "set",
-                "p": "debug_on",
-                "pt": "global",
-                "to": "config.glpi.debug_on",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 220,
-        "wires": [
-            [
-                "cd999564657880cc",
-                "4146b052670fb819"
-            ]
-        ],
-        "icon": "font-awesome/fa-cogs"
-    },
-    {
         "id": "9587918c59375270",
         "type": "inject",
         "z": "104f7938a23fe82f",
@@ -9768,8 +9739,8 @@
         "type": "switch",
         "z": "104f7938a23fe82f",
         "name": "Debug No Auto-run",
-        "property": "debug_on",
-        "propertyType": "msg",
+        "property": "$boolean($globalContext('config.glpi.debug_on'))\t",
+        "propertyType": "jsonata",
         "rules": [
             {
                 "t": "true"
@@ -9885,7 +9856,8 @@
             "2f0dd5172e907730",
             "0e97a47512b3c7ef",
             "d6e72db598c850a0",
-            "610fb43bda07b3c3"
+            "610fb43bda07b3c3",
+            "e852bc3458923688"
         ],
         "x": 145,
         "y": 180,
@@ -9917,24 +9889,24 @@
         "rules": [
             {
                 "t": "set",
-                "p": "glpi.authorization",
-                "pt": "global",
-                "to": "authorization",
-                "tot": "msg"
+                "p": "authorization",
+                "pt": "msg",
+                "to": "config.glpi.authorization",
+                "tot": "global"
             },
             {
                 "t": "set",
-                "p": "glpi.app_token",
-                "pt": "global",
-                "to": "app_token",
-                "tot": "msg"
+                "p": "app_token",
+                "pt": "msg",
+                "to": "config.glpi.app_token",
+                "tot": "global"
             },
             {
                 "t": "set",
-                "p": "glpi.api_url",
-                "pt": "global",
-                "to": "api_url",
-                "tot": "msg"
+                "p": "api_url",
+                "pt": "msg",
+                "to": "config.glpi.api_url",
+                "tot": "global"
             }
         ],
         "action": "",
@@ -9942,11 +9914,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1420,
-        "y": 120,
+        "x": 1160,
+        "y": 220,
         "wires": [
             [
-                "a9472349e8102352"
+                "a9472349e8102352",
+                "cd999564657880cc"
             ]
         ],
         "icon": "font-awesome/fa-cogs"
@@ -9960,7 +9933,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 1600,
@@ -9972,7 +9946,7 @@
         "type": "function",
         "z": "104f7938a23fe82f",
         "name": "Config Exists",
-        "func": "var exists = null;\nvar absent = null;\nvar config_not_loaded = null;\n\nfs.stat('config.glpi.json', function (err) {\n    if (err) {\n        absent = msg;\n    } else {\n        if( global.get('config') != null ) {\n            exists = msg;\n        }else{\n            config_not_loaded = msg;\n        }\n    }\n});\n\nnode.send([exists, absent, config_not_loaded]);\n",
+        "func": "var exists = null;\nvar absent = msg;\n\n\n// fs.stat('config.glpi.json', function (err) {\n//     if (err) {\n//         absent = msg;\n//         node.warn('here1');\n//     } else {\n//         if( global.get('config') != null ) {\n//             exists = msg;\n//             node.warn('here2');\n//         }else{\n//             config_not_loaded = msg;\n//             node.warn('here3');\n//         }\n//     }\n//     node.warn('here4');\n// });\n\n// config.glpi\n//for( var key in Array(global.get('config')).keys()) {\n// for (var key in Object.keys(global.get('config') || {}).keys()) {\n\n//     node.warn('key: ' + key)\n//     if(key == 'glpi') {\n\n//         exists = msg;\n//         absent = null;\n\n//     }\n// }\n\nif( Object.keys(global.get('config.glpi') || {}).length > 0 ) {\n\n    exists = msg\n    absent = null;\n\n}\n\nnode.send([exists, absent]);\n",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -9987,7 +9961,7 @@
         "y": 220,
         "wires": [
             [
-                "82183bee2dd412fe"
+                "4146b052670fb819"
             ],
             [
                 "e4ec88859fe76e54"
@@ -10035,6 +10009,49 @@
         "x": 1190,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "e852bc3458923688",
+        "type": "link out",
+        "z": "104f7938a23fe82f",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "f2259793983f70a6",
+            "935f35904a0d89bf"
+        ],
+        "x": 1235,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2b9dec0acc865c80",
+        "type": "inject",
+        "z": "104f7938a23fe82f",
+        "name": "Manual Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1080,
+        "y": 440,
+        "wires": [
+            [
+                "e852bc3458923688"
+            ]
+        ]
     },
     {
         "id": "8de5bc665bc27215",
