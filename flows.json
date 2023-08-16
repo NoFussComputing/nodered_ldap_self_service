@@ -5913,7 +5913,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "(&(objectclass=*)(cn={{ auth.user.fname }} {{ auth.user.lname }})(givenName={{ auth.user.fname }})(sn={{ auth.user.lname }})(uid={{ auth.user.username }})(mail={{ auth.user.mail }}))",
+        "template": "(&(objectclass=*)(cn={{ session.user.fname }} {{ session.user.lname }})(givenName={{ session.user.fname }})(sn={{ session.user.lname }})(uid={{ session.user.username }})(mail={{ session.user.mail }}))",
         "output": "str",
         "x": 1460,
         "y": 1220,
