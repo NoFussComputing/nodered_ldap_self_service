@@ -5732,7 +5732,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$string(msg.http.form.random & msg.payload)",
+                "to": "$string(msg.req.body.random & msg.password_second_half)",
                 "tot": "jsonata"
             },
             {
