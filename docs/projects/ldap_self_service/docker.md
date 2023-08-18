@@ -14,6 +14,12 @@ Data for the container is stored in two volumes `/data` and `/usr/src/node-red`.
     Path `/admin` should not be made publically available, as access to this path grants full access to the backend as well as access to passwords and secrets from your `flows_cred.json` file.
 
 
+## Features
+
+- NPM packages `passport` `passport-keycloak-oauth2-oidc`
+
+    > Used for keycloak authentication on admin interface
+
 ## Docker Hub
 
 !!! info
