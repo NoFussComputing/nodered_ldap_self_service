@@ -1,3 +1,9 @@
+## 1.0.0rc4 (2023-08-19)
+
+### Features
+
+- **glpi**: [efa789f0](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/commit/efa789f07fdf965a93a2b6fca3dbcb5072dd800c) - correct debug check [ [!12](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests/12) ]
+
 ## 1.0.0rc3 (2023-08-19)
 
 ### Features
