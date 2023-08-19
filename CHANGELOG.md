@@ -1,3 +1,12 @@
+## 1.0.0rc3 (2023-08-19)
+
+### Features
+
+- **selfservice**: [9b1c30a5](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/commit/9b1c30a5d4249b16a05078e4d6496961c0735194) - migrate external js to internal request [ [!11](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests/11) ]
+- **NodeRED**: [b4454afe](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/commit/b4454afe82ee0e99de98375548377204745a12f2) - add audit events to logging [ [!11](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests/11) ]
+- **docker**: [527d8ffb](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/commit/527d8ffb9696e13e326de4e3dfa434b2d1069128) - listen port updated to HTTP/80 [ [!11](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests/11) ]
+- **docker**: [90aa8d59](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/commit/90aa8d59bd00794dc085a07ef37a19c954e0208b) - remove specified data volumes [ [!11](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests/11) ]
+
 ## 1.0.0rc2 (2023-08-19)
 
 ### Bug Fixes
