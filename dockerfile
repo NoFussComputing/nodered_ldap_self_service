@@ -54,5 +54,3 @@ RUN cd /data; \
   npm install --unsafe-perm --no-update-notifier --no-fund --only=production passport passport-keycloak-oauth2-oidc;
 
 HEALTHCHECK CMD curl http://localhost:1880/admin || exit 1
-
-VOLUME [ "/data", "/usr/src/node-red" ]
