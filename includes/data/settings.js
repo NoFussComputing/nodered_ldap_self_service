@@ -141,7 +141,7 @@ module.exports = {
      ******************************************************************************/
     
         /** the tcp port that the Node-RED web server is listening on */
-        uiPort: process.env.PORT || 1880,
+        uiPort: process.env.PORT || 80,
     
         /** By default, the Node-RED UI accepts connections on all IPv4 interfaces.
          * To listen on all IPv6 addresses, set uiHost to "::",
@@ -298,7 +298,7 @@ module.exports = {
                 /** Whether or not to include metric events in the log output */
                 metrics: false,
                 /** Whether or not to include audit events in the log output */
-                audit: false
+                audit: true
             }
         },
     
