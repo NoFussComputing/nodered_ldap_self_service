@@ -1,3 +1,9 @@
+## 1.0.0rc2 (2023-08-19)
+
+### Bug Fixes
+
+- **callback_redirect**: [4f2397a4](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/commit/4f2397a473e13d649c92f3ef876f218d8e22ec3e) - dont use full url use relative [ [!10](https://gitlab.com/nofusscomputing/projects/nodered_ldap_self_service/-/merge_requests/10) ]
+
 ## 1.0.0rc1 (2023-08-18)
 
 ### Bug Fixes
