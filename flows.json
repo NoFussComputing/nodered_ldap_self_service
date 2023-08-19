@@ -9677,14 +9677,18 @@
         "type": "switch",
         "z": "104f7938a23fe82f",
         "name": "Debug No Auto-run",
-        "property": "$boolean($globalContext('config.glpi.debug_on'))\t",
-        "propertyType": "jsonata",
+        "property": "config.glpi.debug_on",
+        "propertyType": "global",
         "rules": [
             {
-                "t": "true"
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
             },
             {
-                "t": "false"
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
             }
         ],
         "checkall": "true",
